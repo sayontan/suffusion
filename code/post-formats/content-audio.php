@@ -11,6 +11,32 @@
  * @subpackage Formats
  */
 
+if (!function_exists('suffusion_sc_audio')) {
+	function suffusion_sc_audio($atts) {
+		global $suffusion_audio_instance;
+		if (!isset($suffusion_audio_instance)) {
+			$suffusion_audio_instance = 1;
+		}
+		else {
+			$suffusion_audio_instance++;
+		}
+
+		if (!isset($atts[0]))
+			return '';
+
+		if (count($atts))
+			$atts[0] = join(' ', $atts);
+
+		$src = rtrim($atts[0], '=');
+		$src = trim($src, ' "');
+		$data = preg_split("/[\|]/", $src);
+
+		$sound_file = $data[0];
+
+		return "<p id=\"audioplayer_$suffusion_audio_instance\"></p><script type=\"text/javascript\">AudioPlayer.embed(\"audioplayer_$suffusion_audio_instance\", {soundFile: \"$sound_file\", width: 300, initialvolume: 100, transparentpagebg: 'yes', left: '000000', lefticon: 'FFFFFF' });</script>";
+	}
+}
+
 $audios = suffusion_get_audio();
 if (is_array($audios) && count($audios) > 0) {
 	if (!array_key_exists('shortcode', $audios)) { // We won't process shortcode responses because the Audio Player will get displayed for them automatically
