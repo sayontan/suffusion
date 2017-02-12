@@ -6,7 +6,7 @@
  * @subpackage Functions
  */
 class Suffusion {
-	var $context, $body_layout, $content_layout;
+	var $context, $body_layout, $content_layout, $user_agent;
 
 	function init() {
 		if (function_exists('icl_register_string')) {
@@ -105,110 +105,8 @@ class Suffusion {
 	 * @return void
 	 */
 	function set_translatable_fields() {
-		global $suffusion_translatable_fields, $suffusion_unified_options;
-		if (function_exists('wpml_register_string')) {
-			$suffusion_translatable_fields = array(
-				"suf_home_text",
-				"suf_nav_page_tab_title",
-				"suf_nav_cat_tab_title",
-				"suf_nav_links_tab_title",
-				"suf_breadcrumb_separator",
-				"suf_navt_home_text",
-				"suf_navt_page_tab_title",
-				"suf_navt_cat_tab_title",
-				"suf_navt_links_tab_title",
-				"suf_excerpt_custom_more_text",
-				"suf_seo_title_separator",
-				"suf_comment_label_name",
-				"suf_comment_label_name_req",
-				"suf_comment_label_email",
-				"suf_comment_label_email_req",
-				"suf_comment_label_uri",
-				"suf_comment_label_your_comment",
-				"suf_sbtab_categories_title",
-				"suf_sbtab_archives_title",
-				"suf_sbtab_Links_title",
-				"suf_sbtab_meta_title",
-				"suf_sbtab_pages_title",
-				"suf_sbtab_recent_comments_title",
-				"suf_sbtab_recent_posts_title",
-				"suf_sbtab_search_title",
-				"suf_sbtab_tag_cloud_title",
-				"suf_sbtab_custom_tab_1_title",
-				"suf_sbtab_custom_tab_2_title",
-				"suf_sbtab_custom_tab_3_title",
-				"suf_sbtab_custom_tab_4_title",
-				"suf_sbtab_custom_tab_5_title",
-				"suf_sbtab_custom_tab_6_title",
-				"suf_sbtab_custom_tab_7_title",
-				"suf_sbtab_custom_tab_8_title",
-				"suf_sbtab_custom_tab_9_title",
-				"suf_sbtab_custom_tab_10_title",
-				"suf_custom_rss_title_1",
-				"suf_custom_rss_title_2",
-				"suf_custom_rss_title_3",
-				"suf_custom_atom_title_1",
-				"suf_custom_atom_title_2",
-				"suf_custom_atom_title_3",
-
-				"suf_wa_tbrh_open_text",
-				"suf_wa_tbrh_close_text",
-
-				"suf_mag_headline_title",
-				"suf_mag_excerpts_title",
-				"suf_mag_excerpt_full_story_text",
-				"suf_mag_catblocks_title",
-				"suf_mag_catblocks_see_all_text",
-				"suf_sitemap_label_pages",
-				"suf_sitemap_label_categories",
-				"suf_sitemap_label_authors",
-				"suf_sitemap_label_yarchives",
-				"suf_sitemap_label_marchives",
-				"suf_sitemap_label_warchives",
-				"suf_sitemap_label_darchives",
-				"suf_sitemap_label_tags",
-				"suf_sitemap_label_posts",
-				"suf_nr_lib_title",
-				"suf_nr_lib_curr_title",
-				"suf_nr_lib_unread_title",
-				"suf_nr_lib_completed_title",
-				"suf_nr_single_added_text",
-				"suf_nr_single_started_text",
-				"suf_nr_single_finished_text",
-				"suf_nr_wid_curr_title",
-				"suf_nr_wid_unread_title",
-				"suf_nr_wid_completed_title",
-				"suf_404_title",
-
-				"suf_seo_meta_description",
-				"suf_seo_meta_keywords",
-				"suf_uprof_post_info_content",
-				"suf_sbtab_custom_tab_1_contents",
-				"suf_sbtab_custom_tab_2_contents",
-				"suf_sbtab_custom_tab_3_contents",
-				"suf_sbtab_custom_tab_4_contents",
-				"suf_sbtab_custom_tab_5_contents",
-				"suf_sbtab_custom_tab_6_contents",
-				"suf_sbtab_custom_tab_7_contents",
-				"suf_sbtab_custom_tab_8_contents",
-				"suf_sbtab_custom_tab_9_contents",
-				"suf_sbtab_custom_tab_10_contents",
-				"suf_nr_no_books_text",
-				"suf_nr_lib_curr_text",
-				"suf_nr_lib_unread_text",
-				"suf_nr_lib_completed_text",
-				"suf_404_content",
-				"suf_footer_left",
-				"suf_footer_center"
-			);
-
-			if (is_admin()) {
-				global $suffusion_interactive_text_fields;
-				foreach ($suffusion_translatable_fields as $field) {
-					$display = $suffusion_interactive_text_fields[$field]."|$field";
-					wpml_register_string('suffusion-interactive', $display, $suffusion_unified_options[$field]);
-				}
-			}
+		if (function_exists('icl_t')) {
+			suffusion_set_translatable_fields();
 		}
 	}
 
@@ -314,4 +212,3 @@ class Suffusion {
 		return $this->content_layout;
 	}
 }
-?>

@@ -1,4 +1,4 @@
-body { background:  #000; color: #bbb; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+body { background-color: #000; color: #bbb; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 h1, h2, h3, h4, h5, h6 { font-family: Quattrocento, "Georgia", serif; color: #ccc; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1.posttitle, h2.posttitle, h1.posttitle a, h2.posttitle a, h1.posttitle a:visited, h2.posttitle a:visited { color: #ccc; }
 h3, h4, h5, h6 { font-weight: normal; }
@@ -133,6 +133,7 @@ h2.suf-mag-category-title { font-weight: normal; font-size: 140%; font-family: Q
 /*.post-format-icon { background-image: url(../../images/post-formats-2.png); margin-top: -75px; }*/
 .no-title .post-format-icon { margin-top: 0; }
 .author-profile, .info-tag, .info-category { background: transparent; border: none; }
+.author-description { padding: 0 10px; }
 
 ul.sidebar-tabs li a, .warea ul.sidebar-tabs li a { background-color: #000; color: #bbb; border-color: #444; }
 ul.sidebar-tabs li a.tab-current { background: #111 url(../../images/bg-black.png) repeat-x top left; color: #0af; }

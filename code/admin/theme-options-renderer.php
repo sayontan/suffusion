@@ -107,6 +107,7 @@ class Suffusion_Options_Renderer {
 	/**
 	 * Creates the closing markup for each option.
 	 *
+	 * @param $value
 	 * @return void
 	 */
 	function create_closing_tag($value) {
@@ -188,8 +189,9 @@ class Suffusion_Options_Renderer {
 	function create_section_for_select($value) {
 		global $suffusion_options;
 		$this->create_opening_tag($value);
+		$option_list = apply_filters('suffusion_admin_modify_option_list', $value['options'], $value['id']);
 		echo '<select name="suffusion_options['.$value['id'].']">'."\n";
-		foreach ($value['options'] as $option_value => $option_text) {
+		foreach ($option_list as $option_value => $option_text) {
 			$option_value = stripslashes($option_value);
 			echo "<option ";
 			if (isset($suffusion_options[$value['id']])) {
@@ -278,7 +280,8 @@ class Suffusion_Options_Renderer {
 	function create_section_for_radio($value) {
 		global $suffusion_options;
 		$this->create_opening_tag($value);
-		foreach ($value['options'] as $option_value => $option_text) {
+		$option_list = apply_filters('suffusion_admin_modify_option_list', $value['options'], $value['id']);
+		foreach ($option_list as $option_value => $option_text) {
 			$option_value = stripslashes($option_value);
 			if (isset($suffusion_options[$value['id']])) {
 				$checked = checked(stripslashes($suffusion_options[$value['id']]), $option_value, false);
@@ -1031,16 +1034,6 @@ class Suffusion_Options_Renderer {
 					}
 				}
 				echo "</tr>\n";
-/*				foreach ($stored_value as $stored_key => $stored_pairs) {
-					if (!isset($key_values[$stored_key])) {
-						unset($stored_value[$stored_key]);
-					}
-					else {
-						foreach ($associations as $association) {
-							//
-						}
-					}
-				}*/
 				$counter = 0;
 				$key_value_list = array();
 
@@ -1066,8 +1059,9 @@ class Suffusion_Options_Renderer {
 						}
 						switch ($association['type']) {
 							case 'select':
+								$option_list = apply_filters('suffusion_admin_modify_option_list', $association['options'], $value['id'], $association['name']);
 								echo "<select name='{$value['id']}-$key-{$association['name']}' id='{$value['id']}-$key-{$association['name']}' >\n";
-								foreach ($association['options'] as $choice_key => $choice_text) {
+								foreach ($option_list as $choice_key => $choice_text) {
 									echo "<option value='$choice_key' ".selected($to_check, $choice_key, false).">$choice_text</option>";
 								}
 								echo "</select>\n";
@@ -1127,35 +1121,6 @@ class Suffusion_Options_Renderer {
 		$this->create_closing_tag($value);
 	}
 
-	function get_template_element_universe() {
-		$universe = array(
-			'nav-top' => array(
-				'name' => 'Navigation Bar Above Header',
-			),
-			'header' => array(
-				'name' => 'Header',
-			),
-			'nav-below' => array(
-				'name' => 'Navigation Bar Below Header',
-			),
-			'featured-content' => array(
-				'name' => 'Featured Content',
-			),
-			'page-content' => array(
-				'name' => 'Page Content',
-			),
-			'posts' => array(
-				'name' => 'All Posts',
-			),
-			'breadcrumb' => array(
-				'name' => 'Breadcrumbs',
-			),
-			'post-pagination' => array(
-				'name' => 'Post Pagination',
-			),
-		);
-		return $universe;
-	}
 	/**
 	 * Takes the flat options array and converts it into a hierarchical array, with the root level, and subsequent nested levels.
 	 *
@@ -1590,7 +1555,6 @@ class Suffusion_Options_Renderer {
 				$options[$hidden_option] = esc_attr($hidden_value);
 			}
 		}
-		$options['pre-navt'] = $options['suf_navt_entity_order'];
 
 		foreach ($this->nested_options as $section => $children) {
 			if (isset($options['submit-'.$section])) {
@@ -1716,7 +1680,6 @@ class Suffusion_Options_Renderer {
 			echo "<h2 class='fix'><a href='#'><img src='".get_template_directory_uri()."/admin/images/remove.png' alt='Close' /></a>Save / Reset</h2>\n";
 			echo "<input name=\"suffusion_options[submit-{$section['id']}]\" type='submit' value=\"Save page '{$option_structure[$section['id']]['name']}'\" class=\"button suf-button-section\" />\n";
 			echo "<input name=\"suffusion_options[submit-{$section['id']}]\" type='submit' value=\"Reset page '{$option_structure[$section['id']]['name']}'\" class=\"button suf-button-section\" />\n";
-			//echo "<input name=\"suffusion_options[submit-{$section['id']}]\" type='submit' value=\"Save changes for '$group_name'\" class=\"button suf-button-sub-menu\" />\n";
 			echo "<input name=\"suffusion_options[submit-{$section['id']}]\" type='submit' value=\"Reset changes for '$group_name'\" class=\"button suf-button-sub-menu\" />\n";
 			echo "<input name=\"suffusion_options[submit-{$section['id']}]\" type='submit' value=\"Delete all theme options\" class=\"button suf-button-all\" />\n";
 			echo "</div><!-- suf-button-bar -->\n";

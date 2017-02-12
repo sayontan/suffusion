@@ -1,5 +1,5 @@
 <?php
-global $suffusion_help_texts, $suffusion_pointers;
+global $suffusion_help_texts;
 $suffusion_help_texts = array(
 	"skinning" => array("name" => "Skinning",
 		"category" => "skinning",
@@ -132,36 +132,5 @@ $suffusion_help_texts = array(
 					<td>Sidebar Configuration</td>
 				</tr>
 			</table>",
-	),
-);
-
-$suffusion_pointers = array(
-	'theme-options-layouts' => array(
-		'content' => "<h3>New in Suffusion 4.0.0</h3>".
-			"<ul class=\"margin-40\">".
-				"<li>Page templates (<em>1 Left Sidebar</em> etc) have been deprecated and moved to <em>Layouts</em> from <em>Templates</em>.</li>".
-				"<li>Excerpt / Tile / Mosaic / Line layout options have been moved to <em>Layouts</em> from <em>Other Graphical Elements</em>.</li>".
-				"<li>Typography options have been moved to <em>Typography</em> from <em>Skinning</em>.</li>".
-			"</ul>",
-		'position' => 'top',
-		'selector' => '#theme-options-layouts',
-	),
-	'suf-section-tabs-visual-effects' => array(
-		'content' => "<h3>Moved in Suffusion 4.0.0!</h3>".
-			"<ul class=\"margin-40\">".
-				"<li><em>Sizes and Margins</em>: moved to <em>Layouts &rarr; Default Sidebar Layout</em></li>".
-				"<li><em>Layout: Excerpt / List / Tile / Mosaic / Full</em>: moved to <em>Layouts</em></li>".
-			"</ul>",
-		'position' => 'left',
-		'selector' => '#suf-section-tabs-visual-effects',
-	),
-	'suf-section-tabs-sidebar-setup' => array(
-		'content' => "<h3>Moved in Suffusion 4.0.0!</h3>".
-			"<ul class=\"margin-40\">".
-				"<li>The <em>How many sidebars</em> options have moved to <em>Layouts</em></li>".
-				"<li>The <em>Sidebar 1</em> and <em>Sidebar 2</em> positioning options have moved to <em>Layouts &rarr; Default Sidebar Layout</em></li>".
-			"</ul>",
-		'position' => 'left',
-		'selector' => '#suf-section-tabs-sidebar-setup',
 	),
 );

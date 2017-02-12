@@ -748,7 +748,7 @@ $suffusion_templates_options = array(
 		"parent" => "att-template",
 		"grouping" => "image-settings",
 		"type" => "multi-select",
-		"options" => suffusion_get_formatted_options_array("suf_image_exif_pieces", array('file' => 'File Name',
+		"options" => suffusion_get_formatted_options_array(array('file' => 'File Name',
 			'width' => 'Width',
 			'height' => 'Height',
 			'created_timestamp' => "Date taken",
@@ -1003,7 +1003,7 @@ $suffusion_templates_options = array(
 	),
 
 	array("name" => "The \"Now Reading\" plugin templates",
-		"desc" => "If you have a site for book reviews the <a href='http://robm.me.uk/projects/plugins/wordpress/now-reading'>Now Reading plugin</a> is a gerat one to use.
+		"desc" => "If you have a site for book reviews the <a href='http://wordpress.org/extend/plugins/now-reading-reloaded/'>Now Reading Reloaded plugin</a> is a gerat one to use.
 		 	Suffusion has templates that support this plugin, which you can control here",
 		"parent" => "nr-template",
 		"type" => "blurb"
@@ -1353,7 +1353,7 @@ $suffusion_templates_options = array(
 			"all-row" => "All widgets in the same row in this widget area have the same height",
 			"all" => "All widgets in this widget area have the same height",
 			"original" => "No height adjustment",
-			"masonry" => "All widgets have their original heights, but use JQuery Masonry to position them",
+			"masonry" => "All widgets have their original heights, but use JQuery Masonry to position them (not responsive)",
 		),
 		"std" => "all-row"),
 
@@ -1410,7 +1410,7 @@ $suffusion_templates_options = array(
 			"all-row" => "All widgets in the same row in this widget area have the same height",
 			"all" => "All widgets in this widget area have the same height",
 			"original" => "No height adjustment",
-			"masonry" => "All widgets have their original heights, but use JQuery Masonry to position them",
+			"masonry" => "All widgets have their original heights, but use JQuery Masonry to position them (not responsive)",
 		),
 		"std" => "all-row"),
 
@@ -1467,7 +1467,7 @@ $suffusion_templates_options = array(
 			"all-row" => "All widgets in the same row in this widget area have the same height",
 			"all" => "All widgets in this widget area have the same height",
 			"original" => "No height adjustment",
-			"masonry" => "All widgets have their original heights, but use JQuery Masonry to position them",
+			"masonry" => "All widgets have their original heights, but use JQuery Masonry to position them (not responsive)",
 		),
 		"std" => "all-row"),
 
@@ -1524,7 +1524,7 @@ $suffusion_templates_options = array(
 			"all-row" => "All widgets in the same row in this widget area have the same height",
 			"all" => "All widgets in this widget area have the same height",
 			"original" => "No height adjustment",
-			"masonry" => "All widgets have their original heights, but use JQuery Masonry to position them",
+			"masonry" => "All widgets have their original heights, but use JQuery Masonry to position them (not responsive)",
 		),
 		"std" => "all-row"),
 
@@ -1581,7 +1581,7 @@ $suffusion_templates_options = array(
 			"all-row" => "All widgets in the same row in this widget area have the same height",
 			"all" => "All widgets in this widget area have the same height",
 			"original" => "No height adjustment",
-			"masonry" => "All widgets have their original heights, but use JQuery Masonry to position them",
+			"masonry" => "All widgets have their original heights, but use JQuery Masonry to position them (not responsive)",
 		),
 		"std" => "all-row"),
 

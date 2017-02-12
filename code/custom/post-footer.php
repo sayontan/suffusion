@@ -10,7 +10,8 @@
  * @subpackage Custom
  */
 
-global $suf_page_show_posted_by, $suf_page_show_comment, $post, $suf_page_meta_position;
+global $suf_page_show_posted_by, $suf_page_show_comment, $post, $suf_page_meta_position, $suf_byline_before_permalink, $suf_byline_after_permalink,
+       $suf_byline_before_category, $suf_byline_after_category, $suf_byline_before_tag, $suf_byline_after_tag;
 $format = suffusion_get_post_format();
 if ($format == 'standard') {
 	$format = '';
@@ -40,7 +41,9 @@ $post_with_title_show_perm = $$with_title_show_perm;
 $title = get_the_title();
 if (($post_show_perm == 'show-bleft' || $post_show_perm == 'show-bright') && (($title == '' || !$title) || (!($title == '' || !$title) && $post_with_title_show_perm != 'hide'))) {
 	$permalink_text = apply_filters('suffusion_permalink_text', __('Permalink', 'suffusion'));
-	echo "<span class='permalink'><span class='icon'>&nbsp;</span>".suffusion_get_post_title_and_link($permalink_text)."</span>\n";
+	$prepend = apply_filters('suffusion_before_byline_html', do_shortcode($suf_byline_before_permalink), 'permalink');
+	$append = apply_filters('suffusion_after_byline_html', do_shortcode($suf_byline_after_permalink), 'permalink');
+	echo "<span class='permalink'><span class='icon'>&nbsp;</span>".$prepend.suffusion_get_post_title_and_link($permalink_text).$append."</span>\n";
 }
 
 if ((!is_page() && $post_meta_position == 'corners' && ($post_show_posted_by == 'show' || $post_show_posted_by == 'show-bright')) ||
@@ -48,8 +51,10 @@ if ((!is_page() && $post_meta_position == 'corners' && ($post_show_posted_by == 
 	suffusion_print_author_byline();
 }
 if (!is_page() && $post_meta_position == 'corners' && ($post_show_cats == 'show-bleft' || $post_show_cats == 'show-bright')) {
-?>
-		<span class="category"><span class="icon">&nbsp;</span><?php the_category(', ') ?></span>
+	$prepend = apply_filters('suffusion_before_byline_html', do_shortcode($suf_byline_before_category), 'category');
+	$append = apply_filters('suffusion_after_byline_html', do_shortcode($suf_byline_after_category), 'category');
+	?>
+		<span class="category"><span class="icon">&nbsp;</span><?php echo $prepend; the_category(', '); echo $append; ?></span>
 <?php
 }
 if (!is_page()) {
@@ -95,8 +100,10 @@ else {
 if (!is_page() && $post_meta_position == 'corners' && ($post_show_tags == 'show' ||  $post_show_tags == 'show-bleft')) {
 	$tags = get_the_tags();
 	if (is_array($tags) && count($tags) > 0) {
-	?>
-		<span class="tags tax"><span class="icon">&nbsp;</span><?php the_tags(__('Tagged with: ', 'suffusion'),', ','<br />'); ?></span>
+		$prepend = apply_filters('suffusion_before_byline_html', do_shortcode($suf_byline_before_tag), 'tag');
+		$append = apply_filters('suffusion_after_byline_html', do_shortcode($suf_byline_after_tag), 'tag');
+		?>
+		<span class="tags tax"><span class="icon">&nbsp;</span><?php the_tags($prepend, ', ', $append); ?></span>
 	<?php
 	}
 }

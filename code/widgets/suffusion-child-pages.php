@@ -14,7 +14,7 @@ class Suffusion_Child_Pages extends WP_Widget {
 			'description' => __("A widget for displaying child pages of a given page.", "suffusion"));
 
 		$control_ops = array('width' => 650);
-		$this->WP_Widget("suf-child-pages", __("Child Pages", "suffusion"), $widget_ops, $control_ops);
+		parent::__construct("suf-child-pages", __("Child Pages", "suffusion"), $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance) {

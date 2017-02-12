@@ -1,14 +1,3 @@
-/* Copyright (c) 2006 Brandon Aaron (http://brandonaaron.net)
- * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
- * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
- *
- * $LastChangedDate: 2007-06-19 20:25:28 -0500 (Tue, 19 Jun 2007) $
- * $Rev: 2111 $
- *
- * Version 2.1
- */
-(function($){$.fn.bgIframe=$.fn.bgiframe=function(s){if($.browser.msie&&parseInt($.browser.version)<=6){s=$.extend({top:'auto',left:'auto',width:'auto',height:'auto',opacity:true,src:'javascript:false;'},s||{});var prop=function(n){return n&&n.constructor==Number?n+'px':n;},html='<iframe class="bgiframe"frameborder="0"tabindex="-1"src="'+s.src+'"'+'style="display:block;position:absolute;z-index:-1;'+(s.opacity!==false?'filter:Alpha(Opacity=\'0\');':'')+'top:'+(s.top=='auto'?'expression(((parseInt(this.parentNode.currentStyle.borderTopWidth)||0)*-1)+\'px\')':prop(s.top))+';'+'left:'+(s.left=='auto'?'expression(((parseInt(this.parentNode.currentStyle.borderLeftWidth)||0)*-1)+\'px\')':prop(s.left))+';'+'width:'+(s.width=='auto'?'expression(this.parentNode.offsetWidth+\'px\')':prop(s.width))+';'+'height:'+(s.height=='auto'?'expression(this.parentNode.offsetHeight+\'px\')':prop(s.height))+';'+'"/>';return this.each(function(){if($('> iframe.bgiframe',this).length==0)this.insertBefore(document.createElement(html),this.firstChild);});}return this;};if(!$.browser.version)$.browser.version=navigator.userAgent.toLowerCase().match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/)[1];})(jQuery);
-
 /*************************************************
 **  jQuery Masonry version v2.1.04
 **  Copyright David DeSandro, licensed MIT
@@ -35,30 +24,150 @@
 h;c++;for(h=b.charAt(c);h in d.punctuationRight;){c++;i+=k("Right",h,d);h=b.charAt(c)}j.pr=i;j.slicePoint=c;f=j;f.node=a;f.val=e;return f}}this.each(function(){var a,d,b,e,f=this;a=g(this);var i=g.extend({},g.fn.fancyletter.defaults,m||{},g.metadata?a.metadata():g.meta?a.data():{}),c=RegExp(i.characters);e=l(f,i);if(e.firstChar){a=e.val;f=e.node;d=e.firstChar;b=d.toLowerCase();if(c.test(d)){c=g("<span></span>");f.nodeValue=a.slice(e.slicePoint);c.html(e.pl+d+e.pr);c.addClass(i.commonClass+" "+i.ltrClassPrefix+
 b);c.prependTo(this)}}});return this};g.fn.fancyletter.defaults={commonClass:"fancy-letter",ltrClassPrefix:"ltr-",characters:"[a-zA-Z0-9]",groupPunctuation:true,punctuationClass:"punct",punctuationLeft:{'"':"dquo","'":"squo","\u201c":"ldquo","\u2018":"lsquo","\u00ab":"laquo","\u2039":"lsaquo","(":"lparen"},punctuationRight:{'"':"dquo","'":"squo","\u201d":"rdquo","\u2019":"rsquo","\u00bb":"raquo","\u203a":"rsaquo",")":"rparen"}}})(jQuery);
 
+/*!
+ * http://tinynav.viljamis.com v1.03 by @viljamis
+ * Licensed under the MIT license.
+ */
+(function ($, window) {
+	$.fn.tinyNav = function (options) {
+
+		// Default settings
+		var settings = $.extend({
+			'active' : 'selected', // String: Set the "active" class
+			'header' : false // Boolean: Show header instead of the active item
+		}, options);
+
+		var idx = 0;
+
+		return this.each(function () {
+			// Used for namespacing
+			idx++;
+
+			var $nav = $(this),
+			// Namespacing
+				namespace = 'tinynav',
+				namespace_i = namespace + idx,
+				l_namespace_i = '.l_' + namespace_i,
+				$select = $('<select/>').addClass(namespace + ' ' + namespace_i);
+
+			if ($nav.is('ul,ol')) {
+				if (settings.header) {
+					$select.append(
+						$('<option/>').text('Navigation')
+					);
+				}
+
+				// Build options
+				var options = '';
+				$nav
+					.addClass('l_' + namespace_i)
+					.find('a')
+					.each(function () {
+						options += '<option value="' + $(this).attr('href') + '">';
+						for (var j = 0; j < $(this).parents('ul, ol').length - 1; j++) {
+							options += '&mdash; ';
+						}
+						options +=	$(this).text() + '</option>';
+					});
+
+				// Append options into a select
+				$select.append(options);
+
+				var selectors = settings.active.split(',');
+				var index_selectors = new Array();
+				for (var i=0; i<selectors.length; i++) {
+					index_selectors[i] = l_namespace_i + ' li.' + selectors[i];
+				}
+				index_selectors = index_selectors.join(',');
+				// Select the active item
+				if (!settings.header) {
+					$select
+						.find(':eq(' + $(l_namespace_i + ' li')
+						.index($(index_selectors)) + ')')
+						.attr('selected', true);
+				}
+
+				// Change window location
+				$select.change(function () {
+					window.location.href = $(this).val();
+				});
+
+				// Inject select
+				$(l_namespace_i).after($select);
+
+			}
+
+		});
+
+	};
+})(jQuery, this, 0);
+
+/*
+ * Based on the public domain "Responsive Cycle SlideShow" by M. Mikkel Rummelhoff (http://mmikkel.no)
+ * Modifications by Sayontan Sinha
+ */
+(function(window){
+	ResponsiveSlideShow.prototype.id = '';
+	ResponsiveSlideShow.prototype.$container = null;
+	ResponsiveSlideShow.prototype.$slides = null;
+	ResponsiveSlideShow.prototype.orgWidth = -1;
+	ResponsiveSlideShow.prototype.orgHeight = -1;
+	ResponsiveSlideShow.prototype.activeSlideIndex = 0;
+	ResponsiveSlideShow.prototype.options = {
+		fx:'fade',
+		speed:'fast',
+		slideResize:0
+	};
+
+	function ResponsiveSlideShow($container, $slides, $options) {
+		this.$container = $container;
+		this.$slides = this.$container.children($slides + ':first');
+		this.options = $options;
+		this.init();
+	}
+
+	ResponsiveSlideShow.prototype.init = function()	{
+		this.id = this.$container.attr('id');
+		// Check if there's a nav or pager element present
+		this.options.startingSlide = this.activeSlideIndex;
+		this.options.width = this.$container.width();
+		this.options.before = onSlideChange;
+		// Init slideshow
+		this.$slides.show();
+		this.$slides.cycle(this.options);
+		// Get original dimensions
+		if(this.orgWidth <= 0){
+			this.orgWidth = this.$slides.width();
+			this.orgHeight = this.$slides.height();
+		}
+	}
+
+	// Call when width changes
+	ResponsiveSlideShow.prototype.update = function() {
+		if(this.$slides.width() !== this.$container.width()){ // Container width changed. Rebuild slideshow
+			// Get the resize ratio
+			var ratio = (Math.floor((this.$container.width() / this.orgWidth)*100))*.01;
+			this.$slides.height(Math.floor(this.orgHeight * ratio));
+			this.activeSlideIndex = this.$slides.find('.active').index();
+			this.$slides.hide().cycle('destroy');
+			this.init();
+		}
+	}
+
+	function onSlideChange(currSlide,nextSlide) {
+		jQuery(this).parent().find('.active').removeClass('active');
+		jQuery(this).addClass('active');
+	}
+
+	window.ResponsiveSlideShow = ResponsiveSlideShow;
+
+}(window)); // End ResponsiveSlideShow
+
 /**
  * suffusion.js - Contains all custom JavaScript functions required by Suffusion
  */
 
 $j = jQuery.noConflict();
-
-/**
- * jQuery.support.cssProperty
- * To verify that a CSS property is supported (or any of its browser-specific implementations)
- *
- * @param string p - css property name
- * [@param] bool rp - optional, if set to true, the css property name will be returned, instead of a boolean support indicator
- *
- * @Author: Axel Jack Fuchs (Cologne, Germany)
- * @Date: 08-29-2010 18:43
- *
- * Example: $.support.cssProperty('boxShadow');
- * Returns: true
- *
- * Example: $.support.cssProperty('boxShadow', true);
- * Returns: 'MozBoxShadow' (On Firefox4 beta4)
- * Returns: 'WebkitBoxShadow' (On Safari 5)
- */
-$j.support.cssProperty=function(){function a(a,b){var c=document.body||document.documentElement,d=c.style;if(typeof d=="undefined"){return false}if(typeof d[a]=="string"){return b?a:true}v=["Moz","Webkit","Khtml","O","ms","Icab"],a=a.charAt(0).toUpperCase()+a.substr(1);for(var e=0;e<v.length;e++){if(typeof d[v[e]+a]=="string"){return b?v[e]+a:true}}}return a}();
 
 $j.fn.extend({
 	highlight: function(search, insensitive, hls_class){
@@ -230,7 +339,7 @@ $j(document).ready(function() {
 
 	$j("ul.sf-menu .dd-tab li.current_page_item > a, ul.sf-menu .dd-tab li.current-cat > a, ul.sf-menu .dd-tab li.current-menu-item > a, " +
 			"ul.sf-menu li.current_page_item.dd-tab > a, ul.sf-menu li.current-cat.dd-tab > a, ul.sf-menu li.current-menu-item.dd-tab > a, " +
-			"ul.sf-menu li.current_page_item.regular-tab > a, ul.sf-menu li.current-cat.regular-tab > a, ul.sf-menu li.current-menu-item.regular-tab > a,").each(function() {
+			"ul.sf-menu li.current_page_item.regular-tab > a, ul.sf-menu li.current-cat.regular-tab > a, ul.sf-menu li.current-menu-item.regular-tab > a").each(function() {
 		$j(this).addClass('current');
 	});
 
@@ -240,46 +349,47 @@ $j(document).ready(function() {
 	});
 
 	$j("#nav ul.sf-menu .dd-tab, #nav ul.sf-menu .dd-tab li").hover(
-			function() {
-				if (Suffusion_JS.suf_nav_effect == 'fade') {
-					$j(this).children('ul:first').fadeIn(Suffusion_JS.suf_nav_delay).css({visibility: "visible"});
-				}
-				else {
-					$j(this).children('ul:first').show(Suffusion_JS.suf_nav_delay).css({visibility: "visible"});
-				}
-			},
-			function() {
-				$j(this).children('ul:first').hide();
-				$j(this).find('ul:first').css({visibility: "hidden"});
-			}).bgIframe({opacity: 'show'});
+		function() {
+			if (Suffusion_JS.suf_nav_effect == 'fade') {
+				$j(this).children('ul:first').fadeIn(Suffusion_JS.suf_nav_delay).css({visibility: "visible"});
+			}
+			else {
+				$j(this).children('ul:first').show(Suffusion_JS.suf_nav_delay).css({visibility: "visible"});
+			}
+		},
+		function() {
+			$j(this).children('ul:first').hide();
+			$j(this).find('ul:first').css({visibility: "hidden"});
+		}
+	);
 
 	$j("#nav-top ul.sf-menu .dd-tab, #nav-top ul.sf-menu .dd-tab li").hover(
-			function() {
-				if (Suffusion_JS.suf_navt_effect == 'fade') {
-					$j(this).find('ul:first').fadeIn(Suffusion_JS.suf_navt_delay).css({visibility: "visible"});
-				}
-				else {
-					$j(this).find('ul:first').show(Suffusion_JS.suf_navt_delay).css({visibility: "visible"});
-				}
-			},
-			function() {
-				$j(this).children('ul:first').hide();
-				$j(this).find('ul:first').css({visibility: "hidden"});
-			}).bgIframe({opacity: 'show'});
+		function() {
+			if (Suffusion_JS.suf_navt_effect == 'fade') {
+				$j(this).find('ul:first').fadeIn(Suffusion_JS.suf_navt_delay).css({visibility: "visible"});
+			}
+			else {
+				$j(this).find('ul:first').show(Suffusion_JS.suf_navt_delay).css({visibility: "visible"});
+			}
+		},
+		function() {
+			$j(this).children('ul:first').hide();
+			$j(this).find('ul:first').css({visibility: "hidden"});
+		}
+	);
 
 	// Expand Panel
 	$j("#top-bar-right-spanel-tab .open").click(function(){
 		$j("#top-bar-right-spanel").slideDown("medium");
+		$j(this).css({ display: 'none' });
+		$j("#top-bar-right-spanel-tab .close").css({ display: 'block' });
 		return false;
 	});
 	// Collapse Panel
 	$j("#top-bar-right-spanel-tab .close").click(function(){
 		$j("#top-bar-right-spanel").slideUp("medium");
-		return false;
-	});
-	// Switch buttons from "Log In | Register" to "Close Panel" on click
-	$j("#top-bar-right-spanel-tab .toggle a").click(function () {
-		$j("#top-bar-right-spanel-tab .toggle a").toggle();
+		$j(this).css({ display: 'none' });
+		$j("#top-bar-right-spanel-tab .open").css({ display: 'block' });
 		return false;
 	});
 
@@ -370,7 +480,7 @@ $j(document).ready(function() {
 		var parents = $j(this).parents();
 		for (var i=0; i<parents.length; i++) {
 			var parent = parents[i];
-			if ($j(parent).hasClass('suf-tile-row')) {
+			if ($j(parent).hasClass('suf-tiles') || $j(parent).hasClass('suf-mag-excerpts')) {
 				$j(parents[i-1]).css({
 					'min-height': 0
 				});
@@ -395,8 +505,9 @@ $j(document).ready(function() {
 		$j(this).css({top: height + 'px'});
 	});
 
+	var staticSlideShow;
 	$j('#sliderContent').each(function() {
-		$j(this).cycle({
+		staticSlideShow = new ResponsiveSlideShow($j('#slider'), '#sliderContent', {
 			fx: Suffusion_JS.suf_featured_fx,
 			timeout: Suffusion_JS.suf_featured_interval,
 			speed: Suffusion_JS.suf_featured_transition_speed,
@@ -405,9 +516,11 @@ $j(document).ready(function() {
 			pager: '#sliderPager',
 			prev: 'a.sliderPrev',
 			next: 'a.sliderNext',
+			slideResize: 0,
 			pagerAnchorBuilder: suffusion_anchor_builder
 		});
 	});
+
 	$j('a.sliderPause').click(
 		function() {
 			if ($j(this).text() == Suffusion_JS.suf_featured_pause) {
@@ -499,13 +612,13 @@ $j(document).ready(function() {
 		$j(Suffusion_JS.suf_show_drop_caps).fancyletter();
 	}
 
-	$j(".exif-button .open").live('click', function(){
+	$j(".exif-button .open").on('click', function(){
 		$j(".exif-panel").slideDown("medium");
 		$j(this).removeClass('open').addClass('close');
 		return false;
 	});
 	// Collapse Panel
-	$j(".exif-button .close").live('click', function(){
+	$j(".exif-button .close").on('click', function(){
 		$j(".exif-panel").slideUp("medium");
 		$j(this).removeClass('close').addClass('open');
 		return false;
@@ -602,65 +715,29 @@ $j(document).ready(function() {
 		}
 	});
 
-	$j('.cl-warea').each(function() {
-		var children = $j(this).children('.cl-widget');
-		var len = children.length;
-		var wareaColumns = 0;
-		for (var k=1; k<=10; k++) {
-			if ($j(this).hasClass('cl-warea-' + k)) {
-				wareaColumns = k;
-				break;
-			}
-		}
-		if (wareaColumns <= len && !$j(this).hasClass('cl-warea-masonry') && !$j(this).hasClass('cl-warea-all')) {
-			var rows = Math.ceil(len / wareaColumns);
-			for (var j=1; j<=rows; j++) {
-				$j(this).append("<div class='cl-warea-row cl-warea-row-" + j + " fix'></div>");
-			}
-		}
-
-		if ($j(this).hasClass('cl-warea-all-row') || $j(this).hasClass('cl-warea-all') || $j(this).hasClass('mm-row-equal')) {
-			for (var m = 0; m * wareaColumns < children.length; m = m + 1) {
-				var slice = children.slice(m * wareaColumns, (m + 1) * wareaColumns);
-				if (!$j(this).hasClass('mm-row-equal')) {
-					$j(this).children('.cl-warea-row-' + (m + 1)).append($j(slice));
-				}
-			}
-		}
-	});
-
 	$j(window).resize(function() {
-		if (!$j.support.cssProperty('columnCount')) {
-			suffusion_balance_widths('.suf-tile-row, .cl-warea, .mm-row-equal');
+		if (typeof staticSlideShow != 'undefined') {
+			staticSlideShow.update();
+			$j('.controller-icons #sliderControl').css({
+				top: '-' + ($j('#sliderContent').height() / 2) + 'px'
+			});
 		}
-		suffusion_balance_heights('.suf-tile-row, .cl-warea, .mm-row-equal');
-		suffusion_balance_widths('.cl-warea-masonry');
-/*
-		$j('.cl-warea-masonry').masonry({
-			columnWidth: function(containerWidth) {
-				return containerWidth / 3;
-			}
-		});
-*/
+		suffusion_balance_heights('.suf-tiles, .suf-mag-excerpts, .suf-mag-categories, .cl-warea, .mm-row-equal');
 	});
 
-	if (!$j.support.cssProperty('columnCount')) {
-		suffusion_balance_widths('.suf-tile-row, .cl-warea, .mm-row-equal');
-	}
-	suffusion_balance_heights('.suf-tile-row, .cl-warea, .mm-row-equal');
-	suffusion_balance_widths('.cl-warea-masonry');
-/*
-	$j('.cl-warea-masonry').masonry({
-		columnWidth: function(containerWidth) {
-			return containerWidth / 3;
+	$j(function() {
+		if (typeof staticSlideShow != 'undefined') {
+			//staticSlideShow.update();
+			$j('.controller-icons #sliderControl').css({
+				top: '-' + ($j('#sliderContent').height() / 2) + 'px'
+			});
 		}
+		suffusion_balance_heights('.suf-tiles, .suf-mag-excerpts, .suf-mag-categories, .cl-warea, .mm-row-equal');
 	});
-*/
 
-	$j('.suf-tile-image').each(function() {
-		$j(this).css({
-			'max-width': $j(this).parent().innerWidth() - 16
-		});
+	$j(".sf-menu").tinyNav({
+		active: 'current_page_item,current-cat,current-menu-item', // Set the "active" class
+		header: false // Show header instead of the active item
 	});
 
 	function suffusion_anchor_builder(idx, slide) {
@@ -695,19 +772,29 @@ $j(document).ready(function() {
 		$j(selector).each(function() {
 			var children = $j(this).find('.suf-tile, .suf-mag-excerpt, .suf-mag-category, .cl-widget, .mm-widget');
 			var wareaColumns = 0;
-			if ($j(this).hasClass('cl-warea') || $j(this).hasClass('mm-row-equal')) {
-				for (var k=1; k<=10; k++) {
-					if ($j(this).hasClass('cl-warea-' + k) || $j(this).hasClass('mm-row-' + k)) {
+			if ($j(this).hasClass('cl-warea') || $j(this).hasClass('mm-row-equal') || $j(this).hasClass('suf-tiles')) {
+				var baseline = 10 < children.length ? 10 : children.length;
+				for (var k = 0; k < baseline; k++) {
+					if (k != 0 && $j(children[k-1]).position().top != $j(children[k]).position().top) {
 						wareaColumns = k;
 						break;
 					}
 				}
+
+				if (wareaColumns == 0) {
+					for (var k=1; k<=10; k++) {
+						if ($j(this).hasClass('cl-warea-' + k) || $j(this).hasClass('mm-row-' + k) || $j(this).hasClass('suf-tiles-' + k)) {
+							wareaColumns = k;
+							break;
+						}
+					}
+				}
 			}
 
-			if ($j(this).hasClass('cl-warea-all-row') || $j(this).hasClass('cl-warea-all') || $j(this).hasClass('mm-row-equal')) {
+			if ($j(this).hasClass('cl-warea-all-row') || $j(this).hasClass('cl-warea-all') || $j(this).hasClass('mm-row-equal') || $j(this).hasClass('suf-tiles')) {
 				for (var m = 0; m * wareaColumns < children.length; m = m + 1) {
 					var slice = children.slice(m * wareaColumns, (m + 1) * wareaColumns);
-					if ($j(this).hasClass('cl-warea-all-row') || $j(this).hasClass('mm-row-equal')) {
+					if ($j(this).hasClass('cl-warea-all-row') || $j(this).hasClass('mm-row-equal') || $j(this).hasClass('suf-tiles')) {
 						suffusion_make_tiles_equal(slice);
 					}
 				}
@@ -716,147 +803,17 @@ $j(document).ready(function() {
 				}
 			}
 			else if ($j(this).hasClass('cl-warea-masonry')) {
-//				$j(this).masonry();
-				$j(this).masonry({
-					itemSelector: '.cl-widget'
-				});
-			}
-			suffusion_make_tiles_equal($j(this).children('.suf-tile, .suf-mag-excerpt, .suf-mag-category'));
-		});
-	}
-
-	function suffusion_balance_widths(selector) {
-		$j(selector).each(function() {
-			var children = $j(this).find('.suf-tile, .suf-mag-excerpt, .suf-mag-category, .cl-widget, .mm-widget');
-			var len = children.length;
-			var wareaColumns = 0;
-			if ($j(this).hasClass('cl-warea') || $j(this).hasClass('mm-row-equal') || $j(this).hasClass('suf-tile-row')) {
-				for (var k=1; k<=10; k++) {
-					if ($j(this).hasClass('cl-warea-' + k) || $j(this).hasClass('mm-row-' + k) || $j(this).hasClass('suf-tile-row-' + k + '-cols')) {
-						len = k;
-						wareaColumns = k;
-						break;
-					}
-				}
-			}
-
-			var widths = [
-				'100%',	// 0
-				'100%',	// 1
-				'49%',	// 2
-				'32%',	// 3
-				'24%',	// 4
-				'19%',	// 5
-				'16%',	// 6
-				'13%',	// 7
-				'12%',	// 8
-				'10.5%',// 9
-				'9.5%'	// 10
-			];
-
-			$j(children).css({
-				'width': widths[wareaColumns]
-			});
-			var splits = len * 2 - 2;
-
-			var singleWidth, widthDiff, splitWidth, masonMargin;
-			masonMargin = 0;
-
-			if (len > 0 && !$j(this).hasClass('mm-row-equal')) {
-				if (len > 1) {
-					$j(children[0]).css({
-						'margin-left': 0
-					});
-					if (len == wareaColumns && !$j(this).hasClass('cl-warea-masonry')) {
-						$j(children[len - 1]).css({
-							'margin-right': 0
-						});
-					}
-				}
-
-				if (len == 1) {
-					var widthDiff1C = $j(children[0]).outerWidth() - $j(children[0]).innerWidth() + 2;
-					$j(children[0]).css({
-						width: Math.floor($j(this).outerWidth()) - widthDiff1C
-					});
-				}
-
-				if (len > 1) {
-					if (len == wareaColumns && !$j(this).hasClass('cl-warea-masonry')) {
-						$j(children[len - 1]).css({
-							'float': 'right'
-						});
-					}
-					singleWidth = $j(children[0]).outerWidth() + 1; // Adding a pixel to adjust for corner cases.
-					widthDiff = $j(this).parent().innerWidth() - singleWidth * len;
-					splitWidth = Math.floor(widthDiff / splits);
-					masonMargin = splitWidth * 2;
-
-					for (var i=0; i<len - 1; i++) {
-						$j(children[i]).css({
-							'margin-right': splitWidth,
-							'float': 'left'
-						});
-						if ($j(this).hasClass('cl-warea-masonry')) {
-							$j(children[i]).css({
-								'margin-left': splitWidth
-							});
-						}
-					}
-					for (var j=len-1; j>0; j--) {
-						$j(children[j]).css({
-							'margin-left': splitWidth
-						});
-						if ($j(this).hasClass('cl-warea-masonry')) {
-							$j(children[j]).css({
-								'margin-right': splitWidth
-							});
-						}
-					}
-				}
-			}
-
-			if ($j(this).hasClass('cl-warea-all-row') || $j(this).hasClass('cl-warea-all') || $j(this).hasClass('mm-row-equal')) {
-				for (var m = 0; m * wareaColumns < children.length; m = m + 1) {
-					var slice = children.slice(m * wareaColumns, (m + 1) * wareaColumns);
-					if (!$j(this).hasClass('mm-row-equal')) {
-						$j(slice[0]).css({
-							'margin-left': 0,
-							'float': 'left'
-						});
-						if (slice.length - 1 != 0 && slice.length == wareaColumns) {
-							$j(slice[slice.length - 1]).css({
-								'margin-right': 0,
-								'float': 'right'
-							});
-						}
-
-						if (slice.length > 1) {
-							singleWidth = $j(slice[0]).outerWidth() + 1;
-							widthDiff = $j(this).parent().innerWidth() - singleWidth * len;
-							splitWidth = Math.floor(widthDiff / splits);
-
-							for (var i=0; i<slice.length - 1; i++) {
-								$j(slice[i]).css({
-									'margin-right': splitWidth,
-									'float': 'left'
-								});
-							}
-							for (var j=slice.length-1; j>0; j--) {
-								$j(slice[j]).css({
-									'margin-left': splitWidth
-								});
-							}
-						}
-					}
-				}
-			}
-			else if ($j(this).hasClass('cl-warea-masonry')) {
 				$j(this).masonry({
 					itemSelector: '.cl-widget',
-					gutterWidth: masonMargin
+					columnWidth: function(containerWidth) {
+						if (wareaColumns == 0) {
+							return containerWidth;
+						}
+						return containerWidth/wareaColumns;
+					}
 				});
 			}
+			suffusion_make_tiles_equal($j(this).children('.suf-mag-excerpt, .suf-mag-category'));
 		});
 	}
 });

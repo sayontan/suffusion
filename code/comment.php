@@ -10,7 +10,7 @@
 
 global $post, $comment
 ?>
-	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
+	<li id="comment-<?php comment_ID(); ?>" <?php comment_class('plain-nested'); ?>>
 		<?php suffusion_before_comment(); ?>
 		<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
 			<div class="comment-author fix vcard">

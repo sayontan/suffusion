@@ -26,56 +26,18 @@ if ($suf_wa_sb1_style != 'tabbed') {
 <?php
 	if (!dynamic_sidebar()) {
 		if ($suf_sidebar_1_def_widgets == 'show') {
-?>
-	<!--widget start -->
-	<div id="categories" class="dbx-box suf-widget widget_categories">
-	  <div class="dbx-content">
-	  <h3 class="dbx-handle <?php echo $suf_sidebar_header;?>"><?php _e('Categories', 'suffusion'); ?></h3>
-	    <ul>
-	      <?php wp_list_categories(array('show_count' => true, 'title_li' => null)); ?>
-	    </ul>
-	  </div>
-	</div>
-	<!--widget end -->
+			$before_after_args = array(
+				'after_widget' => '</div></aside><!--widget end -->',
+				'before_title' => '<h3 class="dbx-handle '.$suf_sidebar_header.'">',
+				'after_title' => '</h3>'
+			);
 
-	<!--widget start -->
-	<div id="archives" class="dbx-box suf-widget widget_archive">
-	  <div class="dbx-content">
-	  <h3 class="dbx-handle <?php echo $suf_sidebar_header;?>"><?php _e('Archives', 'suffusion'); ?></h3>
-	    <ul>
-	      <?php wp_get_archives('type=monthly'); ?>
-	    </ul>
-	  </div>
-	</div>
-	<!--widget end -->
-
-	<!--widget start -->
-	<div id="links" class="dbx-box suf-widget">
-	  <div class="dbx-content">
-	  <h3 class="dbx-handle <?php echo $suf_sidebar_header;?>"><?php _e('Links', 'suffusion'); ?></h3>
-	    <ul>
-	      <?php wp_list_bookmarks(array('categorize' => false, 'orderby' => 'id', 'order' => 'ASC', 'title_li' => null)); ?>
-	    </ul>
-	  </div>
-	</div>
-	<!--widget end -->
-
-	<!--widget start -->
-	<div id="meta" class="dbx-box suf-widget">
-	  <div class="dbx-content">
-	  <h3 class="dbx-handle <?php echo $suf_sidebar_header;?>"><?php _e('Meta', 'suffusion'); ?></h3>
-	    <ul>
-			  <?php wp_register(); ?>
-			  <li class="login"><?php wp_loginout(); ?></li>
-			  <?php wp_meta(); ?>
-				  <li class="rss"><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Entries (RSS)', 'suffusion'); ?></a></li>
-	        <li class="rss"><a href="<?php bloginfo('comments_rss2_url'); ?>"><?php _e('Comments (RSS)', 'suffusion'); ?></a></li>
-	        <li class="wordpress"><a href="http://www.wordpress.org" title="Powered by WordPress">WordPress</a></li>
-	    </ul>
-	  </div>
-	</div>
-	<!--widget end -->
-<?php
+			$before_after_args['before_widget'] = '<!--widget start --><aside id="categories" class="dbx-box suf-widget widget_categories"><div class="dbx-content">';
+			the_widget('WP_Widget_Categories', array('count' => 1), $before_after_args);
+			$before_after_args['before_widget'] = '<!--widget start --><aside id="archives" class="dbx-box suf-widget widget_archive"><div class="dbx-content">';
+			the_widget('WP_Widget_Archives', array('count' => 1), $before_after_args);
+			$before_after_args['before_widget'] = '<!--widget start --><aside id="meta" class="dbx-box suf-widget"><div class="dbx-content">';
+			the_widget('WP_Widget_Meta', array(), $before_after_args);
 		}
 	}
 ?>
@@ -93,4 +55,3 @@ else {
 </div><!--/sidebar -->
 <?php
 }
-?>

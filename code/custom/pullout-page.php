@@ -9,7 +9,7 @@
  * @subpackage Custom
  */
 
-global $post, $suf_page_meta_position, $suf_page_show_posted_by, $suf_page_show_comment;
+global $post, $suf_page_meta_position, $suf_page_show_posted_by, $suf_page_show_comment, $suf_byline_before_edit, $suf_byline_after_edit;
 
 $page_meta_position = apply_filters('suffusion_pullout_position', $suf_page_meta_position);
 if ($page_meta_position == 'corners') {
@@ -32,11 +32,12 @@ if ($suf_page_show_comment != 'hide') {
 }
 
 if (get_edit_post_link() != '') {
+	$prepend = apply_filters('suffusion_before_byline_html', do_shortcode($suf_byline_before_edit), 'edit');
+	$append = apply_filters('suffusion_after_byline_html', do_shortcode($suf_byline_after_edit), 'edit');
 	echo "<li><span class='edit'><span class='icon'>&nbsp;</span>";
-	edit_post_link(__('Edit', 'suffusion'), '', '');
+	edit_post_link(__('Edit', 'suffusion'), $prepend, $append);
 	echo "</span></li>\n";
 }
 
 echo "</ul>\n";
 echo "</div>\n";
-?>

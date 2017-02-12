@@ -221,7 +221,8 @@ register_sidebar(array(
 	'name' => 'Sidebar 1',
 	'id' => 'sidebar-1',
 	"description" => "This is the default sidebar. If only one sidebar is selected in the theme options, this is the one displayed.
-                    It can be placed on the left or right side. In case two sidebars are selected and both are on the same side, this is the outer sidebar.",
+                    It can be placed on the left or right side. In case two sidebars are selected and both are on the same side, this is the outer sidebar.
+                    If you are seeing no widgets here and your site is still showing widgets, go to Appearance &rarr; Suffusion Options &rarr; Sidebars &rarr; Sidebar 1 &rarr; Default widgets for first sidebar, and hide the widgets from there.",
 	'before_widget' => $sidebar_definitions['sidebar-1'][$sb_style]['before_widget'],
 	'after_widget' => $sidebar_definitions['sidebar-1'][$sb_style]['after_widget'],
 	'before_title' => $sidebar_definitions['sidebar-1'][$sb_style]['before_title'],
@@ -311,7 +312,7 @@ register_sidebar(array(
 	'after_title' => $sidebar_definitions['sidebar-1'][$sb_style]['after_title'],
 ));
 
-global $suf_wah_columns;
+global $suf_wah_columns, $suf_wih_columns;
 register_sidebar(array(
 	"name" => "Widgets Above Header",
 	'id' => 'sidebar-11',
@@ -326,7 +327,7 @@ register_sidebar(array(
 	"name" => "Header Widgets",
 	'id' => 'sidebar-12',
 	"description" => "This appears in the header container and is ideal for small ads or prominent links like subscription links.",
-	"before_widget" => '<!-- widget start --><div id="%1$s" class="%2$s suf-widget">',
+	"before_widget" => '<!-- widget start --><div id="%1$s" class="%2$s suf-widget suf-widget-'.$suf_wih_columns.'c">',
 	"after_widget" => '</div><!-- widget end -->',
 	"before_title" => '<h3>',
 	"after_title" => '</h3>'
@@ -409,19 +410,21 @@ register_sidebar(array (
 	'after_title' => $sidebar_definitions['left-header-widgets'][$sidebar_style]['after_title'],
 ));
 
-$adhoc_count = apply_filters('suffusion_adhoc_count', 5);
-for ($i = 1; $i <= $adhoc_count; $i++) {
-	$adhoc_columns = "suf_adhoc{$i}_columns";
-	global $$adhoc_columns;
-	register_sidebar(array(
-		"name" => "Ad Hoc Widgets $i",
-		'id' => 'sidebar-'.(12 + $i),
-		"description" => "This is an ad-hoc widget area that can be invoked with the short code [suffusion-widgets id='$i'].",
-		"before_widget" => '<!-- widget start --><aside id="%1$s" class="%2$s suf-widget suf-widget-'.$$adhoc_columns.'c">',
-		"after_widget" => '</aside><!-- widget end -->',
-		"before_title" => '<h3>',
-		"after_title" => '</h3>'
-	));
+if (!class_exists('Suffusion_Shortcodes')) {
+	$adhoc_count = apply_filters('suffusion_adhoc_count', 5);
+	for ($i = 1; $i <= $adhoc_count; $i++) {
+		$adhoc_columns = "suf_adhoc{$i}_columns";
+		global $$adhoc_columns;
+		register_sidebar(array(
+			"name" => "Ad Hoc Widgets $i",
+			'id' => 'sidebar-'.(12 + $i),
+			"description" => "This is an ad-hoc widget area that can be invoked with the short code [suffusion-widgets id='$i'].",
+			"before_widget" => '<!-- widget start --><aside id="%1$s" class="%2$s suf-widget suf-widget-'.$$adhoc_columns.'c">',
+			"after_widget" => '</aside><!-- widget end -->',
+			"before_title" => '<h3>',
+			"after_title" => '</h3>'
+		));
+	}
 }
 
 for ($i = 1; $i <= 5; $i++) {
@@ -430,7 +433,7 @@ for ($i = 1; $i <= 5; $i++) {
 			'name' => 'Custom Layout Widget Area '.$i,
 			'id' => 'sidebar-cl-'.$i,
 			'description' => "The contents of this widget area displayed if you use a custom layout template. Use a plugin such as Widget Logic to control what widget shows up in which page.",
-			'before_widget' => '<!-- widget start --><section id="%1$s" class="%2$s cl-widget"><div class="cl-content">',
+			'before_widget' => "\n".'<!-- widget start --><section id="%1$s" class="%2$s cl-widget"><div class="cl-content">',
 			"after_widget" => '</div></section><!-- widget end -->',
 			"before_title" => '<h3>',
 			"after_title" => '</h3>'

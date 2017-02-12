@@ -9,10 +9,10 @@
 
 class Suffusion_Customize_Image_Picker extends WP_Customize_Control {
 	public $type = 'suffusion-image';
-	public $statuses;
+	private $footer_message = '';
 
 	public function __construct($manager, $id, $args = array()) {
-		$this->statuses = array('' => __('Default', 'suffusion'));
+		$this->footer_message = isset($args['footer_message']) ? $args['footer_message'] : '';
 		parent::__construct($manager, $id, $args);
 	}
 
@@ -23,7 +23,6 @@ class Suffusion_Customize_Image_Picker extends WP_Customize_Control {
 
 	public function to_json() {
 		parent::to_json();
-		$this->json['statuses'] = $this->statuses;
 	}
 
 	public function render_content() {
@@ -34,7 +33,7 @@ class Suffusion_Customize_Image_Picker extends WP_Customize_Control {
 
 		?>
 	<span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
-		<div class='customize-suffusion-image-picker'>
+	<div class='customize-suffusion-image-picker'>
 	<?php
 		foreach ($this->choices as $value => $image) {
 			if (isset($image['alt'])) {
@@ -56,8 +55,9 @@ class Suffusion_Customize_Image_Picker extends WP_Customize_Control {
 		<?php
 		}
 		?>
-		</div>
+	</div>
 		<?php
+		echo $this->footer_message;
 	}
 }
 

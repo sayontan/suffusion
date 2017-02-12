@@ -17,7 +17,7 @@ class Suffusion_Search extends WP_Widget {
 			"id_base" => "search"
 		);
 
-		$this->WP_Widget("search", __("Search", "suffusion"), $widget_options, $control_options);
+		parent::__construct("search", __("Search", "suffusion"), $widget_options, $control_options);
 	}
 
 	function widget($args, $instance) {

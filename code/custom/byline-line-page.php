@@ -8,7 +8,7 @@
  * @subpackage Custom
  */
 
-global $post, $suf_page_show_comment, $suf_page_show_posted_by, $suf_page_meta_position;
+global $post, $suf_page_show_comment, $suf_page_show_posted_by, $suf_page_meta_position, $suf_byline_before_edit, $suf_byline_after_edit;
 $format = suffusion_get_page_template();
 if ($format == 'standard') {
 	$format = '';
@@ -43,8 +43,10 @@ if ($post_show_posted_by != 'hide' || $post_show_comment != 'hide') { ?>
 	}
 
 	if (get_edit_post_link() != '') {
+		$prepend = apply_filters('suffusion_before_byline_html', do_shortcode($suf_byline_before_edit), 'edit');
+		$append = apply_filters('suffusion_after_byline_html', do_shortcode($suf_byline_after_edit), 'edit');
 		?>
-		<span class="edit"><span class="icon">&nbsp;</span><?php edit_post_link(__('Edit', 'suffusion'), '', ''); ?></span>
+		<span class="edit"><span class="icon">&nbsp;</span><?php edit_post_link(__('Edit', 'suffusion'), $prepend, $append); ?></span>
 		<?php
 
 	}

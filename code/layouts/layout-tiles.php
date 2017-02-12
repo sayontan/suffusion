@@ -84,7 +84,7 @@ if (have_posts()) {
 
 	if ($number_of_cols > 0) {
 ?>
-<div class='suf-tiles'>
+<div class='suf-tiles suf-tiles-<?php echo $number_of_cols;?>'>
 <?php
 		$ctr = 0;
 		$cols_per_row = $number_of_cols;
@@ -108,20 +108,21 @@ if (have_posts()) {
 				if ($total - 1 - $ctr < $number_of_cols) {
 					$cols_per_row = $total - $ctr;
 				}
-				echo "<div class='suf-tile-row suf-tile-row-$cols_per_row-cols fix'>\n";
 			}
 
 			global $suf_mag_excerpt_full_story_position;
 			do_action('suffusion_before_post', $post->ID, 'tile', $suffusion_current_post_index);
-			echo "\t<article class='suf-tile suf-tile-{$cols_per_row}c $suf_mag_excerpt_full_story_position suf-tile-ctr-$ctr'>\n";
+			echo "\n\t<article class='suf-tile suf-tile-{$cols_per_row}c $suf_mag_excerpt_full_story_position suf-tile-ctr-$ctr'>\n";
 			$image_size = $suf_tile_image_settings == 'inherit' ? 'mag-excerpt' : 'tile-thumb';
 			$image_link = suffusion_get_image(array($image_size => true));
 
 			$show_image = isset($show_image) ? $show_image : (($suf_tile_images_enabled == 'show') || ($suf_tile_images_enabled == 'hide-empty' && $image_link != ''));
+			$topmost = 'suf-tile-topmost';
 			if ($show_image) {
-				echo "\t\t<div class='suf-tile-image'>".$image_link."</div>\n";
+				echo "\t\t<div class='suf-tile-image $topmost'>".$image_link."</div>\n";
+				$topmost = '';
 			}
-			echo "\t\t<h2 class='suf-tile-title'><a class='entry-title' rel='bookmark' href='".get_permalink($post->ID)."'>".get_the_title($post->ID)."</a></h2>\n";
+			echo "\t\t<h2 class='suf-tile-title $topmost'><a class='entry-title' rel='bookmark' href='".get_permalink($post->ID)."'>".get_the_title($post->ID)."</a></h2>\n";
 
 			get_template_part('custom/byline', 'tile');
 
@@ -134,12 +135,9 @@ if (have_posts()) {
 				echo "\t</div>\n";
 			}
 
-			echo "\t</article>\n";
+			echo "\t</article>";
 			do_action('suffusion_after_post', $post->ID, 'tile', $suffusion_current_post_index);
 
-			if ($ctr == $total - 1 || $ctr%$number_of_cols == $number_of_cols - 1) {
-				echo "</div>\n";
-			}
 			$ctr++;
 		}
 ?>

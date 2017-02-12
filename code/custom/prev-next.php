@@ -21,8 +21,8 @@ if (suffusion_post_count() > 1) {
 <nav class='post-nav fix'>
 <table>
 <tr>
-	<td class='previous'><?php previous_post_link('<span class="icon">&nbsp;</span> %link', '%title', $in_same_cat) ?></td>
-	<td class='next'><?php next_post_link('<span class="icon">&nbsp;</span> %link', '%title', $in_same_cat) ?></td>
+	<td class='previous'><?php previous_post_link('%link', '<span class="icon">&nbsp;</span> %title', $in_same_cat) ?></td>
+	<td class='next'><?php next_post_link('%link', '<span class="icon">&nbsp;</span> %title', $in_same_cat) ?></td>
 </tr>
 </table>
 </nav>

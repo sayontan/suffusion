@@ -127,11 +127,6 @@ class Suffusion_Framework {
 		$suffusion_all_sitemap_entities = array_keys($suffusion_sitemap_entities);
 		$suffusion_all_sitemap_entities = implode(',', $suffusion_all_sitemap_entities);
 
-		if (!class_exists('Suffusion_Custom_Post_Types')) {
-			suffusion_set_custom_post_type_globals();
-			suffusion_set_custom_taxonomy_globals();
-		}
-
 		$suffusion_theme_hierarchy = array(
 			'light-theme-gray-1' => array('style.css', 'skins/light-theme-gray-1/skin.css'),
 			'light-theme-gray-2' => array('style.css', 'skins/light-theme-gray-2/skin.css'),
@@ -216,11 +211,7 @@ class Suffusion_Framework {
 			require_once ($template_path . "/functions/actions.php");
 			require_once ($template_path . "/functions/filters.php");
 			require_once ($template_path . "/functions/media.php");
-			require_once ($template_path . "/functions/shortcodes.php");
-			// This is not a BP child theme, but in case it is used with the Suffusion BP support pack, this inclusion is needed.
-			if (function_exists('bp_is_group')) {
-				include_once ($template_path . '/functions/bp-integration.php');
-			}
+			require_once ($template_path . "/library/device.php");
 			suffusion_query_post_meta();
 		}
 	}

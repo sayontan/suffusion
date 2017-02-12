@@ -4,6 +4,7 @@ $suf_theme_definitions = array(
 	"root" => array(
 		"body/color" => "#000000",
 		"body/background-color" => "#444444",
+		"body/background-image" => '',
 
 		"a/color" => "#528f6c",
 		"a:visited/color" => "#528f6c",
@@ -563,9 +564,27 @@ $suf_theme_definitions = array(
 
 		"#wrapper/background-color" => "#000000",
 	),
+
+	"minima" => array(
+		".blogtitle a/color" => "#555555",
+		"body/background-color" => "#ffffff",
+		"body/background-image" => '',
+	),
+
+	"photonique" => array(
+		".blogtitle a/color" => "#00aaff",
+		"body/background-color" => "#000000",
+		"body/background-image" => '',
+	),
+
+	"scribbles" => array(
+		".blogtitle a/color" => "#664422",
+		"body/background-image" => trailingslashit(get_template_directory_uri()).'images/wood.jpg',
+	),
 );
 $suf_element_mapping = array(
 	"suf_body_background_color" => "body/background-color",
+	"suf_body_background_image" => "body/background-image",
 	"suf_font_color" => "body/color",
 	"suf_link_color" => "a/color",
 	"suf_link_style" => "a/text-decoration",
@@ -618,7 +637,7 @@ $suf_element_mapping = array(
 	"suf_post_background_color" => ".post/background-color",
 );
 
-function suffusion_evaluate_style($style_name, $suffusion_theme_name = "root") {
+function suffusion_evaluate_style($style_name, $suffusion_theme_name = "root", $null_return = 'default') {
 	global $suf_theme_definitions, $suf_element_mapping;
 	if (isset($suf_element_mapping[$style_name])) {
 		$mapped_style = $suf_element_mapping[$style_name];
@@ -631,9 +650,8 @@ function suffusion_evaluate_style($style_name, $suffusion_theme_name = "root") {
 				if (isset($style_settings["parent"])) {
 					$parent = $style_settings["parent"];
 					$ancestors = explode(",",$parent);
-					$counter = count($ancestors);
-					for ($i=0; $i<$counter; $i++) {
-						$recursive = suffusion_evaluate_style($style_name, $ancestors[$i]);
+					foreach ($ancestors as $ancestor) {
+						$recursive = suffusion_evaluate_style($style_name, $ancestor, $null_return);
 						if ($recursive != null) {
 							return $recursive;
 						}
@@ -641,6 +659,9 @@ function suffusion_evaluate_style($style_name, $suffusion_theme_name = "root") {
 				}
 			}
 		}
+	}
+	if ($null_return == 'empty') {
+		return '';
 	}
 	return '#ffffff';
 }

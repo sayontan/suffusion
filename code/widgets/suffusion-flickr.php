@@ -12,7 +12,7 @@ class Suffusion_Flickr extends WP_Widget {
 		$widget_ops = array('classname' => 'widget-suf-flickr', 'description' => __("A widget to display your Flickr stream", "suffusion"));
 		$control_ops = array();
 
-		$this->WP_Widget("suf-flickr", __("Flickr", "suffusion"), $widget_ops, $control_ops);
+		parent::__construct("suf-flickr", __("Flickr", "suffusion"), $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance) {

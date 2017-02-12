@@ -30,7 +30,7 @@ if ($suf_footer_layout_style != 'in-align') {
 			<tr>
 				<td class="cred-left"><?php $strip = stripslashes($suf_footer_left); $strip = wp_specialchars_decode($strip, ENT_QUOTES); echo do_shortcode($strip); ?></td>
 				<td class="cred-center"><?php $strip = stripslashes($suf_footer_center); $strip = wp_specialchars_decode($strip, ENT_QUOTES); echo do_shortcode($strip); ?></td>
-				<td class="cred-right"><a href="http://www.aquoid.com/news/themes/suffusion/">Suffusion theme by Sayontan Sinha</a></td>
+				<td class="cred-right"><a href="http://aquoid.com/news/themes/suffusion/">Suffusion theme by Sayontan Sinha</a></td>
 			</tr>
 		</table>
 	</div>

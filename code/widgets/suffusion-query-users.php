@@ -14,7 +14,7 @@ class Suffusion_Query_Users extends WP_Widget {
 			'description' => __("A widget for displaying users and their profiles.", "suffusion"));
 
 		$control_ops = array('width' => 650);
-		$this->WP_Widget("suf-users", __("Query Users", "suffusion"), $widget_ops, $control_ops);
+		parent::__construct("suf-users", __("Query Users", "suffusion"), $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance) {

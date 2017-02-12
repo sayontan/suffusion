@@ -52,8 +52,7 @@ $suffusion_visual_effects_options = array(
 		"type" => "sub-section-4",),
 
 	array("name" => "Basic Setup",
-		"desc" => "You can define what you want to show in your navigation bar. The navigation bar contains two widget areas, 'Top Bar Left Widgets' and 'Top Bar Right Widgets' and a drop down menu.
-				If you prefer having pages, categories and links listed in the sidebar, select \"Hidden\".",
+		"desc" => "You can define what you want to show in your navigation bar. The navigation bar contains two widget areas, 'Top Bar Left Widgets' and 'Top Bar Right Widgets' and a drop down menu.",
 		"id" => "suf_navt_contents",
 		"parent" => "navt-setup",
 		"grouping" => "navt-lf",
@@ -313,15 +312,15 @@ $suffusion_visual_effects_options = array(
 		"std" => '',
 	),
 
-	array("name" => "WP 3.0 Navigation Menus",
-		"desc" => "Control the display of inbuilt navigation menus (WP 3.0 and higher)",
+	array("name" => "Native Navigation Menus",
+		"desc" => "Control the display of inbuilt navigation menus",
 		"category" => "navt-3menu",
 		"parent" => "navt-setup",
 		"type" => "sub-section-4",),
 
-	array("name" => "WP 3.0 Navigation Menus - All or Selected",
+	array("name" => "Native Navigation Menus - All or Selected",
 		"desc" => "You can decide if you want to show all menus or selected menus in the navigation bar.
-			If you choose 'All' your settings in the next option will be ignored. Also note that if you have added a menu to the navigation bar through the WP 3.0 menu administration page, it will show up even if excluded here.
+			If you choose 'All' your settings in the next option will be ignored. Also note that if you have added a menu to the navigation bar through the menu administration page, it will show up even if excluded here.
 			Note that this option is different from choosing 'Select All' in the next option, because this guarantees that always all are displayed, while the next option only ensures that all selections at the time of setup are displayed",
 		"id" => "suf_navt_menus_all_sel",
 		"parent" => "navt-setup",
@@ -651,15 +650,15 @@ $suffusion_visual_effects_options = array(
 		"std" => '',
 	),
 
-	array("name" => "WP 3.0 Navigation Menus",
-		"desc" => "Control the display of inbuilt navigation menus (WP 3.0 and higher)",
+	array("name" => "Native Navigation Menus",
+		"desc" => "Control the display of inbuilt navigation menus (Native and higher)",
 		"category" => "nav-3menu",
 		"parent" => "nav-setup",
 		"type" => "sub-section-4",),
 
-	array("name" => "WP 3.0 Navigation Menus - All or Selected",
+	array("name" => "Native Navigation Menus - All or Selected",
 		"desc" => "You can decide if you want to show all menus or selected menus in the navigation bar.
-			If you choose 'All' your settings in the next option will be ignored. Also note that if you have added a menu to the navigation bar through the WP 3.0 menu administration page, it will show up even if excluded here.
+			If you choose 'All' your settings in the next option will be ignored. Also note that if you have added a menu to the navigation bar through the native menu administration page, it will show up even if excluded here.
 			Note that this option is different from choosing 'Select All' in the next option, because this guarantees that always all are displayed, while the next option only ensures that all selections at the time of setup are displayed",
 		"id" => "suf_nav_menus_all_sel",
 		"parent" => "nav-setup",
@@ -682,7 +681,7 @@ $suffusion_visual_effects_options = array(
 
 	array("name" => "\"Title\" attribute upon hovering over navigation bar",
 		"desc" => "If you set this to show the title, when you hover over the menu, a little box with the title of the link will show up.
-			This applies to both navigation bars. Also, the WP 3.0 menus are not impacted by this setting:",
+			This applies to both navigation bars. Also, the native WP menus are not impacted by this setting:",
 		"id" => "suf_nav_strip_a_title",
 		"parent" => "nav-setup",
 		"type" => "radio",
@@ -1854,6 +1853,143 @@ $suffusion_visual_effects_options = array(
 			"show-bleft" => "Show Tags above footer on the left side", "show" => "Show Tags near footer on the right side", "hide" => "Hide Tags"),
 		"std" => "show"),
 
+	array("name" => "Byline Configuration",
+		"type" => "sub-section-3",
+		"category" => "byline-configuration",
+		"parent" => "visual-effects"
+	),
+
+	array("name" => "Categories",
+		"category" => "byline-categories",
+		"parent" => "byline-configuration",
+		"type" => "sub-section-4",),
+
+	array("name" => "HTML Before",
+		"desc" => "HTML to show before category list in bylines (shortcodes allowed)",
+		"id" => "suf_byline_before_category",
+		"parent" => "byline-configuration",
+		"grouping" => "byline-categories",
+		"type" => "text",
+		"std" => ""),
+
+	array("name" => "HTML After",
+		"desc" => "HTML to show after category list in bylines (shortcodes allowed)",
+		"id" => "suf_byline_after_category",
+		"parent" => "byline-configuration",
+		"grouping" => "byline-categories",
+		"type" => "text",
+		"std" => ""),
+
+	array("name" => "Tags",
+		"category" => "byline-tags",
+		"parent" => "byline-configuration",
+		"type" => "sub-section-4",),
+
+	array("name" => "HTML Before",
+		"desc" => "HTML to show before tag list in bylines (shortcodes allowed)",
+		"id" => "suf_byline_before_tag",
+		"parent" => "byline-configuration",
+		"grouping" => "byline-tags",
+		"type" => "text",
+		"std" => __('Tagged with: ', 'suffusion')),
+
+	array("name" => "HTML After",
+		"desc" => "HTML to show after tag list in bylines (shortcodes allowed)",
+		"id" => "suf_byline_after_tag",
+		"parent" => "byline-configuration",
+		"grouping" => "byline-tags",
+		"type" => "text",
+		"std" => ""),
+
+	array("name" => "Permalinks",
+		"category" => "byline-permalinks",
+		"parent" => "byline-configuration",
+		"type" => "sub-section-4",),
+
+	array("name" => "HTML Before",
+		"desc" => "HTML to show before permalinks in bylines (shortcodes allowed)",
+		"id" => "suf_byline_before_permalink",
+		"parent" => "byline-configuration",
+		"grouping" => "byline-permalinks",
+		"type" => "text",
+		"std" => ""),
+
+	array("name" => "HTML After",
+		"desc" => "HTML to show after permalinks in bylines (shortcodes allowed)",
+		"id" => "suf_byline_after_permalink",
+		"parent" => "byline-configuration",
+		"grouping" => "byline-permalinks",
+		"type" => "text",
+		"std" => ""),
+
+	array("name" => "Edit",
+		"category" => "byline-edit",
+		"parent" => "byline-configuration",
+		"type" => "sub-section-4",),
+
+	array("name" => "HTML Before",
+		"desc" => "HTML to show before the edit link in bylines (shortcodes allowed)",
+		"id" => "suf_byline_before_edit",
+		"parent" => "byline-configuration",
+		"grouping" => "byline-edit",
+		"type" => "text",
+		"std" => ""),
+
+	array("name" => "HTML After",
+		"desc" => "HTML to show after the edit link in bylines (shortcodes allowed)",
+		"id" => "suf_byline_after_edit",
+		"parent" => "byline-configuration",
+		"grouping" => "byline-edit",
+		"type" => "text",
+		"std" => ""),
+
+	array("name" => "Date",
+		"category" => "byline-date",
+		"parent" => "byline-configuration",
+		"type" => "sub-section-4",),
+
+	array("name" => "HTML Before",
+		"desc" => "HTML to show before the date in bylines (shortcodes allowed)",
+		"id" => "suf_byline_before_date",
+		"parent" => "byline-configuration",
+		"grouping" => "byline-date",
+		"type" => "text",
+		"std" => ""),
+
+	array("name" => "HTML After",
+		"desc" => "HTML to show after the date in bylines (shortcodes allowed)",
+		"id" => "suf_byline_after_date",
+		"parent" => "byline-configuration",
+		"grouping" => "byline-date",
+		"type" => "text",
+		"std" => ""),
+
+	array("name" => "Custom Taxonomies",
+		"category" => "byline-custom",
+		"parent" => "byline-configuration",
+		"type" => "sub-section-4",),
+
+	array("name" => "HTML Before and After",
+		"desc" => "Set the HTML to be shown before and after a custom taxonomy byline",
+		"id" => "suf_byline_before_after_cpt_taxonomies",
+		"parent" => "byline-configuration",
+		"grouping" => "byline-custom",
+		"type" => "associative-array",
+		"options" => array(
+			"Custom Taxonomy" => suffusion_get_custom_taxonomies(),
+			"HTML before taxonomy list" => array(
+				'name' => 'before',
+				'type' => 'text',
+				'std' => '',
+			),
+			"HTML after taxonomy list" => array(
+				'name' => 'after',
+				'type' => 'text',
+				'std' => '',
+			),
+		),
+		"std" => ""),
+
 	array("name" => "Featured Content",
 		"type" => "sub-section-3",
 		"category" => "featured-settings",
@@ -1898,7 +2034,6 @@ $suffusion_visual_effects_options = array(
 		"std" => "disabled"),
 
 	array("name" => "Category view",
-		"desc" => "You can enable the Featured Posts slider for your category view. This way you will see the featured section whenever you are looking at posts in a particular category: ",
 		"id" => "suf_featured_category_view",
 		"parent" => "featured-settings",
 		"grouping" => "fc-where",
@@ -1907,7 +2042,6 @@ $suffusion_visual_effects_options = array(
 		"std" => "disabled"),
 
 	array("name" => "Tag view",
-		"desc" => "You can enable the Featured Posts slider for your tag view. This way you will see the featured section whenever you are looking at posts with a particular tag: ",
 		"id" => "suf_featured_tag_view",
 		"parent" => "featured-settings",
 		"grouping" => "fc-where",
@@ -1916,7 +2050,6 @@ $suffusion_visual_effects_options = array(
 		"std" => "disabled"),
 
 	array("name" => "Author view",
-		"desc" => "You can enable the Featured Posts slider for your author view. This way you will see the featured section whenever you are looking at an author page: ",
 		"id" => "suf_featured_author_view",
 		"parent" => "featured-settings",
 		"grouping" => "fc-where",
@@ -1925,7 +2058,6 @@ $suffusion_visual_effects_options = array(
 		"std" => "disabled"),
 
 	array("name" => "Search view",
-		"desc" => "You can enable the Featured Posts slider for your search view. This way you will see the featured section whenever you are looking at search results: ",
 		"id" => "suf_featured_search_view",
 		"parent" => "featured-settings",
 		"grouping" => "fc-where",
@@ -2323,7 +2455,7 @@ $suffusion_visual_effects_options = array(
 		"parent" => "pagination-settings",
 		"grouping" => "nav-bc",
 		"type" => "multi-select",
-		"options" => suffusion_get_formatted_options_array("suf_show_breadcrumbs_in",
+		"options" => suffusion_get_formatted_options_array(
 			array(
 				'single' => 'Single posts',
 				'attach' => 'Attachment views',
@@ -2347,7 +2479,7 @@ $suffusion_visual_effects_options = array(
 		"parent" => "pagination-settings",
 		"grouping" => "nav-bc",
 		"type" => "multi-select",
-		"options" => suffusion_get_formatted_options_array("suf_show_home_in",
+		"options" => suffusion_get_formatted_options_array(
 			array(
 				'single' => 'Single posts',
 				'page' => 'Pages',
@@ -2533,12 +2665,19 @@ $suffusion_visual_effects_options = array(
 			"dont-preserve" => "Allow overriding the image's aspect ratio by explicit use of the 'height' attribute"),
 		"std" => "preserve"),
 
+	array("name" => "Use JetPack Photon for Resizing",
+		"desc" => "If JetPack is installed and the Photon module is activated, use Photon for resizing images.",
+		"id" => "suf_use_photon_resizing",
+		"parent" => "body-styles",
+		"type" => "checkbox",
+		"std" => ""),
+
 	array("name" => "Thumbnail Generation",
 		"desc" => "If you are not using a particular feature, you can turn off the automatic thumbnail generation for that. This will be applicable to all new images you upload and not to existing images:",
 		"id" => "suf_disable_auto_thumbs",
 		"parent" => "body-styles",
 		"type" => "multi-select",
-		"options" => suffusion_get_formatted_options_array("suf_seo_all_settings",
+		"options" => suffusion_get_formatted_options_array(
 			array(
 				'gallery-thumb' => 'Disable thumbnail generation for the "Gallery" post format',
 				'mosaic-thumb' => 'Disable thumbnail generation for the Mosaic layout',

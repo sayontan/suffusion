@@ -125,7 +125,7 @@ foreach ($sequence as $entity) {
 		}
 		if ($total > 0) {
 			global $suf_mag_excerpts_per_row, $suf_mag_excerpts_title, $suf_mag_total_excerpts;
-			echo "<section class='suf-mag-excerpts'>\n";
+			echo "<section class='suf-mag-excerpts suf-mag-excerpts-$suf_mag_excerpts_per_row'>\n";
 
 			if (trim($suf_mag_excerpts_title) != '') {
 				global $suf_mag_excerpts_main_title_alignment;
@@ -146,11 +146,10 @@ foreach ($sequence as $entity) {
 							if ($total - 1 - $ctr < $suf_mag_excerpts_per_row) {
 								$cols_per_row = $total - $ctr;
 							}
-							echo "<div class='suf-tile-row suf-tile-row-{$cols_per_row}-cols fix'>\n";
 						}
 
 						global $post, $suf_mag_excerpt_full_story_text, $suf_mag_excerpts_images_enabled, $suf_mag_excerpt_full_story_position, $suf_mag_excerpt_title_alignment;
-						echo "\t<div class='suf-mag-excerpt entry-content suf-tile-{$cols_per_row}c $suf_mag_excerpt_full_story_position'>\n";
+						echo "\n\t<div class='suf-mag-excerpt entry-content suf-tile-{$cols_per_row}c $suf_mag_excerpt_full_story_position'>\n";
 
 						$image_link = suffusion_get_image(array('mag-excerpt' => true));
 						$topmost = 'suf-tile-topmost';
@@ -174,11 +173,7 @@ foreach ($sequence as $entity) {
 							echo "\t</div>\n";
 						}
 
-						echo "\t</div>\n";
-
-						if ($ctr == $total - 1 || $ctr%$suf_mag_excerpts_per_row == $suf_mag_excerpts_per_row - 1) {
-							echo "</div>\n";
-						}
+						echo "\t</div>";
 						$ctr++;
 					}
 					wp_reset_postdata();
@@ -209,14 +204,13 @@ foreach ($sequence as $entity) {
 						if ($total - 1 - $ctr < $suf_mag_catblocks_per_row) {
 							$cols_per_row = $total - $ctr;
 						}
-						echo "<div class='suf-tile-row suf-tile-row-{$cols_per_row}-cols fix'>\n";
 					}
 
 					global $suf_mag_catblocks_images_enabled, $suf_mag_catblocks_desc_enabled, $suf_mag_catblocks_posts_enabled, $suf_mag_catblocks_num_posts;
 					global $suf_mag_catblocks_see_all_text, $suf_mag_catblocks_post_style, $suf_mag_catblocks_thumbnail_size, $suf_mag_catblocks_title_alignment;
 					echo "";
 
-					echo "\t<div class='suf-mag-category suf-tile-{$cols_per_row}c $suf_mag_excerpt_full_story_position'>\n";
+					echo "\n\t<div class='suf-mag-category suf-tile-{$cols_per_row}c $suf_mag_excerpt_full_story_position'>\n";
 					echo "\t<h2 class='suf-mag-category-title $suf_mag_catblocks_title_alignment'>".$category->cat_name;
 					echo "</h2>";
 					if ($suf_mag_catblocks_images_enabled != 'hide') {
@@ -230,7 +224,7 @@ foreach ($sequence as $entity) {
 						}
 					}
 					if ($suf_mag_catblocks_desc_enabled == 'show') {
-						echo $category->category_description;
+						echo '<div class="suf-mag-category-description">'.$category->category_description.'</div>';
 					}
 					if ($suf_mag_catblocks_posts_enabled == 'show') {
 						$cat_args = array('cat' => $category->cat_ID, 'posts_per_page' => $suf_mag_catblocks_num_posts);
@@ -270,16 +264,12 @@ foreach ($sequence as $entity) {
 						}
 					}
 					if (trim($suf_mag_catblocks_see_all_text)) {
-						echo "\t<div class='suf-mag-category-footer'>\n";
+						echo "\t<div class='suf-mag-category-footer fix'>\n";
 						echo "\t\t<a href='".get_category_link($category->cat_ID)."' class='suf-mag-category-all-posts'>$suf_mag_catblocks_see_all_text</a>";
 						echo "\t</div>\n";
 					}
 
-					echo "\t</div>\n";
-
-					if ($ctr == $total - 1 || $ctr%$suf_mag_catblocks_per_row == $suf_mag_catblocks_per_row - 1) {
-						echo "</div>\n";
-					}
+					echo "\t</div>";
 					$ctr++;
 				}
 			}

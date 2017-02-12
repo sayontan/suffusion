@@ -13,7 +13,7 @@ class Suffusion_Follow_Twitter extends WP_Widget {
 		$widget_ops = array('classname' => 'widget-suf-follow-twitter '.$rest_class, 'description' => __("A widget to enable people to follow you on Twitter", "suffusion"));
 		$control_ops = array('width' => 840, 'height' => 350);
 
-		$this->WP_Widget("suf-follow-twitter", __("Twitter", "suffusion"), $widget_ops, $control_ops);
+		parent::__construct("suf-follow-twitter", __("Twitter", "suffusion"), $widget_ops, $control_ops);
 	}
 
 	function widget( $args, $instance ) {
@@ -76,6 +76,7 @@ class Suffusion_Follow_Twitter extends WP_Widget {
 						var retweet = status.retweeted_status;
 						tweeter = retweet.user;
 					}
+					var tweeter_url = 'http://twitter.com/' + tweeter.screen_name;
 					var avatar = '';
 					if (typeof tweeter.profile_image_url != 'undefined') {
 						avatar = tweeter.profile_image_url;
@@ -191,6 +192,7 @@ class Suffusion_Follow_Twitter extends WP_Widget {
 					if (avatar != '') {
 						var tweeter_name = sufHtmlEncode(tweeter.name);
 						html_tweet = "<img src='" + avatar +"' class='suf-twitter-avatar' alt='" + tweeter_name + "' title='" + tweeter_name + "' />";
+						html_tweet = "<a href='" + tweeter_url + "'>" + html_tweet + "</a>";
 					}
 					for (var j = 0; j < stok_len; j++) {
 						var curr_token = sortedTokens[j];

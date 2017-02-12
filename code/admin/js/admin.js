@@ -621,7 +621,12 @@ $j(document).ready(function() {
 			duration: "fast"
 		}
 	});
-	$tabs.tabs('select', '#' + selected_category);
+	$j.fn.tabIndex = function () {
+		return $j(this).parent().find(this).index() - 2;
+	};
+
+	//$tabs.tabs('option', 'active', '#' + selected_category);
+	$tabs.tabs('option', 'active', $j('#' + selected_category).tabIndex());
 
 	$j(".suf-tabbed-options .fade").fadeOut(20000);
 
@@ -640,7 +645,7 @@ $j(document).ready(function() {
 		$j('#' + thisClass).val(joined);
 	});
 
-	$j('input.suf-multi-select-button').live('click', function() {
+	$j('input.suf-multi-select-button').on('click', function() {
 		var thisAction = this.className.substring(0, this.className.indexOf(" "));
 		var thisName = this.name.substring(0, this.name.indexOf("-"));
 		if (thisAction == 'button-all') {
@@ -662,7 +667,7 @@ $j(document).ready(function() {
 
 	$j('.suf-button-bar').draggable();
 
-	$j('.suf-button-toggler a').live('click', function() {
+	$j('.suf-button-toggler a').on('click', function() {
 		var thisClass = this.className;
 		thisClass = thisClass.substr(19);
 		var dialogClass = '.suf-button-bar-' + thisClass;
@@ -677,7 +682,7 @@ $j(document).ready(function() {
 	});
 
 	//AJAX Upload
-	$j('.image_upload_button').live('click', function() {
+	$j('.image_upload_button').on('click', function() {
 		var clickedObject = $j(this);
 		var thisID = $j(this).attr('id');
 
@@ -724,7 +729,7 @@ $j(document).ready(function() {
 	});
 
 	//AJAX Remove (clear option value)
-	$j('.image_reset_button').live('click', function() {
+	$j('.image_reset_button').on('click', function() {
 		var clickedObject = $j(this);
 		var thisID = $j(this).attr('id');
 		var image_Id = thisID.substring(6);
@@ -788,7 +793,7 @@ $j(document).ready(function() {
 		if ($j("#" + thisName + "-font-variant").is('*')) { val += 'font-variant=' + $j("#" + thisName + "-font-variant").val() + ';'; }
 		if ($j("#" + thisName + "-font-size").is('*')) { val += 'font-size=' + $j("#" + thisName + "-font-size").val() + ';'; }
 		if ($j("#" + thisName + "-font-size-type").is('*')) { val += 'font-size-type=' + $j("#" + thisName + "-font-size-type").val() + ';'; }
-		
+
 		$j("#" + thisName).val(val);
 	});
 

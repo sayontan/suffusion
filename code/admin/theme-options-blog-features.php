@@ -15,93 +15,6 @@ $suffusion_blog_features_options = array(
 		"parent" => "root"
 	),
 
-	array("name" => "SEO / Meta Settings",
-		"type" => "sub-section-3",
-		"category" => "seo-settings",
-		"parent" => "blog-features"
-	),
-
-	array("name" => "Force IE7 Compatibility View",
-		"desc" => "You can enable compatibility view by force in IE8. This handles some cases of image-rendering bugs (squishing, stretching etc) that are
-			displayed with some plugins",
-		"id" => "suf_ie7_compatibility",
-		"parent" => "seo-settings",
-		"type" => "radio",
-		"options" => array("no-force" => "Don't force compatibility mode", "force" => "Force compatibility mode"),
-		"std" => "no-force"),
-
-	array("name" => "Enable SEO settings for the theme?",
-		"desc" => "Suffusion comes bundled with SEO settings. You should turn these off if you are using a plugin like All-in-One SEO or Platinum SEO. ",
-		"id" => "suf_seo_enabled",
-		"parent" => "seo-settings",
-		"type" => "radio",
-		"options" => array("enabled" => "Enable SEO", "disabled" => "Disable SEO"),
-		"std" => "enabled"),
-
-	array("name" => "Select Meta tags",
-		"desc" => "The options you pick here will be applied to the document headers. Each option corresponds to a meta tag that the theme creates: ",
-		"id" => "suf_seo_all_settings",
-		"parent" => "seo-settings",
-		"type" => "multi-select",
-		"options" => suffusion_get_formatted_options_array("suf_seo_all_settings", array('generator' => 'Show WordPress version tags',
-			'theme' => 'Include Suffusion theme information tags',
-			'robots' => 'Hide page from Google and other search engines',
-			'author' => "Include author information",
-			'copyright' => 'Include copyright info',
-			'revised' => "Include page revision info")),
-		"std" => ""
-	),
-
-	array("name" => "Title style",
-		"desc" => "The best practices in SEO suggest that your article title should be the first text in your page title.
-			For category views etc the article title is the name of category. You can pick your setting: ",
-		"id" => "suf_seo_title_style",
-		"parent" => "seo-settings",
-		"type" => "radio",
-		"options" => array('page-blog' => 'Show the page title followed by the blog title',
-			'blog-page' => 'Show the blog title followed by the page title', 'page' => 'Show the page title only'),
-		"std" => "page-blog"),
-
-	array("name" => "Title Separator",
-		"desc" => "This is the symbol that appears as a separator between the page title and blog title (based on your selection in the parevious option):",
-		"id" => "suf_seo_title_separator",
-		"parent" => "seo-settings",
-		"type" => "text",
-		"hint" => "Use &amp;bull; for &bull;, &amp;gt; for &gt; and &amp;raquo; for &raquo;",
-		"std" => "&raquo;"),
-
-	array("name" => "Blog description / subtitle in page title on home page",
-		"id" => "suf_seo_show_subtitle",
-		"parent" => "seo-settings",
-		"type" => "radio",
-		"options" => array('show' => 'Include blog subtitle in page title',
-			'hide' => 'Hide blog subtitle in page title'),
-		"std" => "hide"),
-
-	array("name" => "Page numbers in title",
-		"id" => "suf_seo_show_page_num",
-		"parent" => "seo-settings",
-		"type" => "radio",
-		"options" => array('show' => 'Include page number in the title on the second page and higher',
-			'hide' => 'Hide page number in the title'),
-		"std" => "show"),
-
-	array("name" => "Homepage Meta Description",
-		"desc" => "Enter a brief description for your home page, not more than 30 words:",
-		"id" => "suf_seo_meta_description",
-		"parent" => "seo-settings",
-		"hint" => "Leave blank if you don't want a meta description",
-		"type" => "textarea",
-		"std" => ""),
-
-	array("name" => "Homepage Meta Keywords",
-		"desc" => "Enter a comma-separated list of keywords that best describe your blog:",
-		"id" => "suf_seo_meta_keywords",
-		"parent" => "seo-settings",
-		"type" => "textarea",
-		"std" => "",
-		"hint" => "Leave blank if you don't want meta keywords"),
-
 	array("name" => "Comment Settings",
 		"type" => "sub-section-3",
 		"category" => "comment-settings",
@@ -174,7 +87,7 @@ $suffusion_blog_features_options = array(
 		"id" => "suf_comment_label_styles",
 		"parent" => "comment-settings",
 		"type" => "radio",
-		"options" => array("theme" => "Theme default", "plain" => "Plain (unstyled, default)", "colored" => "Coloured", "inside" => "Label inside field"),
+		"options" => array("theme" => "Theme default", "plain" => "Plain (unstyled)", "colored" => "Coloured", "inside" => "Label inside field"),
 		"std" => "theme"),
 
 	array("name" => "Comment form labels",
@@ -252,7 +165,7 @@ $suffusion_blog_features_options = array(
 		"id" => "suf_uprof_networks",
 		"parent" => "user-profiles",
 		"type" => "multi-select",
-		"options" => suffusion_get_formatted_options_array("suf_uprof_networks", $suffusion_social_networks), "std" => ""),
+		"options" => suffusion_get_formatted_options_array($suffusion_social_networks), "std" => ""),
 
 	array("name" => "Show author information for individual posts and pages",
 		"desc" => "You can add author information to each post. In subsequent options you can specify what you want to put in the author information section.",
@@ -326,41 +239,6 @@ $suffusion_blog_features_options = array(
 		"type" => "textarea",
 		"hint" => "Enter the tracking code here",
 		"note" => "If you have any text here, it will be included with your pages (even if incorrect!!). Note that if your analytics are not enabled then this will be ignored.",
-		"std" => ""),
-
-	array("name" => "OpenID Setup",
-		"type" => "sub-section-3",
-		"category" => "openid-setup",
-		"parent" => "blog-features"
-	),
-
-	array("name" => "Enable OpenID support?",
-		"desc" => "If you have set up your blog as an <a href=\"http://openid.net/\">OpenID</a> server, you will need to populate the OpenID server and delegate here." .
-				"This theme currently does not help set your blog up as an OpenID provider. It only supports your blog if you have OpenID enabled. If you want to set your blog as a server see <a href=\"http://intertwingly.net/blog/2007/01/03/OpenID-for-non-SuperUsers\">here</a>.",
-		"id" => "suf_openid_enabled",
-		"parent" => "openid-setup",
-		"type" => "radio",
-		"note" => "Please set this option to \"OpenID enabled\" if you want to override the theme's settings for OpenID.",
-		"options" => array("not-enabled" => "OpenID not enabled",
-			"enabled" => "OpenID enabled"),
-		"std" => "not-enabled"),
-
-	array("name" => "OpenID Server",
-		"desc" => "Set the location of your OpenID server. " .
-				"If you have chosen \"OpenID not enabled\" above then this setting will be ignored.",
-		"id" => "suf_openid_server",
-		"parent" => "openid-setup",
-		"type" => "text",
-		"hint" => "Enter the full URL here (including http://)",
-		"std" => ""),
-
-	array("name" => "OpenID Delegate",
-		"desc" => "Set the location of your OpenID delegate. " .
-				"If you have chosen \"OpenID not enabled\" above then this setting will be ignored.",
-		"id" => "suf_openid_delegate",
-		"parent" => "openid-setup",
-		"type" => "text",
-		"hint" => "Enter the full URL here (including http://)",
 		"std" => ""),
 
 	array("name" => "Custom Includes",
@@ -602,6 +480,32 @@ $suffusion_blog_features_options = array(
 		"type" => "text",
 		"hint" => "Enter the feed title here",
 		"std" => ""),
+
+	array("name" => "Modules",
+		"type" => "sub-section-3",
+		"category" => "modules",
+		"parent" => "blog-features"
+	),
+
+	array("name" => "Disable Widgets",
+		"desc" => "Disabling widgets that you are not using keeps your site load lower. You won't see a disabled widget in Appearance &rarr; Widgets",
+		"id" => "suf_module_widgets",
+		"parent" => "modules",
+		"type" => "multi-select",
+		"options" => suffusion_get_formatted_options_array(array(
+				'search' => 'Disable Search',
+				'twitter' => 'Disable Twitter',
+				'flickr' => 'Disable Flickr',
+				'translator' => 'Disable Google Translator',
+				'featured-posts' => 'Disable Featured Posts',
+				'follow-me' => 'Disable Follow Me',
+				'child-pages' => 'Disable Child Pages',
+				'query-posts' => 'Disable Query Posts',
+				'query-users' => 'Disable Query Users',
+			)
+		),
+		"std" => ""
+	),
 
 	array("name" => "Site Optimization",
 		"type" => "sub-section-3",

@@ -35,7 +35,7 @@ $suffusion_theme_skinning_options = array(
 			"dark-theme-pale-blue" => "<div class='picture'><img src='" . get_template_directory_uri() . "/admin/images/Dark-theme-pale-blue.jpg' alt='Pale Blue on a dark theme'/><p>Pale Blue on a dark theme</p></div>",
 			"light-theme-royal-blue" => "<div class='picture'><img src='" . get_template_directory_uri() . "/admin/images/Light-theme-royal-blue.jpg' alt='Royal Blue on a light theme'/><p>Royal Blue on a light theme</p></div>",
 			"dark-theme-royal-blue" => "<div class='picture'><img src='" . get_template_directory_uri() . "/admin/images/Dark-theme-royal-blue.jpg' alt='Royal Blue on a dark theme'/><p>Royal Blue on a dark theme</p></div>",
-			"light-theme-gray-1" => "<div class='picture'><img src='" . get_template_directory_uri() . "/admin/images/Light-theme-gray-1.jpg' alt='Gray Shade 1 on a light theme'/><p>Gray Shade 1 on a light theme</p></div>",
+			"light-theme-gray-1" => "<div class='picture'><img src='" . get_template_directory_uri() . "/screenshot.png' alt='Gray Shade 1 on a light theme'/><p>Gray Shade 1 on a light theme</p></div>",
 			"dark-theme-gray-1" => "<div class='picture'><img src='" . get_template_directory_uri() . "/admin/images/Dark-theme-gray-1.jpg' alt='Gray Shade 1 on a dark theme'/><p>Gray Shade 1 on a dark theme</p></div>",
 			"light-theme-gray-2" => "<div class='picture'><img src='" . get_template_directory_uri() . "/admin/images/Light-theme-gray-2.jpg' alt='Gray Shade 2 on a light theme'/><p>Gray Shade 2 on a light theme</p></div>",
 			"dark-theme-gray-2" => "<div class='picture'><img src='" . get_template_directory_uri() . "/admin/images/Dark-theme-gray-2.jpg' alt='Gray Shade 2 on a dark theme'/><p>Gray Shade 2 on a dark theme</p></div>",
@@ -46,8 +46,8 @@ $suffusion_theme_skinning_options = array(
 			"light-theme-purple" => "<div class='picture'><img src='" . get_template_directory_uri() . "/admin/images/Light-theme-purple.jpg' alt='Purple on a light theme'/><p>Purple on a light theme</p></div>",
 			"dark-theme-purple" => "<div class='picture'><img src='" . get_template_directory_uri() . "/admin/images/Dark-theme-purple.jpg' alt='Purple on a dark theme'/><p>Purple on a dark theme</p></div>",
 			"minima" => "<div class='picture'><img src='" . get_template_directory_uri() . "/admin/images/minima.jpg' alt='Minima'/><p>Minima</p></div>",
-			"photonique" => "<div class='picture'><img src='" . get_template_directory_uri() . "/admin/images/photonique.jpg' alt='Photonique'/><p>Photonique</p></div>",
-			"scribbles" => "<div class='picture'><img src='" . get_template_directory_uri() . "/admin/images/photonique.jpg' alt='Scribbles'/><p>Scribbles</p></div>",
+			"photonique" => "<div class='picture'><img src='" . get_template_directory_uri() . "/screenshot-2.png' alt='Photonique'/><p>Photonique</p></div>",
+			"scribbles" => "<div class='picture'><img src='" . get_template_directory_uri() . "/screenshot-1.png' alt='Scribbles'/><p>Scribbles</p></div>",
 		),
 		"std" => "light-theme-gray-1"),
 
@@ -79,7 +79,7 @@ $suffusion_theme_skinning_options = array(
 		"id" => "suf_little_icons_enabled",
 		"parent" => "icon-sets",
 		"type" => "multi-select",
-		"options" => suffusion_get_formatted_options_array("suf_little_icons_enabled",
+		"options" => suffusion_get_formatted_options_array(
 			array(
 				'author' => 'Post/page author',
 				'date' => 'Post/page date',
@@ -630,9 +630,12 @@ $suffusion_theme_skinning_options = array(
 		"type" => "sub-section-3",),
 
 	array("name" => "Default or custom backgrounds for main body?",
-		"desc" => "<b> If you are using WP's native background features, this section will be completely ignored.</b> You can decide to go with the colors / text styles of the theme you are using, or choose your own. " .
-				"If you choose default colors / text styles here then the rest of your settings in this section will be ignored. " .
-				"If you choose custom styles then the settings you make here will override the theme's settings.",
+		"desc" => "<b>If you are using WP's native background features:</b>
+			<ul class='margin-20'>
+				<li>If <em>Appearance &rarr; Background</em> has a background image, that image will be shown as your site's background (no change in this behaviour).</li>
+				<li>If <em>Appearance &rarr; Background</em> has no background image, there will be no background image for your site.</li>
+				<li>If <em>Appearance &rarr; Background</em> has the default background image, only then will the settings from this page will take effect. If you have left this section to have &ldquo;Theme Styles&rdquo;, then everything will stay as default.</li>
+			</ul>",
 		"id" => "suf_body_style_setting",
 		"parent" => "body-bg-settings",
 		"note" => "Please set this option to \"Custom styles\" if you want to override the theme's settings for the body.",
@@ -657,7 +660,7 @@ $suffusion_theme_skinning_options = array(
 		"parent" => "body-bg-settings",
 		"type" => "upload",
 		"hint" => "Enter the full URL here (including http://), or click on \"Upload Image\"",
-		"std" => ""),
+		"std" => suffusion_evaluate_style("suf_body_background_image", $suffusion_theme_name)),
 
 	array("name" => "Body Background Image Tiling",
 		"desc" => "Set how the background image should be tiled. This will define how the image will repeat on the background. " .

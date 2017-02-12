@@ -14,7 +14,7 @@ class Suffusion_Featured_Posts extends WP_Widget {
 		$widget_ops = array('classname' => 'widget-suf-featured-posts',
 			'description' => __("A widget for displaying featured posts.", "suffusion"));
 		$control_ops = array('width' => 750);
-		$this->WP_Widget("suf-featured-posts", __("Featured Content", "suffusion"), $widget_ops, $control_ops);
+		parent::__construct("suf-featured-posts", __("Featured Content", "suffusion"), $widget_ops, $control_ops);
 	}
 
 	function form($instance) {
@@ -425,26 +425,35 @@ class Suffusion_Featured_Posts extends WP_Widget {
         /* <![CDATA[ */
         $j = jQuery.noConflict();
         $j(document).ready(function() {
-            $j('#<?php echo $widget_id; ?>-sliderContent').cycle({
-                fx: '<?php echo $transition_effect; ?>',
-                timeout: <?php echo $frame_time; ?>,
-                speed: <?php echo $frame_delay; ?>,
-                pause: 1,
-                sync: 0,
-                pager: '#<?php echo $widget_id; ?>-sliderPager',
-                prev: 'a.sliderPrev',
-                next: 'a.sliderNext',
-	            pagerAnchorBuilder: function (idx, slide) {
-            		var anchor;
-            		if ('<?php echo $index_style; ?>' == 'numbers') {
-            			anchor = (idx + 1);
-            		}
-            		else {
-            			anchor = '&nbsp;';
-            		}
-            		return '<a href="#">' + anchor + '</a>';
-            	}
-            });
+			var responsiveSlideShow = new ResponsiveSlideShow($j('#<?php echo $widget_id; ?>-slider'), '#<?php echo $widget_id; ?>-sliderContent', {
+				fx: '<?php echo $transition_effect; ?>',
+				timeout: <?php echo $frame_time; ?>,
+				speed: <?php echo $frame_delay; ?>,
+				pause: 1,
+				sync: 0,
+				pager: '#<?php echo $widget_id; ?>-sliderPager',
+				prev: 'a.sliderPrev',
+				next: 'a.sliderNext',
+				slideResize: 0,
+				pagerAnchorBuilder: function (idx, slide) {
+					var anchor;
+					if ('<?php echo $index_style; ?>' == 'numbers') {
+						anchor = (idx + 1);
+					}
+					else {
+						anchor = '&nbsp;';
+					}
+					return '<a href="#">' + anchor + '</a>';
+				}
+			});
+
+			$j(window).bind('resize', function() {
+				responsiveSlideShow.update();
+				$j('.controller-icons #<?php echo $widget_id; ?>-sliderControl').css({
+					top: '-' + ($j('#<?php echo $widget_id; ?>-sliderContent').height() / 2) + 'px'
+				});
+			});
+			$j(window).trigger('resize');
 
             $j('#<?php echo $widget_id; ?>-fc a.sliderPause').click(
                 function() {
@@ -574,10 +583,10 @@ class Suffusion_Featured_Posts extends WP_Widget {
 			$pager_class = $index_style == 'numbers' ? 'pager-numbers' : 'pager-bullets';
 
 			$ret .= "<div id=\"$widget_id-fc\" class=\"featured-content $index_class $controller_class $pager_class fix\">";
-            $ret .= "\t<div id=\"$widget_id-slider\" class=\"slider fix clear\" style='height: $featured_height;'>";
-            $ret .= "\t\t<ul id=\"$widget_id-sliderContent\" class=\"sliderContent fix clear\" style='height: $featured_height;'>";
-            $do_not_duplicate = array();
-            if (isset($sticky_query)) {
+			$ret .= "\t<div id=\"$widget_id-slider\" class=\"slider fix clear\" style='max-height: $featured_height;'>";
+			$ret .= "\t\t<ul id=\"$widget_id-sliderContent\" class=\"sliderContent fix clear\" style='max-height: $featured_height;'>";
+			$do_not_duplicate = array();
+			if (isset($sticky_query)) {
 	            $ret .= $this->widget_parse_featured_query_results($sticky_query, $do_not_duplicate, $featured_excerpt_position, $featured_post_counter,
 	                $number_of_posts, $excerpt_position, $position, $rotation, $alttb, $altlr, $text_display, $text_width, $text_bg_color, $text_color, $link_color,
 	                $featured_height, $custom_image_size,$custom_img_height, $custom_img_width, $center_slides, $full_width);
@@ -640,16 +649,16 @@ class Suffusion_Featured_Posts extends WP_Widget {
                     $position = $altlr[$featured_excerpt_position%2];
                 }
                 $featured_excerpt_position++;
-                $ret .= $this->widget_display_single_featured_post($featured_excerpt_position, $position, $text_display, $text_width, $text_bg_color,
-                    $text_color, $link_color, $featured_height, $custom_image_size, $custom_img_height, $custom_img_width, $center_slides, $full_width);
+				$ret .= $this->widget_display_single_featured_post($position, $text_display, $text_width, $text_bg_color,
+					$text_color, $link_color, $featured_height, $custom_image_size, $custom_img_height, $custom_img_width, $center_slides, $full_width);
                 $featured_post_counter++;
             }
         }
         return $ret;
     }
 
-    function widget_display_single_featured_post($featured_excerpt_position, $position, $text_display, $text_width,
-        $text_bg_color, $text_color, $link_color, $featured_height, $custom_image_size, $custom_img_height, $custom_img_width, $center_slides, $full_width) {
+	function widget_display_single_featured_post($position, $text_display, $text_width, $text_bg_color, $text_color, $link_color,
+		$featured_height, $custom_image_size, $custom_img_height, $custom_img_width, $center_slides, $full_width) {
         global $post;
 		if ($center_slides == 'on') {
 			$center = 'center';
@@ -746,4 +755,3 @@ class Suffusion_Featured_Posts extends WP_Widget {
 		}
 	}
 }
-?>

@@ -143,36 +143,6 @@ function suffusion_include_custom_js($location = 'footer') {
 	}
 }
 
-/**
- * Includes JavaScript to play an audio file. Suffusion is bundled with the standalone version of the Open Source WP Audio Player plugin.
- * See http://wpaudioplayer.com/ for the plugin page.
- *
- * Suffusion is bundled with the JS and the SWF files from the plugin. For the FLA file corresponding to the SWF, see http://tools.assembla.com/1pixelout/browser/audio-player/trunk/source
- *
- * @return void
- */
-function suffusion_include_audio_player_script() {
-	global $suf_enable_audio_shortcode;
-	if (!function_exists('audio_shortcode') && !class_exists('AudioPlayer') && isset($suf_enable_audio_shortcode) && $suf_enable_audio_shortcode == 'on') {?>
-<!-- Include AudioPlayer via Suffusion -->
-<script type="text/javascript">
-/* <![CDATA[ */
-	if (typeof AudioPlayer != 'undefined') {
-		AudioPlayer.setup("<?php echo get_template_directory_uri().'/scripts/player.swf'; ?>", {
-			width: 500,
-			initialvolume: 100,
-			transparentpagebg: "yes",
-			left: "000000",
-			lefticon: "FFFFFF"
-		});
-	}
-/* ]]> */
-</script>
-<!-- /AudioPlayer -->
-<?php
-	}
-}
-
 function suffusion_display_header() {
 	global $suf_sub_header_vertical_alignment, $suf_header_fg_image_type, $suf_header_fg_image, $suf_header_alignment, $suf_sub_header_alignment;
 	$display = apply_filters('suffusion_can_display_header', true);
@@ -183,7 +153,7 @@ function suffusion_display_header() {
 	if ($suf_header_alignment == 'right') {
 		suffusion_display_widgets_in_header();
 	}
-	if (!is_singular()) {
+	if (!is_singular() || is_page_template('magazine.php')) {
 		$header_tag = "h1";
 	}
 	else {
@@ -818,19 +788,19 @@ function suffusion_print_author_byline($echo = true, $show_icon = true) {
 	}
 	switch ($format) {
 		case 'by':
-			$ret .= sprintf(__('Posted by %1$s', 'suffusion'), '<span class="vcard"><a href="'.get_author_posts_url(get_the_author_meta('ID')).'" class="url fn" rel="author">'.get_the_author_meta('display_name').'</a></span>');
+			$ret .= sprintf(__('Posted by %1$s', 'suffusion'), '<span class="vcard"><a href="'.get_author_posts_url(get_the_author_meta('ID')).'" class="url fn" rel="author">'.get_the_author().'</a></span>');
 			break;
 		case 'by-at':
-			$ret .= sprintf(__('Posted by %1$s at %2$s', 'suffusion'), '<span class="vcard"><a href="'.get_author_posts_url(get_the_author_meta('ID')).'" class="url fn" rel="author">'.get_the_author_meta('display_name').'</a></span>', get_the_time(get_option('time_format')));
+			$ret .= sprintf(__('Posted by %1$s at %2$s', 'suffusion'), '<span class="vcard"><a href="'.get_author_posts_url(get_the_author_meta('ID')).'" class="url fn" rel="author">'.get_the_author().'</a></span>', get_the_time(get_option('time_format')));
 			break;
 		case 'by-on':
-			$ret .= sprintf(__('Posted by %1$s on %2$s', 'suffusion'), '<span class="vcard"><a href="'.get_author_posts_url(get_the_author_meta('ID')).'" class="url fn" rel="author">'.get_the_author_meta('display_name').'</a></span>', get_the_time(get_option('date_format')));
+			$ret .= sprintf(__('Posted by %1$s on %2$s', 'suffusion'), '<span class="vcard"><a href="'.get_author_posts_url(get_the_author_meta('ID')).'" class="url fn" rel="author">'.get_the_author().'</a></span>', get_the_time(get_option('date_format')));
 			break;
 		case 'by-on-at':
-			$ret .= sprintf(__('Posted by %1$s on %2$s at %3$s', 'suffusion'), '<span class="vcard"><a href="'.get_author_posts_url(get_the_author_meta('ID')).'" class="url fn" rel="author">'.get_the_author_meta('display_name').'</a></span>', get_the_time(get_option('date_format')), get_the_time(get_option('time_format')));
+			$ret .= sprintf(__('Posted by %1$s on %2$s at %3$s', 'suffusion'), '<span class="vcard"><a href="'.get_author_posts_url(get_the_author_meta('ID')).'" class="url fn" rel="author">'.get_the_author().'</a></span>', get_the_time(get_option('date_format')), get_the_time(get_option('time_format')));
 			break;
 		case 'by-at-on':
-			$ret .= sprintf(__('Posted by %1$s at %2$s on %3$s', 'suffusion'), '<span class="vcard"><a href="'.get_author_posts_url(get_the_author_meta('ID')).'" class="url fn" rel="author">'.get_the_author_meta('display_name').'</a></span>', get_the_time(get_option('time_format')), get_the_time(get_option('date_format')));
+			$ret .= sprintf(__('Posted by %1$s at %2$s on %3$s', 'suffusion'), '<span class="vcard"><a href="'.get_author_posts_url(get_the_author_meta('ID')).'" class="url fn" rel="author">'.get_the_author().'</a></span>', get_the_time(get_option('time_format')), get_the_time(get_option('date_format')));
 			break;
 	}
 	$ret .= "</span>";
@@ -942,7 +912,8 @@ function suffusion_template_specific_header() {
 function suffusion_get_category_information() {
 	$ret = "<div class=\"category-description\">\n";
 	if (function_exists('get_cat_icon')) {
-		$ret .= get_cat_icon('echo=false');
+		$cat = get_queried_object_id();
+		$ret .= get_cat_icon('echo=false&cat='.$cat);
 	}
 	$ret .= category_description()."\n";
 	$ret .= "</div><!-- .category-description -->\n";
@@ -1087,61 +1058,6 @@ function suffusion_include_jqfix_js() {
 	wp_localize_script('suffusion', 'Suffusion_JS', $base_array);
 }
 
-function suffusion_set_title() {
-	global $suf_seo_enabled, $suf_seo_title_style, $suf_seo_title_separator, $suf_seo_show_subtitle, $suf_seo_show_page_num, $paged, $page;
-	if ($suf_seo_enabled != 'enabled') {
-		if (is_home() || is_front_page()) {
-			echo "\t<title>".wp_title('', false)."</title>\n";
-		}
-		// BP 1.5 makes bp_get_page_title deprecated
-/*		else if (function_exists('bp_is_group')) {
-			echo "\t<title>".bp_get_page_title()."</title>\n";
-		}*/
-		else {
-			echo "\t<title>".wp_title('&raquo;', false)."</title>\n";
-		}
-		return;
-	}
-
-	$page_title = wp_title('', false);
-	$blog_title = get_bloginfo('name');
-
-	if (is_home() || is_front_page()) {
-		$title = $blog_title;
-		if ($suf_seo_show_subtitle == 'show') {
-			$blog_subtitle = get_bloginfo('description');
-			$title .= " ".$suf_seo_title_separator." ".$blog_subtitle;
-		}
-	}
-	else {
-		if ($suf_seo_title_style == 'page-blog') {
-			$title = $page_title." ".$suf_seo_title_separator." ".$blog_title;
-		}
-		else if ($suf_seo_title_style == 'blog-page') {
-			$title = $blog_title." ".$suf_seo_title_separator." ".$page_title;
-		}
-		else {
-			$title = $page_title;
-		}
-	}
-	if ($suf_seo_show_page_num == 'show' && ($paged >= 2 || $page >= 2)) {
-		$title .= ' '.$suf_seo_title_separator.' '.sprintf(__('Page %s', 'suffusion'), max($paged, $page));
-	}
-    $title = apply_filters('suffusion_set_title', $title);
-    echo "\t<title>{$title}</title>\n";
-}
-
-function suffusion_include_meta() {
-	get_template_part('custom/seo');
-}
-
-function suffusion_include_ie7_compatibility_mode() {
-	global $suf_ie7_compatibility;
-	if ($suf_ie7_compatibility == 'force') {
-		echo "\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=EmulateIE7\" />\n";
-	}
-}
-
 function suffusion_include_default_feed() {
 	global $suf_custom_default_rss_enabled, $wp_version;
 	if ($suf_custom_default_rss_enabled == 'enabled') {
@@ -1237,12 +1153,6 @@ function suffusion_display_closed_header() {
 				?>
 			</div><!-- //#header-container -->
 <?php
-	}
-}
-
-function suffusion_include_bp_admin_css() {
-	if (function_exists('bp_is_group')) {
-		wp_enqueue_style('bp-admin-bar', apply_filters('bp_core_admin_bar_css', WP_PLUGIN_URL.'/buddypress/bp-themes/bp-default/_inc/css/adminbar.css'), array(), null);
 	}
 }
 
@@ -1478,4 +1388,25 @@ function suffusion_print_line_byline($position) {
  */
 function suffusion_print_post_updated_information() {
 	echo "<span class='updated' title='".get_the_time('c')."'></span>";
+}
+
+/**
+ * Prints the meta tag required for responsive layouts
+ */
+function suffusion_include_responsive_meta() {
+	global $suf_enable_responsive;
+	if (isset($suf_enable_responsive) && $suf_enable_responsive == 'on') {
+		global $suf_responsive_prevent_user_scaling;
+		if (isset($suf_responsive_prevent_user_scaling) && $suf_responsive_prevent_user_scaling == 'on') {
+			$user_scalable = ',minimum-scale=1,maximum-scale=1,user-scalable=no';
+		}
+		else {
+			$user_scalable = '';
+		}
+		//user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0
+		echo '<meta name="viewport" content="width=device-width, initial-scale=1.0'.$user_scalable.'">'."\n";
+//		echo '<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">'."\n";
+		echo '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">'."\n";
+		echo '<meta name="HandheldFriendly" content="true">'."\n";
+	}
 }

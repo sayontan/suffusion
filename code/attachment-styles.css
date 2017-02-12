@@ -26,7 +26,7 @@
 .msword .icon, .vnd-ms-write .icon, .vnd-ms-word .icon, .vnd-openxmlformats-officedocument-wordprocessingml .icon, .vnd-oasis-opendocument-text .icon, .wordperfect .icon
 { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -256px -128px; }
 
-.vnd-ms-powerpoint .icon, vnd-openxmlformats-officedocument-presentationml .icon, vnd-oasis-opendocument-presentation .icon
+.vnd-ms-powerpoint .icon, .vnd-openxmlformats-officedocument-presentationml .icon, .vnd-oasis-opendocument-presentation .icon
 { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat 0 -64px; }
 
 .vnd-ms-excel .icon, .vnd-openxmlformats-officedocument-spreadsheetml .icon, .vnd-oasis-opendocument-spreadsheet .icon, .vnd-oasis-opendocument-chart .icon

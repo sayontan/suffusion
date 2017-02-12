@@ -337,7 +337,7 @@ $suffusion_typography_options = array(
 		"id" => "suf_drop_cap_post_views",
 		"parent" => "typo-drop",
 		"type" => "multi-select",
-		"options" => suffusion_get_formatted_options_array("suf_drop_cap_post_views",
+		"options" => suffusion_get_formatted_options_array(
 			array(
 				'full-content' => 'Full content',
 				'excerpt' => 'Excerpts',
@@ -351,7 +351,7 @@ $suffusion_typography_options = array(
 		"id" => "suf_drop_cap_post_formats",
 		"parent" => "typo-drop",
 		"type" => "multi-select",
-		"options" => suffusion_get_formatted_options_array("suf_drop_cap_post_formats",
+		"options" => suffusion_get_formatted_options_array(
 			array(
 				'standard' => 'Standard',
 				'aside' => 'Aside',

@@ -14,7 +14,7 @@ class Suffusion_Category_Posts extends WP_Widget {
 			'description' => __("A widget to pull posts based on various selection criteria. You can use this to display posts from a category, latest posts, random posts, popular posts etc.", "suffusion"));
 
 		$control_ops = array('width' => 810);
-		$this->WP_Widget("suf-cat-posts", __("Query Posts", "suffusion"), $widget_ops, $control_ops);
+		parent::__construct("suf-cat-posts", __("Query Posts", "suffusion"), $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance) {
@@ -39,8 +39,9 @@ class Suffusion_Category_Posts extends WP_Widget {
 		$post_formats = isset($instance['post_formats']) ? $instance['post_formats'] : '';
 		$any_post_type = isset($instance['any_post_type']) ? $instance['any_post_type'] : false;
 		$separate_widgets = isset($instance['separate_widgets']) ? $instance['separate_widgets'] : false;
+		$all_posts_link = isset($instance['all_posts_link']) ? $instance['all_posts_link'] : '';
 
-        $ret = "";
+		$ret = "";
         if ($icon_type == 'plugin') {
             if (function_exists('get_cat_icon')) {
                 $cat_icon = get_cat_icon('echo=false&cat='.$selected_category);
@@ -176,7 +177,11 @@ class Suffusion_Category_Posts extends WP_Widget {
 					$ret .= "<li class='suf-widget-mosaic'><div class='suf-widget-thumb'><a href='".get_permalink()."' title=\"".esc_attr(get_the_title())."\">".$image."</a></div></li>\n";
 				}
 				else {
-					$ret .= "<li><a href='".get_permalink()."'>".get_the_title()."</a></li>\n";
+					$post_title = get_the_title();
+					if (!$post_title) {
+						$post_title = get_the_ID();
+					}
+					$ret .= "<li><a href='".get_permalink()."'>".$post_title."</a></li>\n";
 				}
 			}
 			wp_reset_query();
@@ -210,7 +215,13 @@ class Suffusion_Category_Posts extends WP_Widget {
 
         if (trim($all_posts_text)) {
             $ret .= "\t<div class='suf-mag-category-footer'>\n";
-            $ret .= "\t\t<a href='".get_category_link($selected_category)."' class='suf-mag-category-all-posts'>$all_posts_text</a>";
+			if (trim($all_posts_link) != '') {
+				$link = esc_url($all_posts_link);
+			}
+			else {
+				$link = get_category_link($selected_category);
+			}
+            $ret .= "\t\t<a href='".$link."' class='suf-mag-category-all-posts'>$all_posts_text</a>";
             $ret .= "\t</div>\n";
         }
 
@@ -248,6 +259,7 @@ class Suffusion_Category_Posts extends WP_Widget {
 		$instance['post_formats'] = $new_instance['post_formats'];
 		$instance['any_post_type'] = $new_instance['any_post_type'];
 		$instance['separate_widgets'] = $new_instance['separate_widgets'];
+		$instance["all_posts_link"] = esc_url($new_instance["all_posts_link"]);
 
 		return $instance;
 	}
@@ -382,6 +394,12 @@ class Suffusion_Category_Posts extends WP_Widget {
 			<label for="<?php echo $this->get_field_id('all_posts_text'); ?>"><?php _e('Text for "All Posts":', 'suffusion'); ?></label>
 			<input id="<?php echo $this->get_field_id('all_posts_text'); ?>" name="<?php echo $this->get_field_name('all_posts_text'); ?>" value="<?php if (isset($instance['all_posts_text'])) echo stripslashes($instance['all_posts_text']); ?>" class="widefat" />
 			<i><?php _e("The text you enter here will be the displayed in the button for \"All Posts\". If you leave this field blank the button will not be shown.", "suffusion"); ?></i>
+		</p>
+
+		<p>
+			<label for="<?php echo $this->get_field_id('all_posts_link'); ?>"><?php _e('Link for "All Posts":', 'suffusion'); ?></label>
+			<input id="<?php echo $this->get_field_id('all_posts_link'); ?>" name="<?php echo $this->get_field_name('all_posts_link'); ?>" value="<?php if (isset($instance['all_posts_link'])) echo $instance['all_posts_link']; ?>" class="widefat" />
+			<i><?php _e("The text you enter here will be the linked to the \"All Posts\" button. If you leave this field blank the category page will be linked.", "suffusion"); ?></i>
 		</p>
 	</div>
 

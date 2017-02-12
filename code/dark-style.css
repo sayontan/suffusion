@@ -187,8 +187,8 @@ div.navigation .suf-page-nav a.page-numbers:hover {
 	color: #999999;
 }
 
-.post-nav .previous .icon { width: 16px; height: 16px; background-position: -16px -160px; float: left; margin-right: 4px;}
-.post-nav .next .icon { width: 16px; height: 16px; background-position: 0 -160px; float: right; margin-left: 4px;}
+.post-nav .previous .icon { width: 16px; height: 16px; background-position: 0 -160px; float: left; margin-right: 4px;}
+.post-nav .next .icon { width: 16px; height: 16px; background-position: -16px -160px; float: right; margin-left: 4px;}
 
 /* commentform */
 #commentform label.suf-comment-label {

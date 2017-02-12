@@ -488,6 +488,10 @@ input.slidertext {
 .opt-sub-table-col-3 { width: 44%; }
 .opt-sub-table-col-31 { width: 12%; }
 
+.opt-sub-table-4 { border-collapse: collapse; width: 98%; display: table; }
+.opt-sub-table-col-4 { width: 30%; }
+.opt-sub-table-col-41 { width: 10%; }
+
 .opt-sub-table input[type='text'],
 .opt-sub-table select,
 .opt-sub-table .transslider {

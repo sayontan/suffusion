@@ -24,7 +24,7 @@ class Suffusion_Subscription extends WP_Widget {
             'description' => __("This widget lets visitors of your blog subscribe to it and follow you on popular social networks like Digg, FaceBook etc. Additionally they can subscribe to your blog by email, for which you need a FeedBurner account.", "suffusion"));
 		$control_ops = array('width' => 840);
 
-		$this->WP_Widget("suf-subscription", __("Follow Me", "suffusion"), $widget_ops, $control_ops);
+		parent::__construct("suf-subscription", __("Follow Me", "suffusion"), $widget_ops, $control_ops);
         $this->icon_suffixes = array();
         $image_path = opendir(get_template_directory() . "/images/follow");
         while (false !== ($icon = readdir($image_path))) {
@@ -298,9 +298,18 @@ class Suffusion_Subscription extends WP_Widget {
                 $url_or_account = $this->follow_urls[$icon_type];
                 foreach ($url_or_account as $key => $value) {
                     $hyperlink = str_replace('%account%', $account, $value);
+					$image_file = locate_template('images/follow/'.$icon.'.png');
+					$stylesheet_dir = trailingslashit(get_stylesheet_directory());
+					if (strlen($image_file) > strlen($stylesheet_dir) &&
+						substr($image_file, 0, strlen($stylesheet_dir)) == $stylesheet_dir) {
+						$image_url = trailingslashit(get_stylesheet_directory_uri()).'images/follow/'.$icon.'.png';
+					}
+					else {
+						$image_url = trailingslashit(get_template_directory_uri()).'images/follow/'.$icon.'.png';
+					}
 ?>
         <a href="<?php echo $hyperlink; ?>" class="follow-icon-and-tag" title="<?php echo $icon_type;?>" <?php echo $blank; ?>>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/follow/<?php echo $icon;?>.png" alt="<?php echo $icon_type;?>" style='width: <?php echo $icon_size;?>; height: <?php echo $icon_size;?>;' />
+            <img src="<?php echo $image_url; ?>" alt="<?php echo $icon_type;?>" style='width: <?php echo $icon_size;?>; height: <?php echo $icon_size;?>;' />
         </a>
 <?php
                 }

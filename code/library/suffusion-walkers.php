@@ -14,14 +14,14 @@
  * @since: 4.0.0
  */
 class Suffusion_MM_Walker extends Walker_Nav_Menu {
-	function start_el(&$output, $item, $depth, $args) {
+	function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
 		if ($depth == 0) {
 			$parent_id = $item->menu_item_parent;
 			if ($parent_id != 0) {
 				return;
 			}
 		}
-		parent::start_el($output, $item, $depth, $args);
+		parent::start_el($output, $item, $depth, $args, $id = 0);
 	}
 
 	function display_element($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {

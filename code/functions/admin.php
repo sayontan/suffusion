@@ -74,7 +74,6 @@ function suffusion_meta_fields($post, $args = array()) {
 	}
 	echo "<li><a href='#suf-meta-tabs-layout'>".__('Layout', 'suffusion')."</a></li>";
 	echo "<li><a href='#suf-meta-tabs-images'>".__('Images', 'suffusion')."</a></li>";
-	echo "<li><a href='#suf-meta-tabs-seo'>".__('SEO', 'suffusion')."</a></li>";
 	if ($type == 'page' && isset($post->page_template) && 'template-custom-layout.php' == $post->page_template) {
 		echo "<li><a href='#suf-meta-tabs-custom-template'>".__('Custom Template', 'suffusion')."</a></li>";
 	}
@@ -165,51 +164,40 @@ function suffusion_meta_fields($post, $args = array()) {
 		</p>
 	</div>
 
+	<?php
+	// Older releases didn't prefix meta_description and meta_keywords with suf. That is being addressed in version 4.2.1
+	// Note that while the theme fully supports featured images, this functionality predates the featured images by over a year,
+	// and is hence required for backwards compatibility.
+	$thumbnail = get_post_meta($post->ID, "suf_thumbnail", true);
+	if (!$thumbnail) {
+		$thumbnail = get_post_meta($post->ID, "thumbnail", true);
+	}
+	$featured_image = get_post_meta($post->ID, "suf_featured_image", true);
+	if (!$featured_image) {
+		$featured_image = get_post_meta($post->ID, "featured_image", true);
+	}
+	?>
 	<div id='suf-meta-tabs-images' class="suf-meta-tabs">
 		<h3><?php _e('Images', 'suffusion'); ?></h3>
 		<table>
 			<tr>
-				<td><label for="thumbnail"><?php _e("Thumbnail", "suffusion"); ?></label></td>
+				<td><label for="suf_thumbnail"><?php _e("Thumbnail", "suffusion"); ?></label></td>
 				<td>
-					<input type="text" id="thumbnail" name="thumbnail" value="<?php echo get_post_meta($post->ID, "thumbnail", true); ?>" />
+					<input type="text" id="suf_thumbnail" name="suf_thumbnail" value="<?php echo $thumbnail; ?>" />
 					<br/><em><?php _e("Enter the full URL of the thumbnail image that you would like to use, including http://", "suffusion"); ?></em>
 				</td>
 			</tr>
 
 			<tr>
-				<td><label for="featured_image"><?php _e("Featured Image", "suffusion"); ?></label></td>
+				<td><label for="suf_featured_image"><?php _e("Featured Image", "suffusion"); ?></label></td>
 				<td>
-					<input type="text" id="featured_image" name="featured_image" value="<?php echo get_post_meta($post->ID, "featured_image", true); ?>" />
+					<input type="text" id="suf_featured_image" name="suf_featured_image" value="<?php echo $featured_image; ?>" />
 					<br/><em><?php _e("Enter the full URL of the featured image that you would like to use, including http://", "suffusion"); ?></em>
 				</td>
 			</tr>
 		</table>
 		<p>
 			<br />
-		</p>
-	</div>
-
-	<div id='suf-meta-tabs-seo' class="suf-meta-tabs">
-		<?php
-		// Older releases didn't prefix meta_description and meta_keywords with suf. That is being addressed in version 4.2.1
-		$description = get_post_meta($post->ID, "suf_meta_description", true);
-		if (!$description) {
-			$description = get_post_meta($post->ID, "meta_description", true);
-		}
-		$keywords = get_post_meta($post->ID, "suf_meta_keywords", true);
-		if (!$keywords) {
-			$keywords = get_post_meta($post->ID, "meta_keywords", true);
-		}
-		?>
-		<h3><?php _e('SEO', 'suffusion'); ?></h3>
-		<p>
-			<label for="suf_meta_description"><?php _e("Meta Description", "suffusion"); ?></label><br />
-			<textarea id="suf_meta_description" name="suf_meta_description" cols='80' rows='5'><?php echo $description; ?></textarea>
-		</p>
-		<p>
-			<label for="suf_meta_keywords"><?php _e("Meta Keywords", "suffusion"); ?></label><br />
-			<input type="text" id="suf_meta_keywords" name="suf_meta_keywords" value="<?php echo $keywords; ?>" />
-			<br/><em><?php _e("Enter a comma-separated list of keywords for this post. This list will be included in the meta tags for this post.", "suffusion"); ?></em>
 		</p>
 	</div>
 
@@ -456,8 +444,8 @@ function suffusion_meta_fields($post, $args = array()) {
  * @param $post_id
  */
 function suffusion_save_post_fields($post_id) {
-	$suffusion_post_fields = array('thumbnail', 'featured_image', 'suf_magazine_headline', 'suf_magazine_excerpt', 'suf_alt_page_title',
-		'suf_meta_description', 'suf_meta_keywords', 'suf_nav_unlinked', 'suf_pseudo_template', 'suf_hide_page_title', 'suf_toggle_breadcrumb',
+	$suffusion_post_fields = array('suf_thumbnail', 'suf_featured_image', 'suf_magazine_headline', 'suf_magazine_excerpt', 'suf_alt_page_title',
+		'suf_nav_unlinked', 'suf_pseudo_template', 'suf_hide_page_title', 'suf_toggle_breadcrumb',
 		'suf_hide_top_navigation', 'suf_hide_header', 'suf_hide_main_navigation', 'suf_hide_footer', 'suf_cpt_post_type', 'suf_cpt_total_posts',
 		'suf_cpt_post_type_layout', 'suf_cpt_full_posts', 'suf_cpt_full_posts_fp_only', 'suf_cpt_byline_type', 'suf_cpt_bylines_post_date',
 		'suf_cpt_posts_per_row', 'suf_cpt_bylines_posted_by', 'suf_cpt_bylines_comments', 'suf_cpt_bylines_permalinks', 'suf_cpt_byline_taxonomies',

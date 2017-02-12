@@ -1,8 +1,8 @@
 body {/* Default styling for everything that is un-styled and doesn't inherit*/
+	background-color: #fff;
 	color:#000;
 	font-size: 12px;
 	line-height: 1.8em;
-	background-color: #fff;
 }
 
 h2.suf-mag-excerpt-title {

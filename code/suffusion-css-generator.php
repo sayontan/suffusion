@@ -520,12 +520,10 @@ col.nr-shelf-slot { width: $slot_width%; }";
 .suf-mag-headline-photo-box { width: {$widths['mag-headline-photos']}px; right: {$widths['mag-headline-photos']}px; }
 .suf-mag-headline-block { width: ".(suffusion_admin_check_integer($widths['mag-headline-block']) ? $widths['mag-headline-block'].'px' : $widths['mag-headline-block'])."; }
 #ie6 .suf-mag-headline-block { width: ".(suffusion_admin_check_integer($widths['mag-headline-block']) ? ($widths['mag-headline-block'] - 20).'px' : $widths['mag-headline-block'])."; }
-.suf-mag-headlines { height: ".suffusion_admin_get_size_from_field($suf_mag_headlines_height, "250px")." }
-col.suf-mag-excerpt { width: ".$mag_excerpt_td_width."%; }
+.suf-mag-headlines { min-height: ".suffusion_admin_get_size_from_field($suf_mag_headlines_height, "250px")."; height: auto; }
 .suf-mag-excerpt-image {
 	height: ".suffusion_admin_get_size_from_field($suf_mag_excerpts_image_box_height, "100px").";
 }
-col.suf-mag-category { width: $mag_category_td_width%; }
 .suf-mag-category-image {
 	width: ".(suffusion_admin_check_integer($mag_category_td_img_width) ? $mag_category_td_img_width.'px' : $mag_category_td_img_width).";
 	height: ".suffusion_admin_get_size_from_field($suf_mag_catblocks_image_box_height, "100px").";
@@ -615,6 +613,7 @@ h2.suf-mag-headlines-title { text-align: $suf_mag_headline_main_title_alignment;
 #header-widgets { float: left; width: $wih_width; }";
 			}
 		}
+
 		return $ret;
 	}
 
@@ -633,7 +632,6 @@ h2.suf-mag-headlines-title { text-align: $suf_mag_headline_main_title_alignment;
 }";
 		}
 		if ($suf_header_style_setting == "custom" && isset($suf_wrapper_margin)) {
-			$wrapper_margin = "50px";
 			$wrapper_margin = suffusion_admin_get_size_from_field($suf_wrapper_margin, "50px");
 			$ret .= "
 #wrapper { margin: $wrapper_margin auto; }";
@@ -832,7 +830,7 @@ article.page span.author { float: $page_author_align; ".($page_author_align == "
 			$custom = '';
 		}
 		$ret = "
-#slider, #sliderContent { height: $featured_height; }
+#slider, #sliderContent { max-height: $featured_height; }
 $custom #slider .left, $custom #slider .right { height: $featured_height; max-height: $featured_height; width: $featured_excerpt_width !important; }
 $custom .sliderImage .top, $custom .sliderImage .bottom { max-width: none; }
 .sliderImage { height: $featured_height; }
@@ -996,9 +994,86 @@ h2.suf-tile-title { text-align: $suf_tile_title_alignment; }";
 			$ret .= ".gallery-container { padding-$suf_gallery_format_thumb_panel_position: $mod_width }";
 			$ret .= ".gallery-contents { width: $width }";
 			$ret .= ".gallery-contents.left { left: -$mod_width }";
-			$ret .= ".gallery-contents.right { margin-right: -$mod_width }";
+			$ret .= ".gallery-contents.right { margin-right: -$mod_width }\n";
 		}
 		return $ret;
 	}
+
+	function generate_all_css() {
+		global $suf_size_options, $suf_sidebar_count, $suf_minify_css, $suf_enable_responsive;
+		$css = '';
+
+		$css .= "/* ".$this->get_creation_date()." */";
+		$css .= $this->get_custom_body_settings();
+		$css .= $this->get_custom_wrapper_settings();
+		$css .= $this->get_custom_post_bg_settings();
+		$css .= $this->get_custom_body_font_settings();
+
+		$suffusion_template_prefixes = suffusion_get_template_prefixes();
+		$suffusion_template_sidebars = suffusion_get_template_sidebars();
+		foreach ($suffusion_template_prefixes as $template => $prefix) {
+			$sb_count = $suffusion_template_sidebars[$template];
+			$suffusion_template_widths = $this->get_widths_for_template($prefix, $sb_count, $template);
+			$template_class = '.page-template-'.str_replace('.', '-', $template);
+			$css .= $this->get_template_specific_classes($template_class, $suffusion_template_widths);
+		}
+
+		if ($suf_size_options == "custom") {
+			$suffusion_template_widths = $this->get_widths_for_template(false, $suf_sidebar_count);
+		}
+		else {
+			// We still need to get the array of widths for the sidebars.
+			$suffusion_template_widths = $this->get_automatic_widths(1000, $suf_sidebar_count, false);
+		}
+
+		// The default settings:
+		$css .= $this->get_template_specific_classes('', $suffusion_template_widths);
+
+		// For the no-sidebars.php template (uses the same widths as computed for the default settings):
+		$css .= $this->get_zero_sidebars_template_widths();
+
+		$css .= $this->get_mag_template_widths($suffusion_template_widths);
+
+		$css .= $this->get_custom_date_box_css();
+		$css .= $this->get_custom_byline_css();
+		$css .= $this->get_custom_header_settings();
+
+		$css .= $this->get_custom_tbrh_css();
+		$css .= $this->get_custom_wabh_css();
+		$css .= $this->get_custom_waaf_css();
+		$css .= $this->get_custom_featured_css();
+		$css .= $this->get_custom_emphasis_css();
+		$css .= $this->get_custom_layout_template_css();
+
+		$css .= $this->get_custom_tiled_layout_css($suffusion_template_widths);
+		$css .= $this->get_finalized_header_footer_nav_css();
+		$css .= $this->get_nr_css($suffusion_template_widths);
+
+		$css .= $this->get_navigation_bar_custom_css('nav');
+		$css .= $this->get_navigation_bar_custom_css('nav-top');
+
+		$css .= $this->get_custom_miscellaneous_css();
+		$css .= $this->get_custom_sidebar_settings_css();
+
+		$css .= $this->get_typography_css();
+		$css .= $this->get_icon_set_css();
+		$css .= $this->get_post_format_widths_css();
+
+		if (isset($suf_enable_responsive) && $suf_enable_responsive == 'on') {
+			$css .= suffusion_get_responsive_widths_css();
+		}
+
+		if ($suf_minify_css == 'minify') {
+			$css = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $css);
+			/* remove tabs, spaces, newlines, etc. */
+			$css = str_replace(array("\r\n", "\r", "\n", "\t"), '', $css);
+			$css = str_replace(array('  ', '   ', '    ', '     '), ' ', $css);
+			$css = str_replace(array(": ", " :"), ':', $css);
+			$css = str_replace(array(" {", "{ "), '{', $css);
+			$css = str_replace(';}','}', $css);
+			$css = str_replace(', ', ',', $css);
+			$css = str_replace('; ', ';', $css);
+		}
+		return $css;
+	}
 }
-?>

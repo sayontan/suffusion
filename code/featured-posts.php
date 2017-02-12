@@ -146,6 +146,7 @@ function suffusion_display_featured_posts($echo = true) {
 	}
 
 	if (isset($cat_tag_query_args)) {
+		$cat_tag_query_args = apply_filters('suffusion_cat_tag_query_args', $cat_tag_query_args);
 		$cat_tag_query = new WP_Query($cat_tag_query_args);
 		$count_so_far += $cat_tag_query->post_count;
 	}

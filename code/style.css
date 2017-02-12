@@ -1,16 +1,16 @@
 /**
  * Theme Name: Suffusion
- * Description: An elegant and versatile theme with a power-packed set of options and semantic HTML5-based markup. It supports Mega-Menus, custom layout templates, advanced support for custom post types, customizable drop-down menus, featured sliders, tabbed sidebars, a magazine layout and lots of enhanced widgets for Twitter, Flickr, Google etc. It has 19 widget areas, one-column, two-column and three-column fixed-width and flexible-width layouts, 8 pre-defined templates, 18 pre-defined color schemes. RTL support is built-in and translations in many languages are available. Custom Post Types and Custom Taxonomies are integrated. A BuddyPress support pack and an e-commerce support pack are available as plugins for smooth integration. Support forum at http://www.aquoid.com/forum.
+ * Description: An elegant, responsive and versatile theme with a power-packed set of options and semantic HTML5-based markup. It supports Mega-Menus, custom layout templates, advanced support for custom post types, customizable drop-down menus, featured sliders, tabbed sidebars, a magazine layout and lots of enhanced widgets for Twitter, Flickr, Google etc. It has 19 widget areas, one-column, two-column and three-column responsive, fixed-width and flexible-width layouts, 9 pre-defined templates and 19 pre-defined color schemes. Responsive capabilities are switched on by a single click. RTL support is built-in and translations in many languages are available. Custom Post Types and Custom Taxonomies are integrated. Compatibility packs for BuddyPress, bbPress, Jigoshop and WooCommerce are available as plugins for smooth integration. Support forum at http://www.aquoid.com/forum.
  * Theme URI: http://aquoid.com/news/themes/suffusion/
- * Version: 4.2.1
+ * Version: 4.4.9
  * Author: Sayontan Sinha
  * Author URI: http://mynethome.net/blog
  * Announcements Feed: http://aquoid.com/news/category/theme-releases/feed/
  * License: GNU General Public License (GPL), v3 (or newer)
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
- * Tags: theme-options, green, blue, silver, red, orange, purple, white, black, light, dark, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-colors, custom-header, custom-background, custom-menu, threaded-comments, translation-ready, sticky-post, rtl-language-support, microformats, featured-images, post-formats, photoblogging, blavatar
+ * Tags: theme-options, green, blue, silver, red, orange, purple, white, black, light, dark, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, custom-colors, custom-header, custom-background, custom-menu, threaded-comments, sticky-post, rtl-language-support, microformats, featured-images, post-formats, photoblogging, blavatar
  *
- * Copyright (c) 2009 - 2012 Sayontan Sinha. All rights reserved.
+ * Copyright (c) 2009 - 2016 Sayontan Sinha. All rights reserved.
  *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -26,7 +26,7 @@ label, legend,table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 	font-size: 100%;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
 	display: block;
 }
 input:focus, textarea:focus { outline: none; }
@@ -257,11 +257,19 @@ dl.gallery-item {margin:0}
 	position:relative;
 	margin: 0;
 	padding: 0;
+	text-align: left;
 }
-.blogtitle.center { float: none; }
+.blogtitle.center {
+	float: none;
+	text-align: center;
+}
 .blogtitle.hidden {
 	display: none;
 	visibility: hidden;
+}
+.blogtitle.right {
+	float: right;
+	text-align: right;
 }
 
 .blogtitle a {
@@ -275,17 +283,26 @@ dl.gallery-item {margin:0}
 /* Blog description on the right side of the title */
 .description {
 	float: right;
-	margin-top: 21px; 	/* description distance from top of screen */
+	margin-top: 21px;
 	margin-right: 20px;
 	margin-left: 20px;
 	text-transform: uppercase;
 	font-size: 116%;
+	text-align: right;
 }
-.description.center { float: none; margin-top: 0; }
+.description.center {
+	float: none;
+	margin-top: 0;
+	text-align: center;
+}
 
 .description.hidden {
 	display: none;
 	visibility: hidden;
+}
+.description.left {
+	float: left;
+	text-align: left;
 }
 
 /* search form */
@@ -764,6 +781,10 @@ img.home-icon { height: 21px; }
 	float: left;
 	margin-left: 10px;
 	width: 635px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .page-links {
@@ -1352,7 +1373,7 @@ a.openid_link {
 .sidebar-tab-content ul,
 .suf-widget ul,
 .suf-flat-widget ul,
-.suf-panel-widget ul {
+.suf-panel-widget ul, .widget_categories ul, .widget_archive ul {
 	list-style: none;
 	margin: 0 ;
 	padding: 0 ;
@@ -1374,6 +1395,7 @@ a.openid_link {
 .tabbed-sidebar div.sbtab-content-archives ul li,
 .widget_archive ul li {
 	background: url(images/icons/calendar_date.png) no-repeat;
+	padding-left: 20px;
 	padding-bottom: 3px;
 }
 
@@ -1490,6 +1512,11 @@ a.twitter-icon-and-tag, a.twitter-icon-and-tag:hover, a.twitter-icon-and-tag:act
 	display: inline;
 	float: right;
 }
+#header-widgets .suf-widget {
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+}
 /* Featured Posts */
 #featured-posts {
 	margin-top: 15px;
@@ -1561,11 +1588,9 @@ ul.sliderContent { margin: 0; }
 }
 
 #sliderContent {
-	width: 100%; /* important to be same as image width or wider */
-	position: absolute; /* important */
-	top: 0; /* important */
-	padding: 0;
+	width: 100%;
 	margin: 0;
+	padding-left: 0;
 }
 
 .sliderImage {
@@ -1614,7 +1639,7 @@ img.featured-excerpt-right {
 }
 
 .sliderImage.center { text-align: center; }
-.sliderImage.full-width img { width: 100%; }
+.sliderImage.full-width img { width: 100%; height: auto; }
 .sliderImage.center img.featured-excerpt-left, .sliderImage.center img.featured-excerpt-right { float: none; }
 
 .sliderIndex a,
@@ -1949,7 +1974,9 @@ div.sidebar-tab-content {
 	margin: 10px 0;
 	display: inline-block;
 }
-
+.suf-mag-category-description {
+	margin: 5px;
+}
 .suf-tiles {
 	width: 100%;
 	padding: 0;
@@ -1958,22 +1985,28 @@ div.sidebar-tab-content {
 .suf-mag-category,
 .suf-mag-excerpt,
 .suf-tile {
-	padding: 8px 0;
+	padding: 0 0 8px;
 	font-size: 108%;
 	line-height: 20px;
 	text-align: center;
 
-	/*margin: 3px;*/
 	border: 1px solid #c0c0c0;
 	vertical-align: top;
 	background-color: #ffffff;
 
 	position: relative;
 	display: inline-block;
+	vertical-align: top;
 
-	/*float: left;*/
-	width: 99%;
+	width: 100%;
 	margin-top: 5px;
+}
+
+.suf-tile-1c {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .suf-mag-category { padding: 0 0 8px; text-align: left; }
@@ -2008,10 +2041,10 @@ h2.suf-tile-title {
 	margin-right: 8px;
 	margin-left: 8px;
 }
-.suf-tile-row { width: 100%; text-align: center; }
-.suf-tile-row .left { text-align: left; }
-.suf-tile-row .center { text-align: center; }
-.suf-tile-row .right { text-align: right; }
+
+.suf-tiles .left { text-align: left; }
+.suf-tiles .center { text-align: center; }
+.suf-tiles .right { text-align: right; }
 
 .suf-mag-excerpt-image,
 .suf-tile-image {
@@ -2022,10 +2055,30 @@ h2.suf-tile-title {
 	text-align: center;
 }
 
-.suf-tile-image img {
-	margin: auto;
+.suf-mag-excerpt, .suf-tile {
+	padding-top: 0;
 }
 
+.suf-tile-image img {
+	margin: auto;
+
+	max-width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.suf-tile-topmost {
+	width: 100%;
+	margin: 0;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.suf-mag-excerpt-image.suf-tile-topmost a, .suf-tile-image.suf-tile-topmost a {
+	overflow: hidden;
+	margin: 8px 10px;
+}
 .suf-mag-excerpt-text,
 .suf-tile-text {
 	margin: 12px 8px;
@@ -2039,8 +2092,7 @@ h2.suf-tile-title {
 
 h2.suf-mag-headlines-title,
 .suf-mag-excerpts-header,
-.suf-mag-categories-header,
-.suf-tiles th {
+.suf-mag-categories-header {
 	padding: 5px;
 	border: 1px solid #c0c0c0;
 	background-color: #ffffff;
@@ -2053,12 +2105,6 @@ h2.suf-mag-headlines-title,
 .suf-mag-excerpts-header.left, .suf-mag-categories-header.left { text-align: left; }
 .suf-mag-excerpts-header.center, .suf-mag-categories-header.center { text-align: center; }
 .suf-mag-excerpts-header.right, .suf-mag-categories-header.right { text-align: right; }
-
-/*
-div.suf-mag-category {
-	margin: 8px;
-}
-*/
 
 .suf-mag-category-image {
 	overflow: hidden;
@@ -2234,8 +2280,8 @@ a.follow-icon-and-tag:hover, a.follow-icon-and-tag:active, a.follow-icon-and-tag
 }
 
 .title-container {
-	padding-left: 48px;
-	padding-right: 10px;
+	padding-left: 58px;
+	/*padding-right: 10px;*/
 }
 
 .post .title {
@@ -2243,7 +2289,7 @@ a.follow-icon-and-tag:hover, a.follow-icon-and-tag:active, a.follow-icon-and-tag
 	width: 100%;
 	position: relative;
 	margin: 0;
-	padding: 0 0 0 10px;
+	padding: 0;
 }
 
 .widget_tag_cloud {
@@ -2634,13 +2680,15 @@ ul.image-sizes { list-style: none; clear: both; margin: 0 0 10px 0; padding: 0; 
 ul.image-sizes li { float: left; padding: 5px 10px; margin: 0 10px 0 0; text-decoration: none; }
 .suf-widget { overflow: hidden; }
 
-.suf-widget-1c {
-	width: 100%;
-	margin: 5px 0;
+.suf-widget-1c, .suf-widget-2c, .suf-widget-3c, .suf-widget-4c, .suf-widget-5c {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
+}
+.suf-widget-1c {
+	width: 100%;
+	margin: 5px 0;
 }
 .suf-widget-2c { width: 49%; margin: 5px 0.39%; }
 .suf-widget-3c { width: 32%; margin: 5px 0.49%; }
@@ -2655,14 +2703,13 @@ ul.image-sizes li { float: left; padding: 5px 10px; margin: 0 10px 0 0; text-dec
 	border: 1px solid #c0c0c0;
 	display: inline-block;
 	width: 99%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .cl-content { margin: 8px; }
 .cl-widget h3 { text-align: center; }
-.cl-warea-1 { text-align: center; -moz-column-count: 1; -webkit-column-count: 1; column-count: 1; }
-.cl-warea-2 .cl-warea-row, .cl-warea-2.cl-warea-all { -moz-column-count: 2; -webkit-column-count: 2; column-count: 2; }
-.cl-warea-3 .cl-warea-row, .cl-warea-2.cl-warea-all { -moz-column-count: 3; -webkit-column-count: 3; column-count: 3; }
-.cl-warea-4 .cl-warea-row, .cl-warea-2.cl-warea-all { -moz-column-count: 4; -webkit-column-count: 4; column-count: 4; }
-.cl-warea-5 .cl-warea-row, .cl-warea-2.cl-warea-all { -moz-column-count: 5; -webkit-column-count: 5; column-count: 5; }
 
 .cl-warea-1 .cl-widget {
 	float: none;
@@ -2670,25 +2717,46 @@ ul.image-sizes li { float: left; padding: 5px 10px; margin: 0 10px 0 0; text-dec
 	margin-right: auto;
 }
 
-.cl-warea-masonry .cl-widget {
-	float: left;
-	margin-top: 8px;
-	margin-bottom: 8px;
-	margin-left: 0 !important;
-	margin-right: 0 !important;
+.cl-warea {
+	text-align: justify;
+	-ms-text-justify: distribute;
+	text-justify: distribute;
 }
-.cl-warea-1.cl-warea-masonry { -moz-column-count: auto; -webkit-column-count: auto; column-count: auto; }
+.cl-warea:after {
+	content: '';
+	width: 100%;
+	display: inline-block;
+	font-size: 0;
+	line-height: 0
+}
+.cl-warea .cl-widget { display: inline-block; vertical-align: top; float: none; }
+.cl-warea-1 .cl-widget { width: 100%; }
+.cl-warea-2 .cl-widget { width: 49%; }
+.cl-warea-3 .cl-widget { width: 32%; }
+.cl-warea-4 .cl-widget { width: 24%; }
+.cl-warea-5 .cl-widget { width: 19%; }
 
-.suf-tile-row-1-cols { -moz-column-count: 1; -webkit-column-count: 1; column-count: 1; }
-.suf-tile-row-2-cols { -moz-column-count: 2; -webkit-column-count: 2; column-count: 2; }
-.suf-tile-row-3-cols { -moz-column-count: 3; -webkit-column-count: 3; column-count: 3; }
-.suf-tile-row-4-cols { -moz-column-count: 4; -webkit-column-count: 4; column-count: 4; }
-.suf-tile-row-5-cols { -moz-column-count: 5; -webkit-column-count: 5; column-count: 5; }
-.suf-tile-row-6-cols { -moz-column-count: 6; -webkit-column-count: 6; column-count: 6; }
-.suf-tile-row-7-cols { -moz-column-count: 7; -webkit-column-count: 7; column-count: 7; }
-.suf-tile-row-8-cols { -moz-column-count: 8; -webkit-column-count: 8; column-count: 8; }
-.suf-tile-row-9-cols { -moz-column-count: 9; -webkit-column-count: 9; column-count: 9; }
-.suf-tile-row-10-cols { -moz-column-count: 10; -webkit-column-count: 10; column-count: 10; }
+/* Props to the brilliant technique highlighted here: http://stackoverflow.com/questions/6865194/fluid-width-with-equally-spaced-divs.
+ This distributes divs equally in a fluid-width row without any JS hack and without using CSS multi-columns. */
+.suf-tiles, .suf-mag-excerpts, .suf-mag-categories { text-align: justify; -ms-text-justify: distribute; text-justify: distribute;}
+.suf-tiles:after, .suf-mag-excerpts:after, .suf-mag-categories:after {
+	content: '';
+	width: 100%;
+	display: inline-block;
+	font-size: 0;
+	line-height: 0
+}
+
+.suf-tile-1c { width: 100%; }
+.suf-tile-2c { width: 49%; }
+.suf-tile-3c { width: 32%; }
+.suf-tile-4c { width: 24%; }
+.suf-tile-5c { width: 19%; }
+.suf-tile-6c { width: 16%; }
+.suf-tile-7c { width: 13%; }
+.suf-tile-8c { width: 12%; }
+.suf-tile-9c { width: 10.5%; }
+.suf-tile-10c { width: 9.5%; }
 
 .suf-gallery-1c { width: 98%; }
 .suf-gallery-2c { width: 49%; }
@@ -2900,3 +2968,8 @@ span.updated { display: none; }
 .outer-pullout-container #comments {
 	padding: 15px;
 }
+.tinynav {
+	display: none;
+}
+
+.screen-reader-text { }

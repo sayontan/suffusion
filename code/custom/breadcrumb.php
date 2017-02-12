@@ -172,10 +172,10 @@ else if (is_404() && in_array('404', $show)) {
 $stack = array_reverse($stack);
 $string_stack = array();
 foreach ($stack as $element) {
-	if (is_array($element) && count($element) > 1) {
+	if (is_array($element) && count($element) > 1 && is_string($element[0]) && is_string($element[1])) {
 		$string_stack[] = "<a href='{$element[1]}' title='".esc_attr($element[0])."'>{$element[0]}</a>";
 	}
-	else if (is_array($element) && count($element) == 1) {
+	else if (is_array($element) && count($element) == 1 && is_string($element[0])) {
 		$string_stack[] = $element[0];
 	}
 	else if (!is_array($element)) {

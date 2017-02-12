@@ -225,6 +225,23 @@ class Suffusion_Fonts {
 				'class' => 'serif',
 			),
 
+			'lato' => array(
+				'family' => 'Lato',
+				'weight' => array(
+					100 => 'Ultra-Light',
+					'100italic' => 'Ultra-Light italic',
+					300 => 'Book',
+					'300italic' => 'Book italic',
+					400 => 'Normal',
+					'400italic' => 'Normal italic',
+					700 => 'Bold',
+					'700italic' => 'Bold italic',
+					900 => 'Ultra-Bold',
+					'900italic' => 'Ultra-Bold italic',
+				),
+				'class' => 'sans-serif',
+			),
+
 			'lobster' => array(
 				'family' => 'Lobster',
 				'weight' => array(),
@@ -408,6 +425,28 @@ class Suffusion_Fonts {
 				'family' => 'Satisfy',
 				'weight' => array(),
 				'class' => 'cursive',
+			),
+
+			'signika' => array(
+				'family' => 'Signika',
+				'weight' => array(
+					300 => 'Book',
+					400 => 'Normal',
+					600 => 'Semi-Bold',
+					700 => 'Bold',
+				),
+				'class' => 'sans-serif',
+			),
+
+			'signika-negative' => array(
+				'family' => 'Signika Negative',
+				'weight' => array(
+					300 => 'Book',
+					400 => 'Normal',
+					600 => 'Semi-Bold',
+					700 => 'Bold',
+				),
+				'class' => 'sans-serif',
 			),
 
 			'sue-ellen-francisco' => array(
