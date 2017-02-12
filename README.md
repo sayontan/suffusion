@@ -6,7 +6,9 @@ The Suffusion Theme for WordPress used to be distributed from the official WordP
 
 To install the theme:
 
-1. Download the latest version from the `dist` folder of this repository
+1. Download the latest version from the `dist` folder of this repository. Note that the last version officially released through WP was 4.4.9. The zip file corresponding to it has been made available. In addition there have been two minor modifications to the code (made available as Version 4.5.0):
+ * A correction to the code for Audio Post Formats to prevent a fatal error. Note that the error wouldn't occur if you have the Suffusion Shortcodes plugin
+ * A small change to allow jQuery Cycle to be used if [Photonic](https://wordpress.org/plugins/photonic) is active. Photonic switched to using a different slideshow script in its version 1.62
 2. Unzip the contents to your `wp-content/themes` folder of your WordPress installation
 3. Activate the theme from your WordPress dashboard, under Appearance &rarr; Themes
 
