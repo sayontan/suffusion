@@ -855,9 +855,7 @@ function suffusion_include_featured_js() {
 		((is_date() || is_year() || is_month() || is_day() || is_time()) && $suf_featured_time_view == "enabled") ||
 		(!(is_category() || is_tag() || is_search() || is_author() || is_date() || is_year() || is_month() || is_day() || is_time() || is_page_template('magazine.php') || is_page()) && $suf_featured_index_view == "enabled")) {
 		// Photonic is a plugin by me, so I know that it loads JQuery Cycle always. If Photonic is active there is no need to load JQuery Cycle via Suffusion.
-		if (!class_exists('Photonic')) {
-			wp_enqueue_script('suffusion-jquery-cycle');
-		}
+		wp_enqueue_script('suffusion-jquery-cycle');
 	}
 }
 
