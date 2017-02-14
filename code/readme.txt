@@ -46,8 +46,8 @@ of your WordPress installation. You will then be able to activate the theme.
 
 == Screenshots ==
 
-For the theme in action with the Custom Layout Template see the <a href='http://aquoid.com/news/themes/suffusion/'>theme page</a>. You can also
-check out the <a href='http://aquoid.com/news/showcase/'>showcase</a> for examples of sites using the theme.
+For the theme in action with the Custom Layout Template see the <a href='https://aquoid.com/themes/suffusion/'>theme page</a>. You can also
+check out the <a href='https://aquoid.com/showcase/'>showcase</a> for examples of sites using the theme.
 
 1.	The "Scribbles" skin, bundled with the theme, for an informal looking blog.
 2.	The "Photonique" skin in action, set up as a photo blog by using the "Mosaic" layout.
@@ -79,7 +79,7 @@ You are in luck! Suffusion's shortcodes are bundled as a separate plugin called 
 which will let your shortcodes work seamlessly with any new theme that you decide to use.
 
 = Are translations supported? =
-Translations for the theme are available at http://aquoid.com/news/themes/suffusion/translating-suffusion/. The back-end of the theme is
+Translations for the theme are available at https://aquoid.com/themes/suffusion/translating-suffusion/. The back-end of the theme is
 not currently translated. However a plugin will be made available to facilitate translations of the same.
 
 = What languages is Suffusion available in? =

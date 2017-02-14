@@ -177,14 +177,28 @@ function suffusion_display_featured_posts($echo = true) {
         }
 		$suffusion_fc_feautred_excerpt_position = 0;
 		$suffusion_fc_featured_post_counter = 0;
-		global $suf_featured_show_border;
+		global $suf_featured_show_border, $suf_featured_transition_speed, $suf_featured_interval;
 		$border_class = $suf_featured_show_border == 'hide' ? 'no-border' : 'show-border';
 		$index_class = ($suf_featured_pager == 'show' || $suf_featured_controller == 'show') ? 'index-below' : (($suf_featured_pager == 'show-overlaid' || $suf_featured_controller == 'show-overlaid') ? 'index-overlaid' : 'index-hidden');
 		$controller_class = $suf_featured_controller == 'show-overlaid-icons' ? 'controller-icons' : '';
 		$pager_class = $suf_featured_pager_style == 'numbers' ? 'pager-numbers' : 'pager-bullets';
-        $ret .= "<div id=\"featured-posts\" class=\"fix $border_class $index_class $pager_class $controller_class\">";
+		if ($suf_featured_pager_style == 'numbers') {
+			$pager_template = "<a href=\"#\">{{slideNum}}</a>";
+		}
+		else {
+			$pager_template = "<a href=\"#\">&nbsp;</a>";
+		}
+
+		$ret .= "<div id=\"featured-posts\" class=\"fix $border_class $index_class $pager_class $controller_class\">";
         $ret .= "\t<div id=\"slider\" class=\"fix clear\">";
-        $ret .= "\t\t<ul id=\"sliderContent\" class=\"fix clear\">";
+        $ret .= "\t\t<ul id=\"sliderContent\" class=\"fix clear cycle-slideshow\"
+	data-cycle-slides='> li'
+	data-cycle-pager='#sliderPager'
+	data-cycle-prev='#sliderControl .sliderPrev'
+	data-cycle-next='#sliderControl .sliderNext'
+	data-cycle-speed='$suf_featured_transition_speed'
+	data-cycle-timeout='$suf_featured_interval'
+	data-cycle-pager-template='$pager_template'>";
         $do_not_duplicate = array();
 
         if (isset($sticky_query)) {
@@ -205,7 +219,7 @@ function suffusion_display_featured_posts($echo = true) {
 
         $ret .= "\t\t</ul>";
         $ret .= "\t</div>";
-        $ret .= suffusion_display_featured_pager($echo);
+        $ret .= suffusion_display_featured_pager();
         $ret .= "</div>";
         if ($suf_featured_show_dupes == 'hide') {
 	        $suffusion_duplicate_posts = $do_not_duplicate;

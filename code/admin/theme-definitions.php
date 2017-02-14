@@ -1,188 +1,192 @@
 <?php
 global $suf_theme_definitions, $suf_element_mapping;
+$root_options = array(
+	"body/color" => "#000000",
+	"body/background-color" => "#444444",
+	"body/background-image" => '',
+
+	"a/color" => "#528f6c",
+	"a:visited/color" => "#528f6c",
+	"a/text-decoration" => "none",
+	"a:hover/color" => "#528f6c",
+	"a:hover/text-decoration" => "underline",
+
+	".blogtitle a/color" => "#000000",
+	".blogtitle a:hover/color" => "#528f6c",
+	".description/color" => "#000000",
+
+	"#wrapper/border-color" => "#008000",
+	"#wrapper/background-color" => "#EDF3E6",
+
+	".post/border-color" => "#c0c0c0",
+	".post/background-color" => "#ffffff",
+	".post .date/color" => "#ffffff",
+	".post .date span/color" => "#ffffff",
+	".post .date span.year/color" => "#ffffff",
+
+	"h2.posttitle/color" => "#000000",
+	"h2.posttitle/border-bottom-color" => "#CCCCCC",
+	"h2.posttitle a/color" => "#000000",
+	"h2.posttitle a:visited/color" => "#000000",
+	"h2.posttitle a:hover/color" => "#528f6c",
+
+	"#sidebar/color" => "#666666",
+	"#sidebar h3/color" => "#444444",
+	"#sidebar h3:hover/color" => "#000000",
+	"#sidebar h3 a/color" => "#333333",
+	"#sidebar h3 a:visited/color" => "#333333",
+	"#sidebar a/color" => "#000000",
+	"#sidebar a:visited/color" => "#000000",
+	"#sidebar a:hover/color" => "#528f6c",
+	"#sidebar a:focus/color" => "#528f6c",
+	"#sidebar a:active/color" => "#528f6c",
+	"#sidebar div.dbx-box/border-color" => "#c0c0c0",
+
+	".widget_calendar a/color" => "#528f6c",
+	".wp-caption/background" => "#ffffff",
+
+	".download/color" => "#000000",
+	".download/background-color" => "#bbe7f9",
+	".download/border-color" => "#0000ff",
+
+	".announcement/color" => "#000000",
+	".announcement/background-color" => "#b8f9d5",
+	".announcement/border-color" => "#088c43",
+
+	".warning/color" => "#000000",
+	".warning/background-color" => "#ffdbea",
+	".warning/border-color" => "#ff0000",
+
+	".note/color" => "#000000",
+	".note/background-color" => "#f9f6a7",
+	".note/border-color" => "#e7d605",
+
+	"#horizontal-outer-widgets-1/color" => "#000000",
+	"#horizontal-outer-widgets-1 a/color" => "#000000",
+	"#horizontal-outer-widgets-1 a:visited/color" => "#000000",
+
+	"#horizontal-outer-widgets-2/color" => "#000000",
+	"#horizontal-outer-widgets-2 a/color" => "#000000",
+	"#horizontal-outer-widgets-2 a:visited/color" => "#000000",
+);
+
+$dark_theme_options = array_merge($root_options, array(
+	"parent" => "root",
+	"body/color" => "#dedede",
+
+	"blockquote/background-color" => "#222222",
+	"blockquote/border-color" => "#555555",
+
+	"#wrapper/border-color" => "#555555",
+	"#wrapper/background-color" => "#222222",
+
+	"#sidebar div.dbx-box/border-color" => "#555555",
+	"#sidebar div.dbx-box/background-color" => "#000000",
+
+	".dbx-handle/border-color" => "#555555",
+
+	".blogtitle a/color" => "#cccccc",
+	".description/color" => "#cccccc",
+
+	".post/border-color" => "#555555",
+	".post/background-color" => "#000000",
+
+	"h2.posttitle/color" => "#ffffff",
+	"h2.posttitle/border-bottom-color" => "#555555",
+	"h2.posttitle a/color" => "#ffffff",
+	"h2.posttitle a:visited/color" => "#ffffff",
+
+	"#commentform textarea/background" => "#333333",
+	"#commentform textarea/border-color" => "#555555",
+
+	"textarea/color" => "#999999",
+	"textarea/border-color" => "#555555",
+
+	".submit/border-color" => "#555555",
+	".submit/background" => "#444444",
+
+	"#sidebar/color" => "#666666",
+	"#sidebar h3/color" => "#999999",
+	"#sidebar h3:hover/color" => "#999999",
+	"#sidebar h3 a/color" => "#999999",
+	"#sidebar h3 a:visited/color" => "#999999",
+	"#sidebar a/color" => "#999999",
+	"#sidebar a:visited/color" => "#999999",
+
+	"#horizontal-outer-widgets-1/color" => "#666666",
+	"#horizontal-outer-widgets-1 a/color" => "#999999",
+	"#horizontal-outer-widgets-1 a:visited/color" => "#999999",
+
+	"#horizontal-outer-widgets-2/color" => "#666666",
+	"#horizontal-outer-widgets-2 a/color" => "#999999",
+	"#horizontal-outer-widgets-2 a:visited/color" => "#999999",
+));
+$light_theme_green_options = array_merge($root_options, array(
+	"name" => "Green on a light theme",
+	"parent" => "root",
+
+	"a/color" => "#528f6c",
+	"a:visited/color" => "#528f6c",
+	"a:hover/color" => "#528f6c",
+
+	"#wrapper/border-color" => "#008000",
+	"#wrapper/background-color" => "#edf3e6",
+
+	".blogtitle a:hover/color" => "#528f6c",
+
+	".post .date/color" => "#ffffff",
+	".post .date span/color" => "#ffffff",
+	".post .date span.year/color" => "#ffffff",
+
+	"#sidebar h3/color" => "#444444",
+	"#sidebar h3:hover/color" => "#444444",
+	"#sidebar h3 a/color" => "#444444",
+	"#sidebar h3 a:visited/color" => "#444444",
+	"#sidebar h3.scheme/color" => "#ffffff",
+	"#sidebar h3.scheme:hover/color" => "#ffffff",
+	"#sidebar h3.scheme a/color" => "#ffffff",
+	"#sidebar h3.scheme a:visited/color" => "#ffffff",
+	"#sidebar a:hover/color" => "#528f6c",
+	"#sidebar a:focus/color" => "#528f6c",
+	"#sidebar a:active/color" => "#528f6c",
+
+	".widget_calendar a/color" => "#528f6c",
+
+	"#horizontal-outer-widgets-1 a:hover/color" => "#528f6c",
+	"#horizontal-outer-widgets-1 a:focus/color" => "#528f6c",
+	"#horizontal-outer-widgets-1 a:active/color" => "#528f6c",
+
+	"#horizontal-outer-widgets-2 a:hover/color" => "#528f6c",
+	"#horizontal-outer-widgets-2 a:focus/color" => "#528f6c",
+	"#horizontal-outer-widgets-2 a:active/color" => "#528f6c",
+));
+
+$dark_theme_green_options = array_merge($light_theme_green_options, $dark_theme_options, array(
+	"name" => "Green on a dark theme",
+	"parent" => "dark-theme,light-theme-green",
+
+	"a/color" => "#528f6c",
+	"a:visited/color" => "#528f6c",
+	"a/text-decoration" => "none",
+	"a:hover/color" => "#528f6c",
+	"a:hover/text-decoration" => "underline",
+
+	".blogtitle a:hover/color" => "#528f6c",
+
+	"#horizontal-outer-widgets-1 a:hover/color" => "#528f6c",
+	"#horizontal-outer-widgets-1 a:focus/color" => "#528f6c",
+	"#horizontal-outer-widgets-1 a:active/color" => "#528f6c",
+
+	"#horizontal-outer-widgets-2 a:hover/color" => "#528f6c",
+	"#horizontal-outer-widgets-2 a:focus/color" => "#528f6c",
+	"#horizontal-outer-widgets-2 a:active/color" => "#528f6c",
+));
+
 $suf_theme_definitions = array(
-	"root" => array(
-		"body/color" => "#000000",
-		"body/background-color" => "#444444",
-		"body/background-image" => '',
-
-		"a/color" => "#528f6c",
-		"a:visited/color" => "#528f6c",
-		"a/text-decoration" => "none",
-		"a:hover/color" => "#528f6c",
-		"a:hover/text-decoration" => "underline",
-
-		".blogtitle a/color" => "#000000",
-		".blogtitle a:hover/color" => "#528f6c",
-		".description/color" => "#000000",
-
-		"#wrapper/border-color" => "#008000",
-		"#wrapper/background-color" => "#EDF3E6",
-
-		".post/border-color" => "#c0c0c0",
-		".post/background-color" => "#ffffff",
-		".post .date/color" => "#ffffff",
-		".post .date span/color" => "#ffffff",
-		".post .date span.year/color" => "#ffffff",
-
-		"h2.posttitle/color" => "#000000",
-		"h2.posttitle/border-bottom-color" => "#CCCCCC",
-		"h2.posttitle a/color" => "#000000",
-		"h2.posttitle a:visited/color" => "#000000",
-		"h2.posttitle a:hover/color" => "#528f6c",
-
-		"#sidebar/color" => "#666666",
-		"#sidebar h3/color" => "#444444",
-		"#sidebar h3:hover/color" => "#000000",
-		"#sidebar h3 a/color" => "#333333",
-		"#sidebar h3 a:visited/color" => "#333333",
-		"#sidebar a/color" => "#000000",
-		"#sidebar a:visited/color" => "#000000",
-		"#sidebar a:hover/color" => "#528f6c",
-		"#sidebar a:focus/color" => "#528f6c",
-		"#sidebar a:active/color" => "#528f6c",
-		"#sidebar div.dbx-box/border-color" => "#c0c0c0",
-
-		".widget_calendar a/color" => "#528f6c",
-		".wp-caption/background" => "#ffffff",
-
-		".download/color" => "#000000",
-		".download/background-color" => "#bbe7f9",
-		".download/border-color" => "#0000ff",
-
-		".announcement/color" => "#000000",
-		".announcement/background-color" => "#b8f9d5",
-		".announcement/border-color" => "#088c43",
-
-		".warning/color" => "#000000",
-		".warning/background-color" => "#ffdbea",
-		".warning/border-color" => "#ff0000",
-
-		".note/color" => "#000000",
-		".note/background-color" => "#f9f6a7",
-		".note/border-color" => "#e7d605",
-
-		"#horizontal-outer-widgets-1/color" => "#000000",
-		"#horizontal-outer-widgets-1 a/color" => "#000000",
-		"#horizontal-outer-widgets-1 a:visited/color" => "#000000",
-
-		"#horizontal-outer-widgets-2/color" => "#000000",
-		"#horizontal-outer-widgets-2 a/color" => "#000000",
-		"#horizontal-outer-widgets-2 a:visited/color" => "#000000",
-	),
-
-	"dark-theme" => array(
-		"parent" => "root",
-		"body/color" => "#dedede",
-
-		"blockquote/background-color" => "#222222",
-		"blockquote/border-color" => "#555555",
-
-		"#wrapper/border-color" => "#555555",
-		"#wrapper/background-color" => "#222222",
-
-		"#sidebar div.dbx-box/border-color" => "#555555",
-		"#sidebar div.dbx-box/background-color" => "#000000",
-
-		".dbx-handle/border-color" => "#555555",
-
-		".blogtitle a/color" => "#cccccc",
-		".description/color" => "#cccccc",
-
-		".post/border-color" => "#555555",
-		".post/background-color" => "#000000",
-
-		"h2.posttitle/color" => "#ffffff",
-		"h2.posttitle/border-bottom-color" => "#555555",
-		"h2.posttitle a/color" => "#ffffff",
-		"h2.posttitle a:visited/color" => "#ffffff",
-
-		"#commentform textarea/background" => "#333333",
-		"#commentform textarea/border-color" => "#555555",
-
-		"textarea/color" => "#999999",
-		"textarea/border-color" => "#555555",
-
-		".submit/border-color" => "#555555",
-		".submit/background" => "#444444",
-
-		"#sidebar/color" => "#666666",
-		"#sidebar h3/color" => "#999999",
-		"#sidebar h3:hover/color" => "#999999",
-		"#sidebar h3 a/color" => "#999999",
-		"#sidebar h3 a:visited/color" => "#999999",
-		"#sidebar a/color" => "#999999",
-		"#sidebar a:visited/color" => "#999999",
-
-		"#horizontal-outer-widgets-1/color" => "#666666",
-		"#horizontal-outer-widgets-1 a/color" => "#999999",
-		"#horizontal-outer-widgets-1 a:visited/color" => "#999999",
-
-		"#horizontal-outer-widgets-2/color" => "#666666",
-		"#horizontal-outer-widgets-2 a/color" => "#999999",
-		"#horizontal-outer-widgets-2 a:visited/color" => "#999999",
-	),
-
-	"light-theme-green" => array(
-		"name" => "Green on a light theme",
-		"parent" => "root",
-
-		"a/color" => "#528f6c",
-		"a:visited/color" => "#528f6c",
-		"a:hover/color" => "#528f6c",
-
-		"#wrapper/border-color" => "#008000",
-		"#wrapper/background-color" => "#edf3e6",
-
-		".blogtitle a:hover/color" => "#528f6c",
-
-		".post .date/color" => "#ffffff",
-		".post .date span/color" => "#ffffff",
-		".post .date span.year/color" => "#ffffff",
-
-		"#sidebar h3/color" => "#444444",
-		"#sidebar h3:hover/color" => "#444444",
-		"#sidebar h3 a/color" => "#444444",
-		"#sidebar h3 a:visited/color" => "#444444",
-		"#sidebar h3.scheme/color" => "#ffffff",
-		"#sidebar h3.scheme:hover/color" => "#ffffff",
-		"#sidebar h3.scheme a/color" => "#ffffff",
-		"#sidebar h3.scheme a:visited/color" => "#ffffff",
-		"#sidebar a:hover/color" => "#528f6c",
-		"#sidebar a:focus/color" => "#528f6c",
-		"#sidebar a:active/color" => "#528f6c",
-
-		".widget_calendar a/color" => "#528f6c",
-
-		"#horizontal-outer-widgets-1 a:hover/color" => "#528f6c",
-		"#horizontal-outer-widgets-1 a:focus/color" => "#528f6c",
-		"#horizontal-outer-widgets-1 a:active/color" => "#528f6c",
-
-		"#horizontal-outer-widgets-2 a:hover/color" => "#528f6c",
-		"#horizontal-outer-widgets-2 a:focus/color" => "#528f6c",
-		"#horizontal-outer-widgets-2 a:active/color" => "#528f6c",
-	),
-
-	"dark-theme-green" => array(
-		"name" => "Green on a dark theme",
-		"parent" => "dark-theme,light-theme-green",
-
-		"a/color" => "#528f6c",
-		"a:visited/color" => "#528f6c",
-		"a/text-decoration" => "none",
-		"a:hover/color" => "#528f6c",
-		"a:hover/text-decoration" => "underline",
-
-		".blogtitle a:hover/color" => "#528f6c",
-
-		"#horizontal-outer-widgets-1 a:hover/color" => "#528f6c",
-		"#horizontal-outer-widgets-1 a:focus/color" => "#528f6c",
-		"#horizontal-outer-widgets-1 a:active/color" => "#528f6c",
-
-		"#horizontal-outer-widgets-2 a:hover/color" => "#528f6c",
-		"#horizontal-outer-widgets-2 a:focus/color" => "#528f6c",
-		"#horizontal-outer-widgets-2 a:active/color" => "#528f6c",
-	),
+	"root" => $root_options,
+	"dark-theme" => $dark_theme_options,
+	"light-theme-green" => $light_theme_green_options,
+	"dark-theme-green" => $dark_theme_green_options,
 
 	"light-theme-pale-blue" => array(
 		"name" => "Pale Blue on a light theme",

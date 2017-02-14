@@ -651,7 +651,9 @@ $suffusion_theme_skinning_options = array(
 		"id" => "suf_body_background_color",
 		"parent" => "body-bg-settings",
 		"type" => "color-picker",
-		"std" => suffusion_evaluate_style("suf_body_background_color", $suffusion_theme_name)),
+//		"std" => suffusion_evaluate_style("suf_body_background_color", $suffusion_theme_name)
+		"std" => get_background_color()
+	),
 
 	array("name" => "Body Background Image",
 		"desc" => "Set the image to use for the background. " .

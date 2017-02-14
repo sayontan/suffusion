@@ -23,7 +23,7 @@ label { color: #aaa; }
 
 #sliderIndex, .sliderIndex { background: #111 url(../../images/bg-black.png) repeat-x top left; }
 #sliderIndex a, #sliderIndex a:visited, .sliderIndex a, .sliderIndex a:visited { border: none; color: #bbb; font-weight: normal; padding: 6px; }
-#sliderIndex a:hover, .sliderIndex a:hover, #sliderIndex a.activeSlide, .sliderIndex a.activeSlide { color: #0af; }
+#sliderIndex a:hover, .sliderIndex a:hover, #sliderIndex a.activeSlide, .sliderIndex a.activeSlide, #sliderIndex a.cycle-pager-active, .sliderIndex a.cycle-pager-active { color: #0af; }
 .index-overlaid #sliderIndex a, .index-overlaid .sliderIndex a { background-color: transparent; }
 .pager-bullets #sliderPager a, .pager-bullets .sliderPager a { background: url(../../images/slider-gray.png) transparent no-repeat center center; }
 .pager-bullets #sliderPager a.activeSlide, .pager-bullets .sliderPager a.activeSlide, .pager-bullets #sliderPager a:hover, .pager-bullets .sliderPager a:hover { background: url(../../images/slider-blue.png) transparent no-repeat center center; }

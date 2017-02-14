@@ -7,7 +7,7 @@
  */
 
 if (!defined('SUFFUSION_THEME_VERSION')) {
-	define('SUFFUSION_THEME_VERSION', '4.5.0');
+	define('SUFFUSION_THEME_VERSION', '4.4.9');
 }
 
 require_once(get_template_directory().'/functions/framework.php');
@@ -684,6 +684,7 @@ function suffusion_register_jquery() {
 	else {
 		wp_register_script('suffusion-jquery-cycle', get_template_directory_uri() . '/scripts/jquery.cycle.all.min.js', array('jquery'), null);
 	}
+//	wp_register_script('suffusion-jquery-cycle', get_template_directory_uri() . '/scripts/jquery.cycle.min.js', array('jquery'), null);
 }
 
 /**

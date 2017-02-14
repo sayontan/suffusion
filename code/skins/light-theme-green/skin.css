@@ -317,10 +317,10 @@ div.sbtab-content-meta .rss,
 	color: #528f6c;
 }
 
-.sliderIndex a:hover, .sliderIndex a.activeSlide,
-#sliderIndex a:hover, #sliderIndex a.activeSlide,
-.index-overlaid .sliderIndex a:hover, .index-overlaid .sliderIndex a.activeSlide,
-.index-overlaid #sliderIndex a:hover, .index-overlaid #sliderIndex a.activeSlide {
+.sliderIndex a:hover, .sliderIndex a.activeSlide, .sliderIndex a.cycle-pager-active,
+#sliderIndex a:hover, #sliderIndex a.activeSlide, #sliderIndex a.cycle-pager-active,
+.index-overlaid .sliderIndex a:hover, .index-overlaid .sliderIndex a.activeSlide, .index-overlaid .sliderIndex a.cycle-pager-active,
+.index-overlaid #sliderIndex a:hover, .index-overlaid #sliderIndex a.activeSlide, .index-overlaid #sliderIndex a.cycle-pager-active {
 	background-color: #528f6c;
 	color: #fff;
 }

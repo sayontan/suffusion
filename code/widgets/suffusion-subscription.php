@@ -49,7 +49,7 @@ class Suffusion_Subscription extends WP_Widget {
             'Flickr' => array('account' => 'http://flickr.com/photos/%account%'),
             'LinkedIn' => array('url' => '%account%'),
             'Reddit' => array('account' => 'http://www.reddit.com/user/%account%'),
-            'RSS' => array('account' => 'http://feeds.feedburner.com/%account%'),
+            'RSS' => array('account' => 'https://feeds.feedburner.com/%account%'),
             'StumbleUpon' => array('account' => 'http://%account%.stumbleupon.com'),
             'Technorati' => array('account' => 'http://technorati.com/people/technorati/%account%/'),
             'Twitter' => array('account' => 'http://twitter.com/%account%'),
@@ -84,7 +84,7 @@ class Suffusion_Subscription extends WP_Widget {
         <p>
             <label for="<?php echo $this->get_field_id('feed'); ?>"><?php _e('FeedBurner Feed:', 'suffusion'); ?></label>
             <input id="<?php echo $this->get_field_id('feed'); ?>" name="<?php echo $this->get_field_name('feed'); ?>" value="<?php echo $instance['feed']; ?>" class="widefat" />
-            <i><?php printf(__('Enter your %1$s feed name. If your feed address is http://feeds.feedburner.com/my_feed_name, your feed name is my_feed_name', 'suffusion'), '<a href="http://feedburner.google.com">FeedBurner</a>'); ?></i>
+            <i><?php printf(__('Enter your %1$s feed name. If your feed address is https://feeds.feedburner.com/my_feed_name, your feed name is my_feed_name', 'suffusion'), '<a href="https://feedburner.google.com">FeedBurner</a>'); ?></i>
         </p>
 
         <p>
@@ -254,8 +254,8 @@ class Suffusion_Subscription extends WP_Widget {
         if ($show_email) {
 ?>
     <form class="aligncenter"
-        action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow"
-        onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=<?php echo $feed; ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+        action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow"
+        onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=<?php echo $feed; ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
             <p>
                 <input type="text" name="email" value='<?php echo $default_text; ?>' class='subscription-email'
                     onfocus="if (this.value == '<?php echo $default_text; ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php echo $default_text; ?>';}" />
@@ -269,8 +269,8 @@ class Suffusion_Subscription extends WP_Widget {
         if ($show_stats) {
 ?>
     <p>
-        <a href="http://feeds.feedburner.com/<?php echo $feed;?>">
-            <img src="http://feeds.feedburner.com/~fc/<?php echo $feed;?>?bg=99CCFF&amp;fg=444444&amp;anim=0" class="subscription-stats-icon" alt="" />
+        <a href="https://feeds.feedburner.com/<?php echo $feed;?>">
+            <img src="https://feeds.feedburner.com/~fc/<?php echo $feed;?>?bg=99CCFF&amp;fg=444444&amp;anim=0" class="subscription-stats-icon" alt="" />
         </a>
     </p>
 <?php

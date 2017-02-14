@@ -384,6 +384,22 @@ body {
 }";
 			return $ret;
 		}
+		else if ((get_background_image() || get_background_color()) && $suf_body_style_setting == 'custom') {
+			$ret = "
+body {
+	background-color: #".get_background_color().";";
+			if (get_background_image()) {
+				$body_bg_url = " url(".get_background_image().") ";
+				$ret .= "
+	background-image: $body_bg_url;
+	background-repeat: $suf_body_background_repeat;
+	background-attachment: $suf_body_background_attachment;
+	background-position: $suf_body_background_position;";
+			}
+			$ret .= "
+}";
+			return $ret;
+		}
 		return "";
 	}
 

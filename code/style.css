@@ -1,11 +1,11 @@
 /**
  * Theme Name: Suffusion
  * Description: An elegant, responsive and versatile theme with a power-packed set of options and semantic HTML5-based markup. It supports Mega-Menus, custom layout templates, advanced support for custom post types, customizable drop-down menus, featured sliders, tabbed sidebars, a magazine layout and lots of enhanced widgets for Twitter, Flickr, Google etc. It has 19 widget areas, one-column, two-column and three-column responsive, fixed-width and flexible-width layouts, 9 pre-defined templates and 19 pre-defined color schemes. Responsive capabilities are switched on by a single click. RTL support is built-in and translations in many languages are available. Custom Post Types and Custom Taxonomies are integrated. Compatibility packs for BuddyPress, bbPress, Jigoshop and WooCommerce are available as plugins for smooth integration. Support forum at http://www.aquoid.com/forum.
- * Theme URI: https://aquoid.com/news/themes/suffusion/
+ * Theme URI: https://aquoid.com/themes/suffusion/
  * Version: 4.5.0
  * Author: Sayontan Sinha
- * Author URI: https://mynethome.net/blog
- * Announcements Feed: https://aquoid.com/news/category/theme-releases/feed/
+ * Author URI: http://mynethome.net/blog
+ * Announcements Feed: https://aquoid.com/category/theme-releases/feed/
  * License: GNU General Public License (GPL), v3 (or newer)
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * Tags: theme-options, green, blue, silver, red, orange, purple, white, black, light, dark, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, custom-colors, custom-header, custom-background, custom-menu, threaded-comments, sticky-post, rtl-language-support, microformats, featured-images, post-formats, photoblogging, blavatar
@@ -1557,7 +1557,7 @@ a.twitter-icon-and-tag, a.twitter-icon-and-tag:hover, a.twitter-icon-and-tag:act
 	list-style: none;
 }
 
-#sliderPager, .sliderPager, #sliderControl, .sliderControl { margin:  5px; }
+#sliderPager, .sliderPager, #sliderControl, .sliderControl { margin:  5px;}
 .index-overlaid #sliderIndex, .index-overlaid .sliderIndex { bottom: 5px; z-index: 30; padding: 0; }
 .show-border.index-overlaid #sliderIndex, .show-border.index-overlaid .sliderIndex { bottom: 0; }
 .index-overlaid #sliderPager, .index-overlaid .sliderPager, .index-overlaid #sliderControl, .index-overlaid .sliderControl { padding: 0 5px; }
@@ -1661,7 +1661,7 @@ img.featured-excerpt-right {
 
 .sliderPager.left, #sliderPager.left, .sliderControl.left, #sliderControl.left { float: left; }
 .sliderPager.right, #sliderPager.right, .sliderControl.right, #sliderControl.right { float: right; }
-.controller-icons #sliderControl, .controller-icons .sliderControl { position: absolute; width: 100%; margin: 0; padding: 0; z-index: 30; height: 0; }
+.controller-icons #sliderControl, .controller-icons .sliderControl { position: absolute; width: 100%; margin: 0; padding: 0; z-index: 1000; height: 0; }
 .controller-icons .sliderPrev { float: left; background-position: -16px 0; background-color: transparent; }
 .controller-icons .sliderNext { float: right; background-position: -46px 0; background-color: transparent; }
 .controller-icons .sliderPause { display: none; }
@@ -2970,6 +2970,10 @@ span.updated { display: none; }
 }
 .tinynav {
 	display: none;
+	width: 95%;
+	height: 3em;
 }
 
 .screen-reader-text { }
+
+.cycle-slideshow img { width: 100%; height: auto }

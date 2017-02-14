@@ -620,7 +620,7 @@ class Suffusion_Fonts {
 
 		if (is_array($esc_fonts) && count($esc_fonts) > 0) {
 			$query_text = implode('|', $esc_fonts);
-			wp_enqueue_style('suffusion-google-fonts', "http://fonts.googleapis.com/css?family=$query_text", array(), null);
+			wp_enqueue_style('suffusion-google-fonts', "https://fonts.googleapis.com/css?family=$query_text", array(), null);
 		}
 	}
 }

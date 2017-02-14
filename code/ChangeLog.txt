@@ -1,3 +1,9 @@
+Version 4.5.0 - 29 Feb 2016
+=============================
+1.	Fixed an issue that was causing the background color functionality to not apply properly.
+Replaced JQuery Cycle with JQuery Cycle2; reduced transition options, added touch capabilities.
+Added lightbox touch capabilities.
+
 Version 4.4.9 - 20 Jan 2016
 =============================
 1.	Made minor CSS validation corrections for HTML5 compatibility

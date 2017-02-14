@@ -319,10 +319,10 @@ div.sbtab-content-meta .rss,
 	color: #787878;
 }
 
-.sliderIndex a:hover, .sliderIndex a.activeSlide,
-#sliderIndex a:hover, #sliderIndex a.activeSlide,
-.index-overlaid .sliderIndex a:hover, .index-overlaid .sliderIndex a.activeSlide,
-.index-overlaid #sliderIndex a:hover, .index-overlaid #sliderIndex a.activeSlide {
+.sliderIndex a:hover, .sliderIndex a.activeSlide, .sliderIndex a.cycle-pager-active,
+#sliderIndex a:hover, #sliderIndex a.activeSlide, #sliderIndex a.cycle-pager-active,
+.index-overlaid .sliderIndex a:hover, .index-overlaid .sliderIndex a.activeSlide, .index-overlaid .sliderIndex a.cycle-pager-active,
+.index-overlaid #sliderIndex a:hover, .index-overlaid #sliderIndex a.activeSlide, .index-overlaid #sliderIndex a.cycle-pager-active {
 	background-color: #787878;
 	color: #fff;
 }

@@ -2097,7 +2097,7 @@ msgid "Suffusion"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://aquoid.com/news/themes/suffusion/"
+msgid "https://aquoid.com/themes/suffusion/"
 msgstr ""
 
 #. Description of the plugin/theme
