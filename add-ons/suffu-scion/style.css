@@ -1,0 +1,35 @@
+/**
+ * Theme Name: Suffu-scion
+ * Theme URI: http://your.theme.uri/
+ * Description: A starter child theme for Suffusion. In the line that says "Tags:" below, add buddypress if this is being used for BuddyPress. E.g. "Tags: buddypress"
+ * Version: 1.0.0
+ * Author: Sayontan Sinha
+ * Author URI: http://mynethome.net/blog
+ * Template: suffusion
+ * Tags:
+ */
+
+/**
+ * No @import declarations are necessary if you go to Suffusion Options -> Back-end -> Child Themes -> Inherit styles, and Inherit all stylesheets.
+ * Otherwise import as follows.
+ */
+
+/* Always include this first if you are not inheriting */
+/* @import url("../suffusion/style.css"); */
+
+/* Include this if you are not inheriting and you wish to have rounded corners */
+/* @import url("../suffusion/rounded-corners.css"); */
+
+/* Include this for your specific skin if you are not inheriting */
+/* @import url("../suffusion/skins/light-theme-royal-blue/skin.css"); */
+
+/* Include this if you are using a dark theme and you are not inheriting. This is not needed for newer skins like Minima or Photonique */
+/* @import url("../suffusion/dark-style.css"); */
+
+/* Include this for your specific skin if you are using a dark theme and you are not inheriting */
+/* @import url("../suffusion/skins/dark-theme-royal-blue/skin.css"); */
+
+/**
+ * Define additional styles here. Note that the styles defined through options will override these styles.
+ * To override those styles you have to increase the CSS specificity here. For more on specificity see http://coding.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/
+ */
