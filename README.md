@@ -22,5 +22,5 @@ This program is distributed in the hope that it will be useful, but without any 
 
 ## Support
 
-As the author has stopped making modifications to the theme and no longer supports the theme actively, the only place to obtain support is at the support forum on https://aquoid.com/forum, where other volunteers sometimes monitor and provide support.
+The author has stopped making modifications to the theme and no longer supports the theme actively, but a few collaborators have continued to keep the theme up to date. The original support forum on https://aquoid.com/forum is being shut down with effect from February 2019, and support will henceforth be provided via this GitHub page by other volunteers.
 
