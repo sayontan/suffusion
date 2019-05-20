@@ -4,6 +4,7 @@
  */
 
 global $suffusion_options_file, $suffusion_options_intro_page, $suffusion_options_theme_skinning_page, $suffusion_options_visual_effects_page, $suffusion_options_sidebars_and_widgets_page, $suffusion_options_blog_features_page, $suffusion_options_templates_page;
+
 class Suffusion_Options_Renderer {
 	var $options;
 	var $option_structure;
@@ -16,8 +17,8 @@ class Suffusion_Options_Renderer {
 	var $allowed_values;
 	var $displayed_sections;
 	var $previous_displayed_section;
-
-	function Suffusion_Options_Renderer($options, $file) {
+	
+	function __construct($options, $file) {
 		$this->options = $options;
 		$this->file = $file;
 		$this->displayed_sections = 0;
@@ -46,7 +47,9 @@ class Suffusion_Options_Renderer {
 			}
 		}
 	}
-
+	function Suffusion_Options_Renderer($options, $file) {
+		self::__construct($options, $file);
+	}
 	/**
 	 * Renders an option whose type is "title". Invoked by add_settings_field.
 	 *
