@@ -315,7 +315,7 @@ class Suffusion_CSS_Helper {
 			$widths['wrapper'] = $main_col_width + $sb_1_width + $sb_2_width + 30;
 		}
 
-		$content_width = $widths['main-col'] - 30; // Account for padding on the sides
+$content_width = is_numeric( $widths['main-col'] ) ? $widths['main-col'] - 30 : $widths['main-col']; // Account for padding on the sides
 		$widths['wsidebar'] = $widths['sidebar-1'] + $widths['sidebar-2'] + 13;
 		$widths['category'] = $widths['main-col'] - 275;
 		$widths['tags'] = $widths['main-col'] - 275;
@@ -423,7 +423,7 @@ class Suffusion_CSS_Helper {
 			}
 		}
 
-		$content_width = $widths['main-col'] - 30; // Account for padding on the sides
+        $content_width = is_numeric( $widths['main-col'] ) ? $widths['main-col'] - 30 : $widths['main-col']; // Account for padding on the sides
 		$widths['wsidebar'] = $widths['sidebar-1'] + $widths['sidebar-2'] + 13;
 		$widths['category'] = '60%';
 		$widths['tags'] = '60%';
