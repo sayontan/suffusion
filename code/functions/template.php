@@ -203,6 +203,7 @@ function suffusion_enqueue_styles() {
 		$custom_file = trailingslashit($upload_dir['basedir']).'suffusion/custom-styles.css';
 		if (@file_exists($custom_file)) {
 			$custom_file_url = $upload_dir['baseurl'].'/suffusion/custom-styles.css';
+			if ( is_ssl() ) $custom_file_url = str_replace( 'http://','https://', $custom_file_url );
 			wp_enqueue_style('suffusion-generated', $custom_file_url, array('suffusion-theme', 'suffusion-ie'), SUFFUSION_THEME_VERSION);
 			$css_loaded = true;
 		}
