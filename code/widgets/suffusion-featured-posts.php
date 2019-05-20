@@ -10,13 +10,16 @@
 class Suffusion_Featured_Posts extends WP_Widget {
 	var $post_excerpt_length;
 
-	function Suffusion_Featured_Posts() {
+	function __construct() {
 		$widget_ops = array('classname' => 'widget-suf-featured-posts',
 			'description' => __("A widget for displaying featured posts.", "suffusion"));
 		$control_ops = array('width' => 750);
 		parent::__construct("suf-featured-posts", __("Featured Content", "suffusion"), $widget_ops, $control_ops);
 	}
-
+	
+	function Suffusion_Featured_Posts() {
+		self::__construct();		
+	}
 	function form($instance) {
 		global $suf_excerpt_custom_length;
 		$defaults = array("title" => "",
