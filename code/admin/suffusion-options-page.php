@@ -65,14 +65,14 @@ function suffusion_render_options() {
 	$generated_css = get_option('suffusion_generated_css');
 	//$db_options = get_option('suffusion_options');
 	global $suffusion_unified_options;
-	if (isset($suffusion_unified_options) && is_array($suffusion_unified_options) &&
-			isset($suffusion_unified_options['suf_autogen_css']) && $suffusion_unified_options['suf_autogen_css'] == 'autogen-file') {
+//	if (isset($suffusion_unified_options) && is_array($suffusion_unified_options) &&
+//			isset($suffusion_unified_options['suf_autogen_css']) && $suffusion_unified_options['suf_autogen_css'] == 'autogen-file') {
 		if (isset($generated_css) && is_array($generated_css)) {
 			if (suffusion_save_css_to_file($generated_css)) {
 				return;
 			}
 		}
-	}
+//	}
 	suffusion_get_custom_post_types();
 ?>
 	<div class="wrapper">
@@ -137,6 +137,7 @@ function suffusion_render_options() {
  * @return bool
  */
 function suffusion_save_css_to_file($custom_css = array()) {
+
 	if(!isset($_GET['settings-updated'])) {
 		return false;
 	}
@@ -166,6 +167,7 @@ function suffusion_save_css_to_file($custom_css = array()) {
 	}
 
 	if (is_array($custom_css) && isset($custom_css['css'])) {
+		unlink($filename); // pre-empty
 		if (!$wp_filesystem->put_contents($filename, $custom_css['css'], FS_CHMOD_FILE)) {
 			echo "<div class='error'><p>Failed to save file $filename. Please check your folder permissions.</p></div>";
 		}
