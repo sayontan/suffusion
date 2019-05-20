@@ -181,7 +181,12 @@ class Suffusion_Framework {
 		$suffusion_options_custom_types_page = 'theme-options-custom-types.php';
 
 		//WP provides a global $is_IE, but we specifically need to find IE6x (or, heaven forbid, IE5x). Note that older versions of Opera used to identify themselves as IE6, so we exclude Opera.
-		$suffusion_is_ie6 = preg_match('/\bmsie [56]/i', $_SERVER['HTTP_USER_AGENT']) && !preg_match('/\bopera/i', $_SERVER['HTTP_USER_AGENT']);
+		if ( isset( $_SERVER['HTTP_USER_AGENT'] ) ) {
+			$suffusion_is_ie6 = preg_match('/\bmsie [56]/i', $_SERVER['HTTP_USER_AGENT']) && !preg_match('/\bopera/i', $_SERVER['HTTP_USER_AGENT']);
+		}
+		else {
+			$suffusion_is_ie6 = false;
+		}
 
 		$suffusion_mm_sidebar_count = apply_filters('suffusion_mega_menu_count', 10);
 	}
