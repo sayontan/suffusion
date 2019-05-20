@@ -9,14 +9,17 @@
 
 class Suffusion_Child_Pages extends WP_Widget {
 	var $post_counts, $comment_counts, $post_excerpt_length;
-	function Suffusion_Child_Pages() {
+	function __construct() {
 		$widget_ops = array('classname' => 'widget-suf-child-pages',
 			'description' => __("A widget for displaying child pages of a given page.", "suffusion"));
 
 		$control_ops = array('width' => 650);
 		parent::__construct("suf-child-pages", __("Child Pages", "suffusion"), $widget_ops, $control_ops);
 	}
-
+	function Suffusion_Child_Pages() {
+		self::__construct();		
+	}
+	
 	function widget($args, $instance) {
 		if (!is_page()) {
 			return;
