@@ -8,7 +8,11 @@
 
 if (!class_exists('Suffusion_Widgets')) {
 	class Suffusion_Widgets {
+		function __construct() {
+		}
+		
 		function Suffusion_Widgets() {
+			self::__construct();		
 		}
 
 		function init() {
