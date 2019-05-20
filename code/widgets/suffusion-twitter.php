@@ -8,14 +8,17 @@
  */
 
 class Suffusion_Follow_Twitter extends WP_Widget {
-	function Suffusion_Follow_Twitter() {
+	function __construct() {
 		$rest_class = function_exists('simplexml_load_string') ? 'suf-twitter-rest' : '';
 		$widget_ops = array('classname' => 'widget-suf-follow-twitter '.$rest_class, 'description' => __("A widget to enable people to follow you on Twitter", "suffusion"));
 		$control_ops = array('width' => 840, 'height' => 350);
 
 		parent::__construct("suf-follow-twitter", __("Twitter", "suffusion"), $widget_ops, $control_ops);
 	}
-
+	function Suffusion_Follow_Twitter() {
+			self::__construct();		
+	}
+	
 	function widget( $args, $instance ) {
 		extract($args);
 		$user = $instance['user'];
