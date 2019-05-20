@@ -9,14 +9,17 @@
 
 class Suffusion_Category_Posts extends WP_Widget {
 	var $post_excerpt_length;
-	function Suffusion_Category_Posts() {
+	function __construct() {
 		$widget_ops = array('classname' => 'widget-suf-cat-posts',
 			'description' => __("A widget to pull posts based on various selection criteria. You can use this to display posts from a category, latest posts, random posts, popular posts etc.", "suffusion"));
 
 		$control_ops = array('width' => 810);
 		parent::__construct("suf-cat-posts", __("Query Posts", "suffusion"), $widget_ops, $control_ops);
 	}
-
+	
+	function Suffusion_Category_Posts() {
+		self::__construct();		
+	}
 	function widget($args, $instance) {
 		extract($args);
 
@@ -549,6 +552,6 @@ class Suffusion_Category_Posts extends WP_Widget {
 		else {
 			return 55;
 		}
-	}
+	}		
 }
 ?>
