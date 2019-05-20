@@ -384,22 +384,6 @@ body {
 }";
 			return $ret;
 		}
-		else if ((get_background_image() || get_background_color()) && $suf_body_style_setting == 'custom') {
-			$ret = "
-body {
-	background-color: #".get_background_color().";";
-			if (get_background_image()) {
-				$body_bg_url = " url(".get_background_image().") ";
-				$ret .= "
-	background-image: $body_bg_url;
-	background-repeat: $suf_body_background_repeat;
-	background-attachment: $suf_body_background_attachment;
-	background-position: $suf_body_background_position;";
-			}
-			$ret .= "
-}";
-			return $ret;
-		}
 		return "";
 	}
 
@@ -416,8 +400,8 @@ $template_class #main-col {	width: 100%; }";
 		$ret = "
 div.booklisting img, div.bookentry img { width: ".suffusion_admin_get_size_from_field($suf_nr_main_cover_w, "108px")."; height: ".suffusion_admin_get_size_from_field($suf_nr_main_cover_h, "160px")."; }
 div.bookentry .stats { width: ".(suffusion_get_numeric_size_from_field($suf_nr_main_cover_w, 108) + 34)."px; }
-div.bookentry .review { width: ".($widths['main-col'] - suffusion_get_numeric_size_from_field($suf_nr_main_cover_w, 108) - 80)."px; }
-#ie6 div.bookentry .review { width: ".($widths['main-col'] - suffusion_get_numeric_size_from_field($suf_nr_main_cover_w, 108) - 100)."px; }
+div.bookentry .review { width: ".(is_numeric($widths['main-col'])?($widths['main-col'] - suffusion_get_numeric_size_from_field($suf_nr_main_cover_w, 108) - 80)."px":$widths['main-col'])."; }
+#ie6 div.bookentry .review { width: ".(is_numeric($widths['main-col'])?($widths['main-col'] - suffusion_get_numeric_size_from_field($suf_nr_main_cover_w, 108) - 100)."px":$widths['main-col'])."; }
 col.nr-shelf-slot { width: $slot_width%; }";
 		return $ret;
 	}
