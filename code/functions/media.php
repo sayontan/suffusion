@@ -663,12 +663,12 @@ function suffusion_get_image($options = array()) {
 		switch ($position) {
 			case 'native':
 				$img = suffusion_get_image_by_post_thumbnail($size, $original, $get_original);
-				continue;
+				continue 2;
 
 			case 'custom-thumb':
 				$img = suffusion_get_image_from_custom_field('suf_thumbnail');
 				$original[0] = $img;
-				continue;
+				continue 2;
 
 			case 'attachment':
 				if (isset($options['attachment-id'])) {
@@ -681,17 +681,17 @@ function suffusion_get_image($options = array()) {
 				if (isset($original['yapb']) && $original['yapb']) {
 					$full_size = true;
 				}
-				continue;
+				continue 2;
 
 			case 'embedded':
 				$img = suffusion_get_image_from_embedded_url();
 				$original[0] = $img;
-				continue;
+				continue 2;
 
 			case 'custom-featured':
 				$img = suffusion_get_image_from_custom_field('suf_featured_image');
 				$original[0] = $img;
-		        continue;
+		        continue 2;
 		}
 	}
 
