@@ -20,9 +20,7 @@ else {
 <?php
 	if ($collapse == '') {
 ?>
-			value="<?php _e('Search','suffusion');?>"
-			onfocus="if (this.value == '<?php _e("Search","suffusion");?>') {this.value = '';}"
-			onblur="if (this.value == '') {this.value = '<?php _e("Search","suffusion");?>';}"
+			placeholder="<?php esc_attr( _e('Search','suffusion') ); ?>"
 <?php
 	}
 ?>
