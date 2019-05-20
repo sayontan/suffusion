@@ -18,7 +18,7 @@
  */
 
 class Suffusion_Subscription extends WP_Widget {
-	function Suffusion_Subscription() {
+	function __construct() {
 		$widget_ops = array(
             'classname' => 'widget-suf-subscription',
             'description' => __("This widget lets visitors of your blog subscribe to it and follow you on popular social networks like Digg, FaceBook etc. Additionally they can subscribe to your blog by email, for which you need a FeedBurner account.", "suffusion"));
@@ -57,7 +57,9 @@ class Suffusion_Subscription extends WP_Widget {
 			'YouTube' => array('account' => 'http://www.youtube.com/%account%'),
 		);
 	}
-
+	function Suffusion_Subscription() {
+			self::__construct();		
+	}
     function form($instance) {
         $defaults = array("title" => __("Follow Me", "suffusion"),
             "feed" => __("your-feed-name", "suffusion"),
