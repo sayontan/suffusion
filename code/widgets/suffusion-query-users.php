@@ -9,14 +9,16 @@
 
 class Suffusion_Query_Users extends WP_Widget {
 	var $post_counts, $comment_counts;
-	function Suffusion_Query_Users() {
+	function __construct() {
 		$widget_ops = array('classname' => 'widget-suf-users',
 			'description' => __("A widget for displaying users and their profiles.", "suffusion"));
 
 		$control_ops = array('width' => 650);
 		parent::__construct("suf-users", __("Query Users", "suffusion"), $widget_ops, $control_ops);
 	}
-
+	function Suffusion_Query_Users() {
+			self::__construct();		
+	}
 	function widget($args, $instance) {
 		extract($args);
 
