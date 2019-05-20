@@ -613,7 +613,12 @@ function suffusion_get_pseudo_template_class() {
 
 	// The current view is not any preset ('search', 'date', 'author', 'tag', 'category', 'blog'). Check if this is a single post.
 	if (!isset($count_option)) {
-		$post_template = suffusion_get_post_meta($post->ID, 'suf_pseudo_template', true);
+		if ( is_object( $post ) ) {
+			$post_template = suffusion_get_post_meta($post->ID, 'suf_pseudo_template', true);
+		}
+		else {
+			$post_template = '';
+		}
 		if (is_singular() && !is_page()) {
 			$special_template = ($post_template == '' || $post_template === 0 || $post_template == "0") ? 'default' : $post_template;
 		}
