@@ -2,7 +2,7 @@
 Donate link: http://www.aquoid.com/news/themes/suffusion
 Tags: theme-options, green, blue, silver, red, orange, purple, white, black, light, dark, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-colors, custom-header, custom-background, custom-menu, threaded-comments, sticky-post, rtl-language-support, microformats
 Requires at least: WP 3.1
-Tested up to: WP 5.2
+Tested up to: WP 5.3.2
 Stable tag: trunk
 Contributors: sayontan
 

@@ -14,7 +14,7 @@ class Suffusion_CSS_Helper {
 			$val_array = array();
 			$vals = explode(';', $option_val);
 			foreach ($vals as $val) {
-				if (trim($val) == '') { continue; }
+				if (trim($val) == '') { continue 1; }
 				$pair = explode('=', $val);
 				$val_array[$pair[0]] = $pair[1];
 			}

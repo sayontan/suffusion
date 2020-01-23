@@ -246,7 +246,7 @@ function suffusion_parse_featured_query_results($query, &$do_not_duplicate) {
 			}
 			$query->the_post();
             if (in_array($post->ID, $do_not_duplicate)) {
-                continue;
+                continue 1;
             }
             else {
 	            $do_not_duplicate[] = $post->ID;

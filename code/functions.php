@@ -7,7 +7,7 @@
  */
 
 if (!defined('SUFFUSION_THEME_VERSION')) {
-	define('SUFFUSION_THEME_VERSION', '4.5.6');
+	define('SUFFUSION_THEME_VERSION', '4.5.7');
 }
 
 require_once(get_template_directory().'/functions/framework.php');
@@ -934,14 +934,14 @@ function suffusion_get_associative_array($stored_value) {
 				$inner_ctr++;
 				if ($inner_ctr == 1) {
 					$index = $pairs_string;
-					continue;
+					continue 1;
 				}
 				if (trim($pairs_string) != '') {
 					$pairs = explode(';', $pairs_string);
 					foreach ($pairs as $pair) {
 						$name_value = explode('=', $pair);
 						if (count($name_value) <= 1) {
-							continue;
+							continue 1;
 						}
 						$pair_array[$name_value[0]] = $name_value[1];
 					}

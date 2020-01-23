@@ -1,4 +1,11 @@
-Version 4.5.6 - 21 May 2016
+Version 4.5.7 - 23 January 2020
+============================================
+Changed "continue" statement in several php files:
+featured-posts.php, functions.php, suffusion-css-helper.php, template-sitemap.php, admin\theme-options-renderer.php,
+custom\navigation-menu.php, functions\filters.php, functions\template.php, all files from layouts\ directory,
+post-formats\content-gallery.php, widgets\suffusion-featured-posts.php, widgets\suffusion-subscription.
+
+Version 4.5.6 - 21 May 2019
 ============================================
 Fixed Warning: "continue" targeting switch is equivalent to "break". in media.php
 
