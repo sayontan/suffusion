@@ -900,7 +900,7 @@ function suffusion_template_specific_header() {
 			<header class='post-header'>
 				<h2 class='posttitle'><?php $title = wp_title(':', false); $title = trim($title); if (substr($title, 0, 1) == ':') { $title = substr($title, 1);} echo $title; ?></h2>
 			</header>
-			<form method="get" action="<?php echo home_url(); ?>/" class='search-info' id='search-info'>
+			<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>/" class='search-info' id='search-info'>
 				<input class="search-hl checkbox" name="search-hl" id="search-hl" type="checkbox"/>
 				<label class='search-hl' for='search-hl'><?php _e('Highlight matching results below', 'suffusion');?></label>
 				<input type='hidden' name='search-term' id='search-term' value="<?php $search_term = get_search_query(); echo esc_attr($search_term);?>"/>
