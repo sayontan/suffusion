@@ -15,7 +15,7 @@ else {
 }
 ?>
 
-<form method="get" class="searchform <?php echo $collapse; ?>" action="<?php echo home_url(); ?>/">
+<form method="get" class="searchform <?php echo $collapse; ?>" action="<?php echo esc_url( home_url( '/' ) ); ?>/">
 	<input type="text" name="s" class="searchfield"
 <?php
 	if ($collapse == '') {

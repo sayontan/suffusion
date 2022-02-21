@@ -47,7 +47,7 @@ class Suffusion_Follow_Twitter extends WP_Widget {
 <?php
 			if ($show_icon) {
 ?>
-		<img src="<?php echo get_template_directory_uri(); ?>/images/twitter/<?php echo $icon;?>-big.png" alt="Twitter" height="<?php echo $icon_height;?>" width="<?php echo $icon_height;?>"/>
+		<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/twitter/<?php echo $icon;?>-big.png" alt="Twitter" height="<?php echo $icon_height;?>" width="<?php echo $icon_height;?>"/>
 <?php
 			}
 
@@ -331,7 +331,7 @@ class Suffusion_Follow_Twitter extends WP_Widget {
 <?php
 		for ($i = 0; $i < 10; $i++) {
 ?>
-			<span><input type="radio" name="<?php echo $this->get_field_name('icon'); ?>" value="twitter-0<?php echo $i; ?>" <?php checked("twitter-0$i", $icon); ?>/><img src="<?php echo get_template_directory_uri(); ?>/images/twitter/twitter-0<?php echo $i; ?>.png" alt="Twitter 0<?php echo $i; ?>"/></span>
+			<span><input type="radio" name="<?php echo $this->get_field_name('icon'); ?>" value="twitter-0<?php echo $i; ?>" <?php checked("twitter-0$i", $icon); ?>/><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/twitter/twitter-0<?php echo $i; ?>.png" alt="Twitter 0<?php echo $i; ?>"/></span>
 <?php
 		}
 ?>

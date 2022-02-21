@@ -33,7 +33,7 @@ if( have_books(intval($nr_id)) ) {
 
 			<div class="rating">
 				Rating: <?php echo book_rating(false); ?>
-<!--				<img src="<?php echo get_template_directory_uri(); ?>/images/<?php book_rating() ?>.png" height="20px" title="Rating: <?php book_rating()?>" alt="Rating: <?php book_rating()?>" />-->
+<!--				<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/<?php book_rating() ?>.png" height="20px" title="Rating: <?php book_rating()?>" alt="Rating: <?php book_rating()?>" />-->
 			</div>
 <?php
 		if( can_now_reading_admin() ) {
