@@ -806,7 +806,7 @@ $suffusion_layouts_options = array(
 	),
 
 	array("name" => "Scaling",
-		"desc" => "Don't allow pinch and zoom on touch devices. Selecting this will fix <a href='http://filamentgroup.com/examples/iosScaleBug/'>a bug on mobile Safari</a>.",
+		"desc" => "Don't allow pinch and zoom on touch devices. Selecting this will fix a bug on mobile Safari.",
 		"id" => "suf_responsive_prevent_user_scaling",
 		"parent" => "responsive",
 		"type" => "checkbox",
