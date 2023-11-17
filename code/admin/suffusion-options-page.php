@@ -92,17 +92,11 @@ function suffusion_render_options() {
 				<div class="suf-header-nav-top fix">
 					<h2 class='suf-header-1'>Suffusion &ndash; <?php echo SUFFUSION_THEME_VERSION; ?></h2>
 					<div class='donate fix'>
-						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="paypal-submit" >
-							<input type="hidden" name="cmd" value="_s-xclick"/>
-							<input type="hidden" name="hosted_button_id" value="9018267"/>
-							<ul>
-								<li class='announcements'><a href='http://www.aquoid.com/news'>Announcements</a></li>
-								<li class='support'><a href='http://www.aquoid.com/forum'>Support Forum</a></li>
-								<li class='showcase'><a href='http://www.aquoid.com/news/showcase/'>Showcase</a></li>
-								<li class='coffee'><input type='submit' name='submit' value='Like Suffusion? Buy me a coffee!' /></li>
-							</ul>
-							<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
-						</form>
+						<ul>
+							<li class='announcements'><a href='http://www.aquoid.com/news' target="_blank">Announcements</a></li>
+                            <li class='support'><a href='https://github.com/sayontan/suffusion/issues' target="_blank">Support Forum</a></li>
+                            <li class='showcase'><a href='http://www.aquoid.com/news/showcase/' target="_blank">Showcase</a></li>
+						</ul>
 					</div><!-- donate -->
 				</div>
 				<div class="suf-options-header-bar fix">
