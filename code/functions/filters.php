@@ -45,7 +45,7 @@ function suffusion_pages_link($content) {
 	return $content;
 }
 
-function suffusion_hide_reply_link_for_pings($link, $custom_options = array(), $current_comment, $current_post) {
+function suffusion_hide_reply_link_for_pings($link, $current_comment, $current_post) {
 	global $suf_show_hide_reply_link_for_pings;
 	if ($suf_show_hide_reply_link_for_pings != "allow") {
 		if (($current_comment->comment_type != "") && ($current_comment->comment_type != "comment")) {
