@@ -52,6 +52,7 @@ if (function_exists('icl_t')) {
 </head>
 
 <body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <?php suffusion_before_page(); ?>
 		<?php
 			suffusion_before_begin_wrapper();
