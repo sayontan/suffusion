@@ -1,35 +1,43 @@
+Version 4.5.8 - 22 November 2023
+============================================
+- Theme Check: Escape URLs used in attributes (#31)
+- Removed obsolete files (#39)
+- Updated options header (#40)
+- Removed broken link in options (#41)
+- Fixed PHP deprecated warnings (#42)
+
 Version 4.5.7 - 23 January 2020
 ============================================
-Changed "continue" statement in several php files:
+- Changed "continue" statement in several php files:
 featured-posts.php, functions.php, suffusion-css-helper.php, template-sitemap.php, admin\theme-options-renderer.php,
 custom\navigation-menu.php, functions\filters.php, functions\template.php, all files from layouts\ directory,
 post-formats\content-gallery.php, widgets\suffusion-featured-posts.php, widgets\suffusion-subscription.
 
 Version 4.5.6 - 21 May 2019
 ============================================
-Fixed Warning: "continue" targeting switch is equivalent to "break". in media.php
+- Fixed Warning: "continue" targeting switch is equivalent to "break". in media.php
 
 Version 4.5.4 - 4.5.5 - Colin fixes
 ============================================
-Fixed my mistakes in versioning the theme and returning back to http instead https in site-footer.php
+- Fixed my mistakes in versioning the theme and returning back to http instead https in site-footer.php
 
 Version 4.5.3 - 06 Mar 2018 - Opa Jaap fixes
 ============================================
-Fixed PHP notices: "Trying to get property 'ID' of non-object" in actions.php and "Undefined index: HTTP_USER_AGENT" in framework.php. 
+- Fixed PHP notices: "Trying to get property 'ID' of non-object" in actions.php and "Undefined index: HTTP_USER_AGENT" in framework.php. 
 
 Version 4.5.2 - 23 Feb 2018 - Opa Jaap bug fixes
 ================================================
-Solved bug related to not always saving the changes from Custom Styles when is settled to save those changes in a file.
+- Solved bug related to not always saving the changes from Custom Styles when is settled to save those changes in a file.
 
 Version 4.5.1 - 12 Feb 2018 - Drake version
 ===========================================
-Minor changes to the code for preventing the PHP warnings on servers with PHP 7+
+- Minor changes to the code for preventing the PHP warnings on servers with PHP 7+
 
 Version 4.5.0 - 12 Feb 2017 - Github version
 ============================================
 Two minor modifications to the code (made available as Version 4.5.0):
-1. A correction to the code for Audio Post Formats to prevent a fatal error. Note that the error wouldn't occur if you have the Suffusion Shortcodes plugin
-2. A small change to allow jQuery Cycle to be used if Photonic is active. Photonic switched to using a different slideshow script in its version 1.62
+1.  A correction to the code for Audio Post Formats to prevent a fatal error. Note that the error wouldn't occur if you have the Suffusion Shortcodes plugin
+2.  A small change to allow jQuery Cycle to be used if Photonic is active. Photonic switched to using a different slideshow script in its version 1.62
 
 Version 4.4.9 - 20 Jan 2016
 =============================
