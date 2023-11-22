@@ -50,7 +50,6 @@ function suffusion_theme_setup() {
  */
 function suffusion_add_theme_supports() {
 	add_theme_support('post-thumbnails');
-	add_theme_support('menus');
 	add_theme_support('automatic-feed-links');
 	add_theme_support('title-tag');
 
@@ -694,8 +693,10 @@ function suffusion_register_jquery() {
  * @return void
  */
 function suffusion_register_menus() {
-	register_nav_menu('top', 'Navigation Bar Above Header');
-	register_nav_menu('main', 'Navigation Bar Below Header');
+	register_nav_menus(array(
+		'top' => __( 'Navigation Bar Above Header', 'suffusion' ),
+		'main' => __( 'Navigation Bar Below Header', 'suffusion' ),
+	));	
 }
 
 function suffusion_add_user_contact_methods($contact_methods) {
