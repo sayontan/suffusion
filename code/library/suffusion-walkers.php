@@ -24,7 +24,7 @@ class Suffusion_MM_Walker extends Walker_Nav_Menu {
 		parent::start_el($output, $item, $depth, $args, $id = 0);
 	}
 
-    function display_element($element, &$children_elements, $max_depth, $depth, $args, &$output) {
+    	function display_element($element, &$children_elements, $max_depth, $depth, $args, &$output) {
 		// For nested levels we want to check if the parent is mega-menu enabled. If so, we shouldn't print the children.
 		if ($depth == 1) {
 			$parent_id = $element->menu_item_parent;
