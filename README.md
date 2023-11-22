@@ -1,6 +1,6 @@
 # Suffusion
 
-The Suffusion Theme for WordPress used to be distributed from the official WordPress site at http://wordpress.org/themes/suffusion, however it was pulled from the repository in June 2016. This site is intended to serve as the source for the last working version of the code. Note that the author (@sayontan) no longer maintains or offers support for the theme, and the code has been made available at the behest of its users.
+The Suffusion Theme for WordPress used to be distributed from the official WordPress site at `https://wordpress.org/themes/suffusion`, however it was pulled from the repository in June 2016. This site is intended to serve as the source for the last working version of the code. Note that the author (@sayontan) no longer maintains or offers support for the theme, and the code has been made available at the behest of its users.
 
 ## Installation
 
@@ -24,5 +24,7 @@ This program is distributed in the hope that it will be useful, but without any 
 
 ## Support
 
-The author has stopped making modifications to the theme and no longer supports the theme actively, but a few collaborators have continued to keep the theme up to date. The original support forum on https://aquoid.com/forum was shut down with effect from February 2019, and support will henceforth be provided via this GitHub repository by other volunteers.
+The author has stopped making modifications to the theme and no longer supports the theme actively, but a few collaborators have continued to keep the theme up to date. The original support forum on `https://aquoid.com/forum` was shut down with effect from February 2019, and support will henceforth be provided via this GitHub repository by other volunteers. 
+
+Feel free to open an issue or create pull requests! 
 
