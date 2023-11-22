@@ -255,7 +255,7 @@ function suffusion_setup_standard_actions_and_filters() {
 		add_filter('excerpt_more', 'suffusion_excerpt_more_replace');
 		add_filter('the_excerpt', 'suffusion_excerpt_more_append');
 
-		add_filter('comment_reply_link', 'suffusion_hide_reply_link_for_pings', 10, 3);
+		add_filter('comment_reply_link', 'suffusion_hide_reply_link_for_pings', 10, 4);
 		add_filter('get_comments_number', 'suffusion_filter_trk_ping_from_count');
 		add_filter('get_comments_pagenum_link', 'suffusion_append_comment_type');
 
