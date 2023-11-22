@@ -176,7 +176,7 @@ class Suffusion_Subscription extends WP_Widget {
 <?php
             foreach($icon_type_suffixes as $icon_type_suffix) {
 ?>
-            <div class="suf-radio-block"><input type="radio" name="<?php echo $this->get_field_name($icon_type.'_icon'); ?>" value="<?php echo $icon_type."-".$icon_type_suffix; ?>" <?php checked($icon_type."-".$icon_type_suffix, $icon); ?> /><img src="<?php echo get_template_directory_uri(); ?>/images/follow/<?php echo $icon_type."-".$icon_type_suffix; ?>.png" alt="<?php echo $icon_type."-".$icon_type_suffix; ?>"/></div>
+            <div class="suf-radio-block"><input type="radio" name="<?php echo $this->get_field_name($icon_type.'_icon'); ?>" value="<?php echo $icon_type."-".$icon_type_suffix; ?>" <?php checked($icon_type."-".$icon_type_suffix, $icon); ?> /><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/follow/<?php echo $icon_type."-".$icon_type_suffix; ?>.png" alt="<?php echo $icon_type."-".$icon_type_suffix; ?>"/></div>
 <?php
             }
 ?>
@@ -202,7 +202,7 @@ class Suffusion_Subscription extends WP_Widget {
 <?php
             foreach($icon_type_suffixes as $icon_type_suffix) {
 ?>
-            <div class="suf-radio-block"><input type="radio" name="<?php echo $this->get_field_name($icon_type.'_icon'); ?>" value="<?php echo $icon_type."-".$icon_type_suffix; ?>" <?php checked($icon_type."-".$icon_type_suffix, $icon); ?> /><img src="<?php echo get_template_directory_uri(); ?>/images/follow/<?php echo $icon_type."-".$icon_type_suffix; ?>.png" alt="<?php echo $icon_type."-".$icon_type_suffix; ?>"/></div>
+            <div class="suf-radio-block"><input type="radio" name="<?php echo $this->get_field_name($icon_type.'_icon'); ?>" value="<?php echo $icon_type."-".$icon_type_suffix; ?>" <?php checked($icon_type."-".$icon_type_suffix, $icon); ?> /><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/follow/<?php echo $icon_type."-".$icon_type_suffix; ?>.png" alt="<?php echo $icon_type."-".$icon_type_suffix; ?>"/></div>
 <?php
             }
 ?>
