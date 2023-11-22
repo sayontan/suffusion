@@ -695,7 +695,7 @@ function suffusion_register_jquery() {
 function suffusion_register_menus() {
 	register_nav_menus(array(
 		'top' => __( 'Navigation Bar Above Header', 'suffusion' ),
-		'main'  => __( 'Navigation Bar Below Header', 'suffusion' ),
+		'main' => __( 'Navigation Bar Below Header', 'suffusion' ),
 	));	
 }
 
