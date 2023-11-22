@@ -234,7 +234,6 @@ function suffusion_setup_standard_actions_and_filters() {
 		add_action('wp_head', 'suffusion_print_direct_styles', 11);
 		add_action('wp_head', 'suffusion_print_direct_scripts', 11);
 		add_action('wp_head', 'suffusion_create_analytics_contents', 30);
-		remove_action('wp_head', 'wp_generator');
 
 		add_action('wp_footer', 'suffusion_add_footer_contents');
 
@@ -1335,3 +1334,12 @@ function suffusion_get_horizontal_components($include = array(), $exclude = arra
 	}
 	return $base;
 }
+
+/**
+ * The Right Way to Remove WordPress Version Number
+ * https://www.wpbeginner.com/wp-tutorials/the-right-way-to-remove-wordpress-version-number/
+ */
+function suffusion_replace_version() {
+    return 'latest';
+}
+add_filter('the_generator', 'suffusion_replace_version');
