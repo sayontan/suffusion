@@ -1,10 +1,18 @@
-Version 4.5.8 - 22 November 2023
+Version 4.6.0 - 22 November 2023
 ============================================
 - Theme Check: Escape URLs used in attributes (#31)
 - Removed obsolete files (#39)
 - Updated options header (#40)
 - Removed broken link in options (#41)
 - Fixed PHP deprecated warnings (#42)
+- Clean-up obsolete tags (#44)
+- Fix PHP warnings (#45)
+- Theme Check: Fix text domain (#46)
+- Theme Check: Update metadata (#47)
+- Theme Check: Replace add_theme_support (#48)
+- Theme Check: Escape URLs (#49)
+- Remove WordPress version number (#51)
+- Add wp_body_open to header (#52)
 
 Version 4.5.7 - 23 January 2020
 ============================================
