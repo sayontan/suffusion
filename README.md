@@ -1,3 +1,6 @@
+![Release](https://img.shields.io/github/v/release/sayontan/suffusion)
+![License](https://img.shields.io/github/license/sayontan/suffusion)
+
 # Suffusion
 
 The Suffusion Theme for WordPress used to be distributed from the official WordPress site at `https://wordpress.org/themes/suffusion`, however it was pulled from the repository in June 2016. This site is intended to serve as the source for the last working version of the code. Note that the author (@sayontan) no longer maintains or offers support for the theme, and the code has been made available at the behest of its users.
