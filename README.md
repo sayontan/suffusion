@@ -17,7 +17,7 @@ To install the theme:
 
 The last version officially released through WordPress was 4.4.9. The ZIP file corresponding to it has been made available in the `dist` folder. 
 
-Old versions from 4.4.9 to 4.5.6 are still available in the [history of the `dist` folder](https://github.com/sayontan/suffusion/tree/5decf564ed8f6d5fd8f6bcfcde64ceb22bc90a25).
+Old versions from 4.4.9 to 4.5.6 are still available in the [history of the `dist` folder](https://github.com/sayontan/suffusion/tree/5decf564ed8f6d5fd8f6bcfcde64ceb22bc90a25/dist).
 
 ## License
 
