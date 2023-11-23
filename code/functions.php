@@ -42,6 +42,10 @@ function suffusion_theme_setup() {
 	if(is_admin() && isset($_GET['activated']) && $pagenow = 'themes.php') {
 		header('Location: '.admin_url().'themes.php?page=suffusion-options-manager&now-active=true');
 	}
+
+	// Get any translations
+	// https://developer.wordpress.org/themes/functionality/internationalization/
+	load_theme_textdomain( 'suffusion', get_template_directory() . '/translation' );	
 }
 
 /**
