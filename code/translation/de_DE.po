@@ -4,1052 +4,1020 @@ msgid ""
 msgstr ""
 "Project-Id-Version: suffusion\n"
 "POT-Creation-Date: 2023-11-23 09:18-0500\n"
-"PO-Revision-Date: 2023-11-23 09:19-0500\n"
+"PO-Revision-Date: 2023-11-23 11:04-0500\n"
 "Last-Translator: \n"
-"Language-Team: marcissimus@gmail.com\n"
-"Language: en\n"
+"Language-Team: German\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e\n"
+"X-Crowdin-Project: suffusion\n"
+"X-Crowdin-Project-ID: 629566\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: suffusion.pot\n"
+"X-Crowdin-File-ID: 4\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: admin/theme-options-visual-effects.php:1894 custom/byline-tile.php:93
 #: now-reading/single.php:110
 msgid "Tagged with: "
-msgstr ""
+msgstr "Markiert mit: "
 
 #: attachment.php:54 image.php:51 single.php:75
 msgid "Sorry, no posts matched your criteria."
-msgstr ""
+msgstr "Ihren Kriterien entsprechen keine Beiträge."
 
 #: categories.php:38
 msgid "RSS"
-msgstr ""
+msgstr "RSS"
 
 #: comment-author-above.php:23 comment-author-below.php:33 comment.php:23
 #, php-format
 msgid "%1$s at %2$s"
-msgstr ""
+msgstr "%1$s um %2$s"
 
 #: comment-author-above.php:23 comment-author-below.php:33 comment.php:23
 msgid "(Edit)"
-msgstr ""
+msgstr "(Bearbeiten)"
 
 #: comment-author-above.php:39 comment-author-below.php:17 comment.php:29
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Ihr Kommentar muss noch freigegeben werden."
 
 #: comment.php:19
 #, php-format
 msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
-msgstr ""
+msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">schrieb:</span>"
 
 #: comments.php:12
 msgid "This post is password protected. Enter the password to view comments."
-msgstr ""
+msgstr "Kennwortgeschützter Beitrag. Geben Sie das  Passwort ein, um die Kommentare angezeigt zu bekommen."
 
 #: comments.php:23
 #, php-format
 msgid "%1$s to &#8220;%2$s&#8221;"
-msgstr ""
+msgstr "%1$s zu &#8220;%2$s&#8221;"
 
 #: comments.php:23 custom/byline-line-page.php:41 custom/byline-line.php:124
 #: custom/byline-tile.php:70 custom/post-footer.php:88
 #: custom/post-header.php:103 custom/pullout.php:85
 msgid "No Responses"
-msgstr ""
+msgstr "Keine Antworten"
 
 #: comments.php:23
 msgid "One Response"
-msgstr ""
+msgstr "Eine Antwort"
 
 #: comments.php:23 custom/byline-line-page.php:41 custom/byline-line.php:124
 #: custom/byline-tile.php:70 custom/post-footer.php:88
 #: custom/post-header.php:103 custom/pullout.php:85
 msgid "% Responses"
-msgstr ""
+msgstr "% Antworten"
 
 #: comments.php:102
 #, php-format
 msgid "Logged in as %s. "
-msgstr ""
+msgstr "Angemeldet als %s. "
 
 #: comments.php:103 login.php:45
 msgid "Log out"
-msgstr ""
+msgstr "Abmelden"
 
 #: comments.php:105
 msgid "You must be logged in to post a comment."
-msgstr ""
+msgstr "Sie müssen angemeldet sein, um kommentieren zu können."
 
 #: comments.php:106
 msgid "Leave a Reply"
-msgstr ""
+msgstr "Kommentieren"
 
 #: comments.php:107
 #, php-format
 msgid "Leave a Reply to %s"
-msgstr ""
+msgstr "%s kommentieren"
 
 #: comments.php:108
 msgid "Submit Comment"
-msgstr ""
+msgstr "Kommentar senden"
 
 #: comments.php:110
 #, php-format
-msgid ""
-"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
-"and attributes: %s"
-msgstr ""
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr "Sie können diese <abbr title=\"HyperText Markup Language\">HTML</abbr>-Tags und Attribute verwenden: %s"
 
 #: comments.php:111
 msgid "Cancel reply"
-msgstr ""
+msgstr "Kommentar abbrechen"
 
 #: comments.php:133
 msgid "Sorry, the comment form is closed at this time."
-msgstr ""
+msgstr "Kommentare sind derzeit nicht möglich."
 
 #: content-gallery.php:157 post-formats/content-gallery.php:157
 #, php-format
 msgid "This gallery contains %1$s photos"
-msgstr ""
+msgstr "Diese Galerie enthält %1$s Bilder"
 
 #: content-gallery.php:166 post-formats/content-gallery.php:166
 #, php-format
 msgid "View %1$s photos"
-msgstr ""
+msgstr "%1$s Bilder anzeigen"
 
 #: content-gallery.php:174 post-formats/content-audio.php:51
 #: post-formats/content-chat.php:31 post-formats/content-gallery.php:174
 #: post-formats/content-status.php:13 post-formats/content.php:29
 #: widgets/suffusion-query-posts.php:172 widgets/suffusion-query-posts.php:202
 msgid "Continue reading &raquo;"
-msgstr ""
+msgstr "Weiterlesen &raquo;"
 
 #: custom/breadcrumb-page.php:70 custom/breadcrumb.php:86
 #: custom/breadcrumb.php:99 custom/breadcrumb.php:117 custom/breadcrumb.php:135
 #: custom/breadcrumb.php:142 custom/breadcrumb.php:154
 #: custom/breadcrumb.php:168
 msgid "Home"
-msgstr ""
+msgstr "Startseite"
 
 #: custom/breadcrumb.php:122
 msgid "j"
-msgstr ""
+msgstr "j"
 
 #: custom/breadcrumb.php:123 custom/breadcrumb.php:127
 msgid "F"
-msgstr ""
+msgstr "F"
 
 #: custom/breadcrumb.php:124 custom/breadcrumb.php:128
 #: custom/breadcrumb.php:131
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: custom/byline-line-page.php:35 custom/byline-line.php:111
 #: custom/byline-line.php:117 custom/post-footer.php:83
 #: custom/post-footer.php:96 custom/post-header.php:96
 #: custom/post-header.php:191 custom/pullout-page.php:30 custom/pullout.php:81
 msgid "Add comments"
-msgstr ""
+msgstr "Kommentieren"
 
 #: custom/byline-line-page.php:41 custom/byline-line.php:124
 #: custom/byline-tile.php:70 custom/post-footer.php:88
 #: custom/post-header.php:103 custom/pullout.php:85
 msgid "1 Response"
-msgstr ""
+msgstr "1 Antwort"
 
 #: custom/byline-line-page.php:49 custom/byline-line.php:132
 #: custom/byline-tile.php:103 custom/byline-tile.php:107
 #: custom/post-header.php:110 custom/post-header.php:199
 #: custom/pullout-page.php:38 custom/pullout.php:123
 msgid "Edit"
-msgstr ""
+msgstr "Bearbeiten"
 
 #: custom/byline-line.php:53 custom/byline-tile.php:51
 #: custom/post-footer.php:43 custom/post-header.php:58 custom/pullout.php:68
 msgid "Permalink"
-msgstr ""
+msgstr "Permalink"
 
 #: custom/byline-tile.php:45
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: custom/byline-tile.php:58
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: custom/byline-tile.php:66
 msgid "Responses"
-msgstr ""
+msgstr "Antworten"
 
 #: custom/byline-tile.php:79 functions/framework.php:73
 msgid "Categories"
-msgstr ""
+msgstr "Kategorien"
 
 #: custom/byline-tile.php:90
 msgid "Tags"
-msgstr ""
+msgstr "Tags"
 
 #: custom/pagination-comments.php:13
 msgid "Older Comments"
-msgstr ""
+msgstr "Ältere Kommentare"
 
 #: custom/pagination-comments.php:14
 msgid "Newer Comments"
-msgstr ""
+msgstr "Neuere Kommentare"
 
 #: custom/pagination-comments.php:19
 #, php-format
 msgid "Older %1$s"
-msgstr ""
+msgstr "Ältere %1$s"
 
 #: custom/pagination-comments.php:20
 #, php-format
 msgid "Newer %1$s"
-msgstr ""
+msgstr "Neuerer %1$s"
 
 #: custom/pagination-comments.php:49 custom/pagination-posts.php:46
 #, php-format
 msgid "Page %1$s of %2$s"
-msgstr ""
+msgstr "Seite %1$s von %2$s"
 
 #: custom/pagination-posts.php:59 custom/pagination-posts.php:70
 msgid "Older Entries"
-msgstr ""
+msgstr "Ältere Beiträge"
 
 #: custom/pagination-posts.php:60 custom/pagination-posts.php:71
 msgid "Newer Entries"
-msgstr ""
+msgstr "Neuere Beiträge"
 
 #: featured-posts.php:25 featured-posts.php:30 suffusion-featured-posts.php:55
 #: widgets/suffusion-featured-posts.php:55
 msgid "Previous Post"
-msgstr ""
+msgstr "Vorhergehender Beitrag"
 
 #: featured-posts.php:26 featured-posts.php:31 functions/actions.php:1010
 #: suffusion-featured-posts.php:56 widgets/suffusion-featured-posts.php:56
 msgid "Pause"
-msgstr ""
+msgstr "Pause"
 
 #: featured-posts.php:27 featured-posts.php:32 suffusion-featured-posts.php:57
 #: widgets/suffusion-featured-posts.php:57
 msgid "Next Post"
-msgstr ""
+msgstr "Nächster Beitrag"
 
 #: functions.php:697
 msgid "Navigation Bar Above Header"
-msgstr ""
+msgstr "Navigationsleiste oberhalb des Kopfbereichs"
 
 #: functions.php:698
 msgid "Navigation Bar Below Header"
-msgstr ""
+msgstr "Navigationsleiste unter des Kopfbereichs"
 
 #: functions.php:1177
-msgid ""
-"For more customization options and better control over the width and height "
-"see: "
-msgstr ""
+msgid "For more customization options and better control over the width and height see: "
+msgstr "Für weitere Anpassungsoptionen und bessere Kontrolle über Breite und Höhe siehe: "
 
 #: functions.php:1179
-msgid ""
-"<li><em>Appearance &rarr; Suffusion Options &rarr; Theme Skinning &rarr; "
-"Header</em></li>"
-msgstr ""
+msgid "<li><em>Appearance &rarr; Suffusion Options &rarr; Theme Skinning &rarr; Header</em></li>"
+msgstr "<li><em>Gestaltung &rarr; Suffusion-Optionen &rarr; Theme-Oberfläche &rarr; Kopfbereich</em></li>"
 
 #: functions.php:1180
-msgid ""
-"<li><em>Appearance &rarr; Suffusion Options &rarr; Other Graphical Elements "
-"&rarr; Header</em></li>"
-msgstr ""
+msgid "<li><em>Appearance &rarr; Suffusion Options &rarr; Other Graphical Elements &rarr; Header</em></li>"
+msgstr "<li><em>Gestaltung &rarr; Suffusion-Optionen &rarr; Andere grafische Elemente &rarr; Kopfbereich</em></li>"
 
 #: functions.php:1181
-msgid ""
-"<li><em>Appearance &rarr; Suffusion Options &rarr; Layouts &rarr; Default "
-"Sidebar Layout</em></li>"
-msgstr ""
+msgid "<li><em>Appearance &rarr; Suffusion Options &rarr; Layouts &rarr; Default Sidebar Layout</em></li>"
+msgstr "<li><em>Gestaltung &rarr; Suffusion-Optionen &rarr; Layouts &rarr; Seitenleisten-Standard-Layout </em></li>"
 
 #: functions.php:1191 functions.php:1208
 msgid "Skin"
-msgstr ""
+msgstr "Skin"
 
 #: functions/actions.php:796
 #, php-format
 msgid "Posted by %1$s"
-msgstr ""
+msgstr "Veröffentlicht von %1$s"
 
 #: functions/actions.php:799
 #, php-format
 msgid "Posted by %1$s at %2$s"
-msgstr ""
+msgstr "Veröffentlicht von %1$s um %2$s"
 
 #: functions/actions.php:802
 #, php-format
 msgid "Posted by %1$s on %2$s"
-msgstr ""
+msgstr "Veröffentlicht von %1$s am %2$s"
 
 #: functions/actions.php:805
 #, php-format
 msgid "Posted by %1$s on %2$s at %3$s"
-msgstr ""
+msgstr "Veröffentlicht von %1$s am %2$s um %3$s"
 
 #: functions/actions.php:808
 #, php-format
 msgid "Posted by %1$s at %2$s on %3$s"
-msgstr ""
+msgstr "Veröffentlicht von %1$s um %2$s am %3$s"
 
 #: functions/actions.php:905
 msgid "Highlight matching results below"
-msgstr ""
+msgstr "Die Treffer werden hervorgehoben angezeigt"
 
 #: functions/actions.php:1011
 msgid "Resume"
-msgstr ""
+msgstr "Fortsetzen"
 
 #: functions/admin.php:55
 msgid "Default - Inherit default sidebar layout for your blog"
-msgstr ""
+msgstr "Standard - Standard-Sidebar-Layout für Ihr Blog übernehmen"
 
 #: functions/admin.php:56
 msgid "0 (Zero) - Will inherit settings of the \"No Sidebars\" layout"
-msgstr ""
+msgstr "0 (Nulll) - Einstellungen des \"Keine Sidebars\" - Layouts übernehmen"
 
 #: functions/admin.php:57
 msgid "1 Left - Will inherit settings of the \"1 Left Sidebar\" layout"
-msgstr ""
+msgstr "1 Links - Übernimmt die Einstellungen des \"Ein Sidebar Links\"-Layouts"
 
 #: functions/admin.php:58
 msgid "1 Right - Will inherit settings of the \"1 Right Sidebar\" layout"
-msgstr ""
+msgstr "1 Rechts - Übernimmt die Einstellungen des \"Ein Sidebar Rechts\" -Layouts"
 
 #: functions/admin.php:59
-msgid ""
-"1 Left, 1 Right - Will inherit settings of the \"1 Left and 1 Right "
-"Sidebar\" layout"
-msgstr ""
+msgid "1 Left, 1 Right - Will inherit settings of the \"1 Left and 1 Right Sidebar\" layout"
+msgstr "1 Links, 1 Rechts  -  Übernimmt die Einstellungen des \"1 Links und 1 Rechts Sidebar\"-Layouts"
 
 #: functions/admin.php:60
 msgid "2 Left - Will inherit settings of the \"2 Left Sidebars\" layout"
-msgstr ""
+msgstr "2 Links - Übernimmt die Einstellungen des \"Zwei Sidebars Links\"-Layouts"
 
 #: functions/admin.php:61
 msgid "2 Right - Will inherit settings of the \"2 Right Sidebars\" layout"
-msgstr ""
+msgstr "2 Rechts - Übernimmt die Einstellungen des  \"2 Rechts Sidebar\" -Layouts"
 
 #: functions/admin.php:70 functions/admin.php:89
 msgid "General Settings"
-msgstr ""
+msgstr "Allgemeine Einstellungen"
 
 #: functions/admin.php:73 functions/admin.php:132
 msgid "Magazine Settings"
-msgstr ""
+msgstr "Magazin Einstellungen"
 
 #: functions/admin.php:75 functions/admin.php:148 functions/admin.php:273
 #: functions/admin.php:332
 msgid "Layout"
-msgstr ""
+msgstr "Layout"
 
 #: functions/admin.php:76 functions/admin.php:181
 msgid "Images"
-msgstr ""
+msgstr "Bilder"
 
 #: functions/admin.php:78
 msgid "Custom Template"
-msgstr ""
+msgstr "Benutzerdefinierte Vorlage"
 
 #: functions/admin.php:81 functions/admin.php:248
 msgid "Custom Post Type Archive"
-msgstr ""
+msgstr "Benutzerdefinierter Beitrag, Archiv-Typ"
 
 #: functions/admin.php:91
 msgid "Page Title in Dropdown Menu"
-msgstr ""
+msgstr "Seitentitel im Aufklappmenü"
 
 #: functions/admin.php:93
-msgid ""
-"This text will be shown in the drop-down menus in the navigation bar. If "
-"left blank, the title of the page is used."
-msgstr ""
+msgid "This text will be shown in the drop-down menus in the navigation bar. If left blank, the title of the page is used."
+msgstr "Dieser Text wird in den Aufklappmenüs der Navigationsleiste angezeigt. Wird er leer gelassen, wird stattdessen der Seitentitel angezeigt."
 
 #: functions/admin.php:98
 msgid "Do not link to this page in the navigation bars"
-msgstr ""
+msgstr "Diese Seite nicht in der Navigationsleiste verlinken"
 
 #: functions/admin.php:99
-msgid ""
-"If this box is checked, clicking on this page in the navigation bar will not "
-"take you anywhere."
-msgstr ""
+msgid "If this box is checked, clicking on this page in the navigation bar will not take you anywhere."
+msgstr "Wenn aktiviert, führt ein Klick auf diese Seite in der Navigationsleiste nirgendwohin."
 
 #: functions/admin.php:104
 msgid "Do not display the page title"
-msgstr ""
+msgstr "Seitentitel nicht anzeigen"
 
 #: functions/admin.php:108
 msgid "Toggle the breadcrumb display"
-msgstr ""
+msgstr "Breadcrumb-Anzeige ein-/ausblenden"
 
 #: functions/admin.php:112
 msgid "Hide Navigation Bar Above Header, if applicable"
-msgstr ""
+msgstr "Wenn möglich, die Navigations-Leiste über dem Header verbergen"
 
 #: functions/admin.php:116
 msgid "Hide site header for this page"
-msgstr ""
+msgstr "Kopfbereich auf dieser Seite nicht anzeigen"
 
 #: functions/admin.php:120
 msgid "Hide Navigation Bar Below Header, if applicable"
-msgstr ""
+msgstr "Wenn möglich, die Navigations-Leiste unter dem Header verbergen"
 
 #: functions/admin.php:124
 msgid "Hide site footer for this page"
-msgstr ""
+msgstr "Fußbereich auf dieser Seite nicht anzeigen"
 
 #: functions/admin.php:134
 msgid "Make this post a headline"
-msgstr ""
+msgstr "Diese Beitrag wird zur Überschrift"
 
 #: functions/admin.php:136
-msgid ""
-"If this box is checked, this post will show up as a headline in the magazine "
-"template."
-msgstr ""
+msgid "If this box is checked, this post will show up as a headline in the magazine template."
+msgstr "Wenn aktiviert, wird dieser Beitrag als Überschrift im Zeitschriftenlayout angezeigt."
 
 #: functions/admin.php:139
 msgid "Make this post an excerpt in the magazine layout"
-msgstr ""
+msgstr "Dieser Beitrag wird als Auszug im Zeitschriftenlayout angezeigt"
 
 #: functions/admin.php:141
-msgid ""
-"If this box is checked, this post will show up as an excerpt in the magazine "
-"template."
-msgstr ""
+msgid "If this box is checked, this post will show up as an excerpt in the magazine template."
+msgstr "Wenn aktiviert, wird  der Beitrag als Auszug im Zeitschriftenlayout angezeigt."
 
 #: functions/admin.php:150
 msgid "Select the sidebar layout to apply to this post"
-msgstr ""
+msgstr "Wählen Sie das Sidebar-Layout für diesen Beitrag"
 
 #: functions/admin.php:161
-msgid ""
-"Leave the selection to \"Default\" if you are not sure what this is. You can "
-"control individual sidebar widths from <strong>Suffusion Options &rarr; "
-"Layouts</strong>."
-msgstr ""
+msgid "Leave the selection to \"Default\" if you are not sure what this is. You can control individual sidebar widths from <strong>Suffusion Options &rarr; Layouts</strong>."
+msgstr "Lass die Auswahl bei \"Default\" wenn du dir nicht sicher bist. Du kannst die individuelle Sidebar auch noch in den <strong>Suffusion Optionen &rarr; Layout</strong> überprüfen."
 
 #: functions/admin.php:163
-msgid ""
-"If you have a conflicting selection for \"Template\", that will override "
-"this selection."
-msgstr ""
+msgid "If you have a conflicting selection for \"Template\", that will override this selection."
+msgstr "Falls Sie eine alternative Auswahl bei \"Template\" nutzen, wird dies die Auswahl überschreiben."
 
 #: functions/admin.php:184 widgets/suffusion-flickr.php:99
 msgid "Thumbnail"
-msgstr ""
+msgstr "Vorschaubild"
 
 #: functions/admin.php:187
-msgid ""
-"Enter the full URL of the thumbnail image that you would like to use, "
-"including http://"
-msgstr ""
+msgid "Enter the full URL of the thumbnail image that you would like to use, including http://"
+msgstr "Bitte die komplette URL des gewünschten Vorschaubildes eingeben inklusive http://"
 
 #: functions/admin.php:192
 msgid "Featured Image"
-msgstr ""
+msgstr "Bild der hervorgehobenen Beitrag"
 
 #: functions/admin.php:195
-msgid ""
-"Enter the full URL of the featured image that you would like to use, "
-"including http://"
-msgstr ""
+msgid "Enter the full URL of the featured image that you would like to use, including http://"
+msgstr "Bitte die komplette URL des gewünschten Bildes für den hervorgehobenen Beitrag eingeben inklusive http://"
 
 #: functions/admin.php:211
 #, php-format
 msgid "Custom Layout Widget Area %1$s"
-msgstr ""
+msgstr "Benutzerdefinierter Layout Widget-Bereich %1$s"
 
 #: functions/admin.php:214
 msgid "Number of columns"
-msgstr ""
+msgstr "Anzahl der Spalten"
 
 #: functions/admin.php:217 functions/admin.php:229
 #: widgets/suffusion-query-posts.php:501
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: functions/admin.php:226
 msgid "Height adjustment for widgets"
-msgstr ""
+msgstr "Höhen-Anpassung der Widgets"
 
 #: functions/admin.php:230
 msgid "All same height"
-msgstr ""
+msgstr "Alle mit gleicher Höhe"
 
 #: functions/admin.php:231
 msgid "All same height if in the same row"
-msgstr ""
+msgstr "Alle mit gleicher Höhe in einer Reihe"
 
 #: functions/admin.php:232
 msgid "All original height"
-msgstr ""
+msgstr "Ursprüngliche Höhe"
 
 #: functions/admin.php:233
 msgid "All original height, but auto-arranged"
-msgstr ""
+msgstr "Ursprüngliche Höhe, aber automatisch angeordnet"
 
 #: functions/admin.php:251
 msgid "Post type"
-msgstr ""
+msgstr "Beitragstyp"
 
 #: functions/admin.php:265
 msgid "Total posts per page"
-msgstr ""
+msgstr "Anzahl der Beiträge pro Seite"
 
 #: functions/admin.php:268
-msgid ""
-"Leave blank or 0 for default value from Settings &rarr; Reading, -1 for all "
-"matching posts, any other positive number otherwise"
-msgstr ""
+msgid "Leave blank or 0 for default value from Settings &rarr; Reading, -1 for all matching posts, any other positive number otherwise"
+msgstr "Leerlassen oder 0 für Standardeinstelleungen aus Einstellungen &arr; Lesen, -1 für alle passenden Beiträge, ansonsten jedwede passende positive Zahl"
 
 #: functions/admin.php:293
-msgid ""
-"Number of posts to display in full (Only if Layout is not \"Full Posts\")"
-msgstr ""
+msgid "Number of posts to display in full (Only if Layout is not \"Full Posts\")"
+msgstr "Anzahl der anzuzeigenden Beiträge (nur wenn das Layout nicht \"Vollständige Beiträge\")"
 
 #: functions/admin.php:296
 msgid "Leave blank or 0 to show no full posts"
-msgstr ""
+msgstr "Leerlassen oder 0 um keine Beiträge anzuzeigen"
 
 #: functions/admin.php:301
 msgid "Full posts on first page or all pages"
-msgstr ""
+msgstr "Komplette Beiträge auf der ersten oder auf allen Seiten"
 
 #: functions/admin.php:303
-msgid ""
-"Show the above number of full posts on all pages, not just the first page"
-msgstr ""
+msgid "Show the above number of full posts on all pages, not just the first page"
+msgstr "Anzahl aller kompletten Beiträge auf allen Seiten, nicht nur der ersten Seite"
 
 #: functions/admin.php:308
 msgid "Additional CSS classes to apply to each full post"
-msgstr ""
+msgstr "Weitere CSS-Klassen für jeden kompletten Beitrag"
 
 #: functions/admin.php:311 functions/admin.php:319
 msgid "Specify a comma-separated list of classes. E.g. <code>post,cpt</code>"
-msgstr ""
+msgstr "Definieren Sie eine Liste der Klassen, z.B. <code>post,cpt</code>, mit Komma getrennt"
 
 #: functions/admin.php:316
 msgid "Additional CSS classes to apply to each excerpt"
-msgstr ""
+msgstr "Weitere CSS-Klassen für jeden Auszug"
 
 #: functions/admin.php:324
 msgid "Posts per row"
-msgstr ""
+msgstr "Beiträge pro Zeile"
 
 #: functions/admin.php:327
 msgid "Tiles and Mosaic layouts only"
-msgstr ""
+msgstr "Nur Kachel- und Mosaik-Darstellung"
 
 #: functions/admin.php:337
 msgid "No bylines"
-msgstr ""
+msgstr "Keine Untertitel"
 
 #: functions/admin.php:338
 msgid "Single line below post title"
-msgstr ""
+msgstr "Einzelne Zeile unter dem Beitragstitel"
 
 #: functions/admin.php:339
 msgid "Single line below post"
-msgstr ""
+msgstr "Einzelne Zeile unter dem Beitragstitel"
 
 #: functions/admin.php:340
 msgid "Pullout on the left"
-msgstr ""
+msgstr "Linke Ausrückung"
 
 #: functions/admin.php:341
 msgid "Pullout on the right"
-msgstr ""
+msgstr "Rechts ausziehen"
 
 #: functions/admin.php:342
 msgid "Pullout on the left outside post"
-msgstr ""
+msgstr "Ausrückung am linken äußeren Beitrag"
 
 #: functions/admin.php:343
 msgid "Pullout on the right outside post"
-msgstr ""
+msgstr "Ausrückung am rechten äußeren Beitrag"
 
 #: functions/admin.php:354
 msgid "Byline Control"
-msgstr ""
+msgstr "Einstellungen für Untertitel"
 
 #: functions/admin.php:356
 msgid "Show date"
-msgstr ""
+msgstr "Datum anzeigen"
 
 #: functions/admin.php:357
 msgid "Show author"
-msgstr ""
+msgstr "Autor anzeigen"
 
 #: functions/admin.php:358
 msgid "Show comment link"
-msgstr ""
+msgstr "Link zu Kommentaren anzeigen"
 
 #: functions/admin.php:359
 msgid "Show permalink"
-msgstr ""
+msgstr "Permalink anzeigen"
 
 #: functions/admin.php:360
 msgid "Show bylines in tiles"
-msgstr ""
+msgstr "Untertitel auch bei gekachelter Anzeige"
 
 #: functions/admin.php:365
 msgid "Taxonomies in byline"
-msgstr ""
+msgstr "Taxonomien im Untertitel"
 
 #: functions/admin.php:368
 msgid "Comma-separated list of taxonomy types"
-msgstr ""
+msgstr "Kommagetrennte Liste der Taxonomietypen"
 
 #: functions/admin.php:373
 msgid "Thumbnails"
-msgstr ""
+msgstr "Vorschaubilder"
 
 #: functions/admin.php:375
 msgid "Show thumbnails for full posts in the archive"
-msgstr ""
+msgstr "Vorschaubilder für vollständige Beiträge im Archiv anzeigen"
 
 #: functions/admin.php:376
 msgid "Show thumbnails for excerpts"
-msgstr ""
+msgstr "Vorschaubilder bei auszugsweiser Darstellung anzeigen"
 
 #: functions/admin.php:377
 msgid "Show thumbnails for tiles"
-msgstr ""
+msgstr "Vorschaubilder in Kachel-Anordnung anzeigen"
 
 #: functions/admin.php:382 widgets/suffusion-child-pages.php:174
 #: widgets/suffusion-query-posts.php:330 widgets/suffusion-query-users.php:172
 msgid "Order by:"
-msgstr ""
+msgstr "Sortiere nach:"
 
 #: functions/admin.php:387 widgets/suffusion-query-posts.php:334
 msgid "Creation date"
-msgstr ""
+msgstr "Erstelldatum"
 
 #: functions/admin.php:388 widgets/suffusion-query-posts.php:335
 msgid "Post id"
-msgstr ""
+msgstr "Beitragsnummer"
 
 #: functions/admin.php:389 widgets/suffusion-query-posts.php:336
 msgid "Post author"
-msgstr ""
+msgstr "Beitragauthor"
 
 #: functions/admin.php:390 widgets/suffusion-child-pages.php:179
 #: widgets/suffusion-query-posts.php:337
 msgid "Post title"
-msgstr ""
+msgstr "Beitragtitel"
 
 #: functions/admin.php:391 widgets/suffusion-query-posts.php:338
 msgid "Modification date"
-msgstr ""
+msgstr "Änderungsdatum"
 
 #: functions/admin.php:392 widgets/suffusion-query-posts.php:339
 msgid "Popularity (comment count)"
-msgstr ""
+msgstr "Popularität (Kommentaranzahl)"
 
 #: functions/admin.php:393 widgets/suffusion-flickr.php:108
 #: widgets/suffusion-query-posts.php:340
 msgid "Random"
-msgstr ""
+msgstr "Zufällig"
 
 #: functions/admin.php:394
 msgid "No order"
-msgstr ""
+msgstr "Unsortiert"
 
 #: functions/admin.php:395
 msgid "Parent id"
-msgstr ""
+msgstr "Übergeordnete Nummer"
 
 #: functions/admin.php:396 widgets/suffusion-child-pages.php:180
 msgid "Menu order"
-msgstr ""
+msgstr "Menüreihenfolge"
 
 #: functions/admin.php:407 widgets/suffusion-child-pages.php:198
 #: widgets/suffusion-query-posts.php:313 widgets/suffusion-query-users.php:195
 msgid "Order:"
-msgstr ""
+msgstr "Reihenfolge:"
 
 #: functions/admin.php:412 widgets/suffusion-child-pages.php:204
 #: widgets/suffusion-query-posts.php:317 widgets/suffusion-query-users.php:201
 msgid "Descending"
-msgstr ""
+msgstr "Absteigend"
 
 #: functions/admin.php:413 widgets/suffusion-child-pages.php:203
 #: widgets/suffusion-query-posts.php:318 widgets/suffusion-query-users.php:200
 msgid "Ascending"
-msgstr ""
+msgstr "Aufsteigend"
 
 #: functions/filters.php:37
 msgid "Pages:"
-msgstr ""
+msgstr "Seiten:"
 
 #: functions/framework.php:69
 msgid "Comments"
-msgstr ""
+msgstr "Kommentare"
 
 #: functions/framework.php:69
 msgid "Trackbacks"
-msgstr ""
+msgstr "Trackbacks"
 
 #: functions/framework.php:69
 msgid "Pingbacks"
-msgstr ""
+msgstr "Pingbacks"
 
 #: functions/framework.php:72
 msgid "Archives"
-msgstr ""
+msgstr "Archiv"
 
 #: functions/framework.php:74
 msgid "Links"
-msgstr ""
+msgstr "Verweise"
 
 #: functions/framework.php:75
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: functions/framework.php:76
 msgid "Pages"
-msgstr ""
+msgstr "Seiten"
 
 #: functions/framework.php:77
 msgid "Recent Comments"
-msgstr ""
+msgstr "Neueste Kommentare"
 
 #: functions/framework.php:78
 msgid "Recent Posts"
-msgstr ""
+msgstr "Neueste Beiträge"
 
 #: functions/framework.php:79 searchform.php:23 widgets/suffusion-search.php:18
 #: widgets/suffusion-search.php:44
 msgid "Search"
-msgstr ""
+msgstr "Suche"
 
 #: functions/framework.php:80
 msgid "Tag Cloud"
-msgstr ""
+msgstr "Phrasenwolke"
 
 #: functions/framework.php:81
 msgid "Custom Tab 1"
-msgstr ""
+msgstr "Benutzerdefinierter Reiter 1"
 
 #: functions/framework.php:82
 msgid "Custom Tab 2"
-msgstr ""
+msgstr "Benutzerdefinierter Reiter 2"
 
 #: functions/framework.php:83
 msgid "Custom Tab 3"
-msgstr ""
+msgstr "Benutzerdefinierter Reiter 3"
 
 #: functions/framework.php:84
 msgid "Custom Tab 4"
-msgstr ""
+msgstr "Benutzerdefinierter Reiter 4"
 
 #: functions/framework.php:85
 msgid "Custom Tab 5"
-msgstr ""
+msgstr "Benutzerdefinierter Reiter 5"
 
 #: functions/framework.php:86
 msgid "Custom Tab 6"
-msgstr ""
+msgstr "Benutzerdefinierter Reiter 6"
 
 #: functions/framework.php:87
 msgid "Custom Tab 7"
-msgstr ""
+msgstr "Benutzerdefinierter Reiter 7"
 
 #: functions/framework.php:88
 msgid "Custom Tab 8"
-msgstr ""
+msgstr "Benutzerdefinierter Reiter 8"
 
 #: functions/framework.php:89
 msgid "Custom Tab 9"
-msgstr ""
+msgstr "Benutzerdefinierter Reiter 9"
 
 #: functions/framework.php:90
 msgid "Custom Tab 10"
-msgstr ""
+msgstr "Benutzerdefinierter Reiter 10"
 
 #: functions/framework.php:93
 msgid "Error 404 - Not Found"
-msgstr ""
+msgstr "Fehler 404 - Nicht gefunden"
 
 #: functions/framework.php:94
 msgid "Sorry, the page that you are looking for does not exist."
-msgstr ""
+msgstr "Die Seite, nach der Sie suchen, existiert leider nicht."
 
 #: functions/framework.php:96
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: functions/framework.php:97
 msgid "(required)"
-msgstr ""
+msgstr "(erforderlich)"
 
 #: functions/framework.php:98
 msgid "E-mail"
-msgstr ""
+msgstr "E-Mail"
 
 #: functions/framework.php:99
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: functions/framework.php:100
 msgid "Your Comment"
-msgstr ""
+msgstr "Ihr Kommentar"
 
 #: functions/media.php:139
 msgid "File"
-msgstr ""
+msgstr "Datei"
 
 #: functions/media.php:142
 msgid "Width"
-msgstr ""
+msgstr "Breite"
 
 #: functions/media.php:145
 msgid "Height"
-msgstr ""
+msgstr "Höhe"
 
 #: functions/media.php:148
 msgid "Date Taken"
-msgstr ""
+msgstr "Aufnahmedatum"
 
 #: functions/media.php:151
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: functions/media.php:154
 msgid "Credit"
-msgstr ""
+msgstr "Nachweis"
 
 #: functions/media.php:157
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 #: functions/media.php:160
 msgid "Caption"
-msgstr ""
+msgstr "Überschrift"
 
 #: functions/media.php:163
 msgid "Camera"
-msgstr ""
+msgstr "Kamera"
 
 #: functions/media.php:166
 msgid "Focal Length"
-msgstr ""
+msgstr "Brennweite"
 
 #: functions/media.php:169
 msgid "Aperture"
-msgstr ""
+msgstr "Blende"
 
 #: functions/media.php:172
 msgid "ISO"
-msgstr ""
+msgstr "ISO"
 
 #: functions/media.php:188
 msgid "Shutter Speed"
-msgstr ""
+msgstr "Verschlusszeit"
 
 #: functions/media.php:193
 msgid "More Info"
-msgstr ""
+msgstr "Mehr Informationen"
 
 #: functions/wpml-integration.php:39
 msgid "This post is also available in: "
-msgstr ""
+msgstr "Dieser Beitrag ist auch verfügbar in: "
 
 #: image.php:23
 msgid "Previous Image"
-msgstr ""
+msgstr "Voriges Bild"
 
 #: image.php:24
 msgid "Next Image"
-msgstr ""
+msgstr "Nächstes Bild"
 
 #: layouts/template-missing.php:13
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nichts gefunden"
 
 #: layouts/template-missing.php:16
 msgid "Please try another search."
-msgstr ""
+msgstr "Bitte versuchen Sie es noch mal mit anderen Suchbegriffen."
 
 #: layouts/template-missing.php:26 now-reading/single.php:122
 msgid "Not Found"
-msgstr ""
+msgstr "Nicht gefunden"
 
 #: layouts/template-missing.php:29 now-reading/single.php:125
 msgid "Sorry, but you are looking for something that isn't here"
-msgstr ""
+msgstr "Keine Treffer gefunden"
 
 #: library/suffusion-admin-walkers.php:99
 #, php-format
 msgid "%s (Invalid)"
-msgstr ""
+msgstr "%s (Ungültig)"
 
 #: library/suffusion-admin-walkers.php:103
 #, php-format
 msgid "%s (Pending)"
-msgstr ""
+msgstr "%s (anstehend)"
 
 #: library/suffusion-admin-walkers.php:116
 msgid "sub item"
-msgstr ""
+msgstr "Unterpunkt"
 
 #: library/suffusion-admin-walkers.php:148
 msgid "Edit Menu Item"
-msgstr ""
+msgstr "Menüeintrag bearbeiten"
 
 #: library/suffusion-admin-walkers.php:157
 #: widgets/suffusion-query-users.php:182
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: library/suffusion-admin-walkers.php:164
 msgid "Navigation Label"
-msgstr ""
+msgstr "Navigationsbezeichnung"
 
 #: library/suffusion-admin-walkers.php:170
 msgid "Title Attribute"
-msgstr ""
+msgstr "Titelattribut"
 
 #: library/suffusion-admin-walkers.php:177
 msgid "Open link in a new window/tab"
-msgstr ""
+msgstr "Links in einem Fenster / Tab öffnen"
 
 #: library/suffusion-admin-walkers.php:182
 msgid "CSS Classes (optional)"
-msgstr ""
+msgstr "CSS Klassen (optional)"
 
 #: library/suffusion-admin-walkers.php:188
 msgid "Link Relationship (XFN)"
-msgstr ""
+msgstr "Link Relationship (XFN)"
 
 #: library/suffusion-admin-walkers.php:194
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: library/suffusion-admin-walkers.php:196
-msgid ""
-"The description will be displayed in the menu if the current theme supports "
-"it."
-msgstr ""
+msgid "The description will be displayed in the menu if the current theme supports it."
+msgstr "Die Beschreibung wird im Menü angezeigt werden, wenn das aktuelle Theme das unterstützt."
 
 #: library/suffusion-admin-walkers.php:208
 msgid "Pick a widget area for a Mega Menu:"
-msgstr ""
+msgstr "Wählen Sie einen Widget-Bereich für das Mega Menü:"
 
 #: library/suffusion-admin-walkers.php:210
-msgid ""
-"If you select a widget area the rest of the menu under this tab is ignored"
-msgstr ""
+msgid "If you select a widget area the rest of the menu under this tab is ignored"
+msgstr "Wenn Sie einen Widget Bereich auswählen, wird alles andere unterhalb dieses Tabs ignoriert"
 
 #: library/suffusion-admin-walkers.php:216
 msgid "Number of columns in Mega Menu"
-msgstr ""
+msgstr "Anzahl der Spalten im Mega Menü"
 
 #: library/suffusion-admin-walkers.php:227
 msgid "Height of widgets in Mega Menu"
-msgstr ""
+msgstr "Höhe der Widgets im Mega Menü"
 
 #: library/suffusion-admin-walkers.php:230
 msgid "Equal height for a row"
-msgstr ""
+msgstr "Alle mit gleicher Höhe in einer Reihe"
 
 #: library/suffusion-admin-walkers.php:231
 msgid "Original height"
-msgstr ""
+msgstr "Original-Höhe"
 
 #: library/suffusion-admin-walkers.php:232
 msgid "Auto-arrange"
-msgstr ""
+msgstr "Automatische Anordnung"
 
 #: library/suffusion-admin-walkers.php:242
 msgid "Move"
-msgstr ""
+msgstr "Verschieben"
 
 #: library/suffusion-admin-walkers.php:243
 msgid "Up one"
-msgstr ""
+msgstr "Nach oben"
 
 #: library/suffusion-admin-walkers.php:244
 msgid "Down one"
-msgstr ""
+msgstr "Nach unten"
 
 #: library/suffusion-admin-walkers.php:247
 msgid "To the top"
-msgstr ""
+msgstr "Zum Anfang"
 
 #: library/suffusion-admin-walkers.php:254
 #, php-format
 msgid "Original: %s"
-msgstr ""
+msgstr "Original: %s"
 
 #: library/suffusion-admin-walkers.php:267
 msgid "Remove"
-msgstr ""
+msgstr "Entfernen"
 
 #: library/suffusion-admin-walkers.php:268
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: login.php:43
 #, php-format
-msgid ""
-"You are currently logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
-msgstr ""
+msgid "You are currently logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+msgstr "Sie sind nun als <a href=\"%1$s\" title=\"%2$s\">%2$s</a> angemeldet."
 
 #: login.php:50
 #, php-format
-msgid ""
-"You have successfully logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
-msgstr ""
+msgid "You have successfully logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+msgstr "Sie haben sich erfolgreich als <a href=\"%1$s\" title=\"%2$s\">%2$s</a> angemeldet."
 
 #: now-reading/author.php:28 now-reading/library.php:31
 #: now-reading/search.php:26 now-reading/single.php:48 now-reading/tag.php:27
 msgid "Manage Books"
-msgstr ""
+msgstr "Bücher verwalten"
 
 #: sidebar-tabs.php:23
 msgid "Select"
-msgstr ""
+msgstr "Wähle"
 
 #: sidebar-tabs.php:59
 msgid "Syndicate this site using RSS 2.0"
-msgstr ""
+msgstr "Diese Site im RSS 2.0-Format zur Verfügung stellen"
 
 #: sidebar-tabs.php:59
 msgid "Entries <abbr title=\"Really Simple Syndication\">RSS</abbr>"
-msgstr ""
+msgstr "Beiträge <abbr title=\"Really Simple Syndication\">RSS</abbr>"
 
 #: sidebar-tabs.php:60
 msgid "The latest comments to all posts in RSS"
-msgstr ""
+msgstr "Die neuesten Kommentare zu allen Beiträge in RSS"
 
 #: sidebar-tabs.php:60
 msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
-msgstr ""
+msgstr "Kommentare <abbr title=\"Really Simple Syndication\">RSS</abbr>"
 
 #: suffusion-featured-posts.php:15 widgets/suffusion-featured-posts.php:15
 msgid "A widget for displaying featured posts."
-msgstr ""
+msgstr "Ein Widget zum Anzeigen von hervorgehobenen Beiträgen."
 
 #: suffusion-featured-posts.php:17 widgets/suffusion-featured-posts.php:17
 msgid "Featured Content"
-msgstr ""
+msgstr "Hervorgehobene Beiträge"
 
 #: suffusion-featured-posts.php:63 widgets/suffusion-featured-posts.php:63
 msgid "<p>This widget displays a featured posts slider.</p>"
-msgstr ""
+msgstr "<p>Dieses Widget zeigt hervorgehobene Beiträge in Form einer Diashow an.</p>"
 
 #: suffusion-featured-posts.php:67 suffusion-subscription.php:82
 #: widgets/suffusion-child-pages.php:160
@@ -1058,1145 +1026,1107 @@ msgstr ""
 #: widgets/suffusion-search.php:50 widgets/suffusion-subscription.php:82
 #: widgets/suffusion-translator.php:115 widgets/suffusion-twitter.php:305
 msgid "Title:"
-msgstr ""
+msgstr "Titel:"
 
 #: suffusion-featured-posts.php:72 widgets/suffusion-featured-posts.php:72
 msgid "Height of featured content section:"
-msgstr ""
+msgstr "Höhe des Bereichs für hervorgehobene Beiträge:"
 
 #: suffusion-featured-posts.php:74 widgets/suffusion-featured-posts.php:74
 msgid "E.g. 250px"
-msgstr ""
+msgstr "z.B. 250px"
 
 #: suffusion-featured-posts.php:79 widgets/suffusion-featured-posts.php:79
 msgid "Enable custom image size for featured images"
-msgstr ""
+msgstr "Geben Sie die benutzerdefinierte Größe für die Bilder der hervorgehobenen Beiträge an"
 
 #: suffusion-featured-posts.php:83 widgets/suffusion-featured-posts.php:83
 msgid "Custom image height:"
-msgstr ""
+msgstr "Benutzerdefinierte Bildhöhe:"
 
 #: suffusion-featured-posts.php:85 suffusion-featured-posts.php:91
 #: widgets/suffusion-featured-posts.php:85
 #: widgets/suffusion-featured-posts.php:91
 msgid "This is applicable only if custom image size is enabled"
-msgstr ""
+msgstr "Nur anwendbar, wenn eine benutzerdefinierte Bildgröße aktiviert ist"
 
 #: suffusion-featured-posts.php:89 widgets/suffusion-featured-posts.php:89
 msgid "Custom image width:"
-msgstr ""
+msgstr "Benutzerdefinierte Bild-Breite:"
 
 #: suffusion-featured-posts.php:95 widgets/suffusion-featured-posts.php:95
 msgid "Text display options:"
-msgstr ""
+msgstr "Textdarstellungsoptionen:"
 
 #: suffusion-featured-posts.php:98 widgets/suffusion-featured-posts.php:98
 msgid "Show post title and excerpt"
-msgstr ""
+msgstr "Beitragtitel und -auszug anzeigen"
 
 #: suffusion-featured-posts.php:98 widgets/suffusion-featured-posts.php:98
 msgid "Show post title only (no excerpt)"
-msgstr ""
+msgstr "Nur Beitragstitel anzeigen (keinen Auszug)"
 
 #: suffusion-featured-posts.php:99 widgets/suffusion-featured-posts.php:99
 msgid "Show excerpt only (no title)"
-msgstr ""
+msgstr "Nur Auszug, keinen Titel, anzeigen"
 
 #: suffusion-featured-posts.php:99 widgets/suffusion-featured-posts.php:99
 msgid "Don't show any text"
-msgstr ""
+msgstr "Keinen Text anzeigen"
 
 #: suffusion-featured-posts.php:110 widgets/suffusion-featured-posts.php:110
 msgid "Position of the excerpt:"
-msgstr ""
+msgstr "Position des Beitragsauszugs:"
 
 #: suffusion-featured-posts.php:113 widgets/suffusion-featured-posts.php:113
 msgid "Top"
-msgstr ""
+msgstr "Oben"
 
 #: suffusion-featured-posts.php:113 widgets/suffusion-featured-posts.php:113
 msgid "Bottom"
-msgstr ""
+msgstr "Unten"
 
 #: suffusion-featured-posts.php:113 suffusion-featured-posts.php:300
 #: suffusion-featured-posts.php:338 widgets/suffusion-featured-posts.php:113
 #: widgets/suffusion-featured-posts.php:300
 #: widgets/suffusion-featured-posts.php:338
 msgid "Right"
-msgstr ""
+msgstr "Rechts"
 
 #: suffusion-featured-posts.php:113 suffusion-featured-posts.php:298
 #: suffusion-featured-posts.php:340 widgets/suffusion-featured-posts.php:113
 #: widgets/suffusion-featured-posts.php:298
 #: widgets/suffusion-featured-posts.php:340
 msgid "Left"
-msgstr ""
+msgstr "Links"
 
 #: suffusion-featured-posts.php:114 widgets/suffusion-featured-posts.php:114
 msgid "Alternate excerpt between top and bottom"
-msgstr ""
+msgstr "Beitragsauszug abwechselnd oben oder unten"
 
 #: suffusion-featured-posts.php:114 widgets/suffusion-featured-posts.php:114
 msgid "Alternate excerpt between left and right"
-msgstr ""
+msgstr "Beitragsauszug abwechselnd links oder rechts"
 
 #: suffusion-featured-posts.php:115 widgets/suffusion-featured-posts.php:115
 msgid "Rotate between the four positions"
-msgstr ""
+msgstr "Zwischen den vier Positionen abwechseln"
 
 #: suffusion-featured-posts.php:126 widgets/suffusion-child-pages.php:296
 #: widgets/suffusion-featured-posts.php:126
 #: widgets/suffusion-query-posts.php:392
 msgid "Post excerpt length (if applicable):"
-msgstr ""
+msgstr "Länge des Post-Auszugs (Kurzfassung), wenn anwendbar:"
 
 #: suffusion-featured-posts.php:131 widgets/suffusion-featured-posts.php:131
 msgid "Width of excerpt section:"
-msgstr ""
+msgstr "Breite des Abschnittes für den Auszug:"
 
 #: suffusion-featured-posts.php:133 widgets/suffusion-featured-posts.php:133
-msgid ""
-"This is only applicable if your excerpt is at the right or at the left of "
-"your featured posts."
-msgstr ""
+msgid "This is only applicable if your excerpt is at the right or at the left of your featured posts."
+msgstr "Nur anwendbar, wenn der Beitragsauszug rechts oder links von den hervorgehobenen Beiträgen angezeigt wird."
 
 #: suffusion-featured-posts.php:137 widgets/suffusion-featured-posts.php:137
 msgid "Excerpt background color:"
-msgstr ""
+msgstr "Hintergrundfarbe des Auszuges:"
 
 #: suffusion-featured-posts.php:142 widgets/suffusion-featured-posts.php:142
 msgid "Excerpt title color:"
-msgstr ""
+msgstr "Titelfarbe des Beitragsauszuges:"
 
 #: suffusion-featured-posts.php:147 widgets/suffusion-featured-posts.php:147
 msgid "Excerpt font color:"
-msgstr ""
+msgstr "Schriftfarbe des Beitragsauszuges:"
 
 #: suffusion-featured-posts.php:154 widgets/suffusion-featured-posts.php:154
 msgid "Maximum number of posts / pages to display:"
-msgstr ""
+msgstr "Höchstzahl der anzuzeigenden Beiträge / Seiten:"
 
 #: suffusion-featured-posts.php:168 widgets/suffusion-featured-posts.php:168
 msgid "Include sticky posts"
-msgstr ""
+msgstr "Fixierte Beiträge einbinden"
 
 #: suffusion-featured-posts.php:173 widgets/suffusion-featured-posts.php:173
 msgid "Include latest posts"
-msgstr ""
+msgstr "Letzte Beiträge einbinden"
 
 #: suffusion-featured-posts.php:177 widgets/suffusion-featured-posts.php:177
 msgid "Number of \"Latest Posts\":"
-msgstr ""
+msgstr "Anzahl \"Neueste Beiträge\":"
 
 #: suffusion-featured-posts.php:187 widgets/suffusion-featured-posts.php:187
-msgid ""
-"If you are including latest posts and you select 5 here, the latest 5 posts "
-"will be included in the featured content. If this number is higher than the "
-"maximum number of posts, this setting will be ignored"
-msgstr ""
+msgid "If you are including latest posts and you select 5 here, the latest 5 posts will be included in the featured content. If this number is higher than the maximum number of posts, this setting will be ignored"
+msgstr "Wenn Sie \"Neueste Beiträge\" einbinden und hier \"5\" wählen, werden die fünf neuesten Beiträge bei den hervorgehobenen Beiträge angezeigt. Wenn die Anzahl größer als die maximale Zahl anzuzeigender Beiträge ist, wird diese Einstellung ignoriert"
 
 #: suffusion-featured-posts.php:191 widgets/suffusion-featured-posts.php:191
 msgid "Include categories:"
-msgstr ""
+msgstr "Kategorien einbinden:"
 
 #: suffusion-featured-posts.php:193 widgets/suffusion-featured-posts.php:193
 msgid "Fill in a comma-separated list of category ids. E.g. 3,8,17"
-msgstr ""
+msgstr "Tragen Sie hier eine Liste der Kategorie-IDs ein, mit Kommata getrennt, z.B. 7,9,13"
 
 #: suffusion-featured-posts.php:197 widgets/suffusion-featured-posts.php:197
 msgid "Include posts:"
-msgstr ""
+msgstr "Beitrag einbinden:"
 
 #: suffusion-featured-posts.php:199 widgets/suffusion-featured-posts.php:199
 msgid "Fill in a comma-separated list of post ids. E.g. 7,9,13"
-msgstr ""
+msgstr "Tragen Sie hier eine Liste der Beitragsnummern ein, mit Kommata getrennt, z.B. 7,9,13"
 
 #: suffusion-featured-posts.php:203 widgets/suffusion-featured-posts.php:203
 msgid "Include pages:"
-msgstr ""
+msgstr "Seiten einbinden:"
 
 #: suffusion-featured-posts.php:205 widgets/suffusion-featured-posts.php:205
 msgid "Fill in a comma-separated list of page ids. E.g. 7,9,13"
-msgstr ""
+msgstr "Tragen Sie hier eine Liste der Seiten-IDs ein, mit Kommata getrennt, z.B. 7,9,13"
 
 #: suffusion-featured-posts.php:209 widgets/suffusion-featured-posts.php:209
 msgid "Featured content transition effect:"
-msgstr ""
+msgstr "Überblendungseffekt für die hervorgehobenen Beiträge:"
 
 #: suffusion-featured-posts.php:212 widgets/suffusion-featured-posts.php:212
 msgid "Fade In"
-msgstr ""
+msgstr "Einblenden"
 
 #: suffusion-featured-posts.php:212 widgets/suffusion-featured-posts.php:212
 msgid "Scroll Up"
-msgstr ""
+msgstr "Nach oben verschieben"
 
 #: suffusion-featured-posts.php:212 widgets/suffusion-featured-posts.php:212
 msgid "Scroll Down"
-msgstr ""
+msgstr "Nach unten verschieben"
 
 #: suffusion-featured-posts.php:213 widgets/suffusion-featured-posts.php:213
 msgid "Scroll Left"
-msgstr ""
+msgstr "Nach links verschieben"
 
 #: suffusion-featured-posts.php:213 widgets/suffusion-featured-posts.php:213
 msgid "Scroll Right"
-msgstr ""
+msgstr "Nach rechts verschieben"
 
 #: suffusion-featured-posts.php:213 widgets/suffusion-featured-posts.php:213
 msgid "Scroll Horizontally"
-msgstr ""
+msgstr "Horizontal verschieben"
 
 #: suffusion-featured-posts.php:214 widgets/suffusion-featured-posts.php:214
 msgid "Scroll Vertically"
-msgstr ""
+msgstr "Vertikal verschieben"
 
 #: suffusion-featured-posts.php:214 widgets/suffusion-featured-posts.php:214
 msgid "Slide in and back horizontally"
-msgstr ""
+msgstr "Horizontal ein- und ausblenden"
 
 #: suffusion-featured-posts.php:215 widgets/suffusion-featured-posts.php:215
 msgid "Slide in and back vertically"
-msgstr ""
+msgstr "Vertikal ein- und ausblenden"
 
 #: suffusion-featured-posts.php:215 widgets/suffusion-featured-posts.php:215
 msgid "Turn Upwards"
-msgstr ""
+msgstr "Nach oben ausblenden"
 
 #: suffusion-featured-posts.php:215 widgets/suffusion-featured-posts.php:215
 msgid "Turn Downwards"
-msgstr ""
+msgstr "Nach unten ausblenden"
 
 #: suffusion-featured-posts.php:216 widgets/suffusion-featured-posts.php:216
 msgid "Turn Leftwards"
-msgstr ""
+msgstr "Nach links ausblenden"
 
 #: suffusion-featured-posts.php:216 widgets/suffusion-featured-posts.php:216
 msgid "Turn Rightwards"
-msgstr ""
+msgstr "Nach rechts ausblenden"
 
 #: suffusion-featured-posts.php:216 widgets/suffusion-featured-posts.php:216
 msgid "Zoom"
-msgstr ""
+msgstr "Zoomen"
 
 #: suffusion-featured-posts.php:217 widgets/suffusion-featured-posts.php:217
 msgid "Zoom and Fade"
-msgstr ""
+msgstr "Rein- und rauszoomen"
 
 #: suffusion-featured-posts.php:217 widgets/suffusion-featured-posts.php:217
 msgid "Vertical Blinds"
-msgstr ""
+msgstr "Vertikale Überblendung"
 
 #: suffusion-featured-posts.php:217 widgets/suffusion-featured-posts.php:217
 msgid "Horizontal Blinds"
-msgstr ""
+msgstr "Horizontale Überblendung"
 
 #: suffusion-featured-posts.php:218 widgets/suffusion-featured-posts.php:218
 msgid "Diagonal Blinds"
-msgstr ""
+msgstr "Diagonale Überblendung"
 
 #: suffusion-featured-posts.php:218 widgets/suffusion-featured-posts.php:218
 msgid "Grow horizontally from center"
-msgstr ""
+msgstr "Horizontal von der Mitte aus vergrößern"
 
 #: suffusion-featured-posts.php:219 widgets/suffusion-featured-posts.php:219
 msgid "Grow vertically from center"
-msgstr ""
+msgstr "Vertikal von der Mitte aus vergrößern"
 
 #: suffusion-featured-posts.php:219 widgets/suffusion-featured-posts.php:219
 msgid "Squeeze in both edges horizontally"
-msgstr ""
+msgstr "Horizontal von beiden Seiten rein- und rausschieben"
 
 #: suffusion-featured-posts.php:220 widgets/suffusion-featured-posts.php:220
 msgid "Squeeze in both edges vertically"
-msgstr ""
+msgstr "Vertikal von beiden Seiten rein- und rausschieben"
 
 #: suffusion-featured-posts.php:220 widgets/suffusion-featured-posts.php:220
 msgid "Current post is covered by next post"
-msgstr ""
+msgstr "Aktuellen Beitrag vom nächsten Beitrag verdecken lassen"
 
 #: suffusion-featured-posts.php:221 widgets/suffusion-featured-posts.php:221
 msgid "Current post moves off next post"
-msgstr ""
+msgstr "Aktuellen Beitrag neben nächsten Beitrag  stellen"
 
 #: suffusion-featured-posts.php:221 widgets/suffusion-featured-posts.php:221
 msgid "Wipe"
-msgstr ""
+msgstr "Wischer"
 
 #: suffusion-featured-posts.php:233 widgets/suffusion-featured-posts.php:233
 msgid "Time for each post display:"
-msgstr ""
+msgstr "Anzeigezeit für jeden Beitrag:"
 
 #: suffusion-featured-posts.php:235 suffusion-featured-posts.php:241
 #: widgets/suffusion-featured-posts.php:235
 #: widgets/suffusion-featured-posts.php:241
 msgid "Enter time in milliseconds. E.g. 1000"
-msgstr ""
+msgstr "Geben Sie die Zeit in Tausendstelsekunden ein, z.B. 1000"
 
 #: suffusion-featured-posts.php:239 widgets/suffusion-featured-posts.php:239
 msgid "Delay for each post display:"
-msgstr ""
+msgstr "Verzögerung für die Anzeige von jedem Beitrag:"
 
 #: suffusion-featured-posts.php:248 widgets/suffusion-featured-posts.php:248
 msgid "Center images in the slides"
-msgstr ""
+msgstr "Bilder in den Rahmen zentrieren"
 
 #: suffusion-featured-posts.php:253 widgets/suffusion-featured-posts.php:253
 msgid "Stretch smaller images to full-width"
-msgstr ""
+msgstr "Kleiner Grafiken zu voller Breite vergrößern"
 
 #: suffusion-featured-posts.php:259 widgets/suffusion-featured-posts.php:259
 msgid "Show a numbered post index"
-msgstr ""
+msgstr "Nummerierte Beitragsliste anzeigen"
 
 #: suffusion-featured-posts.php:263 widgets/suffusion-featured-posts.php:263
 msgid "Index position:"
-msgstr ""
+msgstr "Index-Position:"
 
 #: suffusion-featured-posts.php:266 suffusion-featured-posts.php:321
 #: widgets/suffusion-featured-posts.php:266
 #: widgets/suffusion-featured-posts.php:321
 msgid "Below slides"
-msgstr ""
+msgstr "Unter den Rahmen"
 
 #: suffusion-featured-posts.php:267 suffusion-featured-posts.php:322
 #: widgets/suffusion-featured-posts.php:267
 #: widgets/suffusion-featured-posts.php:322
 msgid "Bottom of slides, overlaid"
-msgstr ""
+msgstr "Am unteren Rahmen-Rand, überblendet"
 
 #: suffusion-featured-posts.php:279 widgets/suffusion-featured-posts.php:279
 msgid "Index style:"
-msgstr ""
+msgstr "Index-Stil:"
 
 #: suffusion-featured-posts.php:282 widgets/suffusion-featured-posts.php:282
 msgid "Numbers"
-msgstr ""
+msgstr "Ziffern"
 
 #: suffusion-featured-posts.php:283 widgets/suffusion-featured-posts.php:283
 msgid "Bullets"
-msgstr ""
+msgstr "Aufzählungszeichen"
 
 #: suffusion-featured-posts.php:295 widgets/suffusion-featured-posts.php:295
 msgid "Index alignment:"
-msgstr ""
+msgstr "Index-Anordnung:"
 
 #: suffusion-featured-posts.php:299 suffusion-featured-posts.php:339
 #: widgets/suffusion-featured-posts.php:299
 #: widgets/suffusion-featured-posts.php:339
 msgid "Center"
-msgstr ""
+msgstr "Mitte"
 
 #: suffusion-featured-posts.php:314 widgets/suffusion-featured-posts.php:314
 msgid "Show Previous, Pause and Next controller"
-msgstr ""
+msgstr "Zurück-, Pause- und Vor-Schaltflächen anzeigen"
 
 #: suffusion-featured-posts.php:318 widgets/suffusion-featured-posts.php:318
 msgid "Controller position:"
-msgstr ""
+msgstr "Position des Kontrollers:"
 
 #: suffusion-featured-posts.php:323 widgets/suffusion-featured-posts.php:323
 msgid "Overlaid icons"
-msgstr ""
+msgstr "Überlagerte Icons"
 
 #: suffusion-featured-posts.php:335 widgets/suffusion-featured-posts.php:335
 msgid "Controller alignment:"
-msgstr ""
+msgstr "Anordnung des Kontrollers:"
 
 #: suffusion-featured-posts.php:352 widgets/suffusion-featured-posts.php:352
-msgid ""
-"The following three settings only apply if you show the previous, pause and "
-"next buttons:"
-msgstr ""
+msgid "The following three settings only apply if you show the previous, pause and next buttons:"
+msgstr "Die nachstehenden drei Einstellungen wirken nur, wenn Sie die \"Vor-, Pause- und Weiter\"-Schaltflächen anzeigen lassen:"
 
 #: suffusion-featured-posts.php:356 widgets/suffusion-featured-posts.php:356
 msgid "Text for \"Previous Post\":"
-msgstr ""
+msgstr "Text für \"Vorheriger Beitrag\":"
 
 #: suffusion-featured-posts.php:361 widgets/suffusion-featured-posts.php:361
 msgid "Text for \"Pause\":"
-msgstr ""
+msgstr "Text für \"Pause\":"
 
 #: suffusion-featured-posts.php:366 widgets/suffusion-featured-posts.php:366
 msgid "Text for \"Next Post\":"
-msgstr ""
+msgstr "Text für \"Nächster Beitrag\":"
 
 #: suffusion-featured-posts.php:623 widgets/suffusion-featured-posts.php:623
 msgid "Please select the posts you want to show through the widget settings"
-msgstr ""
+msgstr "Wählen Sie bitte die Beiträge aus, die Sie vermittels der Widget-Einstellungen anzeigen möchten"
 
 #: suffusion-subscription.php:24 widgets/suffusion-subscription.php:24
-msgid ""
-"This widget lets visitors of your blog subscribe to it and follow you on "
-"popular social networks like Digg, FaceBook etc. Additionally they can "
-"subscribe to your blog by email, for which you need a FeedBurner account."
-msgstr ""
+msgid "This widget lets visitors of your blog subscribe to it and follow you on popular social networks like Digg, FaceBook etc. Additionally they can subscribe to your blog by email, for which you need a FeedBurner account."
+msgstr "Das Widget erlaubt Besuchern, Ihren Blog zu abonnieren und sich Ihnen in Sozialen Netzwerken wie Digg, FaceBook, etc. anzuschliessen. Zudem können sie den Blog per E-Mail abonnieren. Dazu benötigen Sie ein FeedBurner-Konto."
 
 #: suffusion-subscription.php:27 suffusion-subscription.php:64
 #: widgets/suffusion-subscription.php:27 widgets/suffusion-subscription.php:64
 msgid "Follow Me"
-msgstr ""
+msgstr "Mir anschliessen (Follow Me)"
 
 #: suffusion-subscription.php:65 widgets/suffusion-subscription.php:65
 msgid "your-feed-name"
-msgstr ""
+msgstr "Ihr Feedname"
 
 #: suffusion-subscription.php:67 widgets/suffusion-subscription.php:67
 msgid "Enter email address"
-msgstr ""
+msgstr "E-Mail Adresse eingeben"
 
 #: suffusion-subscription.php:68 widgets/suffusion-subscription.php:68
 msgid "Subscribe"
-msgstr ""
+msgstr "Abonnieren"
 
 #: suffusion-subscription.php:87 widgets/suffusion-subscription.php:87
 msgid "FeedBurner Feed:"
-msgstr ""
+msgstr "FeedBurner Feed:"
 
 #: suffusion-subscription.php:89 widgets/suffusion-subscription.php:89
 #, php-format
-msgid ""
-"Enter your %1$s feed name. If your feed address is https://feeds.feedburner."
-"com/my_feed_name, your feed name is my_feed_name"
-msgstr ""
+msgid "Enter your %1$s feed name. If your feed address is https://feeds.feedburner.com/my_feed_name, your feed name is my_feed_name"
+msgstr "Geben Sie Ihren %1$s Feed-Namen ein. Wenn Ihre Feed-Adresse https://feedburner.com/my_feed_name ist, lautet Ihr Feed-Name my_feed_name"
 
 #: suffusion-subscription.php:94 widgets/suffusion-subscription.php:94
 msgid "Show Email Subscription"
-msgstr ""
+msgstr "E-Mail Abonnement anzeigen"
 
 #: suffusion-subscription.php:95 widgets/suffusion-subscription.php:95
-msgid ""
-"Will show a text box for visitors to enter an email address for subscription"
-msgstr ""
+msgid "Will show a text box for visitors to enter an email address for subscription"
+msgstr "Zeigt ein Eingabefeld an, welches Besuchern die Eingabe einer E-Mail-Adresse zum Abonnieren ermöglicht"
 
 #: suffusion-subscription.php:99 widgets/suffusion-subscription.php:99
 msgid "Email Subscription Box Default Text:"
-msgstr ""
+msgstr "Voreingestellter Text im Feld für E-Mail Abonnement:"
 
 #: suffusion-subscription.php:101 widgets/suffusion-subscription.php:101
-msgid ""
-"This text will be shown in the subscription box by default. When the visitor "
-"starts entering the email address the text will disappear."
-msgstr ""
+msgid "This text will be shown in the subscription box by default. When the visitor starts entering the email address the text will disappear."
+msgstr "Dies ist der Text, der standardmäßig im Eingabefeld für das Abonnement angezeigt wird. Sobald der Besucher anfängt, die E-Mail-Adresse einzugeben, verschwindet er."
 
 #: suffusion-subscription.php:105 widgets/suffusion-subscription.php:105
 msgid "Email Subscription Button Text:"
-msgstr ""
+msgstr "Text der E-Mail Abonnementschaltfläche:"
 
 #: suffusion-subscription.php:107 widgets/suffusion-subscription.php:107
 msgid "This text will be shown in the subscription button near the email field"
-msgstr ""
+msgstr "Dieser Text wird auf der Schaltfläche für das Abonnement neben dem E-Mail-Feld angezeigt"
 
 #: suffusion-subscription.php:112 widgets/suffusion-subscription.php:112
 msgid "Show FeedBurner reader count"
-msgstr ""
+msgstr "FeedBurner-Leseranzahl anzeigen"
 
 #: suffusion-subscription.php:121 widgets/suffusion-subscription.php:121
 #, php-format
 msgid "Show %1$s icon"
-msgstr ""
+msgstr "Das Symbol für %1$s anzeigen"
 
 #: suffusion-subscription.php:132 widgets/suffusion-subscription.php:132
 #, php-format
 msgid "Enter %1$s account name:"
-msgstr ""
+msgstr "Eingabe des Kontonamens für %1$s:"
 
 #: suffusion-subscription.php:135 widgets/suffusion-subscription.php:135
 #, php-format
 msgid "Enter your full %1$s URL:"
-msgstr ""
+msgstr "Die komplette URL für %1$s eingeben:"
 
 #: suffusion-subscription.php:147 widgets/suffusion-subscription.php:147
 msgid "Select your icon size"
-msgstr ""
+msgstr "Die Symbolgröße auswählen"
 
 #: suffusion-subscription.php:163 widgets/suffusion-subscription.php:163
 msgid "Open follow links in a new window"
-msgstr ""
+msgstr "Follow-Links in einem neuen Browserfenster öffnen"
 
 #: suffusion-subscription.php:175 suffusion-subscription.php:201
 #: widgets/suffusion-subscription.php:175
 #: widgets/suffusion-subscription.php:201
 #, php-format
 msgid "Select your %1$s icon"
-msgstr ""
+msgstr "Das  Symbol für %1$s auswählen"
 
 #: widgets/suffusion-child-pages.php:14
 msgid "A widget for displaying child pages of a given page."
-msgstr ""
+msgstr "Ein Widget zum Anzeigen Unterseiten einer angegeben Seite."
 
 #: widgets/suffusion-child-pages.php:17
 msgid "Child Pages"
-msgstr ""
+msgstr "Unterseiten"
 
 #: widgets/suffusion-child-pages.php:162
-msgid ""
-"You can use shortcodes here, such as [suffusion-the-post display='title'] to "
-"display the title of the current page."
-msgstr ""
+msgid "You can use shortcodes here, such as [suffusion-the-post display='title'] to display the title of the current page."
+msgstr "Sie können hier Shortcodes anwenden, z.B. [suffusion-the-post display='title'] um den Titel der aktuellen Seite anzuzeigen."
 
 #: widgets/suffusion-child-pages.php:168
 msgid "Show empty widget if no sub-pages are found."
-msgstr ""
+msgstr "Leeres Widget anzeigen, wenn keine Unterseiten vorhanden."
 
 #: widgets/suffusion-child-pages.php:181
 msgid "Creation time"
-msgstr ""
+msgstr "Erstellungszeit"
 
 #: widgets/suffusion-child-pages.php:182
 msgid "Last modification time"
-msgstr ""
+msgstr "Zeit der letzten Änderung"
 
 #: widgets/suffusion-child-pages.php:183
 msgid "Page ID"
-msgstr ""
+msgstr "Seiten-ID"
 
 #: widgets/suffusion-child-pages.php:184
 msgid "Post author ID"
-msgstr ""
+msgstr "Nummer des Beitragsauthor"
 
 #: widgets/suffusion-child-pages.php:185
 msgid "Post slug"
-msgstr ""
+msgstr "Beitrag-Seitenname (in URL)"
 
 #: widgets/suffusion-child-pages.php:216 widgets/suffusion-query-users.php:236
 msgid "Include:"
-msgstr ""
+msgstr "Einschließen:"
 
 #: widgets/suffusion-child-pages.php:218
-msgid ""
-"Comma-separated list of page ids. All other selection criteria are ignored."
-msgstr ""
+msgid "Comma-separated list of page ids. All other selection criteria are ignored."
+msgstr "Kommagetrennte Liste der Seiten-IDs. Alle weiteren Auswahlkriterien werden ignoriert."
 
 #: widgets/suffusion-child-pages.php:222 widgets/suffusion-query-users.php:242
 msgid "Exclude:"
-msgstr ""
+msgstr "Ausschließen:"
 
 #: widgets/suffusion-child-pages.php:224
 msgid "Comma-separated list of page ids."
-msgstr ""
+msgstr "Kommagetrennte Liste der Seiten-IDs."
 
 #: widgets/suffusion-child-pages.php:232
 msgid "Display grandchildren."
-msgstr ""
+msgstr "Unter-Unterseiten anzeigen."
 
 #: widgets/suffusion-child-pages.php:237
 msgid "Number of sub-pages to show:"
-msgstr ""
+msgstr "Anzahl der anzuzeigenden Unterseiten:"
 
 #: widgets/suffusion-child-pages.php:243 widgets/suffusion-query-posts.php:352
 msgid "Post display style:"
-msgstr ""
+msgstr "Anzeigestil für die Beitrag:"
 
 #: widgets/suffusion-child-pages.php:247
 msgid "List style"
-msgstr ""
+msgstr "Listen-Stil"
 
 #: widgets/suffusion-child-pages.php:248 widgets/suffusion-query-posts.php:358
 msgid "Thumbnail and title"
-msgstr ""
+msgstr "Thumbnail und Titel"
 
 #: widgets/suffusion-child-pages.php:249 widgets/suffusion-query-posts.php:359
 msgid "Thumbnail, title and excerpt"
-msgstr ""
+msgstr "Thumbnail, Titel und Auszug"
 
 #: widgets/suffusion-child-pages.php:261
 msgid "Number of levels to show (only for list-style display):"
-msgstr ""
+msgstr "Anzahl anzuzeigender Levels (nur für listenartige Anzeige):"
 
 #: widgets/suffusion-child-pages.php:263
 msgid "All child pages, displayed hierarchically"
-msgstr ""
+msgstr "Alle Unter-Seiten, hierarchisch angezeigt"
 
 #: widgets/suffusion-child-pages.php:264
 msgid "All child pages, displayed in a single list"
-msgstr ""
+msgstr "Alle Unterseiten, als Liste"
 
 #: widgets/suffusion-child-pages.php:276 widgets/suffusion-query-posts.php:372
 msgid "Post thumbnail size (if applicable):"
-msgstr ""
+msgstr "Größe des Vorschaubilds im Beitrag (wenn anwendbar):"
 
 #: widgets/suffusion-flickr.php:12
 msgid "A widget to display your Flickr stream"
-msgstr ""
+msgstr "Ein Widget zum Anzeigen Ihres Flickr-Streams"
 
 #: widgets/suffusion-flickr.php:15
 msgid "Flickr"
-msgstr ""
+msgstr "Flickr"
 
 #: widgets/suffusion-flickr.php:59
 msgid "your-id"
-msgstr ""
+msgstr "Ihre ID"
 
 #: widgets/suffusion-flickr.php:60
 msgid "My Flickr Stream"
-msgstr ""
+msgstr "Mein Flickr-Stream"
 
 #: widgets/suffusion-flickr.php:70
 msgid "<p>This widget lets you display a Flickr stream.</p>"
-msgstr ""
+msgstr "<p>Dieses Widget zeigt einen Flickr-Stream an.</p>"
 
 #: widgets/suffusion-flickr.php:78
 msgid "Flickr ID (<a href=\"http://www.idgettr.com\">idGettr</a>):"
-msgstr ""
+msgstr "Flickr ID (<a href=\"http://www.idgettr.com\">idGettr</a>):"
 
 #: widgets/suffusion-flickr.php:83
 msgid "Number of pictures to display:"
-msgstr ""
+msgstr "Anzahl anzuzeigender Bilder:"
 
 #: widgets/suffusion-flickr.php:96
 msgid "Size:"
-msgstr ""
+msgstr "Größe:"
 
 #: widgets/suffusion-flickr.php:98
 msgid "Square"
-msgstr ""
+msgstr "Quadrat"
 
 #: widgets/suffusion-flickr.php:100
 msgid "Mid-Size"
-msgstr ""
+msgstr "Mittlere Größe"
 
 #: widgets/suffusion-flickr.php:105
 msgid "Image sort order:"
-msgstr ""
+msgstr "Sortier-Folge der Bilder:"
 
 #: widgets/suffusion-flickr.php:107
 msgid "Latest"
-msgstr ""
+msgstr "Letztest"
 
 #: widgets/suffusion-flickr.php:113
 msgid "Type:"
-msgstr ""
+msgstr "Typ:"
 
 #: widgets/suffusion-flickr.php:115
 msgid "User"
-msgstr ""
+msgstr "Benutzer"
 
 #: widgets/suffusion-flickr.php:116
 msgid "Group"
-msgstr ""
+msgstr "Gruppe"
 
 #: widgets/suffusion-query-posts.php:14
-msgid ""
-"A widget to pull posts based on various selection criteria. You can use this "
-"to display posts from a category, latest posts, random posts, popular posts "
-"etc."
-msgstr ""
+msgid "A widget to pull posts based on various selection criteria. You can use this to display posts from a category, latest posts, random posts, popular posts etc."
+msgstr "Widget, um Beiträge anhand verschiedener Auswahlkriterien anzuzeigen. Sie können es nutzen, um Beiträge einer Kategorie, letzte Beiträge, zufällige Beiträge, populäre Beiträge etc. anzuzeigen."
 
 #: widgets/suffusion-query-posts.php:17
 msgid "Query Posts"
-msgstr ""
+msgstr "Beitrag suchen"
 
 #: widgets/suffusion-query-posts.php:290
 msgid "<p>This widget lets you display the latest posts from a category.</p>"
-msgstr ""
+msgstr "<p>Dieses Widget zeigt die neuesten Beitrag einer Kategorie an.</p>"
 
 #: widgets/suffusion-query-posts.php:296
 msgid "You can use shortcodes here."
-msgstr ""
+msgstr "Sie können hier ShortCodes anwenden."
 
 #: widgets/suffusion-query-posts.php:300
 msgid "Number of posts to display:"
-msgstr ""
+msgstr "Anzahl der anzuzeigenden Beiträge:"
 
 #: widgets/suffusion-query-posts.php:355
 msgid "Underline upon hover (sidebar-style)"
-msgstr ""
+msgstr "Unterstrichen darstellen, wenn der Cursor darüberfährt (Sidebar Stil)"
 
 #: widgets/suffusion-query-posts.php:356
 msgid "Box upon hover (magazine-style)"
-msgstr ""
+msgstr "Kasten beim Drüberfahren mit dem Cursor (Magazin Stil)"
 
 #: widgets/suffusion-query-posts.php:357
 msgid "Thumbnail only"
-msgstr ""
+msgstr "Nur das Vorschaubild"
 
 #: widgets/suffusion-query-posts.php:360
 msgid "Thumbnail, title and full post"
-msgstr ""
+msgstr "Thumbnail, Titel und kompletter Beitrag"
 
 #: widgets/suffusion-query-posts.php:397
 msgid "Text for \"All Posts\":"
-msgstr ""
+msgstr "Text für \"Alle Beiträge\":"
 
 #: widgets/suffusion-query-posts.php:399
-msgid ""
-"The text you enter here will be the displayed in the button for \"All "
-"Posts\". If you leave this field blank the button will not be shown."
-msgstr ""
+msgid "The text you enter here will be the displayed in the button for \"All Posts\". If you leave this field blank the button will not be shown."
+msgstr "Der hier eingegebene Text wird auf der Schaltfläche für \"Alle Beiträge\" angezeigt. Gibst du  nichts ein, wird die Schaltfläche nicht angezeigt."
 
 #: widgets/suffusion-query-posts.php:403
 msgid "Link for \"All Posts\":"
-msgstr ""
+msgstr "Link für \"Alle Beiträge\":"
 
 #: widgets/suffusion-query-posts.php:405
-msgid ""
-"The text you enter here will be the linked to the \"All Posts\" button. If "
-"you leave this field blank the category page will be linked."
-msgstr ""
+msgid "The text you enter here will be the linked to the \"All Posts\" button. If you leave this field blank the category page will be linked."
+msgstr "Der Text, den Sie hier eingeben, wird mit der Schaltfläche \"Alle Beiträge\" verknüpft. Wenn Sie das Feld leer lassen, wird die Kategorieseite verknüpft."
 
 #: widgets/suffusion-query-posts.php:411
 msgid "Sticky Posts:"
-msgstr ""
+msgstr "Fixierte Beiträge:"
 
 #: widgets/suffusion-query-posts.php:414
 msgid "Ignore sticky posts"
-msgstr ""
+msgstr "Fixierte Beiträge ignorieren"
 
 #: widgets/suffusion-query-posts.php:415
 msgid "Show sticky posts only (ignore the others)"
-msgstr ""
+msgstr "Nur fixierte Beiträge anzeigen (andere ignorieren)"
 
 #: widgets/suffusion-query-posts.php:416
 msgid "Show sticky posts and other posts"
-msgstr ""
+msgstr "Fixierte und andere Beiträge anzeigen"
 
 #: widgets/suffusion-query-posts.php:428
 msgid "Select category to show:"
-msgstr ""
+msgstr "Die anzuzeigende Kategorie auswählen:"
 
 #: widgets/suffusion-query-posts.php:433
 msgid "(Any Category)"
-msgstr ""
+msgstr "Irgendeine Kategorie"
 
 #: widgets/suffusion-query-posts.php:438
 msgid "Posts from the selected category will show in the widget"
-msgstr ""
+msgstr "Beiträge der ausgewählten Kategorie werden im Widget angezeigt"
 
 #: widgets/suffusion-query-posts.php:442
 msgid "Category Icon:"
-msgstr ""
+msgstr "Kategorie-Symbol:"
 
 #: widgets/suffusion-query-posts.php:445
 msgid "No category icon"
-msgstr ""
+msgstr "Kein Kategorie-Symbol"
 
 #: widgets/suffusion-query-posts.php:446
 msgid "Use Category Icons Plugin"
-msgstr ""
+msgstr "Kategorie-Symbol-Plugin (Category Icons Plugin) verwenden"
 
 #: widgets/suffusion-query-posts.php:447
 msgid "Use custom image"
-msgstr ""
+msgstr "Benutzerdefiniertes Bild verwenden"
 
 #: widgets/suffusion-query-posts.php:456
-msgid ""
-"You can choose to display an icon for the category based on the Category "
-"Icons plugin, or a custom image"
-msgstr ""
+msgid "You can choose to display an icon for the category based on the Category Icons plugin, or a custom image"
+msgstr "Wählen Sie ein Symbol für die Kategorie und nutzen Sie dazu das \"Category Icon Plugin\" oder ein benutzerdefiniertes Bild"
 
 #: widgets/suffusion-query-posts.php:460
 msgid "Category icon custom image link:"
-msgstr ""
+msgstr "Link für das benutzerdefinierte Kategoriesymbol:"
 
 #: widgets/suffusion-query-posts.php:462
-msgid ""
-"If you have chosen to use a custom image in the previous option, please "
-"enter the complete URL of the category icon here, including http://"
-msgstr ""
+msgid "If you have chosen to use a custom image in the previous option, please enter the complete URL of the category icon here, including http://"
+msgstr "Wenn Sie zuvor festgelegt haben, ein benutzerdefiniertes Bild zu nutzen, tragen Sie hier die komplette URL des Kategoriesymbols einschließlich http:// ein"
 
 #: widgets/suffusion-query-posts.php:466
 msgid "Set the height for the category icon:"
-msgstr ""
+msgstr "Höhe des Kategoriesymbols festlegen:"
 
 #: widgets/suffusion-query-posts.php:470
 msgid "The image you have picked will be scaled to this height."
-msgstr ""
+msgstr "Das ausgewählte Bild wird auf diese Höhe skaliert."
 
 #: widgets/suffusion-query-posts.php:474
 msgid "Set the width for the category icon:"
-msgstr ""
+msgstr "Breite des Kategoriesymbols festlegen:"
 
 #: widgets/suffusion-query-posts.php:478
 msgid "The image you have picked will be scaled to this width."
-msgstr ""
+msgstr "Das ausgewählte Bild wird auf diese Breite skaliert."
 
 #: widgets/suffusion-query-posts.php:484
 msgid "Show posts with these tags:"
-msgstr ""
+msgstr "Beiträge mit diesen Tags anzeigen:"
 
 #: widgets/suffusion-query-posts.php:486
-msgid ""
-"Enter a comma-separated list of tags. Posts will be filtered by these tags."
-msgstr ""
+msgid "Enter a comma-separated list of tags. Posts will be filtered by these tags."
+msgstr "Geben Sie eine kommagetrennte Liste mit Schlüsselwörtern ein. Die Beiträge werden anhand dieser Tags gefiltert."
 
 #: widgets/suffusion-query-posts.php:490
 msgid "Show posts with these ids:"
-msgstr ""
+msgstr "Beiträge mit diesen Nummern anzeigen:"
 
 #: widgets/suffusion-query-posts.php:492
-msgid ""
-"Enter a comma-separated list of post ids. Only matching posts will be shown."
-msgstr ""
+msgid "Enter a comma-separated list of post ids. Only matching posts will be shown."
+msgstr "Geben Sie eine kommagetrennte Liste mit Beitragsnummern ein, nur Treffer werden angezeigt."
 
 #: widgets/suffusion-query-posts.php:496
 msgid "Post formats to include:"
-msgstr ""
+msgstr "Einzubindende Beitragsformate:"
 
 #: widgets/suffusion-query-posts.php:500
 msgid "All post formats"
-msgstr ""
+msgstr "Alle Beitragformate"
 
 #: widgets/suffusion-query-posts.php:502
 msgid "Aside"
-msgstr ""
+msgstr "Daneben"
 
 #: widgets/suffusion-query-posts.php:503
 msgid "Gallery"
-msgstr ""
+msgstr "Galerie"
 
 #: widgets/suffusion-query-posts.php:504
 msgid "Link"
-msgstr ""
+msgstr "Verweis"
 
 #: widgets/suffusion-query-posts.php:505
 msgid "Image"
-msgstr ""
+msgstr "Bild"
 
 #: widgets/suffusion-query-posts.php:506
 msgid "Quote"
-msgstr ""
+msgstr "Zitat"
 
 #: widgets/suffusion-query-posts.php:507
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: widgets/suffusion-query-posts.php:508
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: widgets/suffusion-query-posts.php:509
 msgid "Audio"
-msgstr ""
+msgstr "Audio"
 
 #: widgets/suffusion-query-posts.php:510
 msgid "Chat"
-msgstr ""
+msgstr "Chat"
 
 #: widgets/suffusion-query-posts.php:524
 msgid "Include all post types"
-msgstr ""
+msgstr "Alle Beitrags-Typen einbinden"
 
 #: widgets/suffusion-query-posts.php:531
 msgid "Show each post as a separate widget (full posts only)"
-msgstr ""
+msgstr "Jeden Beitrag als separates Widget anzeigen (nur vollständige Beiträge)"
 
 #: widgets/suffusion-query-users.php:14
 msgid "A widget for displaying users and their profiles."
-msgstr ""
+msgstr "Ein Widget zum Anzeigen von Benutzer und Benutzerprofilen."
 
 #: widgets/suffusion-query-users.php:17
 msgid "Query Users"
-msgstr ""
+msgstr "Benutzer suchen"
 
 #: widgets/suffusion-query-users.php:166
 msgid "Show empty widget if no users are found."
-msgstr ""
+msgstr "Leeres Widget anzeigen, wenn keine Benutzer vorhanden."
 
 #: widgets/suffusion-query-users.php:177
 msgid "Nice name"
-msgstr ""
+msgstr "Netter Name"
 
 #: widgets/suffusion-query-users.php:178
 msgid "Display name"
-msgstr ""
+msgstr "Namen anzeigen"
 
 #: widgets/suffusion-query-users.php:179
 msgid "Post count"
-msgstr ""
+msgstr "Anzahl der Beiträge"
 
 #: widgets/suffusion-query-users.php:180
 msgid "Joining date"
-msgstr ""
+msgstr "Beitritts-Datum"
 
 #: widgets/suffusion-query-users.php:181
 msgid "Email"
-msgstr ""
+msgstr "E-Mail"
 
 #: widgets/suffusion-query-users.php:214
 msgid "Type of users to display:"
-msgstr ""
+msgstr "Anzuzeigenden Benutzertyp:"
 
 #: widgets/suffusion-query-users.php:219
 msgid "Subscribers"
-msgstr ""
+msgstr "Abonnenten"
 
 #: widgets/suffusion-query-users.php:220
 msgid "Contributors"
-msgstr ""
+msgstr "Beiträgende"
 
 #: widgets/suffusion-query-users.php:221
 msgid "Authors"
-msgstr ""
+msgstr "Autoren"
 
 #: widgets/suffusion-query-users.php:222
 msgid "Editors"
-msgstr ""
+msgstr "Editoren"
 
 #: widgets/suffusion-query-users.php:223
 msgid "Administrators"
-msgstr ""
+msgstr "Administratoren"
 
 #: widgets/suffusion-query-users.php:224 widgets/suffusion-query-users.php:300
 #: widgets/suffusion-query-users.php:316
 msgid "All users"
-msgstr ""
+msgstr "Alle Benutzer"
 
 #: widgets/suffusion-query-users.php:238
 msgid "Comma-separated list of user ids. Only matching users will be shown."
-msgstr ""
+msgstr "Kommagetrennte Liste der Benutzernummern. Zeigt nur die zutreffenden Benutzer an."
 
 #: widgets/suffusion-query-users.php:244
 msgid "Comma-separated list of user ids."
-msgstr ""
+msgstr "Kommagetrennte Liste der Benutzernummer."
 
 #: widgets/suffusion-query-users.php:249
 msgid "Gravatar size for users displayed in full:"
-msgstr ""
+msgstr "Größe des Gravatars (komplette Anzeige):"
 
 #: widgets/suffusion-query-users.php:254
 msgid "Don't show a Gravatar"
-msgstr ""
+msgstr "Gravatar nicht anzeigen"
 
 #: widgets/suffusion-query-users.php:272
 msgid "Gravatar size for users where only the gravatar is displayed:"
-msgstr ""
+msgstr "Größe des Gravatars, wenn nur der Gravatar angezeigt wird:"
 
 #: widgets/suffusion-query-users.php:297
 msgid "Number of users to display:"
-msgstr ""
+msgstr "Anzahl der anzuzeigenden Benutzer:"
 
 #: widgets/suffusion-query-users.php:313
 msgid "Number of users for whom all details will be displayed:"
-msgstr ""
+msgstr "Anzahl der Benutzer, deren Eigenschaften angezeigt werden sollen:"
 
 #: widgets/suffusion-query-users.php:325
 msgid "Only Gravatars will be displayed for all other users"
-msgstr ""
+msgstr "Für die anderen Benutzer wird nur der Gravatar angezeigt"
 
 #: widgets/suffusion-query-users.php:330
 msgid "Link profile to:"
-msgstr ""
+msgstr "Verknüpfe Profil mit:"
 
 #: widgets/suffusion-query-users.php:335
 msgid "Nothing"
-msgstr ""
+msgstr "Nichts"
 
 #: widgets/suffusion-query-users.php:336
 msgid "Author page"
-msgstr ""
+msgstr "Autoren-Seite"
 
 #: widgets/suffusion-query-users.php:337
 msgid "User profile (BuddyPress only)"
-msgstr ""
+msgstr "Benutzerprofil (nur BuddyPress)"
 
 #: widgets/suffusion-query-users.php:350
 msgid "Show user description:"
-msgstr ""
+msgstr "Benutzerbeschreibung anzeigen:"
 
 #: widgets/suffusion-query-users.php:355 widgets/suffusion-query-users.php:404
 #: widgets/suffusion-query-users.php:425
 msgid "Don't show"
-msgstr ""
+msgstr "Nicht anzeigen"
 
 #: widgets/suffusion-query-users.php:356 widgets/suffusion-query-users.php:405
 #: widgets/suffusion-query-users.php:426
 msgid "Show for full displays"
-msgstr ""
+msgstr "Anzeigen für volle Darstellung"
 
 #: widgets/suffusion-query-users.php:371
 msgid "User description format:"
-msgstr ""
+msgstr "Benutzerbeschreibungsformat:"
 
 #: widgets/suffusion-query-users.php:376
 msgid "Description set in user profile"
-msgstr ""
+msgstr "Beschreibung im Benutzerprofil"
 
 #: widgets/suffusion-query-users.php:377
 msgid "Custom format (defined below)"
-msgstr ""
+msgstr "Benutzerdefiniertes Format (nachstehend festgelegt)"
 
 #: widgets/suffusion-query-users.php:378
 msgid "User profile + Custom description"
-msgstr ""
+msgstr "Benutzerprofil und benutzerdefinierte Beschreibung"
 
 #: widgets/suffusion-query-users.php:379
 msgid "Custom + User description"
-msgstr ""
+msgstr "Benutzerdefinierte und Benutzerbeschreibung"
 
 #: widgets/suffusion-query-users.php:392
 msgid "Custom user description format (Short-codes allowed)"
-msgstr ""
+msgstr "Benutzerdefiniertes Beschreibungsformat (Shortcodes erlaubt)"
 
 #: widgets/suffusion-query-users.php:399
 msgid "Show post count:"
-msgstr ""
+msgstr "Anzahl der Beiträge anzeigen:"
 
 #: widgets/suffusion-query-users.php:406 widgets/suffusion-query-users.php:427
 msgid "Show for Gravatar displays"
-msgstr ""
+msgstr "Gravatar Displays anzeigen"
 
 #: widgets/suffusion-query-users.php:407 widgets/suffusion-query-users.php:428
 msgid "Show for both full and Gravatar displays"
-msgstr ""
+msgstr "Komplette und Gravatar-Anzeige für beide anzeigen"
 
 #: widgets/suffusion-query-users.php:420
 msgid "Show comment count:"
-msgstr ""
+msgstr "Anzahl der Kommentare anzeigen:"
 
 #: widgets/suffusion-query-users.php:557 widgets/suffusion-query-users.php:558
 #, php-format
 msgid "%1$s posts"
-msgstr ""
+msgstr "%1$s Beiträge"
 
 #: widgets/suffusion-query-users.php:561 widgets/suffusion-query-users.php:562
 msgid "1 post"
-msgstr ""
+msgstr "1 Beitrag"
 
 #: widgets/suffusion-query-users.php:571 widgets/suffusion-query-users.php:572
 #, php-format
 msgid "%1$s comments"
-msgstr ""
+msgstr "%1$s  Kommentare"
 
 #: widgets/suffusion-query-users.php:575 widgets/suffusion-query-users.php:576
 msgid "1 comment"
-msgstr ""
+msgstr "1 Kommentar"
 
 #: widgets/suffusion-search.php:13
 msgid "A search form for your blog"
-msgstr ""
+msgstr "Ein Suchformular für den Blog"
 
 #: widgets/suffusion-translator.php:12
 msgid "A widget to let people use Google Translator to translate your site"
-msgstr ""
+msgstr "Ein Widget, das den Google-Übersetzer einbindet"
 
 #: widgets/suffusion-translator.php:13
 msgid "Google Translator"
-msgstr ""
+msgstr "Google-Übersetzer"
 
 #: widgets/suffusion-translator.php:107
 msgid "Translate this Page"
-msgstr ""
+msgstr "Diese Seite übersetzen"
 
 #: widgets/suffusion-translator.php:120
 msgid "Source Language:"
-msgstr ""
+msgstr "Ausgangssprache:"
 
 #: widgets/suffusion-translator.php:126
 msgid "What language is your page in?"
-msgstr ""
+msgstr "In welcher Sprache ist die Seite verfasst?"
 
 #: widgets/suffusion-twitter.php:13
 msgid "A widget to enable people to follow you on Twitter"
-msgstr ""
+msgstr "Ein Widget, das es Anderen erlaubt, sich Ihnen  bei Twitter anzuschliessen"
 
 #: widgets/suffusion-twitter.php:16
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: widgets/suffusion-twitter.php:239
 msgid "your-user-name"
-msgstr ""
+msgstr "Ihr Benutzername"
 
 #: widgets/suffusion-twitter.php:240
 msgid "My Tweets"
-msgstr ""
+msgstr "Ihre Tweets"
 
 #: widgets/suffusion-twitter.php:241
 msgid "Follow me on Twitter"
-msgstr ""
+msgstr "Folge mir bei Twitter"
 
 #: widgets/suffusion-twitter.php:258
-msgid ""
-"<p>This widget lets you set up a link to allow people to follow you on "
-"Twitter. You can additionally show your latest feeds.</p>"
-msgstr ""
+msgid "<p>This widget lets you set up a link to allow people to follow you on Twitter. You can additionally show your latest feeds.</p>"
+msgstr "<p>Mit diesem Widget können Sie einen Link setzen, um es Leuten zu ermöglichen, Ihnen auf Twitter zu folgen. Zusätzlich können Sie Ihre neuesten RSS-Feeds anzeigen.</p>"
 
 #: widgets/suffusion-twitter.php:259
 msgid "Recommended settings:"
-msgstr ""
+msgstr "Empfohlene Einstellungen:"
 
 #: widgets/suffusion-twitter.php:261
 msgid "If you are placing this widget in the \"Right Header Widgets\":"
-msgstr ""
+msgstr "Falls das Widget im \"Rechten Kopfzeilen-Widget Bereich\" angezeigt werden soll:"
 
 #: widgets/suffusion-twitter.php:263 widgets/suffusion-twitter.php:271
 msgid "Show icon"
-msgstr ""
+msgstr "Symbol anzeigen"
 
 #: widgets/suffusion-twitter.php:264
 msgid "Don't show tagline"
-msgstr ""
+msgstr "Tagline nicht anzeigen"
 
 #: widgets/suffusion-twitter.php:265
 msgid "Don't show feeds"
-msgstr ""
+msgstr "Feeds nicht anzeigen"
 
 #: widgets/suffusion-twitter.php:269
-msgid ""
-"If you are placing this widget in the sidebars or in \"Widget Area below "
-"Header\" or \"Widget Area below Footer\":"
-msgstr ""
+msgid "If you are placing this widget in the sidebars or in \"Widget Area below Header\" or \"Widget Area below Footer\":"
+msgstr "Falls das Widget in der Sidebar oder  im \"Widgetbereich unterhalb der Kopfzeile\" oder im \"Widgetbereich unterhalb der Fußzeile\" angezeigt werden soll:"
 
 #: widgets/suffusion-twitter.php:272
 msgid "Show tagline"
-msgstr ""
+msgstr "Tagline anzeigen"
 
 #: widgets/suffusion-twitter.php:273
 msgid "Show feeds"
-msgstr ""
+msgstr "Feeds anzeigen"
 
 #: widgets/suffusion-twitter.php:281
 msgid "User:"
-msgstr ""
+msgstr "Benutzer:"
 
 #: widgets/suffusion-twitter.php:283
 msgid "This is the user who will be followed"
-msgstr ""
+msgstr "Dies ist der Twitter-Benutzer, dem gefolgt wird"
 
 #: widgets/suffusion-twitter.php:288
 msgid "Show Twitter Icon"
-msgstr ""
+msgstr "Twittersymbol anzeigen"
 
 #: widgets/suffusion-twitter.php:289
 msgid "Will show the selected Twitter icon"
-msgstr ""
+msgstr "Zeigt das gewählte Twittersymbol an"
 
 #: widgets/suffusion-twitter.php:294
 msgid "Show a Tagline"
-msgstr ""
+msgstr "Tagline anzeigen"
 
 #: widgets/suffusion-twitter.php:295
 msgid "Will show up near the Twitter icon"
-msgstr ""
+msgstr "Wird neben dem Twitter-Symbol angezeigt"
 
 #: widgets/suffusion-twitter.php:300
 msgid "Show my Tweets"
-msgstr ""
+msgstr "Ihre Tweets anzeigen"
 
 #: widgets/suffusion-twitter.php:301
 msgid "Will show your latest tweets"
-msgstr ""
+msgstr "Zeigt Ihre neuesten Tweets"
 
 #: widgets/suffusion-twitter.php:310
 msgid "Tagline:"
-msgstr ""
+msgstr "Motto:"
 
 #: widgets/suffusion-twitter.php:315
 msgid "Number of Tweets to display:"
-msgstr ""
+msgstr "Anzahl anzuzeigender Tweets:"
 
 #: widgets/suffusion-twitter.php:330
 msgid "Select your Twitter icon:"
-msgstr ""
+msgstr "Twittersymbol auswählen:"
 
 #: widgets/suffusion-twitter.php:341
 msgid "Set the height for the Twitter icon:"
-msgstr ""
+msgstr "Höhe des Twittersymbols festlegen:"
 
 #: widgets/suffusion-twitter.php:345
-msgid ""
-"Recommended sizes: 32px if the widget is being added to the \"Right Header "
-"Widgets\" area, whatever you like otherwise. Note that making the image too "
-"large will cause loss of picture quality."
-msgstr ""
+msgid "Recommended sizes: 32px if the widget is being added to the \"Right Header Widgets\" area, whatever you like otherwise. Note that making the image too large will cause loss of picture quality."
+msgstr "Empfohlene Größen: 32px falls das Widget zu dem  \"Rechte Kopfzeilen-Widgets\"-Bereich hinzugefügt wird, ansonsten beliebig. Zu berücksichtigen ist, dass ein zu großes Bild einen Qualitätsverlust verursacht."
