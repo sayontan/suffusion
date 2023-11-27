@@ -2,7 +2,6 @@
 /**
  * Single book template for the Now Reading plugin.
  * This is NOT the template file for single posts. This file applies to the Now Reading plugin support within Suffusion.
- * If you want to edit the file a single post via the WP File Editor, see this: https://aquoid.com/forum/viewtopic.php?f=4&t=1499&p=6754#p6754
  *
  * @package Suffusion
  * @subpackage NowReading
