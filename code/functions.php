@@ -110,8 +110,8 @@ function suffusion_add_theme_supports() {
             'suf_body_background_color' => suffusion_evaluate_style('suf_body_background_color', $theme_name),
             'suf_body_background_image' => suffusion_evaluate_style('suf_body_background_image', $theme_name, 'empty'),
         );
-		// remove null and empty string values
-		$options = array_filter($options, fn($value) => (!is_null($value) && $value !== ''));
+        // remove null and empty string values
+        $options = array_filter($options, fn($value) => (!is_null($value) && $value !== ''));
         $options = wp_parse_args((array)$options, $defaults);
 
         if ($options['suf_header_style_setting'] == 'custom') {
