@@ -151,6 +151,8 @@ class Suffusion_Query_Users extends WP_Widget {
 			"order" => "DESC",
 			"who" => "",
 		);
+		// remove null and empty string values
+		$instance = array_filter($instance, fn($value) => (!is_null($value) && $value !== ''));
 		$instance = wp_parse_args((array)$instance, $defaults);
 ?>
 <div class="suf-widget-block">

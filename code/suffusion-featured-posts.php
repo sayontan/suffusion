@@ -56,6 +56,8 @@ class Suffusion_Featured_Posts extends WP_Widget {
             'pause_text' => __('Pause', 'suffusion'),
             'next_text' => __('Next Post', 'suffusion'),
 		);
+		// remove null and empty string values
+		$instance = array_filter($instance, fn($value) => (!is_null($value) && $value !== ''));
 		$instance = wp_parse_args((array)$instance, $defaults);
 ?>
 <div class="suf-widget-block">

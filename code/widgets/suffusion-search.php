@@ -42,6 +42,8 @@ class Suffusion_Search extends WP_Widget {
 
 	function form($instance) {
 		$defaults = array("title" => __("Search", "suffusion"));
+		// remove null and empty string values
+		$instance = array_filter($instance, fn($value) => (!is_null($value) && $value !== ''));
 		$instance = wp_parse_args((array)$instance, $defaults);
 ?>
 
