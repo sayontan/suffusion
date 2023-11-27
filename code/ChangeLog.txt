@@ -1,3 +1,12 @@
+Version 4.6.1 - 27 November 2023
+============================================
+- Updated custom post types (#62)
+- Fixed issues with empty option fields (#61)
+- Fixed check for translation files (#60)
+- Changed http to https (#59)
+- Added German and Spanish translations (#54, #57)
+- Removed old versions (#56)
+
 Version 4.6.0 - 22 November 2023
 ============================================
 - Theme Check: Escape URLs used in attributes (#31)
