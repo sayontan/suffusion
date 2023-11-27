@@ -74,6 +74,8 @@ class Suffusion_Subscription extends WP_Widget {
             $defaults[$icon_type."_icon"] = $icon_type."-".$icon_type_suffixes[0];
             $defaults["show_".$icon_type] = false;
         }
+		// remove null and empty string values
+		$instance = array_filter($instance, fn($value) => (!is_null($value) && $value !== ''));
         $instance = wp_parse_args((array)$instance, $defaults);
 ?>
 <div class="suf-widget-block">

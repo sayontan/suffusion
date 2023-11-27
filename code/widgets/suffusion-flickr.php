@@ -63,6 +63,8 @@ class Suffusion_Flickr extends WP_Widget {
 			"sorting" => "latest",  // latest, random
 			"type" => "user",   // user, group
 		);
+		// remove null and empty string values
+		$instance = array_filter($instance, fn($value) => (!is_null($value) && $value !== ''));
 		$instance = wp_parse_args((array)$instance, $defaults);
 ?>
 <div class="suf-widget-block">

@@ -282,6 +282,8 @@ class Suffusion_Category_Posts extends WP_Widget {
 			'any_post_type' => false,
 			'separate_widgets' => false,
 		);
+		// remove null and empty string values
+		$instance = array_filter($instance, fn($value) => (!is_null($value) && $value !== ''));
 		$instance = wp_parse_args((array)$instance, $defaults);
 ?>
 <div class="suf-widget-block">

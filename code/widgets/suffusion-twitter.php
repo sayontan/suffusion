@@ -244,6 +244,8 @@ class Suffusion_Follow_Twitter extends WP_Widget {
 			"icon_height" => "32px",
 			"num_tweets" => 5,
 		);
+		// remove null and empty string values
+		$instance = array_filter($instance, fn($value) => (!is_null($value) && $value !== ''));
 		$instance = wp_parse_args((array)$instance, $defaults);
 		if (!isset($instance['icon'])) {
 			$icon = "twitter-00";
