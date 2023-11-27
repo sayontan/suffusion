@@ -87,7 +87,7 @@ function suffusion_image_attachment($attachment = '', $mime = '', $file = '') {
 
 /**
  * Provides links to all image sizes for a given attachment.
- * This is based on a method described by Justin Tadlock: http://justintadlock.com/archives/2011/01/28/linking-to-all-image-sizes-in-wordpress
+ * This is based on a method described by Justin Tadlock: https://justintadlock.com/archives/2011/01/28/linking-to-all-image-sizes-in-wordpress
  *
  * @return string
  */
@@ -123,7 +123,7 @@ function suffusion_get_image_size_links() {
  * Returns the EXIF data for images.
  *
  * @return string
- * @see http://www.walkernews.net/2009/04/13/turn-on-wordpress-feature-to-display-photo-exif-data-and-iptc-information/
+ * @see https://www.walkernews.net/2009/04/13/turn-on-wordpress-feature-to-display-photo-exif-data-and-iptc-information/
  */
 function suffusion_get_image_exif_data() {
 	global $suf_image_exif_pieces;
@@ -304,7 +304,7 @@ function suffusion_video_attachment($attachment = '', $mime = '', $file = '') {
 }
 
 /**
- * Image resizing method, based on the approach described by Victor Teixeira here: http://core.trac.wordpress.org/ticket/15311.
+ * Image resizing method, based on the approach described by Victor Teixeira here: https://core.trac.wordpress.org/ticket/15311.
  * This will be replaced the day WP releases a well-designed dynamic resizer. Unlike TimThumb this doesn't use URL parameters to generate the image.
  * It instead relies on pre-defined (registered) sizes. A unique image is determined based on the resizing dimensions, the quality and the crop/no-crop of the resized image.
  * If the image has been already built in cache, that is returned. Otherwise a new image is created.
@@ -401,8 +401,8 @@ function suffusion_resize($img_url, $width, $height, $crop = false, $quality = n
 			$base = 'https://i0.wp.com/';
 			$img_path = substr_replace($img_path, '', 0, 8);
 		}
-		else if (stripos($upload_dir['baseurl'], 'http://') === 0) {
-			$base = 'http://i0.wp.com/';
+		else if (stripos($upload_dir['baseurl'], 'https://') === 0) {
+			$base = 'https://i0.wp.com/';
 			$img_path = substr_replace($img_path, '', 0, 7);
 		}
 
@@ -529,7 +529,7 @@ function suffusion_resize($img_url, $width, $height, $crop = false, $quality = n
 
 /**
  * Retrieves the URL of the image to be shown for a post. This is loosely based on the "Get the Image" plugin by Justin
- * Tadlock (http://wordpress.org/extend/plugins/get-the-image/). It picks the URL from one of the following:
+ * Tadlock (https://wordpress.org/extend/plugins/get-the-image/). It picks the URL from one of the following:
  *  1. Native WP "Featured Image"
  *  2. Custom "Featured Image" field
  *  3. Custom "Thumbnail" field

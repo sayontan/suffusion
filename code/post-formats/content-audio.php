@@ -4,7 +4,7 @@
  * in a post. If not a shortcode match, it displays the matched file in an Audio Player.
  * Users can override this file in a child theme by creating a file called content-audio.php in a folder called 'post-formats'.
  *
- * The Audio Player used is the standalone version from http://wpaudioplayer.com.
+ * The Audio Player used is the standalone version from https://wpaudioplayer.com.
  *
  * @since 3.9.1
  * @package Suffusion

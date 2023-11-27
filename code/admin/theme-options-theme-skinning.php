@@ -58,7 +58,7 @@ $suffusion_theme_skinning_options = array(
 	),
 
 	array("name" => "Icon Sets",
-		"desc" => "Choose from one of the pre-defined icon sets. These apply mostly to byline, page navigation and comment form elements. A lot of these icons are from a <a href='http://www.studiopress.com/graphics/icon-set-bloggers.htm'>set generously released under GPL by StudioPress</a>.",
+		"desc" => "Choose from one of the pre-defined icon sets. These apply mostly to byline, page navigation and comment form elements. A lot of these icons are from a <a href='https://www.studiopress.com/graphics/icon-set-bloggers.htm'>set generously released under GPL by StudioPress</a>.",
 		"id" => "suf_iconset",
 		"parent" => "icon-sets",
 		"type" => "radio",
@@ -299,7 +299,7 @@ $suffusion_theme_skinning_options = array(
 		"id" => "suf_header_background_image",
 		"parent" => "header-styles",
 		"type" => "upload",
-		"hint" => "Enter the full URL here (including http://), or click on \"Upload Image\"",
+		"hint" => "Enter the full URL here (including https://), or click on \"Upload Image\"",
 		"std" => ""),
 
 	array("name" => "Header Background Image Tiling",
@@ -383,7 +383,7 @@ $suffusion_theme_skinning_options = array(
 		"id" => "suf_header_fg_image",
 		"parent" => "header-styles",
 		"type" => "upload",
-		"hint" => "Enter the full URL here (including http://), or click on \"Upload Image\"",
+		"hint" => "Enter the full URL here (including https://), or click on \"Upload Image\"",
 		"std" => ""),
 
 	array("name" => "Blog Title / Header Color",
@@ -661,7 +661,7 @@ $suffusion_theme_skinning_options = array(
 		"id" => "suf_body_background_image",
 		"parent" => "body-bg-settings",
 		"type" => "upload",
-		"hint" => "Enter the full URL here (including http://), or click on \"Upload Image\"",
+		"hint" => "Enter the full URL here (including https://), or click on \"Upload Image\"",
 		"std" => suffusion_evaluate_style("suf_body_background_image", $suffusion_theme_name)),
 
 	array("name" => "Body Background Image Tiling",

@@ -36,7 +36,7 @@ class Suffusion_Flickr extends WP_Widget {
 		}
 		?>
 	<div class="suf-flickr-wrap fix">
-		<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=<?php echo $number; ?>&amp;display=<?php echo $sorting; ?>&amp;size=<?php echo $size; ?>&amp;layout=x&amp;source=<?php echo $type; ?>&amp;<?php echo $type; ?>=<?php echo $id; ?>"></script>
+		<script type="text/javascript" src="https://www.flickr.com/badge_code_v2.gne?count=<?php echo $number; ?>&amp;display=<?php echo $sorting; ?>&amp;size=<?php echo $size; ?>&amp;layout=x&amp;source=<?php echo $type; ?>&amp;<?php echo $type; ?>=<?php echo $id; ?>"></script>
 	</div>
 	<?php
         echo $after_widget;
@@ -75,7 +75,7 @@ class Suffusion_Flickr extends WP_Widget {
 	</p>
 
 	<p>
-		<label for="<?php echo $this->get_field_id('id'); ?>"><?php _e('Flickr ID (<a href="http://www.idgettr.com">idGettr</a>):','suffusion'); ?></label>
+		<label for="<?php echo $this->get_field_id('id'); ?>"><?php _e('Flickr ID (<a href="https://www.idgettr.com">idGettr</a>):','suffusion'); ?></label>
 		<input id="<?php echo $this->get_field_id('id'); ?>" name="<?php echo $this->get_field_name('id'); ?>" value="<?php if (isset($instance['id'])) echo $instance['id']; ?>" class="widefat" />
 	</p>
 

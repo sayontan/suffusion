@@ -32,11 +32,11 @@ $suffusion_visual_effects_options = array(
 	array("name" => "Favicon Path",
 		"desc" => "Set the image to be used as your Favicon. You can use a PNG, GIF, ICO or JPG file that is 16x16, 32x32 or 64x64 px in size.
 				Note that older versions of Internet Explorer do not support PNG.
-				See <a href='http://perishablepress.com/press/2007/10/17/everything-you-ever-wanted-to-know-about-favicons/'>this article</a> for a very comprehensive writeup on Favicons.",
+				See <a href='https://perishablepress.com/press/2007/10/17/everything-you-ever-wanted-to-know-about-favicons/'>this article</a> for a very comprehensive writeup on Favicons.",
 		"id" => "suf_favicon_path",
 		"parent" => "favicon-setup",
 		"type" => "upload",
-		"hint" => "Enter the full URL here (including http://), or click on \"Upload Image\"",
+		"hint" => "Enter the full URL here (including https://), or click on \"Upload Image\"",
 		"std" => ""),
 
 	array("name" => "Navigation Bar Above Header",
@@ -176,7 +176,7 @@ $suffusion_visual_effects_options = array(
 		"parent" => "navt-setup",
 		"grouping" => "navt-pages",
 		"type" => "text",
-		"hint" => "Enter the full URL, including http://",
+		"hint" => "Enter the full URL, including https://",
 		"std" => ""),
 
 	array("name" => "Pages in Navigation Bar - All or Selected",
@@ -231,7 +231,7 @@ $suffusion_visual_effects_options = array(
 		"parent" => "navt-setup",
 		"grouping" => "navt-cats",
 		"type" => "text",
-		"hint" => "Enter the full URL, including http://",
+		"hint" => "Enter the full URL, including https://",
 		"std" => ""),
 
 	array("name" => "Categories in Navigation Bar - All or Selected",
@@ -287,7 +287,7 @@ $suffusion_visual_effects_options = array(
 		"parent" => "navt-setup",
 		"grouping" => "navt-links",
 		"type" => "text",
-		"hint" => "Enter the full URL, including http://",
+		"hint" => "Enter the full URL, including https://",
 		"std" => ""),
 
 	array("name" => "Links in Navigation Bar - All or Selected",
@@ -514,7 +514,7 @@ $suffusion_visual_effects_options = array(
 		"parent" => "nav-setup",
 		"grouping" => "nav-pages",
 		"type" => "text",
-		"hint" => "Enter the full URL, including http://",
+		"hint" => "Enter the full URL, including https://",
 		"std" => ""),
 
 	array("name" => "Pages in Navigation Bar - All or Selected",
@@ -569,7 +569,7 @@ $suffusion_visual_effects_options = array(
 		"parent" => "nav-setup",
 		"grouping" => "nav-cats",
 		"type" => "text",
-		"hint" => "Enter the full URL, including http://",
+		"hint" => "Enter the full URL, including https://",
 		"std" => ""),
 
 	array("name" => "Categories in Navigation Bar - All or Selected",
@@ -625,7 +625,7 @@ $suffusion_visual_effects_options = array(
 		"parent" => "nav-setup",
 		"grouping" => "nav-links",
 		"type" => "text",
-		"hint" => "Enter the full URL, including http://",
+		"hint" => "Enter the full URL, including https://",
 		"std" => ""),
 
 	array("name" => "Links in Navigation Bar - All or Selected",
@@ -2005,7 +2005,7 @@ $suffusion_visual_effects_options = array(
 					<li>Selected Pages</li>
 					<li>Selected Tags</li>
 				</ul>
-				Suffusion uses the excellent <a href='http://www.malsup.com/jquery/cycle/'>JQuery Cycle</a> to create a Featured section above your posts.
+				Suffusion uses the excellent <a href='https://www.malsup.com/jquery/cycle/'>JQuery Cycle</a> to create a Featured section above your posts.
 				Additionally you can define a \"Featured Image\" (preferably as wide as your blog posts). If you don't associate a featured image, the thumbnail will be picked.
 				And if you don't provide a thumbnail, the first attached image will be used. Note, though, that not having a featured image will generate thumbnail size images, displaying a lot of blank space.
 				Good practices:

@@ -978,7 +978,7 @@ function suffusion_include_jqfix_js() {
 
 	if (!is_admin() && is_active_widget('Suffusion_Google_Translator', false, 'suf-google-translator', true)) {
 		// For some reason the translation widget fails if we load the JS in the header. Hence we are overriding the header/footer JS setting
-		wp_enqueue_script('suffusion-google-translate', 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit', array(), null, true);
+		wp_enqueue_script('suffusion-google-translate', 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit', array(), null, true);
 	}
 
 	$template_widths = suffusion_get_template_prefixes();

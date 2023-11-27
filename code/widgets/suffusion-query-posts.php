@@ -459,7 +459,7 @@ class Suffusion_Category_Posts extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id('cat_icon_url'); ?>"><?php _e('Category icon custom image link:', 'suffusion'); ?></label>
 			<input id="<?php echo $this->get_field_id('cat_icon_url'); ?>" name="<?php echo $this->get_field_name('cat_icon_url'); ?>" value="<?php if (isset($instance['cat_icon_url'])) echo $instance['cat_icon_url']; ?>" class="widefat" />
-			<i><?php _e("If you have chosen to use a custom image in the previous option, please enter the complete URL of the category icon here, including http://", "suffusion"); ?></i>
+			<i><?php _e("If you have chosen to use a custom image in the previous option, please enter the complete URL of the category icon here, including https://", "suffusion"); ?></i>
 		</p>
 
 		<p>

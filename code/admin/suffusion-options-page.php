@@ -93,9 +93,9 @@ function suffusion_render_options() {
 					<h2 class='suf-header-1'>Suffusion &ndash; <?php echo SUFFUSION_THEME_VERSION; ?></h2>
 					<div class='donate fix'>
 						<ul>
-							<li class='announcements'><a href='http://www.aquoid.com/news' target="_blank">Announcements</a></li>
+							<li class='announcements'><a href='https://www.aquoid.com/news' target="_blank">Announcements</a></li>
                             <li class='support'><a href='https://github.com/sayontan/suffusion/issues' target="_blank">Support Forum</a></li>
-                            <li class='showcase'><a href='http://www.aquoid.com/news/showcase/' target="_blank">Showcase</a></li>
+                            <li class='showcase'><a href='https://www.aquoid.com/news/showcase/' target="_blank">Showcase</a></li>
 						</ul>
 					</div><!-- donate -->
 				</div>
@@ -317,21 +317,21 @@ function suffusion_translation_checker() {
 		if (!is_child_theme()) {
 			if (file_exists(get_template_directory()."/translation/$lang.mo")) {
 				$message = "<div class='updated'>You are using a version of WordPress that is not in American English, and your translation files are in the theme's main folder.
-					You will lose these files if you upgrade the theme. <a href='http://www.aquoid.com/news/themes/suffusion/translating-suffusion/#use-basic'>Move your translations to a child theme</a> instead.</div>";
+					You will lose these files if you upgrade the theme. <a href='https://www.aquoid.com/news/themes/suffusion/translating-suffusion/#use-basic'>Move your translations to a child theme</a> instead.</div>";
 			}
 			else {
 				$message = "<div class='updated'>You are using a version of WordPress that is not in American English.
-					Translations for your language <a href='http://www.aquoid.com/news/themes/suffusion/translating-suffusion/'>might be available</a>.</div>";
+					Translations for your language <a href='https://www.aquoid.com/news/themes/suffusion/translating-suffusion/'>might be available</a>.</div>";
 			}
 		}
 		else {
 			if (file_exists(get_template_directory()."/translation/$lang.mo") && !file_exists(get_stylesheet_directory()."/translation/$lang.mo")) {
 				$message = "<div class='updated'>Your translation files are in Suffusion's folder. You will lose these files if you upgrade the theme.
-					<a href='http://www.aquoid.com/news/themes/suffusion/translating-suffusion/#use-basic'>Move your translations to a child theme</a> instead.</div>";
+					<a href='https://www.aquoid.com/news/themes/suffusion/translating-suffusion/#use-basic'>Move your translations to a child theme</a> instead.</div>";
 			}
 			else if (!file_exists(get_stylesheet_directory()."/translation/$lang.mo")) {
 				$message = "<div class='updated'>You are using a version of WordPress that is not in American English.
-					Translations for your language <a href='http://www.aquoid.com/news/themes/suffusion/translating-suffusion/'>might be available</a>.</div>";
+					Translations for your language <a href='https://www.aquoid.com/news/themes/suffusion/translating-suffusion/'>might be available</a>.</div>";
 			}
 		}
 	}
