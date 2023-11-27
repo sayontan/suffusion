@@ -1,7 +1,7 @@
 <?php
 /**
  * The Suffusion_Device class will handle responsive aspects of Suffusion.
- * There are a bunch of is_* functions that have been taken from the mobble plugin (http://wordpress.org/extend/plugins/mobble/)
+ * There are a bunch of is_* functions that have been taken from the mobble plugin (https://wordpress.org/extend/plugins/mobble/)
  *
  * @package Suffusion
  * @subpackage Library

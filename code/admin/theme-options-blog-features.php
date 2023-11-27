@@ -273,7 +273,7 @@ $suffusion_blog_features_options = array(
 		"parent" => "custom-additions",
 		"grouping" => "custom-css",
 		"type" => "text",
-		"hint" => "Enter the stylesheet here, including http://",
+		"hint" => "Enter the stylesheet here, including https://",
 		"std" => ""),
 
 	array("name" => "Second Additional Stylesheet link",
@@ -282,7 +282,7 @@ $suffusion_blog_features_options = array(
 		"parent" => "custom-additions",
 		"grouping" => "custom-css",
 		"type" => "text",
-		"hint" => "Enter the stylesheet here, including http://",
+		"hint" => "Enter the stylesheet here, including https://",
 		"std" => ""),
 
 	array("name" => "Third Additional Stylesheet link",
@@ -291,7 +291,7 @@ $suffusion_blog_features_options = array(
 		"parent" => "custom-additions",
 		"grouping" => "custom-css",
 		"type" => "text",
-		"hint" => "Enter the stylesheet here, including http://",
+		"hint" => "Enter the stylesheet here, including https://",
 		"std" => ""),
 
 	array("name" => "Got JavaScript?",
@@ -308,7 +308,7 @@ $suffusion_blog_features_options = array(
 		"parent" => "custom-additions",
 		"grouping" => "custom-js",
 		"type" => "text",
-		"hint" => "Enter the JavaScript file path here, including http://",
+		"hint" => "Enter the JavaScript file path here, including https:://",
 		"std" => ""),
 
 	array("name" => "Second External JavaScript file",
@@ -318,7 +318,7 @@ $suffusion_blog_features_options = array(
 		"parent" => "custom-additions",
 		"grouping" => "custom-js",
 		"type" => "text",
-		"hint" => "Enter the JavaScript file path here, including http://",
+		"hint" => "Enter the JavaScript file path here, including https:::://",
 		"std" => ""),
 
 	array("name" => "Third External JavaScript file",
@@ -328,7 +328,7 @@ $suffusion_blog_features_options = array(
 		"parent" => "custom-additions",
 		"grouping" => "custom-js",
 		"type" => "text",
-		"hint" => "Enter the JavaScript file path here, including http://",
+		"hint" => "Enter the JavaScript file path here, including https://",
 		"std" => ""),
 
 	array("name" => "Custom Header JavaScript",
@@ -379,7 +379,7 @@ $suffusion_blog_features_options = array(
 		"parent" => "custom-additions",
 		"grouping" => "custom-feed",
 		"type" => "text",
-		"hint" => "Enter the feed URL here, including http://",
+		"hint" => "Enter the feed URL here, including https://",
 		"std" => ""),
 
 	array("name" => "Title of First Additional RSS Feed",
@@ -397,7 +397,7 @@ $suffusion_blog_features_options = array(
 		"parent" => "custom-additions",
 		"grouping" => "custom-feed",
 		"type" => "text",
-		"hint" => "Enter the feed URL here, including http://",
+		"hint" => "Enter the feed URL here, including https://",
 		"std" => ""),
 
 	array("name" => "Title of Second Additional RSS Feed",
@@ -415,7 +415,7 @@ $suffusion_blog_features_options = array(
 		"parent" => "custom-additions",
 		"grouping" => "custom-feed",
 		"type" => "text",
-		"hint" => "Enter the feed URL here, including http://",
+		"hint" => "Enter the feed URL here, including https://",
 		"std" => ""),
 
 	array("name" => "Title of Third Additional RSS Feed",
@@ -433,7 +433,7 @@ $suffusion_blog_features_options = array(
 		"parent" => "custom-additions",
 		"grouping" => "custom-feed",
 		"type" => "text",
-		"hint" => "Enter the feed URL here, including http://",
+		"hint" => "Enter the feed URL here, including https://",
 		"std" => ""),
 
 	array("name" => "Title of First Additional Atom Feed",
@@ -451,7 +451,7 @@ $suffusion_blog_features_options = array(
 		"parent" => "custom-additions",
 		"grouping" => "custom-feed",
 		"type" => "text",
-		"hint" => "Enter the feed URL here, including http://",
+		"hint" => "Enter the feed URL here, including https://",
 		"std" => ""),
 
 	array("name" => "Title of Second Additional Atom Feed",
@@ -469,7 +469,7 @@ $suffusion_blog_features_options = array(
 		"parent" => "custom-additions",
 		"grouping" => "custom-feed",
 		"type" => "text",
-		"hint" => "Enter the feed URL here, including http://",
+		"hint" => "Enter the feed URL here, including https://",
 		"std" => ""),
 
 	array("name" => "Title of Third Additional Atom Feed",

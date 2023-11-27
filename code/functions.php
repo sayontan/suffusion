@@ -352,10 +352,10 @@ function suffusion_skin_setup_specific() {
 function suffusion_enqueue_skin_scripts() {
 	global $suffusion_theme_name;
 	if (isset($suffusion_theme_name) && $suffusion_theme_name == 'photonique') {
-		wp_enqueue_style('suffusion-skin-fonts', "http://fonts.googleapis.com/css?family=Quattrocento", array(), null);
+		wp_enqueue_style('suffusion-skin-fonts', "https://fonts.googleapis.com/css?family=Quattrocento", array(), null);
 	}
 	else if (isset($suffusion_theme_name) && $suffusion_theme_name == 'scribbles') {
-		wp_enqueue_style('suffusion-skin-fonts', "http://fonts.googleapis.com/css?family=Coming+Soon", array(), null);
+		wp_enqueue_style('suffusion-skin-fonts', "https://fonts.googleapis.com/css?family=Coming+Soon", array(), null);
 	}
 }
 
@@ -958,9 +958,8 @@ function suffusion_get_associative_array($stored_value) {
 }
 
 /**
- * Based on the Image Rotator script by Matt Mullenweg > http://photomatt.net
- * Inspired by Dan Benjamin > http://hiveware.com/imagerotator.php
- * Latest version always at: http://photomatt.net/scripts/randomimage
+ * Based on the Image Rotator script by Matt Mullenweg > https://ma.tt/scripts/randomimage/
+ * Inspired by Dan Benjamin > https://alistapart.com/article/randomizer/
  *
  * Make the folder the relative path to the images, like "../img" or "random/images/".
  *
@@ -1258,8 +1257,8 @@ function suffusion_customize_preview() {
 			var skins = <?php echo json_encode($suffusion_theme_hierarchy); ?>;
 			console.log(skins);
 			var fonts = {
-				'photonique': 'http://fonts.googleapis.com/css?family=Quattrocento',
-				'scribbles': 'http://fonts.googleapis.com/css?family=Coming+Soon'
+				'photonique': 'https://fonts.googleapis.com/css?family=Quattrocento',
+				'scribbles': 'https://fonts.googleapis.com/css?family=Coming+Soon'
 			};
 			if (typeof skins[to] != 'undefined' && skins[to].length > 1) {
 				var links = jQuery('link');

@@ -205,7 +205,7 @@ Version 4.2.1 - 10th Jun 2012
 1.  Removed deprecated API calls for WP 3.4 (add_contextual_help, suffusion_version_checker which used get_theme_data).
 2.  Added support for native Custom Headers. This only works for WP 3.4 and upwards, because Suffusion supports flexible width headers, which are not available with older versions.
 3.  Added Theme Customizer support for skins.
-4.  Added new icon set based on Web Design Creatives licensed under GPL (http://www.iconfinder.com/search/?q=iconset:webdesigncreative)
+4.  Added new icon set based on Web Design Creatives licensed under GPL (https://www.iconfinder.com/search?q=iconset:webdesigncreative)
 5.  Fixed a bug in the Authors template, that could cause a conflict of global variables.
 6.  Added a couple of new byline styles, "Outer left pullout" and "Outer right pullout", which differ from the previous pullouts. The new pullouts
 	appear to the left and right of the title as well - the previous ones appear under the title, to the left and right of the content.
@@ -492,8 +492,8 @@ Version 3.8.3 - 14th Sep 2011
 6. Fixed an issue with nested comment styling (Trac ticket #4622).
 7. Fixed table styling in main content and comments (Trac ticket #4622).
 8. DID NOT Introduce support for native WP header customization (Trac ticket #4622). The functionality being implemented in the theme is "Custom Header BACKGROUND",
-   not "Custom Image Header". See http://lists.wordpress.org/pipermail/theme-reviewers/2011-September/006871.html and the ensuing thread,
-   particularly http://lists.wordpress.org/pipermail/theme-reviewers/2011-September/006876.html, where I was asked to build something custom.
+   not "Custom Image Header". See https://lists.wordpress.org/pipermail/theme-reviewers/2011-September/006871.html and the ensuing thread,
+   particularly https://lists.wordpress.org/pipermail/theme-reviewers/2011-September/006876.html, where I was asked to build something custom.
 9. Introduced support for native WP background customization (Trac ticket #4622). If there is a custom background the theme background settings are ignored. The theme options have been retained for backwards compatibility.
 10. Minor bug fix to allow displaying of the "Links" title in the "Static Tabbed Sidebar"
 11. The global variable "suffusion_options" had been erroneously renamed to "rg_options" in the last version. This has been rolled back.

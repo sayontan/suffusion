@@ -1,7 +1,7 @@
 <?php 
 /**
  * File for integration with WPML admin string translation. This has been copied from docs/theme-integration/wpml-integration.php in the WPML
- * installation folder, as per instructions for WPML (http://wpml.org/documentation/support/creating-multilingual-wordpress-themes/).
+ * installation folder, as per instructions for WPML (https://wpml.org/documentation/support/creating-multilingual-wordpress-themes/).
  *
  * @since version 3.7.4
  */

@@ -5,12 +5,12 @@
  * media services: Del.icio.us, Digg, Facebook, Flickr, LinkedIn, Reddit, StumbleUpon, Technorati and Twitter
  *
  * Icon sets used in this widget are:
- * 	- "Aquaticus Social" by Jwloh Lin, free for use and distribution (see license: http://www.iconspedia.com/dload.php?up_id=25517)
- *  - "Stamps" by Marco Folio (http://www.marcofolio.net/), distributed without copyright (http://www.marcofolio.net/icon/social_post_stamps_free_icon_set.html)
- * 	- Google+ icon set from Theme.fm - GPL v2 (http://theme.fm/2011/08/12-gorgeous-google-icons-for-your-website-1280/)
- * 	- "Web Social" by Narjis Naqvi - Free for personal and commercial use (http://www.iconspedia.com/pack/web-social-2021/)
- * 	- "Lifetime Social Networks" from Slodive.com - GPL (http://slodive.com/exclusive/lifetime-social-networks-icons/)
- * 	- ElegantThemes media icons from ElegantThemes.com - Dual licensed under MIT and GPL v3.0 (http://www.elegantthemes.com/blog/resources/free-social-media-icon-set)
+ * 	- "Aquaticus Social" by Jwloh Lin, free for use and distribution (see license: https://www.iconspedia.com/dload.php?up_id=25517)
+ *  - "Stamps" by Marco Folio (https://www.marcofolio.net/), distributed without copyright (https://www.marcofolio.net/icon/social_post_stamps_free_icon_set.html)
+ * 	- Google+ icon set from Theme.fm - GPL v2 (https://theme.fm/2011/08/12-gorgeous-google-icons-for-your-website-1280/)
+ * 	- "Web Social" by Narjis Naqvi - Free for personal and commercial use (https://www.iconspedia.com/pack/web-social-2021/)
+ * 	- "Lifetime Social Networks" from Slodive.com - GPL (https://slodive.com/exclusive/lifetime-social-networks-icons/)
+ * 	- ElegantThemes media icons from ElegantThemes.com - Dual licensed under MIT and GPL v3.0 (https://www.elegantthemes.com/blog/resources/free-social-media-icon-set)
  * 
  * @package Suffusion
  * @subpackage Widgets
@@ -43,18 +43,18 @@ class Suffusion_Subscription extends WP_Widget {
 			}
         }
         $this->follow_urls = array(
-            'Delicious' => array('account' => 'http://delicious.com/%account%'),
-            'Digg' => array('account' => 'http://www.digg.com/users/%account%'),
+            'Delicious' => array('account' => 'https://delicious.com/%account%'),
+            'Digg' => array('account' => 'https://www.digg.com/users/%account%'),
             'Facebook' => array('url' => '%account%'),
-            'Flickr' => array('account' => 'http://flickr.com/photos/%account%'),
+            'Flickr' => array('account' => 'https://flickr.com/photos/%account%'),
             'LinkedIn' => array('url' => '%account%'),
-            'Reddit' => array('account' => 'http://www.reddit.com/user/%account%'),
+            'Reddit' => array('account' => 'https://www.reddit.com/user/%account%'),
             'RSS' => array('account' => 'https://feeds.feedburner.com/%account%'),
-            'StumbleUpon' => array('account' => 'http://%account%.stumbleupon.com'),
-            'Technorati' => array('account' => 'http://technorati.com/people/technorati/%account%/'),
-            'Twitter' => array('account' => 'http://twitter.com/%account%'),
+            'StumbleUpon' => array('account' => 'https://%account%.stumbleupon.com'),
+            'Technorati' => array('account' => 'https://technorati.com/people/technorati/%account%/'),
+            'Twitter' => array('account' => 'https://twitter.com/%account%'),
 			'Google+' => array('url' => '%account%'),
-			'YouTube' => array('account' => 'http://www.youtube.com/%account%'),
+			'YouTube' => array('account' => 'https://www.youtube.com/%account%'),
 		);
 	}
 	function Suffusion_Subscription() {

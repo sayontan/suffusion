@@ -43,7 +43,7 @@ class Suffusion_Follow_Twitter extends WP_Widget {
 ?>
 
 <div class='twitter-header'>
-	<a href="http://twitter.com/<?php echo $user; ?>" class="twitter-icon-and-tag" title="<?php echo esc_attr($tagline);?>">
+	<a href="https://twitter.com/<?php echo $user; ?>" class="twitter-icon-and-tag" title="<?php echo esc_attr($tagline);?>">
 <?php
 			if ($show_icon) {
 ?>
@@ -62,7 +62,7 @@ class Suffusion_Follow_Twitter extends WP_Widget {
 		}
 
 		if ($show_tweets) {
-			$feed_url = "http://api.twitter.com/1/statuses/user_timeline.json?id=$user&include_rts=true&include_entities=true&count=".$num_tweets."&callback=?";
+			$feed_url = "https://api.twitter.com/1/statuses/user_timeline.json?id=$user&include_rts=true&include_entities=true&count=".$num_tweets."&callback=?";
 			$url_var = str_replace('-', '_', $args['widget_id'])."_url";
 ?>
 <div id='<?php echo $args['widget_id'];?>-tweets'>
@@ -79,7 +79,7 @@ class Suffusion_Follow_Twitter extends WP_Widget {
 						var retweet = status.retweeted_status;
 						tweeter = retweet.user;
 					}
-					var tweeter_url = 'http://twitter.com/' + tweeter.screen_name;
+					var tweeter_url = 'https://twitter.com/' + tweeter.screen_name;
 					var avatar = '';
 					if (typeof tweeter.profile_image_url != 'undefined') {
 						avatar = tweeter.profile_image_url;
@@ -99,7 +99,7 @@ class Suffusion_Follow_Twitter extends WP_Widget {
 									start: user_mention.indices[0],
 									end: user_mention.indices[1],
 									text: tweet.substr(user_mention.indices[0], user_mention.indices[1] - user_mention.indices[0]),
-									url: 'http://twitter.com/' + user_mention.screen_name,
+									url: 'https://twitter.com/' + user_mention.screen_name,
 									title: user_mention.name
 								});
 							}
@@ -132,7 +132,7 @@ class Suffusion_Follow_Twitter extends WP_Widget {
 									start: hashtag.indices[0],
 									end: hashtag.indices[1],
 									text: tweet.substr(hashtag.indices[0], hashtag.indices[1] - hashtag.indices[0]),
-									url: "http://search.twitter.com/search?q=%23" + hashtag.text,
+									url: "https://search.twitter.com/search?q=%23" + hashtag.text,
 									title: hashtag.text
 								});
 							}

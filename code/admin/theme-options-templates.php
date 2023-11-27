@@ -23,7 +23,7 @@ $suffusion_templates_options = array(
 
 	array("name" => "The \"Magazine\" template",
 		"desc" => "The magazine template can be used as the landing page for magazine-style blogs. It displays featured content, headlines, excerpts and categories.
-				Suffusion natively supports the <a href='http://wordpress.org/extend/plugins/category-icons/'>\"Category Icons\" plugin by Brahim Machkouri</a>.
+				Suffusion natively supports the <a href='https://wordpress.org/extend/plugins/category-icons/'>\"Category Icons\" plugin by Brahim Machkouri</a>.
 				So if you have the plugin installed, the icon for the category will be automatically displayed for the categories in the magazine view. ",
 		"parent" => "magazine-template",
 		"type" => "blurb"
@@ -440,7 +440,7 @@ $suffusion_templates_options = array(
 		"std" => "center"),
 
 	array("name" => "Magazine Template - Images for category blocks",
-		"desc" => "If  you have the <a href='http://wordpress.org/extend/plugins/category-icons/'>\"Category Icons\" plugin by Brahim Machkouri</a> you can include an image at the top of each category block: ",
+		"desc" => "If  you have the <a href='https://wordpress.org/extend/plugins/category-icons/'>\"Category Icons\" plugin by Brahim Machkouri</a> you can include an image at the top of each category block: ",
 		"id" => "suf_mag_catblocks_images_enabled",
 		"grouping" => "mag-cat",
 		"parent" => "magazine-template",
@@ -581,7 +581,7 @@ $suffusion_templates_options = array(
 
 	array("name" => "The \"Category\" template",
 		"desc" => "The category template is applied whenever you open a category. It displays all posts associated with a category.
-				Suffusion natively supports the <a href='http://wordpress.org/extend/plugins/category-icons/'>\"Category Icons\" plugin</a>.
+				Suffusion natively supports the <a href='https://wordpress.org/extend/plugins/category-icons/'>\"Category Icons\" plugin</a>.
 				So if you have the plugin installed, the icon for the category will be automatically displayed. <br/>
 				<b>This template is automatically assigned to every category &ndash; you cannot manually assign it.</b>",
 		"parent" => "category-template",
@@ -1003,7 +1003,7 @@ $suffusion_templates_options = array(
 	),
 
 	array("name" => "The \"Now Reading\" plugin templates",
-		"desc" => "If you have a site for book reviews the <a href='http://wordpress.org/extend/plugins/now-reading-reloaded/'>Now Reading Reloaded plugin</a> is a gerat one to use.
+		"desc" => "If you have a site for book reviews the <a href='https://wordpress.org/extend/plugins/now-reading-reloaded/'>Now Reading Reloaded plugin</a> is a gerat one to use.
 		 	Suffusion has templates that support this plugin, which you can control here",
 		"parent" => "nr-template",
 		"type" => "blurb"

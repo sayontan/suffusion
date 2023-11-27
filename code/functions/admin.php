@@ -184,7 +184,7 @@ function suffusion_meta_fields($post, $args = array()) {
 				<td><label for="suf_thumbnail"><?php _e("Thumbnail", "suffusion"); ?></label></td>
 				<td>
 					<input type="text" id="suf_thumbnail" name="suf_thumbnail" value="<?php echo $thumbnail; ?>" />
-					<br/><em><?php _e("Enter the full URL of the thumbnail image that you would like to use, including http://", "suffusion"); ?></em>
+					<br/><em><?php _e("Enter the full URL of the thumbnail image that you would like to use, including https://", "suffusion"); ?></em>
 				</td>
 			</tr>
 
@@ -192,7 +192,7 @@ function suffusion_meta_fields($post, $args = array()) {
 				<td><label for="suf_featured_image"><?php _e("Featured Image", "suffusion"); ?></label></td>
 				<td>
 					<input type="text" id="suf_featured_image" name="suf_featured_image" value="<?php echo $featured_image; ?>" />
-					<br/><em><?php _e("Enter the full URL of the featured image that you would like to use, including http://", "suffusion"); ?></em>
+					<br/><em><?php _e("Enter the full URL of the featured image that you would like to use, including https://", "suffusion"); ?></em>
 				</td>
 			</tr>
 		</table>

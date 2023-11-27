@@ -12,7 +12,7 @@ An elegant, responsive, versatile, and browser-safe theme with a power-packed se
 responsive, fixed-width, and flexible-width formats, 10 pre-defined templates, 19 pre-defined color schemes, two customizable multi-level drop-down menus,
 featured posts, a magazine layout, tabbed sidebars, widgets for Twitter, Social Networks and Google Translator, translations in many languages
 and RTL language support. Responsive capabilities are turned on by a single click. Native WP Menus are integrated and additional support is provided for Mega Menus. A BuddyPress support pack is available as a
-plugin for smooth BuddyPress integration. Support forum at http://www.aquoid.com/forum.
+plugin for smooth BuddyPress integration. Support forum at https://github.com/sayontan/suffusion/issues.
 
 = Note =
 *   The theme supports custom headers through its admin panels: Suffusion Options -> Skinning -> Header
@@ -20,21 +20,21 @@ plugin for smooth BuddyPress integration. Support forum at http://www.aquoid.com
 
 = Copyright Acknowledgement =
 
-For the Audio post format, the standalone version of the <a href='http://wpaudioplayer.com'>WP Audio Player</a> is used. The source for the SWF file can be found
-here: http://tools.assembla.com/1pixelout/browser/audio-player/trunk/source. The code for WP Audio Player (including the SWF, FLA, and JS files)
-is distributed under the MIT license as per its <a href='http://wpaudioplayer.com/license/'>License</a> page.
+For the Audio post format, the standalone version of the <a href='https://wpaudioplayer.com'>WP Audio Player</a> is used. The source for the SWF file can be found
+here: https://tools.assembla.com/1pixelout/browser/audio-player/trunk/source. The code for WP Audio Player (including the SWF, FLA, and JS files)
+is distributed under the MIT license as per its <a href='https://wpaudioplayer.com/license/'>License</a> page.
 
 The files titled iconset-*.png and post-formats-*.png use some icons released by StudioPress under GPL as outlined in the downloaded packages from
-<a href='http://www.studiopress.com/download/icon-set-bloggers.zip'>here</a> and <a href='http://www.studiopress.com/download/post-format-icons.zip'>here</a>
+<a href='https://www.studiopress.com/download/icon-set-bloggers.zip'>here</a> and <a href='https://www.studiopress.com/download/post-format-icons.zip'>here</a>
 respectively.
 
 The "Follow Me" widget uses icons from the following sources, either in original form or modified:
 
-*	"Stamps" by <a href='http://www.marcofolio.net/'>Marco Folio</a>, distributed <a href='http://www.marcofolio.net/icon/social_post_stamps_free_icon_set.html'>without copyright</a>
-*	Google+ icon set from Theme.fm, <a href='http://theme.fm/2011/08/12-gorgeous-google-icons-for-your-website-1280/'>distributed under GPL v2</a>
-*	"Lifetime Social Networks" from Slodive.com - GPL v2 (http://slodive.com/exclusive/lifetime-social-networks-icons/)
-*	ElegantThemes media icons from ElegantThemes.com - Dual licensed under MIT and GPL v3.0 (http://www.elegantthemes.com/blog/resources/free-social-media-icon-set)
-*   "Faenza Icon Theme" by Matthieu James - GPL v3 (http://code.google.com/p/faenza-icon-theme/)
+*	"Stamps" by <a href='https://www.marcofolio.net/'>Marco Folio</a>, distributed <a href='https://www.marcofolio.net/icon/social_post_stamps_free_icon_set.html'>without copyright</a>
+*	Google+ icon set from Theme.fm, <a href='https://theme.fm/2011/08/12-gorgeous-google-icons-for-your-website-1280/'>distributed under GPL v2</a>
+*	"Lifetime Social Networks" from Slodive.com - GPL v2 (https://slodive.com/exclusive/lifetime-social-networks-icons/)
+*	ElegantThemes media icons from ElegantThemes.com - Dual licensed under MIT and GPL v3.0 (https://www.elegantthemes.com/blog/resources/free-social-media-icon-set)
+*   "Faenza Icon Theme" by Matthieu James - GPL v3 (https://code.google.com/p/faenza-icon-theme/)
 
 == Installation ==
 
@@ -61,19 +61,19 @@ Support is available at the <a href='https://github.com/sayontan/suffusion/issue
 You will need to "flip a switch". Go to <em>Suffusion Options &rarr; Layouts &rarr; Responsive Layout</em> and enable it there.
 
 = Does Suffusion work with BuddyPress? =
-Yes. There is a plugin called <a href='http://wordpress.org/plugins/suffusion-buddypress-pack/'>Suffusion BuddyPress Pack</a>,
-more information about which can be found <a href='http://www.aquoid.com/news/plugins/suffusion-buddypress-pack/'>here</a>.
+Yes. There is a plugin called <a href='https://wordpress.org/plugins/suffusion-buddypress-pack/'>Suffusion BuddyPress Pack</a>,
+more information about which can be found <a href='https://www.aquoid.com/news/plugins/suffusion-buddypress-pack/'>here</a>.
 
 = Does Suffusion work with e-commerce plugins? =
-There is a plugin called <a href='http://wordpress.org/plugins/suffusion-commerce-pack/'>Suffusion Commerce Pack</a>,
+There is a plugin called <a href='https://wordpress.org/plugins/suffusion-commerce-pack/'>Suffusion Commerce Pack</a>,
 which extends Suffusion support to Jigoshop and WooCommerce. 
 
 = Does Suffusion work with bbPress? =
-There is a plugin called <a href='http://wordpress.org/plugins/suffusion-bbpress-pack/'>Suffusion bbPress Pack</a>,
+There is a plugin called <a href='https://wordpress.org/plugins/suffusion-bbpress-pack/'>Suffusion bbPress Pack</a>,
 which extends Suffusion support to bbPress.
 
 = What happens to my shortcodes when I switch themes? =
-You are in luck! Suffusion's shortcodes are bundled as a separate plugin called <a href='http://wordpress.org/plugins/suffusion-bbpress-pack/'>Suffusion Shortcodes</a>, which will let your shortcodes work seamlessly with any new theme that you decide to use.
+You are in luck! Suffusion's shortcodes are bundled as a separate plugin called <a href='https://wordpress.org/plugins/suffusion-bbpress-pack/'>Suffusion Shortcodes</a>, which will let your shortcodes work seamlessly with any new theme that you decide to use.
 
 = Are translations supported? =
 Translations for the theme are available at https://github.com/sayontan/suffusion/tree/master/code/translation. The backend of the theme is

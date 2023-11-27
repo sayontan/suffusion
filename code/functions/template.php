@@ -178,7 +178,7 @@ function suffusion_enqueue_styles() {
 	// Rounded corners, loaded if the browser is not IE <= 8
 	if ($suf_show_rounded_corners == 'show') {
 		wp_register_style('suffusion-rounded', get_template_directory_uri().'/rounded-corners.css', array('suffusion-theme'), SUFFUSION_THEME_VERSION);
-//		$GLOBALS['wp_styles']->add_data('suffusion_rounded', 'conditional', '!IE'); // Doesn't work (yet). See http://core.trac.wordpress.org/ticket/16118. Instead we will filter style_loader_tag
+//		$GLOBALS['wp_styles']->add_data('suffusion_rounded', 'conditional', '!IE'); // Doesn't work (yet). See https://core.trac.wordpress.org/ticket/16118. Instead we will filter style_loader_tag
 		wp_enqueue_style('suffusion-rounded');
 	}
 
@@ -203,7 +203,7 @@ function suffusion_enqueue_styles() {
 		$custom_file = trailingslashit($upload_dir['basedir']).'suffusion/custom-styles.css';
 		if (@file_exists($custom_file)) {
 			$custom_file_url = $upload_dir['baseurl'].'/suffusion/custom-styles.css';
-			if ( is_ssl() ) $custom_file_url = str_replace( 'http://','https://', $custom_file_url );
+			if ( is_ssl() ) $custom_file_url = str_replace( 'https://','https://', $custom_file_url );
 			wp_enqueue_style('suffusion-generated', $custom_file_url, array('suffusion-theme', 'suffusion-ie'), SUFFUSION_THEME_VERSION);
 			$css_loaded = true;
 		}

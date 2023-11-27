@@ -574,7 +574,7 @@ col.nr-shelf-slot { width: 25%; }
 .bookdata .edit .icon, .bookdata .manage .icon, .page-nav-left a, .page-nav-right a, .mosaic-page-nav-right a, .mosaic-page-nav-left a, .mosaic-overlay a span,
 .meta-pullout .category .icon, .meta-pullout .author .icon, .meta-pullout .tax .icon, .meta-pullout .permalink .icon, .meta-pullout .comments .icon, .meta-pullout .edit .icon, .meta-pullout .pullout-date .icon,
 .controller-icons #sliderControl .sliderPrev, .controller-icons #sliderControl .sliderNext, .controller-icons .sliderControl .sliderPrev, .controller-icons .sliderControl .sliderNext, .user-profiles .icon {
-	background-image: url(http://aquoid.com/news/wp-content/themes/suffusion/images/iconset-1.png);
+	background-image: url(/wp-content/themes/suffusion/images/icons/iconset-1.png);
 }
 .postdata .author .icon,.meta-pullout .author .icon,.postdata .line-date .icon,.meta-pullout .pullout-date .icon,.postdata .category .icon,.meta-pullout .category .icon,.postdata .tags .icon,.meta-pullout .tags .icon,.postdata .permalink .icon,.meta-pullout .permalink .icon,.postdata .comments .icon,.meta-pullout .comments .icon,.postdata .edit .icon,.meta-pullout .edit .icon,.postdata .tax .icon,.meta-pullout .tax .icon { display: inline-block; }
 .gallery-container { padding-right: 266px }.gallery-contents { width: 250px }.gallery-contents.left { left: -266px }.gallery-contents.right { margin-right: -266px }
