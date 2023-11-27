@@ -308,30 +308,38 @@ function suffusion_translation_checker() {
 	if (!defined('WPLANG') || WPLANG == 'en' || WPLANG == '') {
 		$lang = 'en_US';
 	}
+	else if (WPLANG == 'de' ) {
+		$lang = 'de_DE';
+	}
+	else if (WPLANG == 'es' ) {
+		$lang = 'es_ES';
+	}
 	else {
 		$lang = WPLANG;
 	}
 
 	$message = "";
-	if ($lang != 'en_US') {
+	$supported_langs = ['en_US', 'de_DE', 'es_ES'];
+	if (!in_array($lang, $supported_langs)) {
 		if (!is_child_theme()) {
 			if (file_exists(get_template_directory()."/translation/$lang.mo")) {
-				$message = "<div class='updated'>You are using a version of WordPress that is not in American English, and your translation files are in the theme's main folder.
-					You will lose these files if you upgrade the theme. <a href='https://www.aquoid.com/news/themes/suffusion/translating-suffusion/#use-basic'>Move your translations to a child theme</a> instead.</div>";
+				$message = "<div class='updated'>You are using an international version of WordPress that is not supported by Suffusion, and your translation files are in the theme's main folder.
+					You might lose these files if you upgrade the theme. Move your translations to a child theme instead or check <a href='https://github.com/sayontan/suffusion/blob/master/TRANSLATION.md'>GitHub</a>
+				    on how to add your translation to the project.</div>";
 			}
 			else {
-				$message = "<div class='updated'>You are using a version of WordPress that is not in American English.
-					Translations for your language <a href='https://www.aquoid.com/news/themes/suffusion/translating-suffusion/'>might be available</a>.</div>";
+				$message = "<div class='updated'>You are using an international version of WordPress that is not supported by Suffusion.
+					Translations for your language <a href='https://github.com/sayontan/suffusion/blob/master/TRANSLATION.md'>might be available</a>.</div>";
 			}
 		}
 		else {
 			if (file_exists(get_template_directory()."/translation/$lang.mo") && !file_exists(get_stylesheet_directory()."/translation/$lang.mo")) {
-				$message = "<div class='updated'>Your translation files are in Suffusion's folder. You will lose these files if you upgrade the theme.
-					<a href='https://www.aquoid.com/news/themes/suffusion/translating-suffusion/#use-basic'>Move your translations to a child theme</a> instead.</div>";
+				$message = "<div class='updated'>Your translation files are in Suffusion's folder. You might lose these files if you upgrade the theme.
+					<a href='https://github.com/sayontan/suffusion/blob/master/TRANSLATION.md'>Move your translations to a child theme</a> instead.</div>";
 			}
 			else if (!file_exists(get_stylesheet_directory()."/translation/$lang.mo")) {
-				$message = "<div class='updated'>You are using a version of WordPress that is not in American English.
-					Translations for your language <a href='https://www.aquoid.com/news/themes/suffusion/translating-suffusion/'>might be available</a>.</div>";
+				$message = "<div class='updated'>You are using an international version of WordPress that is not supported by Suffusion.
+					Translations for your language <a href='https://github.com/sayontan/suffusion/blob/master/TRANSLATION.md'>might be available</a>.</div>";
 			}
 		}
 	}
