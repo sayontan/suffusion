@@ -47,35 +47,34 @@ if (have_posts()) {
 						<ul class='xoxo <?php echo $entity; ?>'>
 								<?php
 									switch ($entity) {
-								        case 'pages':
-								            wp_list_pages(array('title_li' => false));
-								            continue 1;
-								        case 'categories':
-								            wp_list_categories(array('show_count' => true, 'use_desc_for_title' => false, 'title_li' => false));
-								            continue 1;
-								        case 'authors':
-								            wp_list_authors(array('exclude_admin' => false, 'optioncount' => true, 'title_li' => false));
-								            continue 1;
-								        case 'years':
-								            wp_get_archives(array('type' => 'yearly', 'show_post_count' => true));
-								            continue 1;
-								        case 'months':
-									        wp_get_archives(array('type' => 'monthly', 'show_post_count' => true));
-									        continue 1;
-								        case 'weeks':
-									        wp_get_archives(array('type' => 'weekly', 'show_post_count' => true));
-									        continue 1;
-								        case 'days':
-									        wp_get_archives(array('type' => 'daily', 'show_post_count' => true));
-									        continue;
-								        case 'tag-cloud':
-								            wp_tag_cloud(array('number' => 0));
-								            continue 1;
-								        case 'posts':
-									        wp_get_archives(array('type' => 'postbypost'));
-									        continue 1;
+										case 'pages':
+											wp_list_pages(array('title_li' => false));
+											break;
+										case 'categories':
+											wp_list_categories(array('show_count' => true, 'use_desc_for_title' => false, 'title_li' => false));
+											break;
+										case 'authors':
+											wp_list_authors(array('exclude_admin' => false, 'optioncount' => true, 'title_li' => false));
+											break;
+										case 'years':
+											wp_get_archives(array('type' => 'yearly', 'show_post_count' => true));
+											break;
+										case 'months':
+											wp_get_archives(array('type' => 'monthly', 'show_post_count' => true));
+											break;
+										case 'weeks':
+											wp_get_archives(array('type' => 'weekly', 'show_post_count' => true));
+											break;
+										case 'days':
+											wp_get_archives(array('type' => 'daily', 'show_post_count' => true));
+											break;
+										case 'tag-cloud':
+										wp_tag_cloud(array('number' => 0));
+											break;
+										case 'posts':
+											wp_get_archives(array('type' => 'postbypost'));
+											break;
 									}
-
 								?>
 						</ul><!-- /<?php echo $entity; ?> -->
 					<?php
