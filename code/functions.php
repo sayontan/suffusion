@@ -929,7 +929,7 @@ function suffusion_get_formatted_options_array($options_array) {
 
 function suffusion_get_associative_array($stored_value) {
 	if (!is_array($stored_value)) {
-		$converted = explode('||', $stored_value);
+		$converted = explode('||', $stored_value ?? '');
 		$stored_value = array();
 		foreach ($converted as $converted_string) {
 			$converted_pairs = explode('::', $converted_string);
