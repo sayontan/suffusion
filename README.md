@@ -3,21 +3,19 @@
 
 # Suffusion
 
-The Suffusion Theme for WordPress used to be distributed from the official WordPress site at `https://wordpress.org/themes/suffusion`, however, it was pulled from the repository in June 2016. This site is intended to serve as the source for the last working version of the code. Note that the author (@sayontan) no longer maintains or offers support for the theme, and the code has been made available at the behest of its users.
+The Suffusion Theme for WordPress used to be distributed from the official WordPress site at `https://wordpress.org/themes/suffusion`. However, it was pulled from the repository in June 2016. This site is intended to serve as the source for the last working version of the code. Note that the author (@sayontan) no longer maintains or offers support for the theme, and the code has been made available at the behest of its users.
 
 ## Installation
 
 To install the theme:
 
 1. Download the latest version from the [`dist`](https://github.com/sayontan/suffusion/tree/master/dist) folder of this repository
-2. Unzip the contents to your `wp-content/themes`` folder of your WordPress installation
+2. Unzip the contents to your `wp-content/themes` folder of your WordPress installation
 3. Activate the theme from your WordPress dashboard, under Appearance &rarr; Themes
 
 ## Old Versions
 
-The last version officially released through WordPress was 4.4.9. The ZIP file corresponding to it has been made available in the `dist` folder. 
-
-Old versions from 4.4.9 to 4.5.6 are still available in the [history of the `dist` folder](https://github.com/sayontan/suffusion/tree/5decf564ed8f6d5fd8f6bcfcde64ceb22bc90a25/dist).
+The last version officially released through WordPress was 4.4.9. The ZIP file corresponding to it and other old versions have been made available in the [Suffusion Archive](https://github.com/mbtools/suffusion-archive).
 
 ## License
 
