@@ -1345,6 +1345,6 @@ function suffusion_get_horizontal_components($include = array(), $exclude = arra
  * https://www.wpbeginner.com/wp-tutorials/the-right-way-to-remove-wordpress-version-number/
  */
 function suffusion_replace_version() {
-    return 'latest';
+    return '';
 }
 add_filter('the_generator', 'suffusion_replace_version');
