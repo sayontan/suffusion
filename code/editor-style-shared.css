@@ -1,0 +1,32 @@
+/* These styles are used in the backend editor AND in the Theme (frontend) */
+
+/* Most themes nowadays provide an extra stylesheet of classes which WordPress itself then */
+/* applies to the backend editor TinyMCE. However, custom CSS - set in Plugins, in the WP  */
+/* Customizer or in Theme options, will normally not be reflected to TinyMCE. So better to */
+/* put such styles all here, where they will apply to TinyMCE *and* the frontend.          */
+
+/* The goal is not only to make the visual editor display look as much like the frontend as    */
+/* possible, but also to make sure that all important CSS classes are available for convenient */
+/* selection in TinyMCEs "Formats" dropdown - so do not forget to configure the TinyMCE styles */
+/* dropdown with elements to match those here.                                                 */
+
+/* If you do not need this file then upload an empty one (zero bytes) which will not be loaded at all. */
+
+/* Suggested general non-tag-specific visual styles */
+
+.list       { margin: 0.35rem 0; }
+.topless    { margin-top: 0 !important; }
+.bottomless { margin-bottom: 0 !important; }
+.beforelist { margin-bottom: 0.5rem; }
+.lastitemem { margin-bottom: 0; padding-bottom: 1.3rem; }
+
+strong { font-weight: bold; }
+/* Revert to normal text within strong */
+.notstrong { font-weight: normal; }
+
+.smaller { font-size: 0.95rem; line-height: 1.25; }
+.small   { font-size: 0.89rem; line-height: 1.2; }
+
+.screen-reader-text, .dispnone { display: none; }
+
+/* Append your site-specific styles here */
