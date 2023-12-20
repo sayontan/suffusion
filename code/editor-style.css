@@ -1,0 +1,19 @@
+/* These styles are used only in the backend editor */
+
+/* Here you can override any CSS which causes layout or visibility problems in the editor, */
+/* and duplicate any custom CSS to make the editor display look more like the real frontend */
+
+/* If you do not need this file then upload an empty one (zero bytes) which will not be loaded at all. */
+
+ol { 
+    list-style: decimal; 
+} 
+ol ol { 
+    list-style:lower-latin; 
+} 
+ol ol ol { 
+    list-style:lower-roman; 
+} 
+ol ol ol ol { 
+    list-style:lower-latin; 
+} 
