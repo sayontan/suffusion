@@ -44,7 +44,7 @@ function suffusion_get_headlines() {
 			$query_cats[] = $headline_category->cat_ID;
 		}
 		$query_posts = implode(",", array_values($query_cats));
-		$cat_query = new WP_query(array('cat' => $query_posts, 'post__not_in' => $solos));
+		$cat_query = new WP_Query(array('cat' => $query_posts, 'post__not_in' => $solos));
 	}
 
 	if (isset($cat_query->posts) && is_array($cat_query->posts)) {
@@ -91,7 +91,7 @@ function suffusion_get_mag_section_queries($args = array()) {
 		}
 	}
 	if (count($solos) > 0) {
-		$solo_query = new WP_query(array('post__in' => $solos, 'ignore_sticky_posts' => 1));
+		$solo_query = new WP_Query(array('post__in' => $solos, 'ignore_sticky_posts' => 1));
 		$queries[] = $solo_query;
 	}
 
@@ -104,7 +104,7 @@ function suffusion_get_mag_section_queries($args = array()) {
 				$query_cats[] = $category->cat_ID;
 			}
 			$query_posts = implode(",", array_values($query_cats));
-			$cat_query = new WP_query(array('cat' => $query_posts, 'post__not_in' => $solos, 'posts_per_page' => (int)$suf_mag_total_excerpts));
+			$cat_query = new WP_Query(array('cat' => $query_posts, 'post__not_in' => $solos, 'posts_per_page' => (int)$suf_mag_total_excerpts));
 			$queries[] = $cat_query;
 		}
 	}

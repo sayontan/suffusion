@@ -1556,7 +1556,6 @@ $suffusion_layouts_options = array(
 		"id" => "suf_tile_layout_bylines_post_date",
 		"grouping" => "tile-layout-bylines",
 		"parent" => "excerpt-settings",
-		"grouping" => "layout-tiles",
 		"type" => "radio",
 		"options" => array("show" => "Show", "hide" => "Hide"),
 		"std" => "show"),

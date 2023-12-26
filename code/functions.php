@@ -827,7 +827,7 @@ function suffusion_flatten_option($option) {
 /**
  * Returns an indented array of pages, based on parent and child pages. This is used in the admin menus.
  *
- * @return array
+ * @return array|null
  */
 function suffusion_get_formatted_page_array() {
 	global $suffusion_pages_array;

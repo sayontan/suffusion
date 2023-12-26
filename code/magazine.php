@@ -232,7 +232,7 @@ foreach ($sequence as $entity) {
 							$cat_args['orderby'] = 'order';
 						}
 
-						$query = new WP_query($cat_args);
+						$query = new WP_Query($cat_args);
 						if (isset($query->posts) && is_array($query->posts) && count($query->posts) > 0) {
 							$ul_class = '';
 							$li_class = '';

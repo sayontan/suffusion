@@ -568,7 +568,7 @@ function suffusion_admin_upload_file() {
 		$data = $_POST['data'];
 		$image_id = substr($data, 6);
 		if (isset($suffusion_options_renderer) && isset($suffusion_options_renderer->options)) {
-			if (isset($suffusion_options_renderer->options[$image_id])) unset($this->options[$image_id]);
+			if (isset($suffusion_options_renderer->options[$image_id])) unset($suffusion_options_renderer->options[$image_id]);
 		}
 	}
 	die();
