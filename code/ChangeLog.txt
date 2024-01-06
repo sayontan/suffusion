@@ -1,3 +1,8 @@
+Version 4.6.3 - 06 January 2024
+============================================
+- Improve PHP 8.x compatibility (#74)
+- Add styles for TinyMCE (#72)
+
 Version 4.6.2 - 16 December 2023
 ============================================
 - Remove "latest" from page head (#70)
