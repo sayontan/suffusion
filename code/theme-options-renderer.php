@@ -1444,7 +1444,7 @@ class Suffusion_Options_Renderer {
 	function initialize_settings($structure = null) {
 		$options = $this->options;
 		if (is_null($structure)) {
-			$structure = $this->get_option_structure($options);
+			$structure = $this->get_option_structure();
 		}
 
 		foreach ($structure as $option_entity) {
@@ -1697,7 +1697,7 @@ class Suffusion_Options_Renderer {
 	 * the user is migrating from 3.0.2 or lower.
 	 *
 	 * @param  $options
-	 * @return void
+	 * @return array
 	 */
 	function migrate_from_v302($options) {
 		global $suffusion_inbuilt_options;

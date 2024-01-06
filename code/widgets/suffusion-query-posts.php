@@ -141,7 +141,7 @@ class Suffusion_Category_Posts extends WP_Widget {
 			$query_args['post_type'] = 'any';
 		}
 
-		$query = new WP_query($query_args);
+		$query = new WP_Query($query_args);
 
 		if (isset($query->posts) && is_array($query->posts) && count($query->posts) > 0 && !($separate_widgets && ($post_style == 'thumbnail-full' || $post_style == 'thumbnail-excerpt'))) {
             if ($post_style == 'magazine') {

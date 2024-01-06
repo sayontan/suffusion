@@ -83,7 +83,7 @@ function suffusion_display_featured_posts($echo = true) {
     $featured_pages = suffusion_get_allowed_pages('suf_featured_selected_pages');
 	$count_so_far = 0;
 	if (is_array($stickies) && count($stickies) > 0 && $suf_featured_allow_sticky == "show") {
-		$sticky_query = new WP_query(array('post__in' => $stickies));
+		$sticky_query = new WP_Query(array('post__in' => $stickies));
 		$count_so_far += $sticky_query->post_count;
 	}
 
@@ -94,7 +94,7 @@ function suffusion_display_featured_posts($echo = true) {
 		else {
 			$number_of_latest_posts = $suf_featured_num_latest_posts;
 		}
-		$latest_query = new WP_query(array('post__not_in' => $stickies, 'posts_per_page' => $number_of_latest_posts, 'order' => 'DESC', 'ignore_sticky_posts' => 1));
+		$latest_query = new WP_Query(array('post__not_in' => $stickies, 'posts_per_page' => $number_of_latest_posts, 'order' => 'DESC', 'ignore_sticky_posts' => 1));
 		$count_so_far += $latest_query->post_count;
     }
 
@@ -156,14 +156,14 @@ function suffusion_display_featured_posts($echo = true) {
         foreach ($featured_pages as $featured_page) {
             $query_pages[count($query_pages)] = $featured_page->ID;
         }
-        $page_query = new WP_query(array('post_type' => 'page', 'post__in' => $query_pages, 'posts_per_page' => $suf_featured_num_posts, 'ignore_sticky_posts' => 1, 'orderby' => 'menu_order', 'order' => 'ASC'));
+        $page_query = new WP_Query(array('post_type' => 'page', 'post__in' => $query_pages, 'posts_per_page' => $suf_featured_num_posts, 'ignore_sticky_posts' => 1, 'orderby' => 'menu_order', 'order' => 'ASC'));
 		$count_so_far += $page_query->post_count;
     }
 
 	if (isset($suf_featured_selected_posts) && trim($suf_featured_selected_posts) != '' && $count_so_far < $suf_featured_num_posts) {
 		$trim_featured_posts = str_replace(' ', '', $suf_featured_selected_posts);
 		$query_posts = explode(',', $trim_featured_posts);
-		$post_query = new WP_query(array('post_type' => 'post', 'post__in' => $query_posts, 'posts_per_page' => $suf_featured_num_posts, 'ignore_sticky_posts' => 1));
+		$post_query = new WP_Query(array('post_type' => 'post', 'post__in' => $query_posts, 'posts_per_page' => $suf_featured_num_posts, 'ignore_sticky_posts' => 1));
 		$count_so_far += $post_query->post_count;
 	}
 

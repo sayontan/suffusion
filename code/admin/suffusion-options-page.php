@@ -166,6 +166,8 @@ function suffusion_save_css_to_file($custom_css = array()) {
 			echo "<div class='error'><p>Failed to save file $filename. Please check your folder permissions.</p></div>";
 		}
 	}
+
+	return true;
 }
 
 /**
