@@ -473,7 +473,11 @@ function suffusion_post_count() {
 		$post_type = 'post';
 	}
 	$post_count = wp_count_posts($post_type);
-	return $post_count->publish;
+	if (!empty($post_count) && !empty($post_count->publish) ) {
+		return $post_count->publish;
+	} else {
+		return 0;
+	}
 }
 
 /* Functions for WPML compatibility */
