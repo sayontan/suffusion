@@ -158,7 +158,8 @@ $suffusion_templates_options = array(
 		"parent" => "magazine-template",
 		"export" => "ne",
 		"type" => "multi-select",
-		"options" => suffusion_get_formatted_category_array()),
+		"options" => suffusion_get_formatted_category_array(),
+		"std" => array()),
 
 	array("name" => "Number of headlines",
 		"desc" => "Enter the maximum number of headlines: ",
@@ -229,7 +230,8 @@ $suffusion_templates_options = array(
 		"parent" => "magazine-template",
 		"export" => "ne",
 		"type" => "multi-select",
-		"options" => suffusion_get_formatted_category_array()),
+		"options" => suffusion_get_formatted_category_array(),
+		"std" => array()),
 
 	array("name" => "Magazine Template - Thumbnail container for excerpts",
 		"desc" => "You can show thumbnails for excerpts in the magazine template: ",
@@ -418,7 +420,8 @@ $suffusion_templates_options = array(
 		"parent" => "magazine-template",
 		"export" => "ne",
 		"type" => "multi-select",
-		"options" => suffusion_get_formatted_category_array()),
+		"options" => suffusion_get_formatted_category_array(),
+		"std" => array()),
 
 	array("name" => "Magazine Template - Maximum Number of category blocks per row",
 		"desc" => "You can define how many category blocks you want to show per row: ",
