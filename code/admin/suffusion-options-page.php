@@ -167,7 +167,7 @@ function suffusion_save_css_to_file($custom_css = array()) {
 		}
 	}
 
-	return true;
+	return false;
 }
 
 /**
