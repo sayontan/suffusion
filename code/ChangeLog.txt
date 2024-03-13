@@ -1,3 +1,10 @@
+Version 4.6.4 - 13 March 2024
+============================================
+- Fix saving options (#85)
+- Avoid warning when unlinking custom-sytles.css (#84)
+- Fix PHP warnings when exporting all options (#83)
+- Fix PHP warning regarding post count (#78)
+
 Version 4.6.3 - 06 January 2024
 ============================================
 - Improve PHP 8.x compatibility (#74)
