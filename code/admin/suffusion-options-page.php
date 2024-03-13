@@ -161,7 +161,10 @@ function suffusion_save_css_to_file($custom_css = array()) {
 	}
 
 	if (is_array($custom_css) && isset($custom_css['css'])) {
-		unlink($filename); // pre-empty
+		// Avoid warning if file does not exist
+		if (is_file($filename)) {
+			@unlink($filename); // pre-empty
+		}
 		if (!$wp_filesystem->put_contents($filename, $custom_css['css'], FS_CHMOD_FILE)) {
 			echo "<div class='error'><p>Failed to save file $filename. Please check your folder permissions.</p></div>";
 		}
