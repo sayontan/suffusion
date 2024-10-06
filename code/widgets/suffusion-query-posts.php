@@ -110,6 +110,7 @@ class Suffusion_Category_Posts extends WP_Widget {
 
 		if (trim($tags) != '') {
 			$solo_tags = preg_replace('/\s\s+/', ' ', $tags);
+			$solo_tags = explode(',', $solo_tags);
 			if (count($solo_tags) > 0) {
 				$query_args['tag'] = $solo_tags;
 			}
