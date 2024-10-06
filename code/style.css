@@ -2,8 +2,8 @@
  * Theme Name: Suffusion
  * Description: An elegant, responsive and versatile theme with a power-packed set of options and semantic HTML5-based markup. It supports Mega-Menus, custom layout templates, advanced support for custom post types, customizable drop-down menus, featured sliders, tabbed sidebars, a magazine layout and lots of enhanced widgets for Twitter, Flickr, Google etc. It has 19 widget areas, one-column, two-column and three-column responsive, fixed-width and flexible-width layouts, 9 pre-defined templates and 19 pre-defined color schemes. Responsive capabilities are switched on by a single click. RTL support is built-in and translations in many languages are available. Custom Post Types and Custom Taxonomies are integrated. Compatibility packs for BuddyPress, bbPress, Jigoshop and WooCommerce are available as plugins for smooth integration. Support forum at https://github.com/sayontan/suffusion/issues.
  * Theme URI: https://aquoid.com/themes/suffusion/
- * Version: 4.6.4
- * Tested up to: 6.4.3
+ * Version: 4.6.5
+ * Tested up to: 6.6.2
  * Requires PHP: 6.0
  * Author: Sayontan Sinha
  * Author URI: https://mynethome.net/blog
@@ -415,7 +415,6 @@ img.home-icon { height: 21px; }
 	margin: 0 0 -1px 0;
 	padding: 0;
 	float: left;
-	vertical-align: bottom;
 }
 
 #nav ul li {
@@ -540,7 +539,6 @@ img.home-icon { height: 21px; }
 	display: block;
 	margin: 0 0 -1px 0;
 	padding: 0;
-	vertical-align: bottom;
 }
 
 #nav-top ul li {
@@ -883,7 +881,7 @@ h2.posttitle a:hover {
 }
 span.author {
 	float: left;
-	display: inline-block;
+	display: block;
 	color: #aaa;
 	max-width: 250px;
 }
@@ -893,7 +891,7 @@ span.author {
 }
 .tags {
 	float: right;
-	display: inline-block;
+	display: block;
 	color: #aaa;
 	text-align: right;
 }
@@ -1413,14 +1411,14 @@ a.openid_link {
 /* Other Widget Areas */
 #right-header-widgets, #top-bar-right-widgets {
 	float: right;
-	display: inline-block;
+	display: block;
 	margin-left: 10px;
 }
 
 #left-header-widgets,
 #top-bar-left-widgets {
 	float: left;
-	display: inline-block;
+	display: block;
 	margin-right: 10px;
 }
 
@@ -1428,7 +1426,7 @@ a.openid_link {
 #horizontal-outer-widgets-2 {
 	width: 100%;
 	padding: 10px 0 10px 0;
-	display: inline-block;
+	display: block;
 	float: left;
 	text-align: center;
 }
@@ -2352,7 +2350,7 @@ a.follow-icon-and-tag:hover, a.follow-icon-and-tag:active, a.follow-icon-and-tag
 
 #top-bar-right-spanel-tab {
 	float: right;
-	display: inline-block;
+	display: block;
 	margin-left: 10px;
 }
 
@@ -2619,7 +2617,7 @@ a.dbx-toggle-hilite-closed, a.dbx-toggle-hilite-closed:visited{background-positi
 
 /* Multi-column short code */
 .suf-multic { display: block; width: 100%; float: left; margin: 10px 0;}
-.suf-mc-col {display: inline-block; float: left; margin: 0 3px; padding: 4px}
+.suf-mc-col {display: block; float: left; margin: 0 3px; padding: 4px}
 .suf-mc-col-025 {width: 23%}
 .suf-mc-col-033 {width: 31%}
 .suf-mc-col-050 {width: 48%}
@@ -2833,8 +2831,8 @@ a.suf-tile-icon { width: 16px; height: 16px; overflow: hidden; text-decoration: 
 .warea ul.suf-posts-thumbnail li, ul.suf-posts-thumbnail li { background: none; padding: 5px 0; border-bottom: 1px dotted #ccc; }
 ul.suf-posts-thumbnail li:last-child { border-bottom: none; }
 img.suf-widget-thumb { border: 1px solid #ccc; padding: 3px; }
-div.suf-widget-thumb { float: left; display: inline-block; margin: 0 5px 5px 0; }
-.suf-widget-mosaic { display: inline-block; list-style: none; float: left; }
+div.suf-widget-thumb { float: left; display: block; margin: 0 5px 5px 0; }
+.suf-widget-mosaic { display: block; list-style: none; float: left; }
 
 div.suf-post-gallery { width: 100%; }
 ul.suf-post-gallery { float: left; }

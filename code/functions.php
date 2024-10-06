@@ -7,7 +7,7 @@
  */
 
 if (!defined('SUFFUSION_THEME_VERSION')) {
-	define('SUFFUSION_THEME_VERSION', '4.6.4');
+	define('SUFFUSION_THEME_VERSION', '4.6.5');
 }
 
 require_once(get_template_directory().'/functions/framework.php');

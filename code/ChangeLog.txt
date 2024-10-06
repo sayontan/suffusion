@@ -1,3 +1,7 @@
+Version 4.6.5 - 06 October 2024
+============================================
+- Fix PHP warning when counting tags (#91)
+
 Version 4.6.4 - 13 March 2024
 ============================================
 - Fix saving options (#85)
