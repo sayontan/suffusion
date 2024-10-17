@@ -23,17 +23,17 @@ class Suffusion_Category_Posts extends WP_Widget {
 	function widget($args, $instance) {
 		extract($args);
 
-		$selected_category = $instance["selected_category"];
+		$selected_category = isset($instance["selected_category"]) ? $instance["selected_category"] : '';
 		$title = apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title']);
-		$icon_type = $instance["icon_type"];
-		$cat_icon_url = $instance["cat_icon_url"];
-		$post_style = $instance["post_style"];
-		$post_thumbnail_size = $instance['post_thumbnail_size'];
-		$this->post_excerpt_length = $instance['post_excerpt_length'];
-		$number_of_posts = $instance["number_of_posts"];
-		$icon_height = $instance['icon_height'];
-        $icon_width = $instance['icon_width'];
-        $all_posts_text = $instance['all_posts_text'];
+		$icon_type = isset($instance["icon_type"]) ? $instance["icon_type"] : '';
+		$cat_icon_url = isset($instance["cat_icon_url"]) ? $instance["cat_icon_url"] : '';
+		$post_style = isset($instance["post_style"]) ? $instance["post_style"] : '';
+		$post_thumbnail_size = isset($instance["post_thumbnail_size"]) ? $instance['post_thumbnail_size'] : 32;
+		$this->post_excerpt_length = isset($instance["post_excerpt_length"]) ? $instance['post_excerpt_length'] : 15;
+		$number_of_posts = isset($instance["number_of_posts"]) ? $instance["number_of_posts"] : 5;
+		$icon_height = isset($instance["icon_height"]) ? $instance['icon_height'] : '100px';
+        $icon_width = isset($instance["icon_width"]) ? $instance['icon_width'] : '100px';
+        $all_posts_text = isset($instance["all_posts_text"]) ? $instance['all_posts_text'] : '';
 		$order = isset($instance['order']) ? $instance['order'] : 'DESC';
 		$order_by = isset($instance['order_by']) ? $instance['order_by'] : 'date';
 		$ignore_sticky = isset($instance['ignore_sticky']) ? $instance['ignore_sticky'] : 'ignore';
