@@ -207,7 +207,7 @@ function suffusion_excerpt_length_cat_block($length) {
 
 function suffusion_excerpt_more_replace($more) {
 	global $post, $suf_excerpt_read_more_style, $suf_excerpt_custom_more_text;
-	if ($suf_excerpt_read_more_style == 'append' || !isset($post->ID)) {
+	if ($suf_excerpt_read_more_style == 'append' || !isset($post)) {
 		return '';
 	}
 
