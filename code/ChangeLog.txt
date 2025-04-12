@@ -1,3 +1,7 @@
+Version 4.6.7 - 12 April 2025
+============================================
+- Fix PHP warning when using excerpts (#97)
+
 Version 4.6.6 - 17 October 2024
 ============================================
 - Fix PHP warning "undefined array key" in widget (#93)
