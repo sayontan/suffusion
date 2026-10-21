@@ -17,6 +17,9 @@ require_once(get_template_directory().'/admin/theme-definitions.php');
 
 add_action("after_setup_theme", "suffusion_theme_setup");
 
+// Disable WordPress lazy-load auto-sizes to fix image distortion issues in Wordpress 6.7+
+add_filter( 'wp_img_tag_add_auto_sizes', '__return_false' );
+
 /**
  * Initializing action. If you are creating a child theme and you want to override some of Suffusion's actions/filters etc you
  * can add your own action to the hook "after_setup_theme", with a priority > 10 if you want your actions to be executed after
