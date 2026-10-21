@@ -1,3 +1,9 @@
+Version 4.6.8 - 21 October 2026
+============================================
+- Remove obsolete box-sizing styles (#107)
+- Disable auto sizing for lazy-loaded images (#106)
+- Dropped support for PHP 6 and 7 (end of life)
+
 Version 4.6.7 - 12 April 2025
 ============================================
 - Fix PHP warning when using excerpts (#97)
