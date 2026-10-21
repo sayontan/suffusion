@@ -783,9 +783,6 @@ img.home-icon { height: 21px; }
 	float: left;
 	margin-left: 10px;
 	width: 635px;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -2005,9 +2002,6 @@ div.sidebar-tab-content {
 }
 
 .suf-tile-1c {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -2065,9 +2059,6 @@ h2.suf-tile-title {
 	margin: auto;
 
 	max-width: 100%;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -2626,9 +2617,6 @@ a.dbx-toggle-hilite-closed, a.dbx-toggle-hilite-closed:visited{background-positi
 .suf-mc-col-100 {
 	width: 100%;
 	margin: 0;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .suf-multic .suf-mc-col:first-child {padding-left: 0; margin-left: 0}
@@ -2648,9 +2636,6 @@ span.search-highlight {background:#ff0; color: #000}
 .meta-position-left-pullout .entry, .meta-position-right-pullout .entry {
 	width: 100%;
 	float: left;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .meta-pullout { position: relative; width: 150px; float: left; font-size: 95%; }
@@ -2683,9 +2668,6 @@ ul.image-sizes li { float: left; padding: 5px 10px; margin: 0 10px 0 0; text-dec
 .suf-widget { overflow: hidden; }
 
 .suf-widget-1c, .suf-widget-2c, .suf-widget-3c, .suf-widget-4c, .suf-widget-5c {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .suf-widget-1c {
@@ -2705,9 +2687,6 @@ ul.image-sizes li { float: left; padding: 5px 10px; margin: 0 10px 0 0; text-dec
 	border: 1px solid #c0c0c0;
 	display: inline-block;
 	width: 99%;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .cl-content { margin: 8px; }
@@ -2941,9 +2920,6 @@ span.updated { display: none; }
 	margin-bottom: 0;
 	padding-left: 0;
 	padding-right: 0;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .outer-pullout-container .post-header {
